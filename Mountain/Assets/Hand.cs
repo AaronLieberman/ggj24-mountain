@@ -1,5 +1,7 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class Hand : MonoBehaviour
 {
@@ -7,8 +9,8 @@ public class Hand : MonoBehaviour
 
     public Deck Deck { get; set; }
 
-    public HandUI HandUI;
-    public DeckUI DeckUI;
+    public event EventHandler HandChanged;
+    public event EventHandler DeckChanged;
 
     public void Reset()
     {
@@ -17,8 +19,8 @@ public class Hand : MonoBehaviour
             Destroy(child.gameObject);
         }
 
-        HandUI.RefreshHandUI();
-        DeckUI.RefreshDeckUI();
+        HandChanged.Invoke(this, null);
+        DeckChanged.Invoke(this, null);
     }
 
     public bool DrawTillFull()
@@ -28,15 +30,15 @@ public class Hand : MonoBehaviour
             var card = Deck.GetTopCard();
             if (card == null)
             {
-                HandUI.RefreshHandUI();
+                HandChanged.Invoke(this, null);
                 return false;
             }
 
             card.transform.parent = transform;
         }
 
-        HandUI.RefreshHandUI();
-        DeckUI.RefreshDeckUI();
+        HandChanged.Invoke(this, null);
+        DeckChanged.Invoke(this, null);
 
         return true;
     }

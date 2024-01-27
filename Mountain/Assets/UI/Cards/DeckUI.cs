@@ -5,7 +5,12 @@ public class DeckUI : MonoBehaviour
     [SerializeField] private GameObject DeckSlotPrefab;
     [SerializeField] private Transform CardsSectionTransform;
 
-    public void RefreshDeckUI()
+    void Awake()
+    {
+        Utilities.GetRootComponent<Hand>().DeckChanged += (_, __) => RefreshDeckUI();
+    }
+
+    void RefreshDeckUI()
     {
         foreach (Transform child in CardsSectionTransform)
         {

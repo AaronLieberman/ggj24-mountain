@@ -6,11 +6,16 @@ using UnityEngine;
 
 public class HandUI : MonoBehaviour
 {
-    
+
     [SerializeField] private GameObject CardSlotPrefab;
     [SerializeField] private Transform CardSectionTransform;
 
-    public void RefreshHandUI()
+    void Awake()
+    {
+        Utilities.GetRootComponent<Hand>().HandChanged += (_, __) => RefreshHandUI();
+    }
+
+    void RefreshHandUI()
     {
         foreach (Transform child in CardSectionTransform)
         {
@@ -22,7 +27,7 @@ public class HandUI : MonoBehaviour
         {
             GameObject cardSlot = Instantiate(CardSlotPrefab, CardSectionTransform);
             cardSlot.GetComponent<CardUI>().Card = child.GetComponent<Card>();
-            
+
             cardSlot.GetComponent<CardUI>().SetTexture();
         }
     }
