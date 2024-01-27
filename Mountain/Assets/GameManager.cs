@@ -6,11 +6,13 @@ public class GameManager : MonoBehaviour
 {
     //public TileGridLayout MapPrefab;
 
+    public Worker WorkerPrefab;
+
     public TileGridLayout Map { get; private set; }
     public Deck Deck { get; private set; }
     public Hand Hand { get; private set; }
 
-    public T GetRootComponent<T>()
+    public T GetRootComponent<T>() where T : Component
     {
         return SceneManager.GetActiveScene().GetRootGameObjects().Select(a => a.GetComponent<T>()).Single(a => a != null);
     }
@@ -36,5 +38,12 @@ public class GameManager : MonoBehaviour
         Hand.Reset();
 
         Hand.DrawTillFull();
+
+        Instantiate(WorkerPrefab, Map.transform);
+    }
+
+    void Update()
+    {
+        
     }
 }
