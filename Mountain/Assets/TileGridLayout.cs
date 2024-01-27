@@ -9,6 +9,7 @@ using UnityEngine.Tilemaps;
 using System.Drawing;
 using UnityEditor;
 using static UnityEngine.GraphicsBuffer;
+using static UnityEditor.PlayerSettings;
 
 [ExecuteInEditMode]
 public class TileGridLayout : MonoBehaviour
@@ -16,7 +17,7 @@ public class TileGridLayout : MonoBehaviour
     public GameObject TilePrefab;
     public GameObject TilesContainer;
     public Vector2Int GridSize = new Vector2Int(20, 20);
-    public Vector2Int StartPos;
+    public Vector3 StartPos;
 
     public Bounds Bounds = new Bounds();
 
@@ -29,7 +30,7 @@ public class TileGridLayout : MonoBehaviour
         Generate(GridSize);
     }
 
-    public void ClearTiles()
+    public void ClearTiles(bool clearCache)
     {
         for ( int i = TilesContainer.transform.childCount - 1; i >= 0; --i)
         {
@@ -40,7 +41,10 @@ public class TileGridLayout : MonoBehaviour
         GetComponent<Tilemap>().ClearAllTiles();
         Array.Clear(_tiles, 0, _tiles.Length);
 
-        _generatedGridSize = new Vector2Int(0, 0);
+        if (clearCache)
+        {
+            _generatedGridSize = new Vector2Int(0, 0);
+        }
     }
 
     public void Generate(Vector2Int size)
@@ -51,7 +55,7 @@ public class TileGridLayout : MonoBehaviour
             return;
         }
 
-        ClearTiles();
+        ClearTiles(true);
 
         var grid = GetComponent<Grid>();
 
@@ -67,20 +71,41 @@ public class TileGridLayout : MonoBehaviour
                 tile.name = $"Tile_{x}_{y}";
                 tile.Location = coord;
                 _tiles[x, y] = tile;
-                Bounds.Encapsulate(pos);
             }
         }
+
+        Action refreshBounds = () =>
+        {
+            if (_tiles.Length > 0)
+            {
+                Bounds = new Bounds(_tiles[0, 0].transform.position, grid.cellSize);
+                Bounds.Encapsulate(new Bounds(_tiles[size.x - 1, size.y - 1].transform.position, grid.cellSize));
+            }
+        };
+
+        refreshBounds();
+
+        // anchor along cameraX
+        transform.position = new Vector3(
+            StartPos.x - Bounds.size.x / 2,
+            StartPos.y,
+            StartPos.z);
+
+        refreshBounds();
 
         _generatedGridSize = size;
     }
 
     void Update()
     {
+#if UNITY_EDITOR
         if (!_generatedGridSize.Equals(GridSize))
         {
             Generate(GridSize);
         }
+#endif
     }
+
     public void OnDrawGizmos()
     {
         Gizmos.color = UnityEngine.Color.red;
@@ -101,9 +126,7 @@ public class TileGridLayoutEditor : Editor
         var gl = (TileGridLayout)target;
         if (GUILayout.Button("Clear"))
         {
-            gl.GridSize.x = 0;
-            gl.GridSize.y = 0;
-            gl.Generate(gl.GridSize);
+            gl.ClearTiles(false);
         }
         else if (GUILayout.Button("Regenerate"))
         {
