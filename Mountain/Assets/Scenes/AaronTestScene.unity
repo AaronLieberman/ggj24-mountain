@@ -53494,6 +53494,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 68370019831307415, guid: d6966627641965a40aec1694a03a10e0, type: 3}
+      propertyPath: Bounds.m_Center.x
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 68370019831307415, guid: d6966627641965a40aec1694a03a10e0, type: 3}
+      propertyPath: Bounds.m_Center.y
+      value: 10.875
+      objectReference: {fileID: 0}
+    - target: {fileID: 68370019831307415, guid: d6966627641965a40aec1694a03a10e0, type: 3}
+      propertyPath: Bounds.m_Extent.x
+      value: 15.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 68370019831307415, guid: d6966627641965a40aec1694a03a10e0, type: 3}
+      propertyPath: Bounds.m_Extent.y
+      value: 11.375
+      objectReference: {fileID: 0}
+    - target: {fileID: 68370019831307415, guid: d6966627641965a40aec1694a03a10e0, type: 3}
+      propertyPath: Bounds.m_Extent.z
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 1208695664075253781, guid: d6966627641965a40aec1694a03a10e0, type: 3}
       propertyPath: m_LocalPosition.x
       value: -15.25
@@ -140886,26 +140906,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Deck
       objectReference: {fileID: 0}
-    - target: {fileID: 7192226113975508490, guid: 2d22b31b4bf2393438922a253040b776, type: 3}
-      propertyPath: InitialCards.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 7192226113975508490, guid: 2d22b31b4bf2393438922a253040b776, type: 3}
-      propertyPath: InitialCards.Array.data[0]
-      value: 
-      objectReference: {fileID: 5975526219396173977, guid: e4c68d051c638a94ca6e4b97074ccd69, type: 3}
-    - target: {fileID: 7192226113975508490, guid: 2d22b31b4bf2393438922a253040b776, type: 3}
-      propertyPath: InitialCards.Array.data[1]
-      value: 
-      objectReference: {fileID: 5975526219396173977, guid: e4c68d051c638a94ca6e4b97074ccd69, type: 3}
-    - target: {fileID: 7192226113975508490, guid: 2d22b31b4bf2393438922a253040b776, type: 3}
-      propertyPath: InitialCards.Array.data[2]
-      value: 
-      objectReference: {fileID: 5975526219396173977, guid: e4c68d051c638a94ca6e4b97074ccd69, type: 3}
-    - target: {fileID: 7192226113975508490, guid: 2d22b31b4bf2393438922a253040b776, type: 3}
-      propertyPath: InitialCards.Array.data[3]
-      value: 
-      objectReference: {fileID: 5975526219396173977, guid: e4c68d051c638a94ca6e4b97074ccd69, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

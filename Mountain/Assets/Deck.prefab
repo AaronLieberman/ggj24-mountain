@@ -45,5 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   InitialCards:
-  - {fileID: 5212175071317846402, guid: d8c57bd674c295544aebdbda149a91c2, type: 3}
-  - {fileID: 7870969176332914933, guid: 5412ed8e12eca454db2bd3c30936109c, type: 3}
+  - {fileID: 5975526219396173977, guid: e4c68d051c638a94ca6e4b97074ccd69, type: 3}
+  - {fileID: 5975526219396173977, guid: e4c68d051c638a94ca6e4b97074ccd69, type: 3}
+  - {fileID: 5975526219396173977, guid: e4c68d051c638a94ca6e4b97074ccd69, type: 3}
+  - {fileID: 5975526219396173977, guid: e4c68d051c638a94ca6e4b97074ccd69, type: 3}
