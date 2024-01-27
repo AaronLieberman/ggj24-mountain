@@ -24,8 +24,10 @@ public class Tile : MonoBehaviour
         Instantiate(placement, transform);
     }
 
-    void OnMouseDown()
-    {
-        Debug.Log(gameObject.name + " was clicked.");
-    }
+    private void OnMouseEnter()
+        => GetComponentInParent<TileGridLayout>().OnMouseEnterTile(this);
+
+    private void OnMouseDown()
+        => GetComponentInParent<TileGridLayout>().OnMouseDownTile(this);
+
 }

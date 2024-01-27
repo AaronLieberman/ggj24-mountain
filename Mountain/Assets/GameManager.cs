@@ -8,9 +8,13 @@ public class GameManager : MonoBehaviour
     public Worker WorkerPrefab;
     public Placement HomePrefab;
 
+    public Placement DefaultPrefab;
+
     public TileGridLayout Map { get; private set; }
     public Deck Deck { get; private set; }
     public Hand Hand { get; private set; }
+
+
 
     void Awake()
     {
@@ -62,6 +66,11 @@ public class GameManager : MonoBehaviour
         //     w.GetComponentInChildren<SpriteRenderer>().color = Color.blue;
         // }
 
+        foreach (var tile in Map.GetComponentsInChildren<Tile>())
+        {
+            tile.SpawnPlacement(DefaultPrefab);
+        }
+
         foreach (var coord in PathFinder.CalculateRoute(Map, new Vector2Int(1, 2), new Vector2Int(10, 6)))
         {
             var world = Map.GetComponent<Grid>().CellToWorld(new Vector3Int(coord.x, coord.y, 0));
@@ -72,6 +81,7 @@ public class GameManager : MonoBehaviour
 
     public bool IsWorkerAvailable()
     {
+        // var homePlacement = Map.GetComponentInChildren<
         return false;
     }
 }

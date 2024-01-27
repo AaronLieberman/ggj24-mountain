@@ -42,6 +42,29 @@ public class TileGridLayout : MonoBehaviour
         }
     }
 
+    public void ClearPath()
+    {
+
+    }
+    public void ShowPath(Tile src, Tile dest)
+    {
+
+    }
+
+    public void OnMouseEnterTile(Tile tile)
+    {
+        if (_clicked != null)
+        {
+            ShowPath(_clicked, tile);
+        }
+    }
+
+    private Tile _clicked;
+    public void OnMouseDownTile(Tile tile)
+    {
+        _clicked = tile;
+    }
+
     public void Generate(Vector2Int size)
     {
         if (TilePrefab == null
