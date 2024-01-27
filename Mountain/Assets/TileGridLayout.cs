@@ -63,6 +63,8 @@ public class TileGridLayout : MonoBehaviour
                 var pos = grid.GetCellCenterWorld(new Vector3Int(coord.x, coord.y, 0));
                 var tileObj = Instantiate(TilePrefab, pos, Quaternion.identity, TilesContainer.transform);
                 var tile = tileObj.GetComponent<Tile>();
+                // not sure why this is necessary .. 
+                tileObj.transform.localRotation = Quaternion.identity;
                 tile.name = $"Tile_{x}_{y}";
                 tile.Location = coord;
                 _tiles[x, y] = tile;
