@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.Linq;
 using Unity.Mathematics;
 using UnityEngine;
@@ -5,12 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    public Worker WorkerPrefab;
-    public Placement HomePrefab;
-
-    public Placement DefaultPrefab;
-
     public TileGridLayout Map { get; private set; }
+    public Board Board { get; private set; }
     public Deck Deck { get; private set; }
     public Hand Hand { get; private set; }
 
@@ -18,6 +15,7 @@ public class GameManager : MonoBehaviour
 
     void Awake()
     {
+        Board = Utilities.GetRootComponent<Board>();
         Map = Utilities.GetRootComponent<TileGridLayout>();
         Map.name = $"Map";
 
@@ -39,13 +37,12 @@ public class GameManager : MonoBehaviour
         Hand.Reset();
 
         Hand.DrawTillFull();
-
     }
 
     void SetupMap()
     {
-        var homeLoc = new Vector2Int(10, 6);
-        Map.GetTileFromLoc(homeLoc).SpawnPlacement(HomePrefab);
+        Board.Reset();
+
         //var homeLoc = Map.GetComponent<Grid>().CellToWorld(new Vector3Int(10, 6, 0));
         //Instantiate(HomePrefab, homeLoc, quaternion.identity, Map.transform);
 
@@ -66,17 +63,12 @@ public class GameManager : MonoBehaviour
         //     w.GetComponentInChildren<SpriteRenderer>().color = Color.blue;
         // }
 
-        foreach (var tile in Map.GetComponentsInChildren<Tile>())
-        {
-            tile.SpawnPlacement(DefaultPrefab);
-        }
-
-        foreach (var coord in PathFinder.CalculateRoute(Map, new Vector2Int(1, 2), new Vector2Int(10, 6)))
-        {
-            var world = Map.GetComponent<Grid>().CellToWorld(new Vector3Int(coord.x, coord.y, 0));
-            var w = Instantiate(WorkerPrefab, world, Quaternion.identity, Map.transform);
-            w.GetComponentInChildren<SpriteRenderer>().color = Color.blue;
-        }
+        //foreach (var coord in PathFinder.CalculateRoute(Map, new Vector2Int(1, 2), new Vector2Int(10, 6)))
+        //{
+        //    var world = Map.GetComponent<Grid>().CellToWorld(new Vector3Int(coord.x, coord.y, 0));
+        //    var w = Instantiate(WorkerPrefab, world, Quaternion.identity, Map.transform);
+        //    w.GetComponentInChildren<SpriteRenderer>().color = Color.blue;
+        //}
     }
 
     public bool IsWorkerAvailable()

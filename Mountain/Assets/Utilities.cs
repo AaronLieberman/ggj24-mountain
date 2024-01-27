@@ -11,7 +11,19 @@ public static class Utilities
 			.Single(a => a != null);
 	}
 
-	public static void DestroyAllChildren(Transform transform)
+	public static void DestroyAllChildren(GameObject go)
+	{
+        for (int i = go.transform.childCount - 1; i >= 0; --i)
+        {
+#if UNITY_EDITOR
+			GameObject.DestroyImmediate(go.transform.GetChild(i).gameObject);
+#else
+			GameObject.Destroy(go.transform.GetChild(i).gameObject);
+#endif
+        }
+    }
+
+    public static void DestroyAllChildren(Transform transform)
 	{
 		foreach (Transform child in transform)
 		{

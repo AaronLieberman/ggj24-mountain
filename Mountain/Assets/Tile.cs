@@ -24,6 +24,8 @@ public class Tile : MonoBehaviour
         Instantiate(placement, transform);
     }
 
+    private TileGridLayout Map => transform.parent.GetComponent<TileGridLayout>();
+
     private void OnMouseEnter()
         => GetComponentInParent<TileGridLayout>().OnMouseEnterTile(this);
 
