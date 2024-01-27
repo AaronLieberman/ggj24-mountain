@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Hand : MonoBehaviour
@@ -6,12 +7,16 @@ public class Hand : MonoBehaviour
 
     public Deck Deck { get; set; }
 
+    public HandUI HandUI;
+
     public void Reset()
     {
         foreach (Transform child in transform)
         {
             Destroy(child.gameObject);
         }
+
+        HandUI.RefreshHandUI();
     }
 
     public bool DrawTillFull()
@@ -23,6 +28,8 @@ public class Hand : MonoBehaviour
 
             card.transform.parent = transform;
         }
+
+        HandUI.RefreshHandUI();
 
         return true;
     }
