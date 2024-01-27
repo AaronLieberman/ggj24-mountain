@@ -8,6 +8,7 @@ public class Hand : MonoBehaviour
     public Deck Deck { get; set; }
 
     public HandUI HandUI;
+    public DeckUI DeckUI;
 
     public void Reset()
     {
@@ -17,6 +18,7 @@ public class Hand : MonoBehaviour
         }
 
         HandUI.RefreshHandUI();
+        DeckUI.RefreshDeckUI();
     }
 
     public bool DrawTillFull()
@@ -34,6 +36,7 @@ public class Hand : MonoBehaviour
         }
 
         HandUI.RefreshHandUI();
+        DeckUI.RefreshDeckUI();
 
         return true;
     }
