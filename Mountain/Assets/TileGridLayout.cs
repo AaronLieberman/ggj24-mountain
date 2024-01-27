@@ -8,13 +8,15 @@ using UnityEngine;
 using UnityEngine.Tilemaps;
 using System.Drawing;
 using UnityEditor;
+using static UnityEngine.GraphicsBuffer;
 
 [ExecuteInEditMode]
-public class GridLayout : MonoBehaviour
+public class TileGridLayout : MonoBehaviour
 {
     public GameObject TilePrefab;
     public GameObject TilesContainer;
     public Vector2Int GridSize = new Vector2Int(20, 20);
+    public Vector2Int StartPos;
 
     public Bounds Bounds { get; private set; } = new Bounds();
 
@@ -24,6 +26,7 @@ public class GridLayout : MonoBehaviour
 
     void Start()
     {
+
     }
 
     public void ClearTiles()
@@ -78,16 +81,24 @@ public class GridLayout : MonoBehaviour
             Generate(GridSize);
         }
     }
+    public void OnDrawGizmos()
+    {
+        Gizmos.color = UnityEngine.Color.red;
+
+        //Gizmos.DrawLine(transform.position, transform.position + new Vector3(100, 100, 100));
+
+        Gizmos.DrawWireCube(Bounds.center, Bounds.size);
+    }
 }
 
-[CustomEditor(typeof(GridLayout))]
-public class GridLayoutEditor : Editor
+[CustomEditor(typeof(TileGridLayout))]
+public class TileGridLayoutEditor : Editor
 {
     public override void OnInspectorGUI()
     {
         DrawDefaultInspector();
 
-        var gl = (GridLayout)target;
+        var gl = (TileGridLayout)target;
         if (GUILayout.Button("Clear"))
         {
             gl.GridSize.x = 0;
@@ -99,4 +110,6 @@ public class GridLayoutEditor : Editor
             gl.Generate(gl.GridSize);
         }
     }
+
+
 }
