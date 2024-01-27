@@ -1,23 +1,40 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Drawing;
+using System.Linq;
 using UnityEngine;
-using static UnityEditor.PlayerSettings;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    public TileGridLayout MapPrefab;
+    //public TileGridLayout MapPrefab;
 
     public TileGridLayout Map { get; private set; }
+    public Deck Deck { get; private set; }
+    public Hand Hand { get; private set; }
+
+    public T GetRootComponent<T>()
+    {
+        return SceneManager.GetActiveScene().GetRootGameObjects().Select(a => a.GetComponent<T>()).Single(a => a != null);
+    }
+
+    void Awake()
+    {
+        Map = GetRootComponent<TileGridLayout>();
+        Map.name = $"Map";
+
+        Deck = GetRootComponent<Deck>();
+        Hand = GetRootComponent<Hand>();
+    }
 
     void Start()
     {
-        var mapObj = Instantiate(MapPrefab, transform.position, Quaternion.identity, transform.parent);
-        mapObj.name = $"Map";
-        Map = mapObj.GetComponent<TileGridLayout>();
+        StartGame();
     }
 
-    void Update()
+    void StartGame()
     {
+        Deck.Reset();
+        Hand.Deck = Deck;
+        Hand.Reset();
+
+        Hand.DrawTillFull();
     }
 }
