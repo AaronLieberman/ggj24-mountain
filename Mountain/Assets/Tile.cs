@@ -2,23 +2,9 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-[Serializable]
-public class TileAction
-{
-    public Card Cost;
-    public Tile Upgrade;
-    public MonoBehaviour Action;
-}
-
 public class Tile : MonoBehaviour
 {
-    public List<TileAction> Actions;
-    public string FlavorText;
-
-    public Vector2Int Location {get; set; }
-
-    // public TerrainType Terrain = TerrainType.Plains;
-    // //public Card Card;
+    public Vector2Int Location { get; set; }
 
     // public enum TerrainType
     // {
@@ -30,4 +16,16 @@ public class Tile : MonoBehaviour
     //     Quest,
     //     Goal,
     // }
+
+    public void SpawnPlacement(Placement placement)
+    {
+        Utilities.DestroyAllChildren(transform);
+
+        Instantiate(placement, transform);
+    }
+
+    void OnMouseDown()
+    {
+        Debug.Log(gameObject.name + " was clicked.");
+    }
 }

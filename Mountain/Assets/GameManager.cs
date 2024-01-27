@@ -1,12 +1,12 @@
 using System.Linq;
+using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    //public TileGridLayout MapPrefab;
-
     public Worker WorkerPrefab;
+    public Placement HomePrefab;
 
     public TileGridLayout Map { get; private set; }
     public Deck Deck { get; private set; }
@@ -28,11 +28,22 @@ public class GameManager : MonoBehaviour
 
     void StartGame()
     {
+        SetupMap();
+
         Deck.Reset();
         Hand.Deck = Deck;
         Hand.Reset();
 
         Hand.DrawTillFull();
+
+    }
+
+    void SetupMap()
+    {
+        var homeLoc = new Vector2Int(10, 6);
+        Map.GetTileFromLoc(homeLoc).SpawnPlacement(HomePrefab);
+        //var homeLoc = Map.GetComponent<Grid>().CellToWorld(new Vector3Int(10, 6, 0));
+        //Instantiate(HomePrefab, homeLoc, quaternion.identity, Map.transform);
 
         // var worker = Instantiate(WorkerPrefab, Map.transform);
 
@@ -59,8 +70,8 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    void Update()
+    public bool IsWorkerAvailable()
     {
-
+        return false;
     }
 }

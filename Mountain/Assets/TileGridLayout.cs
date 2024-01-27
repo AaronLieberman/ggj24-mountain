@@ -16,7 +16,7 @@ public class TileGridLayout : MonoBehaviour
 
     public Bounds Bounds = new Bounds();
 
-    private Tile[,] _tiles = new Tile[0,0]; // col major
+    private Tile[,] _tiles = new Tile[0, 0]; // col major
 
     private Vector2Int _generatedGridSize = new Vector2Int(-1, -1);
 
@@ -27,7 +27,7 @@ public class TileGridLayout : MonoBehaviour
 
     public void ClearTiles(bool clearCache)
     {
-        for ( int i = TilesContainer.transform.childCount - 1; i >= 0; --i)
+        for (int i = TilesContainer.transform.childCount - 1; i >= 0; --i)
         {
             DestroyImmediate(TilesContainer.transform.GetChild(i).gameObject);
         }
@@ -60,11 +60,7 @@ public class TileGridLayout : MonoBehaviour
             for (int y = 0; y < size.y; ++y)
             {
                 var coord = new Vector2Int(x, y);
-                var pos = grid.GetCellCenterWorld(new Vector3Int(coord.x, coord.y, 0));
-                var tileObj = Instantiate(TilePrefab, pos, Quaternion.identity, TilesContainer.transform);
-                var tile = tileObj.GetComponent<Tile>();
-                // not sure why this is necessary .. 
-                tileObj.transform.localRotation = Quaternion.identity;
+                Tile tile = GetTileFromLoc(coord);
                 tile.name = $"Tile_{x}_{y}";
                 tile.Location = coord;
                 _tiles[x, y] = tile;
@@ -91,6 +87,16 @@ public class TileGridLayout : MonoBehaviour
         refreshBounds();
 
         _generatedGridSize = size;
+    }
+
+    public Tile GetTileFromLoc(Vector2Int coord)
+    {
+        var grid = GetComponent<Grid>();
+        var pos = grid.GetCellCenterWorld(new Vector3Int(coord.x, coord.y, 0));
+        var tileObj = Instantiate(TilePrefab, pos, Quaternion.identity, TilesContainer.transform);
+        // not sure why this is necessary .. 
+        tileObj.transform.localRotation = Quaternion.identity;
+        return tileObj.GetComponent<Tile>();
     }
 
     void Update()

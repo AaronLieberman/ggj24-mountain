@@ -6,7 +6,7 @@ using UnityEngine;
 [Serializable]
 public class TileSpawnDesc
 {
-    public Tile Tile;
+    public Placement Tile;
     public float Weight = 1;
 }
 
@@ -16,18 +16,12 @@ public class Card : MonoBehaviour
 
     Unity.Mathematics.Random _random = new();
 
-    public void SpawnAtLocation(Tile tile)
+    public void SpawnOnTile(Tile tile)
     {
-        Utilities.DestroyAllChildren(tile.transform);
-
-        var chosenTile = ChooseTileToSpawn();
-        if (chosenTile == null)
-            return;
-
-        Instantiate(chosenTile, tile.transform);
+        tile.SpawnPlacement(ChoosePlacementToSpawn());
     }
 
-    Tile ChooseTileToSpawn()
+    Placement ChoosePlacementToSpawn()
     {
         var totalWeight = TileSpawn.Sum(a => a.Weight);
         if (totalWeight <= 0)

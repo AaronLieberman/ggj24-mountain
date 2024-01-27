@@ -45,3 +45,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   WorkerPrefab: {fileID: 3784145635725975230, guid: c15ff673ddbabbe45a88b553170b2af4, type: 3}
+  HomePrefab: {fileID: 3633046709800144003, guid: 349c7786a22200d48b631c408d4d1dbc, type: 3}
