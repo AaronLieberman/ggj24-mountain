@@ -10,9 +10,17 @@ public class TileSpawnDesc
     public float Weight = 1;
 }
 
+[Serializable]
+public class CardDetails
+{
+    public Sprite CardSprite;
+}
+
 public class Card : MonoBehaviour
 {
     public List<TileSpawnDesc> TileSpawn;
+
+    public CardDetails CardDetails;
 
     Unity.Mathematics.Random _random = new();
 

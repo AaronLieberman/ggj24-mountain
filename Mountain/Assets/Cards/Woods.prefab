@@ -47,3 +47,5 @@ MonoBehaviour:
   TileSpawn:
   - Tile: {fileID: 1365756699843689891, guid: 817df214692c8234c88b99caf669e1ee, type: 3}
     Weight: 1
+  CardDetails:
+    CardSprite: {fileID: 2088842820, guid: 6dfed9e8f1416d34bbd79deac2104118, type: 3}

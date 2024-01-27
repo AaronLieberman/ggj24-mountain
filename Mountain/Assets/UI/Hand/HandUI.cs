@@ -22,7 +22,8 @@ public class HandUI : MonoBehaviour
         {
             GameObject cardSlot = Instantiate(CardSlotPrefab, CardSectionTransform);
             cardSlot.GetComponent<CardUI>().Card = child.GetComponent<Card>();
-            Debug.Log(cardSlot.GetComponent<CardUI>().Card.gameObject.name);
+            
+            cardSlot.GetComponent<CardUI>().SetTexture();
         }
     }
 }
