@@ -5,23 +5,21 @@ using UnityEngine;
 
 public class HandUI : MonoBehaviour
 {
-    public GameObject cardUIPrefab;
-
-    private Transform cardSectionTransform;
-
-    public void Awake()
-    {
-        cardSectionTransform = transform.Find("CardsSection");
-    }
+    
+    [SerializeField] private GameObject cardSlotPrefab;
+    [SerializeField] private Transform cardSectionTransform;
 
     public void RefreshHandUI()
     {
-        // Clear hand UI objects
         foreach (Transform child in cardSectionTransform)
         {
             Destroy(child.gameObject);
         }
 
-        
+        Hand hand = Utilities.GetRootComponent<Hand>();
+        foreach (Transform child in hand.transform)
+        {
+            Instantiate(cardSlotPrefab, cardSectionTransform);
+        }
     }
 }

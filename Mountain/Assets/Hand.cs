@@ -24,7 +24,11 @@ public class Hand : MonoBehaviour
         for (int i = transform.childCount; i < MaxHandSize; i++)
         {
             var card = Deck.GetTopCard();
-            if (card == null) return false;
+            if (card == null)
+            {
+                HandUI.RefreshHandUI();
+                return false;
+            }
 
             card.transform.parent = transform;
         }
