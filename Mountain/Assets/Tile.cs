@@ -8,23 +8,17 @@ public class Tile : MonoBehaviour
 
     public List<Entity> Entities;
     public TerrainType Terrain = TerrainType.Plains;
-    public RevealState Reveal = RevealState.Hidden;
     //public Card Card;
 
     public enum TerrainType
     {
+        None,
         Plains,
         Forest,
         Mountain,
         MountainTunnel,
+        Quest,
         Goal,
-    }
-
-    public enum RevealState
-    {
-        Visible,
-        VisibleQuest,
-        Hidden,
     }
 
     void Start()

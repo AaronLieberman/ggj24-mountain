@@ -18,7 +18,7 @@ public class TileGridLayout : MonoBehaviour
     public Vector2Int GridSize = new Vector2Int(20, 20);
     public Vector2Int StartPos;
 
-    public Bounds Bounds { get; private set; } = new Bounds();
+    public Bounds Bounds = new Bounds();
 
     private Tile[,] _tiles = new Tile[0,0]; // col major
 
@@ -26,7 +26,7 @@ public class TileGridLayout : MonoBehaviour
 
     void Start()
     {
-
+        Generate(GridSize);
     }
 
     public void ClearTiles()
