@@ -7,10 +7,7 @@ public class Deck : MonoBehaviour
 
     public void Reset()
     {
-        foreach (Transform child in transform)
-        {
-            Destroy(child.gameObject);
-        }
+        Utilities.DestroyAllChildren(transform);
 
         foreach (var card in InitialCards)
         {
