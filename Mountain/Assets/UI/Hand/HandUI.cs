@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
@@ -6,12 +7,12 @@ using UnityEngine;
 public class HandUI : MonoBehaviour
 {
     
-    [SerializeField] private GameObject cardSlotPrefab;
-    [SerializeField] private Transform cardSectionTransform;
+    [SerializeField] private GameObject CardSlotPrefab;
+    [SerializeField] private Transform CardSectionTransform;
 
     public void RefreshHandUI()
     {
-        foreach (Transform child in cardSectionTransform)
+        foreach (Transform child in CardSectionTransform)
         {
             Destroy(child.gameObject);
         }
@@ -19,7 +20,9 @@ public class HandUI : MonoBehaviour
         Hand hand = Utilities.GetRootComponent<Hand>();
         foreach (Transform child in hand.transform)
         {
-            Instantiate(cardSlotPrefab, cardSectionTransform);
+            GameObject cardSlot = Instantiate(CardSlotPrefab, CardSectionTransform);
+            cardSlot.GetComponent<CardUI>().Card = child.GetComponent<Card>();
+            Debug.Log(cardSlot.GetComponent<CardUI>().Card.gameObject.name);
         }
     }
 }
