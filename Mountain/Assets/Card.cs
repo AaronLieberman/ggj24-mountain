@@ -12,15 +12,10 @@ public class CardDetails
 public class Card : MonoBehaviour
 {
     public Placement PlacementToSpawn;
+    public Placement UnrevealedPlacement;
     public bool IsRevealed;
 
     public CardDetails CardDetails;
-
-    Unity.Mathematics.Random _random;
-    void Awake()
-    {
-        _random = new Unity.Mathematics.Random(42);
-    }
 
     public void SpawnOnTile(Tile tile)
     {
