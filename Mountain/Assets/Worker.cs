@@ -3,17 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-public class WorkerPlan
-{
-    public Card Card;
-    public Tile Tile;
-}
-
 public class Worker : MonoBehaviour
 {
     public float Speed = 10f;
 
-    public List<WorkerPlan> WorkerPlan { get; } = new();
+    public List<(Card, Tile)> WorkerPlan { get; } = new();
     Vector2Int? _nextDestinationTileLoc;
     float _tileDistanceEpsilon = 0.01f;
 
@@ -23,7 +17,7 @@ public class Worker : MonoBehaviour
 
     public void AddDestination(Card card, Tile tile)
     {
-        WorkerPlan.Add(new WorkerPlan() { Card = card, Tile = tile });
+        WorkerPlan.Add((card, tile));
         card.transform.parent = transform;
     }
 
@@ -49,7 +43,7 @@ public class Worker : MonoBehaviour
     Vector2Int GetNextDestinationWaypointCell()
     {
         return WorkerPlan.Any()
-            ? Utilities.ToVec2I(_grid.LocalToCell(WorkerPlan.First().Tile.transform.localPosition))
+            ? Utilities.ToVec2I(_grid.LocalToCell(WorkerPlan.First().Item2.transform.localPosition))
             : _map.HomeLocation;
     }
 
@@ -94,7 +88,7 @@ public class Worker : MonoBehaviour
                     Debug.LogFormat("Reached waypoint {0} aka {1}", _nextDestinationTileLoc.Value, cell);
                     var currentPlan = WorkerPlan.First();
                     WorkerPlan.RemoveAt(0);
-                    ExecutePlan(currentPlan);
+                    ExecutePlan(currentPlan.Item1, currentPlan.Item2);
                 }
             }
 
@@ -107,8 +101,8 @@ public class Worker : MonoBehaviour
         }
     }
 
-    private void ExecutePlan(WorkerPlan currentPlan)
+    void ExecutePlan(Card card, Tile tile)
     {
-        currentPlan.Card.SpawnOnTile(currentPlan.Tile);
+        card.SpawnOnTile(tile);
     }
 }
