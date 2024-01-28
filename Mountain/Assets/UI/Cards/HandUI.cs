@@ -8,10 +8,12 @@ public class HandUI : MonoBehaviour
 {
     [SerializeField] private GameObject CardSlotPrefab;
     [SerializeField] private Transform CardSectionTransform;
+    [SerializeField] private GameObject HandAvailabilityElement; 
 
     void Awake()
     {
         Utilities.GetRootComponent<Hand>().HandChanged += (_, __) => RefreshHandUI();
+        Utilities.GetRootComponent<GameManager>().WorkerAvailableChanged += (_, __) => RefreshHandAvailabilityUI();
     }
 
     void RefreshHandUI()
@@ -29,5 +31,10 @@ public class HandUI : MonoBehaviour
 
             cardSlot.GetComponent<CardUI>().SetTexture();
         }
+    }
+
+    void RefreshHandAvailabilityUI()
+    {
+        HandAvailabilityElement.SetActive(Utilities.GetRootComponent<GameManager>().IsWorkerAvailable);
     }
 }

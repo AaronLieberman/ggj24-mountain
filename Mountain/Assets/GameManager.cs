@@ -42,10 +42,11 @@ public class GameManager : MonoBehaviour
     Worker GetFirstAvailableWorker()
     {
         var grid = Map.GetComponent<Grid>();
-        var homeCell = grid.LocalToCell(Map.HomeInstance.transform.localPosition);
+        var homeCell = grid.LocalToCell(Map.HomeInstance.transform.parent.localPosition);
 
         // update whether workers are available
         var workers = Map.GetComponentsInChildren<Worker>();
+        
         return workers.FirstOrDefault(w => !w.WorkerPlan.Any() && grid.LocalToCell(w.transform.localPosition) == homeCell);
     }
 
