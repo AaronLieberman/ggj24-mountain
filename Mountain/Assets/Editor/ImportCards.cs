@@ -87,7 +87,7 @@ public class ImportCards : EditorWindow
             }
             else
             {
-                tilePlacement.PathingHeuristic = 1.0f;
+                tilePlacement.PathingHeuristic = 100000.0f;
             }
             tilePlacement.PaysCost = splitData[BIOME];
             tilePlacement.OnRevealText = splitData[ONREVEALTEXT];
