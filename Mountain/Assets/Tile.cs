@@ -17,12 +17,14 @@ public class Tile : MonoBehaviour
     //     Goal,
     // }
 
-    public void SpawnPlacement(Placement placement)
+    public Placement SpawnPlacement(Placement placement)
     {
         Utilities.DestroyAllChildren(transform);
 
-        Instantiate(placement, transform);
+        return Instantiate(placement, transform);
     }
+
+    private TileGridLayout Map => transform.parent.GetComponent<TileGridLayout>();
 
     private void OnMouseEnter()
         => GetComponentInParent<TileGridLayout>().OnMouseEnterTile(this);

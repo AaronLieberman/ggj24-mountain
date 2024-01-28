@@ -19,8 +19,8 @@ public class Hand : MonoBehaviour
             Destroy(child.gameObject);
         }
 
-        HandChanged.Invoke(this, null);
-        DeckChanged.Invoke(this, null);
+        HandChanged?.Invoke(this, null);
+        DeckChanged?.Invoke(this, null);
     }
 
     public bool DrawTillFull()
@@ -30,15 +30,15 @@ public class Hand : MonoBehaviour
             var card = Deck.GetTopCard();
             if (card == null)
             {
-                HandChanged.Invoke(this, null);
+                HandChanged?.Invoke(this, null);
                 return false;
             }
 
             card.transform.parent = transform;
         }
 
-        HandChanged.Invoke(this, null);
-        DeckChanged.Invoke(this, null);
+        HandChanged?.Invoke(this, null);
+        DeckChanged?.Invoke(this, null);
 
         return true;
     }

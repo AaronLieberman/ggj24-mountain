@@ -5,11 +5,19 @@ using UnityEditor;
 
 using static UnityEngine.GraphicsBuffer;
 using static UnityEditor.PlayerSettings;
+using System.Drawing;
+using UnityEngine.WSA;
 
 [ExecuteInEditMode]
 public class TileGridLayout : MonoBehaviour
 {
+    public Placement DefaultPrefab;
     public GameObject TilePrefab;
+    public Placement HomePrefab;
+
+    public Vector2Int HomeLocation;
+    public Placement HomeInstance { get; private set;}
+
     public GameObject TilesContainer;
     public Vector2Int GridSize = new Vector2Int(20, 20);
     public Vector3 StartPos;
@@ -22,15 +30,18 @@ public class TileGridLayout : MonoBehaviour
 
     void Start()
     {
+    }
+
+    public void Reset()
+    {
         Generate(GridSize);
+        HomeLocation = GetCenterTile();
+        HomeInstance = CreateTileFromLoc(HomeLocation).SpawnPlacement(HomePrefab);
     }
 
     public void ClearTiles(bool clearCache)
     {
-        for (int i = TilesContainer.transform.childCount - 1; i >= 0; --i)
-        {
-            DestroyImmediate(TilesContainer.transform.GetChild(i).gameObject);
-        }
+        Utilities.DestroyAllChildren(TilesContainer);
 
         Bounds = new Bounds();
         GetComponent<Tilemap>().ClearAllTiles();
@@ -42,10 +53,19 @@ public class TileGridLayout : MonoBehaviour
         }
     }
 
+    public Vector2Int GetCenterTile()
+        => new Vector2Int(GridSize.x / 2, GridSize.y / 2);
+
+    public Vector3 GetPositionFromTileCoord(Vector2Int coord)
+        => GetComponent<Grid>().GetCellCenterWorld(new Vector3Int(coord.x, coord.y, 0));
+
+
+
     public void ClearPath()
     {
 
     }
+
     public void ShowPath(Tile src, Tile dest)
     {
 
@@ -83,10 +103,7 @@ public class TileGridLayout : MonoBehaviour
             for (int y = 0; y < size.y; ++y)
             {
                 var coord = new Vector2Int(x, y);
-                Tile tile = GetTileFromLoc(coord);
-                tile.name = $"Tile_{x}_{y}";
-                tile.Location = coord;
-                _tiles[x, y] = tile;
+                CreateTileFromLoc(coord);
             }
         }
 
@@ -110,16 +127,30 @@ public class TileGridLayout : MonoBehaviour
         refreshBounds();
 
         _generatedGridSize = size;
+
+        foreach (var tile in GetComponentsInChildren<Tile>())
+        {
+            tile.SpawnPlacement(DefaultPrefab);
+        }
+
     }
 
     public Tile GetTileFromLoc(Vector2Int coord)
+        => _tiles[coord.x, coord.y];
+
+    public Tile CreateTileFromLoc(Vector2Int coord)
     {
         var grid = GetComponent<Grid>();
         var pos = grid.GetCellCenterWorld(new Vector3Int(coord.x, coord.y, 0));
         var tileObj = Instantiate(TilePrefab, pos, Quaternion.identity, TilesContainer.transform);
         // not sure why this is necessary .. 
         tileObj.transform.localRotation = Quaternion.identity;
-        return tileObj.GetComponent<Tile>();
+        tileObj.transform.Rotate(new Vector3(90, 0, 0));
+        tileObj.name = $"Tile_{coord.x}_{coord.y}";
+        var tile = tileObj.GetComponent<Tile>();
+        tile.Location = coord;
+        _tiles[coord.x, coord.y] = tile;
+        return tile;
     }
 
     void Update()

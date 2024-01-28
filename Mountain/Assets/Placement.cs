@@ -14,5 +14,9 @@ public class TileAction
 public class Placement : MonoBehaviour
 {
     public List<TileAction> Actions;
+    public string Name;
     public string FlavorText;
+    public float LostChance;
+    public int Difficulty;
+    public ICardReveal RevealAction;
 }

@@ -11,11 +11,33 @@ public static class Utilities
 			.Single(a => a != null);
 	}
 
-	public static void DestroyAllChildren(Transform transform)
+	public static void DestroyAllChildren(GameObject go)
+	{
+        for (int i = go.transform.childCount - 1; i >= 0; --i)
+        {
+#if UNITY_EDITOR
+			GameObject.DestroyImmediate(go.transform.GetChild(i).gameObject);
+#else
+			GameObject.Destroy(go.transform.GetChild(i).gameObject);
+#endif
+        }
+    }
+
+    public static void DestroyAllChildren(Transform transform)
 	{
 		foreach (Transform child in transform)
 		{
 			GameObject.Destroy(child.gameObject);
 		}
+	}
+
+	public static Vector2Int ToVec2I(Vector3Int v3i)
+	{
+		return new Vector2Int(v3i.x, v3i.y);
+	}
+
+	public static Vector3Int ToVec3I(Vector2Int v2i)
+	{
+		return new Vector3Int(v2i.x, v2i.y, 0);
 	}
 }

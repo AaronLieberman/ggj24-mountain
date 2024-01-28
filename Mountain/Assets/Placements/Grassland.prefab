@@ -45,4 +45,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Actions: []
+  Name: Grassland
   FlavorText: 
+  LostChance: 0
+  Difficulty: 0
+  RevealAction: {fileID: 0}
