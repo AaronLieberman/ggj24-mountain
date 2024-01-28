@@ -17,17 +17,6 @@ public class DeckUI : MonoBehaviour
             Destroy(child.gameObject);
         }
 
-        /*
-        Deck deck = Utilities.GetRootComponent<Deck>();
-        foreach (Transform child in deck.transform)
-        {
-            GameObject cardSlot = Instantiate(DeckSlotPrefab, CardsSectionTransform);
-            cardSlot.GetComponent<CardUI>().Card = child.GetComponent<Card>();
-            
-            cardSlot.GetComponent<CardUI>().SetTexture();
-        }
-        */
-
         Deck deck = Utilities.GetRootComponent<Deck>();
         for (int i = deck.transform.childCount - 1; i >= 0; i--)
         {
