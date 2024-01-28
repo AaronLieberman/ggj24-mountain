@@ -31,7 +31,7 @@ public class Worker : MonoBehaviour
         get
         {
             RefreshComponents();
-            return !WorkerPlan.Any() && Utilities.ToVec2I(_grid.LocalToCell(transform.localPosition)) == _map.HomeLocation;
+            return !WorkerPlan.Any() && (transform.localPosition - _map.HomeInstance.transform.parent.localPosition).magnitude < _tileDistanceEpsilon;
         }
     }
 
@@ -56,8 +56,7 @@ public class Worker : MonoBehaviour
     {
         RefreshComponents();
 
-        if (WorkerPlan.Count == 0 && IsHome)
-            return;
+        if (IsHome) return;
 
         if (_nextDestinationTileLoc == null)
         {
@@ -74,7 +73,7 @@ public class Worker : MonoBehaviour
                 return;
         }
 
-        var nextDestinationTilePos = _grid.CellToLocal(new Vector3Int(_nextDestinationTileLoc.Value.x, _nextDestinationTileLoc.Value.y, 0));
+        var nextDestinationTilePos = _grid.CellToLocal(Utilities.ToVec3I(_nextDestinationTileLoc.Value));
         var differenceDir = new Vector3(nextDestinationTilePos.x, nextDestinationTilePos.y, 0) - transform.localPosition;
         if (differenceDir.magnitude < _tileDistanceEpsilon)
         {
@@ -85,8 +84,15 @@ public class Worker : MonoBehaviour
 
             if (_nextDestinationTileLoc == GetNextDestinationWaypointCell())
             {
-                Debug.LogFormat("Reached waypoint {0} aka {1}", _nextDestinationTileLoc.Value, cell);
-                WorkerPlan.RemoveAt(0);
+                if (IsHome)
+                {
+                    Debug.LogFormat("Reached home {0} aka {1}", _nextDestinationTileLoc.Value, cell);
+                }
+                else
+                {
+                    Debug.LogFormat("Reached waypoint {0} aka {1}", _nextDestinationTileLoc.Value, cell);
+                    WorkerPlan.RemoveAt(0);
+                }
             }
 
             _nextDestinationTileLoc = null;

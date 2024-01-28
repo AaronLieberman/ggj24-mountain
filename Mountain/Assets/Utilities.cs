@@ -8,42 +8,59 @@ public static class Utilities
 {
 	public static T GetRootComponent<T>() where T : Component
 	{
-        return SceneManager.GetActiveScene().GetRootGameObjects()
+		return SceneManager.GetActiveScene().GetRootGameObjects()
 			.Select(a => a.GetComponent<T>())
 			.Single(a => a != null);
 	}
-	
+
 	public static IEnumerable<T> GetRootComponents<T>() where T : Component
 	{
 		return SceneManager.GetActiveScene().GetRootGameObjects()
 			.SelectMany(a => a.GetComponents<T>());
 	}
 
-    public static T GetRootComponentRecursive<T>() where T : Component
-    {
-        return SceneManager.GetActiveScene().GetRootGameObjects()
-            .Select(a => a.GetComponentInChildren<T>())
-            .Single(a => a != null);
-    }
-
-    public static void DestroyAllChildren(GameObject go)
+	public static T GetRootComponentRecursive<T>() where T : Component
 	{
-        for (int i = go.transform.childCount - 1; i >= 0; --i)
-        {
+		return SceneManager.GetActiveScene().GetRootGameObjects()
+			.Select(a => a.GetComponentInChildren<T>())
+			.Single(a => a != null);
+	}
+
+	public static void DestroyAllChildren(GameObject go)
+	{
+		for (int i = go.transform.childCount - 1; i >= 0; --i)
+		{
 #if UNITY_EDITOR
 			GameObject.DestroyImmediate(go.transform.GetChild(i).gameObject);
 #else
 			GameObject.Destroy(go.transform.GetChild(i).gameObject);
 #endif
-        }
-    }
+		}
+	}
 
-    public static void DestroyAllChildren(Transform transform)
+	public static void DestroyAllChildren(Transform transform)
 	{
 		foreach (Transform child in transform)
 		{
 			GameObject.Destroy(child.gameObject);
 		}
+	}
+
+	public static IEnumerable<Transform> GetParents(this Transform transform)
+	{
+		var currentParent = transform.parent;
+		while (currentParent != null)
+		{
+			yield return currentParent;
+			currentParent = currentParent.parent;
+		}
+	}
+
+	public static T FindParentWithComponent<T>(this Transform child) where T : Component
+	{
+		return child.GetParents()
+			.Select(parent => parent.GetComponent<T>())
+			.FirstOrDefault(component => component != null);
 	}
 
 	public static Vector2Int ToVec2I(Vector3Int v3i)
