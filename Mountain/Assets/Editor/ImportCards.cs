@@ -59,7 +59,7 @@ public class ImportCards : EditorWindow
 
             GameObject prefabTofill = FindOrCreatePrefab(prefabName);
 
-            // Save the new GameObject as a prefab
+           // // Save the new GameObject as a prefab
             GameObject prefabInstance = PrefabUtility.SaveAsPrefabAsset(prefabTofill, GetPrefabPath(prefabName));
 
             Placement tilePlacement = prefabInstance.GetComponent<Placement>();
@@ -93,6 +93,9 @@ public class ImportCards : EditorWindow
             tilePlacement.OnRevealText = splitData[ONREVEALTEXT];
             tilePlacement.OnVisitText = splitData[ONVISITTEXT];
 
+            // Save the new GameObject as a prefab
+            prefabInstance = PrefabUtility.SaveAsPrefabAsset(prefabTofill, GetPrefabPath(prefabName));
+
             // Destroy the instantiated GameObject
             DestroyImmediate(prefabTofill);
 
@@ -110,6 +113,7 @@ public class ImportCards : EditorWindow
         GameObject existingPrefab = AssetDatabase.LoadAssetAtPath<GameObject>(GetPrefabPath(PrefabName));
         if(existingPrefab != null)
         {
+            AssetDatabase.DeleteAsset(GetPrefabPath(PrefabName));
             //Prefab exists
             return existingPrefab;
         }
