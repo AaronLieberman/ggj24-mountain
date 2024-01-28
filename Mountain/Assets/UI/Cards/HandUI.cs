@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
+using System.Linq;
+using UnityEngine.UI;
 
 public class HandUI : MonoBehaviour
 {
@@ -13,6 +15,7 @@ public class HandUI : MonoBehaviour
     void Awake()
     {
         Utilities.GetRootComponent<Hand>().HandChanged += (_, __) => RefreshHandUI();
+        Utilities.GetRootComponent<GameManager>().WorkerPlanChanged += (_, __) => RefreshHandUI();
         Utilities.GetRootComponent<GameManager>().WorkerAvailableChanged += (_, __) => RefreshHandAvailabilityUI();
     }
 
@@ -24,12 +27,17 @@ public class HandUI : MonoBehaviour
         }
 
         Hand hand = Utilities.GetRootComponent<Hand>();
+        List<WorkerPlan> workerPlan = Utilities.GetRootComponent<GameManager>().WorkerPlan;
+
         foreach (Transform child in hand.transform)
         {
             GameObject cardSlot = Instantiate(CardSlotPrefab, CardSectionTransform);
-            cardSlot.GetComponent<CardUI>().Card = child.GetComponent<Card>();
 
-            cardSlot.GetComponent<CardUI>().SetTexture();
+            var card = child.GetComponent<Card>();
+            var cardUI = cardSlot.GetComponent<CardUI>();
+            cardUI.Card = card;
+            cardUI.SetTexture();
+            cardUI.SetInUse(workerPlan.Any(a => a.Card == card));
         }
     }
 
@@ -41,6 +49,12 @@ public class HandUI : MonoBehaviour
     public CardUI SelectedCardUI { get; private set; }
     public void SetSelectedCardUI(CardUI cardUI)
     {
+        if (cardUI.InUse)
+            return;
+
+        if (Utilities.GetRootComponent<GameManager>().WorkerPlan.Count >= Utilities.GetRootComponent<GameManager>().MaxCards)
+            return;
+
         if (SelectedCardUI != null)
         {
             SelectedCardUI.SetSelected(false);

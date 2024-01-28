@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
@@ -7,11 +8,12 @@ using UnityEngine.SceneManagement;
 public class DragController : MonoBehaviour
 {
     public LayerMask Mask = ~0;
-    public Camera Camera;
-    public GameObject LinkedObj;
-    public MouseButton MouseButtonDrag = MouseButton.Middle;
+    public MouseButton MouseButtonDrag = MouseButton.Left;
     public MouseButton MouseButtonReturnHome = MouseButton.Right;
     public Vector3 StartPos;
+
+    public Camera Camera => Camera.main;
+    public GameObject LinkedObj { get; private set; }
 
     public enum MouseButton
     {
@@ -34,6 +36,7 @@ public class DragController : MonoBehaviour
 
     void Start()
     {
+        LinkedObj = Utilities.GetRootComponent<GameManager>().Map.gameObject;
         StartPos = LinkedObj.transform.position;
         transform.position = StartPos;
     }
