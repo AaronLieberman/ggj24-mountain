@@ -220,9 +220,12 @@ MonoBehaviour:
   Actions: []
   Name: 
   FlavorText: 
+  OnRevealText: 
+  OnVisitText: 
   LostChance: 0
   Difficulty: 0
-  PathingHeuristic: 0
+  PathingHeuristic: 1
+  PaysCost: 
 --- !u!1 &3696735302705872940
 GameObject:
   m_ObjectHideFlags: 0
