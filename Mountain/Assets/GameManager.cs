@@ -5,21 +5,14 @@ using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public enum PlacementMode
-{
-    None,
-    PlanWorker,
-}
-
 public class GameManager : MonoBehaviour
 {
+    public int MaxCards = 2;
+
     public TileGridLayout Map { get; private set; }
     public Board Board { get; private set; }
     public Deck Deck { get; private set; }
     public Hand Hand { get; private set; }
-
-    public PlacementMode PlacementMode { get; private set; }
-    public event EventHandler PlacementModeChanged;
 
     public bool IsWorkerAvailable { get; private set; }
     public event EventHandler WorkerAvailableChanged;
@@ -53,7 +46,7 @@ public class GameManager : MonoBehaviour
 
         // update whether workers are available
         var workers = Map.GetComponentsInChildren<Worker>();
-        return workers.FirstOrDefault(w => grid.LocalToCell(w.transform.localPosition) == homeCell);
+        return workers.FirstOrDefault(w => !w.WorkerPlan.Any() && grid.LocalToCell(w.transform.localPosition) == homeCell);
     }
 
     void SetWorkerAvailable(bool value)
@@ -61,13 +54,6 @@ public class GameManager : MonoBehaviour
         if (value == IsWorkerAvailable) return;
         IsWorkerAvailable = value;
         WorkerAvailableChanged.Invoke(null, null);
-    }
-
-    void SetPlacementMode(PlacementMode value)
-    {
-        if (value == PlacementMode) return;
-        PlacementMode = value;
-        PlacementModeChanged.Invoke(null, null);
     }
 
     void StartGame()
@@ -84,6 +70,8 @@ public class GameManager : MonoBehaviour
     void SetupMap()
     {
         Board.Reset();
+
+        #region Debug code for hexes
         //var homeLoc = Map.GetComponent<Grid>().CellToWorld(new Vector3Int(10, 6, 0));
         //Instantiate(HomePrefab, homeLoc, quaternion.identity, Map.transform);
 
@@ -110,31 +98,31 @@ public class GameManager : MonoBehaviour
         //    var w = Instantiate(WorkerPrefab, world, Quaternion.identity, Map.transform);
         //    w.GetComponentInChildren<SpriteRenderer>().color = Color.blue;
         //}
-    }
-
-    public void StartPlacingWorker()
-    {
-        SetPlacementMode(PlacementMode.PlanWorker);
+        #endregion
     }
 
     public void AddCardToWorkerPlan(Card card, Tile tile)
     {
         if (!IsWorkerAvailable) return;
         var worker = GetFirstAvailableWorker();
-        if (worker.GetComponentsInChildren<Card>().Count() > worker.MaxCards) return;
+        if (worker.GetComponentsInChildren<Card>().Count() > MaxCards) return;
         _workerPlan.Add(new WorkerPlan() { Card = card, Tile = tile });
+    }
+
+    public void ClearWorkerPlan()
+    {
+        _workerPlan.Clear();
     }
 
     public void StartWorkerOnJourney()
     {
-        if (PlacementMode != PlacementMode.PlanWorker) return;
         if (!IsWorkerAvailable) return;
 
         var worker = GetFirstAvailableWorker();
 
         foreach (var plan in _workerPlan)
         {
-            plan.Card.transform.parent = worker.transform;
+            worker.AddDestination(plan.Card, plan.Tile);
         }
     }
 }
