@@ -6,17 +6,6 @@ public class Tile : MonoBehaviour
 {
     public Vector2Int Location { get; set; }
 
-    // public enum TerrainType
-    // {
-    //     None,
-    //     Plains,
-    //     Forest,
-    //     Mountain,
-    //     MountainTunnel,
-    //     Quest,
-    //     Goal,
-    // }
-
     public Placement SpawnPlacement(Placement placement)
     {
         Utilities.DestroyAllChildren(transform);
@@ -27,12 +16,18 @@ public class Tile : MonoBehaviour
     private TileGridLayout Map => transform.parent.GetComponent<TileGridLayout>();
 
     private void OnMouseEnter()
-        => GetComponentInParent<TileGridLayout>().OnMouseEnterTile(this);
+        => Utilities.GetRootComponent<GameManager>().OnMouseEnterTile(this);
 
     private void OnMouseDown()
-        => GetComponentInParent<TileGridLayout>().OnMouseDownTile(this);
+        => Utilities.GetRootComponent<GameManager>().OnMouseDownTile(this);
 
     private void OnMouseUp()
         => GetComponentInParent<TileGridLayout>().OnMouseUpTile(this);
 
+    private void OnMouseOver()
+        => Utilities.GetRootComponent<GameManager>().OnMouseOverTile(this);
+
+    public void SetHighlight(bool value)
+    {
+    }
 }

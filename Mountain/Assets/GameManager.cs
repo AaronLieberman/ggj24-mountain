@@ -41,13 +41,9 @@ public class GameManager : MonoBehaviour
 
     Worker GetFirstAvailableWorker()
     {
-        var grid = Map.GetComponent<Grid>();
-        var homeCell = grid.LocalToCell(Map.HomeInstance.transform.parent.localPosition);
-
         // update whether workers are available
         var workers = Map.GetComponentsInChildren<Worker>();
-        
-        return workers.FirstOrDefault(w => !w.WorkerPlan.Any() && grid.LocalToCell(w.transform.localPosition) == homeCell);
+        return workers.FirstOrDefault(w => w.IsHome);
     }
 
     void SetWorkerAvailable(bool value)
@@ -102,17 +98,38 @@ public class GameManager : MonoBehaviour
         #endregion
     }
 
+    public void OnMouseEnterTile(Tile tile)
+    {
+    }
+
+    public void OnMouseDownTile(Tile tile)
+    {
+        AddCardToWorkerPlan(Hand.GetComponentInChildren<Card>(), tile);
+    }
+    
+    public void OnMouseOverTile(Tile tile)
+    {
+        if (Input.GetMouseButtonDown(1))
+        {
+            StartWorkerOnJourney();
+        }
+    }
+
     public void AddCardToWorkerPlan(Card card, Tile tile)
     {
         if (!IsWorkerAvailable) return;
         var worker = GetFirstAvailableWorker();
         if (worker.GetComponentsInChildren<Card>().Count() > MaxCards) return;
         WorkerPlan.Add(new WorkerPlan() { Card = card, Tile = tile });
+
+        var workerTile = Map.GetTileAtObject(worker.transform);
+        Map.ShowPath(workerTile, WorkerPlan.Select(a => a.Tile));
     }
 
     public void ClearWorkerPlan()
     {
         WorkerPlan.Clear();
+        Map.ClearPath();
     }
 
     public void StartWorkerOnJourney()
@@ -125,5 +142,8 @@ public class GameManager : MonoBehaviour
         {
             worker.AddDestination(plan.Card, plan.Tile);
         }
+
+        WorkerPlan.Clear();
+        Map.ClearPath();
     }
 }
