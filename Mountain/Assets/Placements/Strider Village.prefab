@@ -56,6 +56,8 @@ MonoBehaviour:
     past. He provides the location of where he hid the diary.
   OnVisitText: 
   LostChance: 0
+  OnVisit: {fileID: 0}
   Difficulty: 2
-  PathingHeuristic: 100000
+  PathingHeuristic: 1
   PaysCost: Settlement
+  RevealAction: {fileID: 0}

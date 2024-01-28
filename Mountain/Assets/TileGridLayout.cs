@@ -31,7 +31,7 @@ public class TileGridLayout : MonoBehaviour
 
     void Start()
     {
-        PathLines.material.renderQueue = 5000;
+        PathLines.sharedMaterial.renderQueue = 5000;
     }
 
 
@@ -48,6 +48,8 @@ public class TileGridLayout : MonoBehaviour
         Generate(GridSize);
         HomeLocation = GetCenterTile();
         HomeInstance = GetTileFromLoc(HomeLocation).SpawnPlacement(HomePrefab);
+        RefreshVisibleTiles();
+        Utilities.GetRootComponent<MapMaker>().MakeMap();
     }
 
     public void ClearTiles(bool clearCache)
@@ -61,6 +63,18 @@ public class TileGridLayout : MonoBehaviour
         if (clearCache)
         {
             _generatedGridSize = new Vector2Int(0, 0);
+        }
+    }
+
+    public bool IsTileAccessible(Tile t)
+        => !(t.Placement?.name ?? "Unexplored").StartsWith("Unexplored")
+            || t.GetNeighbors().Any(n => !(n.Placement?.name ?? "Unexplored").StartsWith("Unexplored"));
+
+    public void RefreshVisibleTiles()
+    {
+        foreach (var t in EnumerateTiles())
+        {
+            t.gameObject.SetActive(IsTileAccessible(t));
         }
     }
 
@@ -224,6 +238,7 @@ public class TileGridLayout : MonoBehaviour
             && checkCoord.y >= 0
             && checkCoord.y < GridSize.y;
 
+    int x = 0;
     void Update()
     {
 #if UNITY_EDITOR
@@ -232,6 +247,7 @@ public class TileGridLayout : MonoBehaviour
             Generate(GridSize);
         }
 #endif
+        if (x++ % 100 == 0) RefreshVisibleTiles();
 
         if (_pathfindingPath.Count > 1)
         {

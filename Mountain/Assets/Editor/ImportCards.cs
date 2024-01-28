@@ -14,7 +14,7 @@ public class ImportCards : EditorWindow
     public const int BIOME = 3;
     public const int CHANCETOLOST = 4;
     public const int DIFFICULTY = 5;
-    public const int IMPASSABLE = 5;
+    public const int IMPASSABLE = 6;
     public const int FLAVORTEXT = 7;
     public const int ABILITY = 8;
     public const int SECRETEFFECT = 9;
@@ -53,7 +53,6 @@ public class ImportCards : EditorWindow
             }
 
 
-
             Debug.Log("Filling prefab: " + GetPrefabPath(prefabName));
 
 
@@ -86,11 +85,11 @@ public class ImportCards : EditorWindow
             tilePlacement.Name = splitData[TILENAME];
             if(splitData[IMPASSABLE] == "TRUE")
             {
-                tilePlacement.PathingHeuristic = 0.0f;
+                tilePlacement.PathingHeuristic = 100000.0f;
             }
             else
             {
-                tilePlacement.PathingHeuristic = 100000.0f;
+                tilePlacement.PathingHeuristic = 1.0f;
             }
             tilePlacement.PaysCost = splitData[BIOME];
             tilePlacement.OnRevealText = splitData[ONREVEALTEXT];

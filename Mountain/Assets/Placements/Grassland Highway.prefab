@@ -51,6 +51,8 @@ MonoBehaviour:
   OnRevealText: 
   OnVisitText: 
   LostChance: 0
+  OnVisit: {fileID: 0}
   Difficulty: 1
-  PathingHeuristic: 100000
+  PathingHeuristic: 1
   PaysCost: Fields
+  RevealAction: {fileID: 0}

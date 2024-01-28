@@ -55,6 +55,8 @@ MonoBehaviour:
     originated. Perhaps this is a clue to others from our world."
   OnVisitText: 
   LostChance: 0
+  OnVisit: {fileID: 0}
   Difficulty: 2
-  PathingHeuristic: 100000
+  PathingHeuristic: 1
   PaysCost: Fields
+  RevealAction: {fileID: 0}
