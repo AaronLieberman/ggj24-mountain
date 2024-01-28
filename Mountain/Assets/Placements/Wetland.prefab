@@ -394,7 +394,7 @@ MonoBehaviour:
   LostChance: 0.2
   OnVisit: {fileID: 0}
   Difficulty: -1
-  PathingHeuristic: 100000
+  PathingHeuristic: 1
   PaysCost: Swamp
   RevealAction: {fileID: 0}
 --- !u!1 &7234826412624954153

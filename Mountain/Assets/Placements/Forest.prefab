@@ -252,9 +252,11 @@ MonoBehaviour:
   OnRevealText: 
   OnVisitText: 
   LostChance: 0.1
+  OnVisit: {fileID: 0}
   Difficulty: 1
-  PathingHeuristic: 100000
+  PathingHeuristic: 1
   PaysCost: Woods
+  RevealAction: {fileID: 0}
 --- !u!1 &1861969430247256808
 GameObject:
   m_ObjectHideFlags: 0

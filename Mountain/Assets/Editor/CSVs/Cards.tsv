@@ -9,23 +9,23 @@ Priority	Can be drawn	Name	Biome Type	Chance To Get Lost	Difficult	Impassable	Fl
 	Yes	Abandoned Wagon	Fields	0.00	2		Deep wagon ruts make it impossible to lose the way.			Reveal Wagon Caravan within 2 tiles						0	0	1	1
 	No	Wagon Caravan	Fields	0.00	0		These nomads have seen a hundred lands, but when they hear about the mountaintop, they promise to visit soon.	Insert a tile to deck 4 settlements, 4 fields, 4 forests, and 1 swamp. 								0	0	0	0
 	Yes	Croplands	Fields													1	1	1	1
-1	No	Unpassable	Mountaintop			TRUE	Too steep to climb.	Impassable								0	0	0	0
-1	No	Videonarium	Mountaintop				A crowd has gathered to complete the 9853rd Annual Series Marathon of Friends	insert forest to upgrade to Traveler's Forum.								0	0	0	0
-1	No	Traveler's Forum	Mountaintop				Lectures, memoirs, and scientific illustrations inspire the next generation of explorer dreams.	Insert Wasteland to upgrade to World Academy.		Plus 1 Explorer						0	0	0	0
-	No	World Academy	Mountaintop				Shocked by the dangers of a chaotic world, we systemitized prepartions for all explorers.			Plus 1 Explorer						0	0	0	0
-1	No	Database Protein Printer	Mountaintop				Today's Menu: Breakfast Bacon flavored protein porridge. Lunch Special! Chicken breast protein porridge. Dinner: Oatsimilie Protein Porridge.	Insert Fields to upgrade to Hydroponic Protein Printer.								0	0	0	0
-	No	Hydroponic Protein Printer	Mountaintop				Today's Menu: Breakfast: Whole Grain Chia Oats. Lunch Special! Bacon Protein BLT. Dinner: Chicken Salad With Celery.	Insert Swamp to upgrade to Gastroprint Farm		Plus 1 Journey Plan Slots						0	0	0	0
-	No	Gastroprint Farm	Mountaintop				Today's Menu: Breakfast Savory Cinnamon Oat Crepes, Lunch Special! Five Star Chicken Tikka Masala, Dinner: Maple Glazed Pancetta Charcuterie			Plus 1 Journey Plan Slots						0	0	0	0
-1	No	The Great Gate	Mountaintop			TRUE	Sealed against the cataclysm for 10,000 years.	Impassable. Insert forest to upgrade to Explorer's Gate.								0	0	0	0
-1	No	Explorer's Gate	Mountaintop				The plasticom tells us that the only biome more swarming with life than a forest is the ocean. But who among us has seen the sea?									0	0	0	0
-2	No	Purification Plant Maintenance Slough	Mountaintop			TRUE	A perfect water recycler, in 10,000 years it has not lost a drop.	Impassable. Insert Swamp to upgrade to The Great River Of Beyond								0	0	0	0
-2	No	The Great River Of Beyond	Mountaintop				Now we take in sludge, and give the world a crystal clear river.			Plus 1 Explorer						0	0	0	0
-	No	Plasticom	Mountaintop				The immortal intelligent computer that has kept Stratohaven running for 10,000 years.	Insert a Forest to upgrade to Global Datamentarian.								0	0	0	0
-	No	Global Datamentarian	Mountaintop				The Plasticom voraciously records all the updated information we bring it from outside Stratohaven.			Plus 1 Hand Size						0	0	0	0
-	No	Interwoven Intellect	Mountaintop							Plus 1 Hand Size						0	0	0	0
-	No	Airlock	Mountaintop	0.00			An airlock with simple controls: two buttons labeled 'Depart' and 'Seal'. Until recently, it has never been used.	Insert a Field to make passable		Reveal location of Fireworks	For a year, the airlock out of Stratohaven has stood unlocked, yet none dared venture beyond. Our haven in the clouds has provided all we needed. Why risk the barren lands below? But today, something changed. In the distance, bursts of light pierced the sky - fireworks, akin to those in our old TV shows. Are we truly alone? Curiosity stirs in Stratohaven. Our bravest will journey to uncover this enigma.					0	0	0	0
-	No	Complex Foundation	Mountaintop	0.00			A complex foundation to some kind of structure. The Plasticom has instructed us not to disturb it.	Insert Stratolink to upgrade.								0	0	0	0
-	No	Stratolink	Mountaintop	0.00			An optical communication beam emitter, capable of transmitting terrabytes of data thousands of miles along line of sight in an instant.	Insert a tile to open a Stratohaven.	Doesn't actually do anything aside from maybe keeping track of how many you've done.	Opens Beat The Game dialog						0	0	0	0
+1	No	Unpassable	Mountaintop		0	TRUE	Too steep to climb.	Impassable								0	0	0	0
+1	No	Videonarium	Mountaintop		0		A crowd has gathered to complete the 9853rd Annual Series Marathon of Friends	insert forest to upgrade to Traveler's Forum.								0	0	0	0
+1	No	Traveler's Forum	Mountaintop		0		Lectures, memoirs, and scientific illustrations inspire the next generation of explorer dreams.	Insert Wasteland to upgrade to World Academy.		Plus 1 Explorer						0	0	0	0
+	No	World Academy	Mountaintop		0		Shocked by the dangers of a chaotic world, we systemitized prepartions for all explorers.			Plus 1 Explorer						0	0	0	0
+1	No	Database Protein Printer	Mountaintop		0		Today's Menu: Breakfast Bacon flavored protein porridge. Lunch Special! Chicken breast protein porridge. Dinner: Oatsimilie Protein Porridge.	Insert Fields to upgrade to Hydroponic Protein Printer.								0	0	0	0
+	No	Hydroponic Protein Printer	Mountaintop		0		Today's Menu: Breakfast: Whole Grain Chia Oats. Lunch Special! Bacon Protein BLT. Dinner: Chicken Salad With Celery.	Insert Swamp to upgrade to Gastroprint Farm		Plus 1 Journey Plan Slots						0	0	0	0
+	No	Gastroprint Farm	Mountaintop		0		Today's Menu: Breakfast Savory Cinnamon Oat Crepes, Lunch Special! Five Star Chicken Tikka Masala, Dinner: Maple Glazed Pancetta Charcuterie			Plus 1 Journey Plan Slots						0	0	0	0
+1	No	The Great Gate	Mountaintop		0	TRUE	Sealed against the cataclysm for 10,000 years.	Impassable. Insert forest to upgrade to Explorer's Gate.								0	0	0	0
+1	No	Explorer's Gate	Mountaintop		0		The plasticom tells us that the only biome more swarming with life than a forest is the ocean. But who among us has seen the sea?									0	0	0	0
+2	No	Purification Plant Maintenance Slough	Mountaintop		0	TRUE	A perfect water recycler, in 10,000 years it has not lost a drop.	Impassable. Insert Swamp to upgrade to The Great River Of Beyond								0	0	0	0
+2	No	The Great River Of Beyond	Mountaintop		0		Now we take in sludge, and give the world a crystal clear river.			Plus 1 Explorer						0	0	0	0
+	No	Plasticom	Mountaintop		0		The immortal intelligent computer that has kept Stratohaven running for 10,000 years.	Insert a Forest to upgrade to Global Datamentarian.								0	0	0	0
+	No	Global Datamentarian	Mountaintop		0		The Plasticom voraciously records all the updated information we bring it from outside Stratohaven.			Plus 1 Hand Size						0	0	0	0
+	No	Interwoven Intellect	Mountaintop		0					Plus 1 Hand Size						0	0	0	0
+	No	Airlock	Mountaintop	0.00	0		An airlock with simple controls: two buttons labeled 'Depart' and 'Seal'. Until recently, it has never been used.	Insert a Field to make passable		Reveal location of Fireworks	For a year, the airlock out of Stratohaven has stood unlocked, yet none dared venture beyond. Our haven in the clouds has provided all we needed. Why risk the barren lands below? But today, something changed. In the distance, bursts of light pierced the sky - fireworks, akin to those in our old TV shows. Are we truly alone? Curiosity stirs in Stratohaven. Our bravest will journey to uncover this enigma.					0	0	0	0
+	No	Complex Foundation	Mountaintop	0.00	0		A complex foundation to some kind of structure. The Plasticom has instructed us not to disturb it.	Insert Stratolink to upgrade.								0	0	0	0
+	No	Stratolink	Mountaintop	0.00	0		An optical communication beam emitter, capable of transmitting terrabytes of data thousands of miles along line of sight in an instant.	Insert a tile to open a Stratohaven.	Doesn't actually do anything aside from maybe keeping track of how many you've done.	Opens Beat The Game dialog						0	0	0	0
 1	Yes	Village	Settlement	0.04	1		Somehow these people have found a way to survive in 10,000 years of cataclysm.									0	1	1	1
 1	Yes	Friendly Tavern	Settlement	0.02	3		All who are weary are welcome to rest here and hear the tales of fellow travelers.	Insert a card to deck 1 card								0	1	1	1
 	Yes	Sprawling Hive City	Settlement	0.15	3			insert field to place an adjacent settlement tile.								0	1	1	1

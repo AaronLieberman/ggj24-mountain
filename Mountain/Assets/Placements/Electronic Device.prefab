@@ -53,6 +53,8 @@ MonoBehaviour:
     that she often visited. Maybe we can find her.
   OnVisitText: 
   LostChance: 0
+  OnVisit: {fileID: 0}
   Difficulty: 2
-  PathingHeuristic: 100000
+  PathingHeuristic: 1
   PaysCost: Woods
+  RevealAction: {fileID: 0}
