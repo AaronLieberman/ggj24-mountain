@@ -15,6 +15,7 @@ public class TileGridLayout : MonoBehaviour
     public Placement DefaultPrefab;
     public GameObject TilePrefab;
     public Placement HomePrefab;
+    public Material HighlightMaterial;
 
     public Vector2Int HomeLocation;
     public Placement HomeInstance { get; private set; }
@@ -83,7 +84,6 @@ public class TileGridLayout : MonoBehaviour
     {
         ClearPath();
 
-        var grid = GetComponent<Grid>();
         var currentTile = startTile;
         foreach (var destination in destinations)
         {
@@ -92,6 +92,8 @@ public class TileGridLayout : MonoBehaviour
                 var tile = GetTileFromLoc(cell);
                 tile.SetHighlight(true);
             }
+
+            currentTile = destination;
         }
     }
 

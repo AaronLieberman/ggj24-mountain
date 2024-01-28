@@ -100,6 +100,12 @@ public class GameManager : MonoBehaviour
 
     public void OnMouseEnterTile(Tile tile)
     {
+        tile.SetHighlight(true);
+    }
+
+    public void OnMouseExitTile(Tile tile)
+    {
+        tile.SetHighlight(false);
     }
 
     public void OnMouseDownTile(Tile tile)
