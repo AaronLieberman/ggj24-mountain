@@ -59,10 +59,13 @@ public class ImportCards : EditorWindow
 
             GameObject prefabTofill = FindOrCreatePrefab(prefabName);
 
-           // // Save the new GameObject as a prefab
-            GameObject prefabInstance = PrefabUtility.SaveAsPrefabAsset(prefabTofill, GetPrefabPath(prefabName));
+            // // Save the new GameObject as a prefab
+            //GameObject prefabInstance = PrefabUtility.SaveAsPrefabAsset(prefabTofill, GetPrefabPath(prefabName));
 
-            Placement tilePlacement = prefabInstance.GetComponent<Placement>();
+            //Placement tilePlacement = prefabInstance.GetComponent<Placement>();
+            Placement tilePlacement = prefabTofill.GetComponent<Placement>();
+
+
             if (splitData[CHANCETOLOST] == "")
             {
                 tilePlacement.LostChance = 0.05f;
@@ -93,8 +96,9 @@ public class ImportCards : EditorWindow
             tilePlacement.OnRevealText = splitData[ONREVEALTEXT];
             tilePlacement.OnVisitText = splitData[ONVISITTEXT];
 
+            //AssetDatabase.DeleteAsset(GetPrefabPath(prefabName));
             // Save the new GameObject as a prefab
-            prefabInstance = PrefabUtility.SaveAsPrefabAsset(prefabTofill, GetPrefabPath(prefabName));
+            PrefabUtility.SaveAsPrefabAsset(prefabTofill, GetPrefabPath(prefabName));
 
             // Destroy the instantiated GameObject
             DestroyImmediate(prefabTofill);
@@ -113,9 +117,9 @@ public class ImportCards : EditorWindow
         GameObject existingPrefab = AssetDatabase.LoadAssetAtPath<GameObject>(GetPrefabPath(PrefabName));
         if(existingPrefab != null)
         {
-            AssetDatabase.DeleteAsset(GetPrefabPath(PrefabName));
+            GameObject prefabInWorld = Instantiate(existingPrefab);
             //Prefab exists
-            return existingPrefab;
+            return prefabInWorld;
         }
         else
         {
@@ -131,6 +135,6 @@ public class ImportCards : EditorWindow
 
     protected static string GetPrefabPath(string prefabName)
     {
-        return AssetDatabase.GenerateUniqueAssetPath("Assets/Placements/" + prefabName + ".prefab");
+        return "Assets/Placements/" + prefabName + ".prefab";
     }
 }
