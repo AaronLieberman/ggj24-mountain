@@ -144,6 +144,7 @@ public class TileGridLayout : MonoBehaviour
         var tileObj = Instantiate(TilePrefab, pos, Quaternion.identity, TilesContainer.transform);
         // not sure why this is necessary .. 
         tileObj.transform.localRotation = Quaternion.identity;
+        tileObj.transform.Rotate(new Vector3(90, 0, 0));
         tileObj.name = $"Tile_{coord.x}_{coord.y}";
         var tile = tileObj.GetComponent<Tile>();
         tile.Location = coord;
