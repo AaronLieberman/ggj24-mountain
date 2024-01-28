@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6216024152685685931}
   - component: {fileID: 626362472129253049}
   m_Layer: 7
-  m_Name: Forest_Tree (1)
+  m_Name: TreeA
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26,13 +26,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 265477624053530365}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.273, y: 0.22, z: 0.085}
+  m_LocalRotation: {x: 0, y: -0.0085519515, z: 0, w: 0.99996346}
+  m_LocalPosition: {x: -0.273, y: 0.146, z: 0.085}
   m_LocalScale: {x: 0.79999995, y: 0.79999995, z: 1.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7273772795233020873}
-  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -0.98, z: 0}
 --- !u!212 &6216024152685685931
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 177141557
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: -638956312, guid: b1fd65972736d9d428706c118634b12d, type: 3}
+  m_Sprite: {fileID: 866278053, guid: f45d5720eb2ddcf4b8cd9ac976a98842, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -109,7 +109,7 @@ GameObject:
   - component: {fileID: 1412215990465841827}
   - component: {fileID: 7421708427737241468}
   m_Layer: 7
-  m_Name: Forest_Tree (5)
+  m_Name: ShrubC
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -123,13 +123,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 393003406586867336}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.075, y: 0.29, z: 0.224}
+  m_LocalRotation: {x: 0, y: -0.0085519515, z: 0, w: 0.99996346}
+  m_LocalPosition: {x: 0.079, y: 0.19999999, z: 0.283}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7273772795233020873}
-  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -0.98, z: 0}
 --- !u!212 &1412215990465841827
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -171,7 +171,7 @@ SpriteRenderer:
   m_SortingLayerID: 177141557
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: -638956312, guid: b1fd65972736d9d428706c118634b12d, type: 3}
+  m_Sprite: {fileID: -1827460693, guid: f45d5720eb2ddcf4b8cd9ac976a98842, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -205,7 +205,7 @@ GameObject:
   - component: {fileID: 7273772795233020873}
   - component: {fileID: 1365756699843689891}
   m_Layer: 0
-  m_Name: Forest
+  m_Name: BanditCopse
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -227,10 +227,10 @@ Transform:
   - {fileID: 1265614678994906638}
   - {fileID: 9188550891861513899}
   - {fileID: 355650533681656356}
+  - {fileID: 2050135986560379856}
   - {fileID: 477154002904127092}
   - {fileID: 1170074432150370119}
   - {fileID: 4991466541856693915}
-  - {fileID: 2050135986560379856}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1365756699843689891
@@ -246,13 +246,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Actions: []
-  Name: Forest
-  FlavorText: The plasticom tells us that the only biome more swarming with life
-    than a forest is the ocean. But who among us has seen the sea?
+  Name: Bandit Copse
+  FlavorText: Insert any tile to not lose a tile when visiting. Insert a Woods tile
+    to upgrade to a Forest.
   OnRevealText: 
   OnVisitText: 
   LostChance: 0.1
-  Difficulty: -1
+  Difficulty: 1
   PathingHeuristic: 1
   PaysCost: 
 --- !u!1 &1861969430247256808
@@ -328,7 +328,7 @@ SpriteRenderer:
   m_SortingLayerID: 1747406911
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1166369273, guid: 78a6885f628c2a548a8ef7edc20c08b0, type: 3}
+  m_Sprite: {fileID: 1141395174, guid: 78a6885f628c2a548a8ef7edc20c08b0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -351,7 +351,7 @@ GameObject:
   - component: {fileID: 1387279044798842452}
   - component: {fileID: 1332068879049733019}
   m_Layer: 7
-  m_Name: Forest_Tree (4)
+  m_Name: ShrubA
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -365,13 +365,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2220956174814639224}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.324, y: 0.22, z: 0.069}
+  m_LocalRotation: {x: 0, y: -0.0085519515, z: 0, w: 0.99996346}
+  m_LocalPosition: {x: 0.324, y: 0.13, z: 0.069}
   m_LocalScale: {x: 0.79999995, y: 0.79999995, z: 1.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7273772795233020873}
-  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -0.98, z: 0}
 --- !u!212 &1387279044798842452
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -413,7 +413,7 @@ SpriteRenderer:
   m_SortingLayerID: 177141557
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: -638956312, guid: b1fd65972736d9d428706c118634b12d, type: 3}
+  m_Sprite: {fileID: -1827460693, guid: f45d5720eb2ddcf4b8cd9ac976a98842, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -448,7 +448,7 @@ GameObject:
   - component: {fileID: 1163949426207567913}
   - component: {fileID: 1563343116901860997}
   m_Layer: 7
-  m_Name: Forest_Tree (3)
+  m_Name: TreeB
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -462,13 +462,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2494090677918071497}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.163, y: 0.29, z: -0.301}
+  m_LocalRotation: {x: 0, y: -0.0085519515, z: 0, w: 0.99996346}
+  m_LocalPosition: {x: 0.196, y: 0.19999999, z: -0.249}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7273772795233020873}
-  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -0.98, z: 0}
 --- !u!212 &1163949426207567913
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -510,7 +510,7 @@ SpriteRenderer:
   m_SortingLayerID: 177141557
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: -638956312, guid: b1fd65972736d9d428706c118634b12d, type: 3}
+  m_Sprite: {fileID: 1146558257, guid: f45d5720eb2ddcf4b8cd9ac976a98842, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -545,7 +545,7 @@ GameObject:
   - component: {fileID: 226090504405095181}
   - component: {fileID: 8587461279683591817}
   m_Layer: 7
-  m_Name: Forest_Tree
+  m_Name: Stump
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -559,13 +559,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4542823158439912166}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.41, z: 0}
+  m_LocalRotation: {x: 0, y: -0.0085519515, z: 0, w: 0.99996346}
+  m_LocalPosition: {x: 0, y: 0.268, z: 0}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7273772795233020873}
-  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -0.98, z: 0}
 --- !u!212 &226090504405095181
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -607,7 +607,7 @@ SpriteRenderer:
   m_SortingLayerID: 177141557
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1648903307, guid: b1fd65972736d9d428706c118634b12d, type: 3}
+  m_Sprite: {fileID: 846882613, guid: f45d5720eb2ddcf4b8cd9ac976a98842, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -642,7 +642,7 @@ GameObject:
   - component: {fileID: 5095340142316134933}
   - component: {fileID: 1099452748361922579}
   m_Layer: 7
-  m_Name: Forest_Tree (2)
+  m_Name: ShrubB
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -656,13 +656,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4892480724164511983}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.169, y: 0.29, z: -0.222}
+  m_LocalRotation: {x: 0, y: -0.0085519515, z: 0, w: 0.99996346}
+  m_LocalPosition: {x: -0.229, y: 0.19999999, z: -0.283}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7273772795233020873}
-  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -0.98, z: 0}
 --- !u!212 &5095340142316134933
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -704,7 +704,7 @@ SpriteRenderer:
   m_SortingLayerID: 177141557
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: -638956312, guid: b1fd65972736d9d428706c118634b12d, type: 3}
+  m_Sprite: {fileID: -1827460693, guid: f45d5720eb2ddcf4b8cd9ac976a98842, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
