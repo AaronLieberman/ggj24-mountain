@@ -31,8 +31,7 @@ public class Worker : MonoBehaviour
         get
         {
             RefreshComponents();
-            var homeCell = _grid.LocalToCell(_map.HomeInstance.transform.parent.localPosition);
-            return WorkerPlan.Any() && _grid.LocalToCell(transform.localPosition) == homeCell;
+            return !WorkerPlan.Any() && Utilities.ToVec2I(_grid.LocalToCell(transform.localPosition)) == _map.HomeLocation;
         }
     }
 
@@ -62,9 +61,9 @@ public class Worker : MonoBehaviour
 
         if (_nextDestinationTileLoc == null)
         {
-            var cell3D = Utilities.ToVec2I(_grid.LocalToCell(new Vector3(transform.localPosition.x, transform.localPosition.y, 0)));
+            var cell = _map.GetCellAtObject(transform);
 
-            var route = PathFinder.CalculateRoute(_map, cell3D, GetNextDestinationWaypointCell(), 1);
+            var route = PathFinder.CalculateRoute(_map, cell, GetNextDestinationWaypointCell(), 1);
             _nextDestinationTileLoc = route.SingleOrDefault();
             if (_nextDestinationTileLoc == null)
                 return;
@@ -74,14 +73,14 @@ public class Worker : MonoBehaviour
         var differenceDir = new Vector3(nextDestinationTilePos.x, nextDestinationTilePos.y, 0) - transform.localPosition;
         if (differenceDir.magnitude < _tileDistanceEpsilon)
         {
-            var cell3D = _grid.LocalToCell(new Vector3(transform.localPosition.x, transform.localPosition.y, 0));
+            var cell = _map.GetCellAtObject(transform);
 
             // force the worker to be exactly in the right local position
             transform.localPosition = _grid.CellToLocal(Utilities.ToVec3I(_nextDestinationTileLoc.Value));
 
             if (_nextDestinationTileLoc == GetNextDestinationWaypointCell())
             {
-                Debug.Log(string.Format("Reached waypoint {0} aka {1}", _nextDestinationTileLoc.Value, cell3D));
+                Debug.LogFormat("Reached waypoint {0} aka {1}", _nextDestinationTileLoc.Value, cell);
                 WorkerPlan.RemoveAt(0);
             }
 

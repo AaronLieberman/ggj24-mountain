@@ -2,11 +2,12 @@ using System;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 using UnityEditor;
-
 using static UnityEngine.GraphicsBuffer;
 using static UnityEditor.PlayerSettings;
 using System.Drawing;
 using UnityEngine.WSA;
+using System.Collections.Generic;
+using System.Linq;
 
 [ExecuteInEditMode]
 public class TileGridLayout : MonoBehaviour
@@ -59,30 +60,39 @@ public class TileGridLayout : MonoBehaviour
     public Vector3 GetPositionFromTileCoord(Vector2Int coord)
         => GetComponent<Grid>().GetCellCenterWorld(new Vector3Int(coord.x, coord.y, 0));
 
+    public Tile GetTileAtObject(Transform transform)
+    {
+        var cell = GetCellAtObject(transform);
+        return GetTileFromLoc(cell);
+    }
 
+    public Vector2Int GetCellAtObject(Transform transform)
+    {
+        return Utilities.ToVec2I(GetComponent<Grid>().LocalToCell(new Vector3(transform.localPosition.x, transform.localPosition.y, 0)));
+    }
 
     public void ClearPath()
     {
-
-    }
-
-    public void ShowPath(Tile src, Tile dest)
-    {
-
-    }
-
-    public void OnMouseEnterTile(Tile tile)
-    {
-        if (_clicked != null)
+        foreach (var tile in GetComponentsInChildren<Tile>())
         {
-            ShowPath(_clicked, tile);
+            tile.SetHighlight(false);
         }
     }
 
-    private Tile _clicked;
-    public void OnMouseDownTile(Tile tile)
+    public void ShowPath(Tile startTile, IEnumerable<Tile> destinations)
     {
-        _clicked = tile;
+        ClearPath();
+
+        var grid = GetComponent<Grid>();
+        var currentTile = startTile;
+        foreach (var destination in destinations)
+        {
+            foreach (var cell in PathFinder.CalculateRoute(this, currentTile.Location, destination.Location))
+            {
+                var tile = GetTileFromLoc(cell);
+                tile.SetHighlight(true);
+            }
+        }
     }
 
     public void Generate(Vector2Int size)

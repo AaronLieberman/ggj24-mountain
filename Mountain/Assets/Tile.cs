@@ -16,9 +16,15 @@ public class Tile : MonoBehaviour
     private TileGridLayout Map => transform.parent.GetComponent<TileGridLayout>();
 
     private void OnMouseEnter()
-        => GetComponentInParent<TileGridLayout>().OnMouseEnterTile(this);
+        => Utilities.GetRootComponent<GameManager>().OnMouseEnterTile(this);
 
     private void OnMouseDown()
-        => GetComponentInParent<TileGridLayout>().OnMouseDownTile(this);
+        => Utilities.GetRootComponent<GameManager>().OnMouseDownTile(this);
 
+    private void OnMouseOver()
+        => Utilities.GetRootComponent<GameManager>().OnMouseOverTile(this);
+
+    public void SetHighlight(bool value)
+    {
+    }
 }

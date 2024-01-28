@@ -98,17 +98,38 @@ public class GameManager : MonoBehaviour
         #endregion
     }
 
+    public void OnMouseEnterTile(Tile tile)
+    {
+    }
+
+    public void OnMouseDownTile(Tile tile)
+    {
+        AddCardToWorkerPlan(Hand.GetComponentInChildren<Card>(), tile);
+    }
+    
+    public void OnMouseOverTile(Tile tile)
+    {
+        if (Input.GetMouseButtonDown(1))
+        {
+            StartWorkerOnJourney();
+        }
+    }
+
     public void AddCardToWorkerPlan(Card card, Tile tile)
     {
         if (!IsWorkerAvailable) return;
         var worker = GetFirstAvailableWorker();
         if (worker.GetComponentsInChildren<Card>().Count() > MaxCards) return;
         WorkerPlan.Add(new WorkerPlan() { Card = card, Tile = tile });
+
+        var workerTile = Map.GetTileAtObject(worker.transform);
+        Map.ShowPath(workerTile, WorkerPlan.Select(a => a.Tile));
     }
 
     public void ClearWorkerPlan()
     {
         WorkerPlan.Clear();
+        Map.ClearPath();
     }
 
     public void StartWorkerOnJourney()
@@ -121,5 +142,7 @@ public class GameManager : MonoBehaviour
         {
             worker.AddDestination(plan.Card, plan.Tile);
         }
+
+        Map.ClearPath();
     }
 }
