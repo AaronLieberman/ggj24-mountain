@@ -1,11 +1,13 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class Tile : MonoBehaviour, INeighborQueryable<Tile>
 {
     public Vector2Int Location { get; set; }
 
+    HashSet<string> _highlightReasons = new();
     Material _highlightMaterial;
     Material _originalMaterial;
 
@@ -24,7 +26,7 @@ public class Tile : MonoBehaviour, INeighborQueryable<Tile>
     public IEnumerable<Tile> GetNeighbors()
         => GetComponentInParent<TileGridLayout>().GetNeighborsByTile(this);
 
-    
+
     public float GetHeuristic()
         => GetComponentInChildren<Placement>()?.PathingHeuristic ?? 1f;
 
@@ -48,9 +50,30 @@ public class Tile : MonoBehaviour, INeighborQueryable<Tile>
     private void OnMouseOver()
         => Utilities.GetRootComponent<GameManager>().OnMouseOverTile(this);
 
-    public void SetHighlight(bool value)
+    public void SetHighlight(string highlightReason, bool value)
     {
-        if (!value)
+        if (value && !_highlightReasons.Contains(highlightReason))
+        {
+            _highlightReasons.Add(highlightReason);
+        }
+        else if (!value && _highlightReasons.Contains(highlightReason))
+        {
+            _highlightReasons.Remove(highlightReason);
+        }
+
+        if (_highlightReasons.Any())
+        {
+            if (_originalMaterial == null)
+            {
+                _originalMaterial = transform.GetComponentsInChildren<SpriteRenderer>().Select(a => a.material).First();
+            }
+
+            foreach (var sr in transform.GetComponentsInChildren<SpriteRenderer>())
+            {
+                sr.material = _highlightMaterial;
+            }
+        }
+        else
         {
             if (_originalMaterial != null)
             {
@@ -58,18 +81,6 @@ public class Tile : MonoBehaviour, INeighborQueryable<Tile>
                 {
                     sr.material = _originalMaterial;
                 }
-            }
-        }
-        else
-        {
-            foreach (var sr in transform.GetComponentsInChildren<SpriteRenderer>())
-            {
-                if (sr.material != _highlightMaterial)
-                {
-                    _originalMaterial = sr.material;
-                }
-
-                sr.material = _highlightMaterial;
             }
         }
     }

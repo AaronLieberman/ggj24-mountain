@@ -40,7 +40,7 @@ public class TileGridLayout : MonoBehaviour
     {
         Generate(GridSize);
         HomeLocation = GetCenterTile();
-        HomeInstance = CreateTileFromLoc(HomeLocation).SpawnPlacement(HomePrefab);
+        HomeInstance = GetTileFromLoc(HomeLocation).SpawnPlacement(HomePrefab);
     }
 
     public void ClearTiles(bool clearCache)
@@ -78,7 +78,7 @@ public class TileGridLayout : MonoBehaviour
     {
         foreach (var tile in GetComponentsInChildren<Tile>())
         {
-            tile.SetHighlight(false);
+            tile.SetHighlight("path", false);
         }
     }
 
@@ -91,7 +91,7 @@ public class TileGridLayout : MonoBehaviour
         {
             foreach (var tile in PathfinderAStar<Tile>.CalculateRoute(currentTile, destination))
             {
-                tile.SetHighlight(true);
+                tile.SetHighlight("path", true);
             }
 
             currentTile = destination;

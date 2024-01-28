@@ -70,45 +70,16 @@ public class GameManager : MonoBehaviour
     void SetupMap()
     {
         Board.Reset();
-
-        #region Debug code for hexes
-        //var homeLoc = Map.GetComponent<Grid>().CellToWorld(new Vector3Int(10, 6, 0));
-        //Instantiate(HomePrefab, homeLoc, quaternion.identity, Map.transform);
-
-        // var worker = Instantiate(WorkerPrefab, Map.transform);
-
-        // worker.AddWaypoint(new Vector2Int(1, 5));
-        // worker.AddWaypoint(new Vector2Int(10, 6));
-        // worker.AddWaypoint(new Vector2Int(3, 2));
-        // worker.AddWaypoint(new Vector2Int(12, 14));
-
-        // var b = new Vector3Int(1, 2, 0);
-        // var o = Map.GetComponent<Grid>().CellToWorld(b);
-        // Instantiate(WorkerPrefab, o, Quaternion.identity, Map.transform);
-        // foreach (var coord in PathFinder.GetAdjacentHexCoords(new Vector2Int(b.x, b.y)))
-        // {
-        //     var world = Map.GetComponent<Grid>().CellToWorld(new Vector3Int(coord.x, coord.y, 0));
-        //     var w = Instantiate(WorkerPrefab, world, Quaternion.identity, Map.transform);
-        //     w.GetComponentInChildren<SpriteRenderer>().color = Color.blue;
-        // }
-
-        //foreach (var coord in PathFinder.CalculateRoute(Map, new Vector2Int(1, 2), new Vector2Int(10, 6)))
-        //{
-        //    var world = Map.GetComponent<Grid>().CellToWorld(new Vector3Int(coord.x, coord.y, 0));
-        //    var w = Instantiate(WorkerPrefab, world, Quaternion.identity, Map.transform);
-        //    w.GetComponentInChildren<SpriteRenderer>().color = Color.blue;
-        //}
-        #endregion
     }
 
     public void OnMouseEnterTile(Tile tile)
     {
-        tile.SetHighlight(true);
+        tile.SetHighlight("mouse", true);
     }
 
     public void OnMouseExitTile(Tile tile)
     {
-        tile.SetHighlight(false);
+        tile.SetHighlight("mouse", false);
     }
 
     public void OnMouseDownTile(Tile tile)
