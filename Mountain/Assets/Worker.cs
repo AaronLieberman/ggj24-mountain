@@ -63,7 +63,7 @@ public class Worker : MonoBehaviour
             }
 
             var route = PathfinderAStar<Tile>.CalculateRoute(_map.GetTileFromLoc(cell), _map.GetTileFromLoc(GetNextDestinationWaypointCell()));
-            _nextDestinationTileLoc = route.Any() ? route.Skip(1).First().Location : null;
+            _nextDestinationTileLoc = route != null && route.Count > 1 ? route.Skip(1).First().Location : null;
             if (_nextDestinationTileLoc == null)
                 return;
         }

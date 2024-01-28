@@ -9,8 +9,11 @@ public class Tile : MonoBehaviour, INeighborQueryable<Tile>
     public Vector2Int Location { get; set; }
 
     HashSet<string> _highlightReasons = new();
+    HashSet<string> _disabledReasons = new();
     Material _highlightMaterial;
     Material _originalMaterial;
+
+    public Placement Placement => GetComponentInChildren<Placement>();
 
     void Awake()
     {
@@ -28,8 +31,8 @@ public class Tile : MonoBehaviour, INeighborQueryable<Tile>
         => GetComponentInParent<TileGridLayout>().GetNeighborsByTile(this);
 
 
-    public float GetHeuristic()
-        => GetComponentInChildren<Placement>()?.PathingHeuristic ?? 1f;
+    public float GetHeuristic(bool isEnd)
+        => isEnd ? 0 : GetComponentInChildren<Placement>()?.PathingHeuristic ?? 1f;
 
     public float CalcDist(Tile other)
         => Vector3.Distance(transform.position, other.transform.position);
@@ -87,6 +90,34 @@ public class Tile : MonoBehaviour, INeighborQueryable<Tile>
                 {
                     sr.material = _originalMaterial;
                 }
+            }
+        }
+    }
+
+    public void SetDisabled(string disabledReason, bool value)
+    {
+        if (value && !_disabledReasons.Contains(disabledReason))
+        {
+            _disabledReasons.Add(disabledReason);
+        }
+        else if (!value && _disabledReasons.Contains(disabledReason))
+        {
+            _disabledReasons.Remove(disabledReason);
+        }
+
+        if (_disabledReasons.Any())
+        {
+            float s = 0.5f;
+            foreach (var sr in transform.GetComponentsInChildren<SpriteRenderer>())
+            {
+                sr.color = new Color(s, s, s);
+            }
+        }
+        else
+        {
+            foreach (var sr in transform.GetComponentsInChildren<SpriteRenderer>())
+            {
+                sr.color = Color.white;
             }
         }
     }
