@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 
 public class DragController : MonoBehaviour
@@ -10,6 +11,7 @@ public class DragController : MonoBehaviour
     public GameObject LinkedObj;
     public MouseButton MouseButtonDrag = MouseButton.Middle;
     public MouseButton MouseButtonReturnHome = MouseButton.Right;
+    public Vector3 StartPos;
 
     public enum MouseButton
     {
@@ -21,19 +23,30 @@ public class DragController : MonoBehaviour
     private Vector3? _lastHitMapPos = null;
     private Vector3 _offset;
 
+    private bool ShouldHandleMouseEvents
+        => !EventSystem.current.IsPointerOverGameObject();
+
     void ReturnHome()
     {
-        transform.localPosition = Vector3.zero;
+        transform.localPosition = StartPos;
         LinkedObj.transform.position = transform.position;
     }
 
     void Start()
     {
-        ReturnHome();
+        StartPos = LinkedObj.transform.position;
+        transform.position = StartPos;
     }
 
     void Update()
     {
+        if (!ShouldHandleMouseEvents)
+        {
+            _lastHitMapPos = null;
+            transform.position = LinkedObj.transform.position;
+            return;
+        }
+
         if (Input.GetMouseButtonDown((int)MouseButtonReturnHome))
         {
             ReturnHome();
