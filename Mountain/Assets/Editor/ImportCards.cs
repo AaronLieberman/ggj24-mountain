@@ -93,11 +93,23 @@ public class ImportCards : EditorWindow
     protected static GameObject FindOrCreatePrefab(string PrefabName)
     {
         Vector3 spawnPosition = Vector3.zero;
-        // Instantiate a new GameObject
-        GameObject newObject = new GameObject(PrefabName);
-        newObject.transform.position = spawnPosition;
-        newObject.AddComponent<Placement>();
-        return newObject;
+        // TODO
+        if(false)
+        {
+            //Prefab exists
+           
+
+        }
+        else
+        {
+            // Instantiate a new GameObject
+            GameObject newObject = new GameObject(PrefabName);
+            newObject.transform.position = spawnPosition;
+            newObject.AddComponent<Placement>();
+            return newObject;
+        }
+
+    
     }
 
     protected static string GetPrefabPath(string prefabName)
