@@ -19,5 +19,6 @@ public class Placement : MonoBehaviour
     public float LostChance;
     public int Difficulty;
     public float PathingHeuristic;  // 0.0 to 1.0
+    public string PaysCost;
     public ICardReveal RevealAction;
 }
