@@ -18,6 +18,8 @@ public class GameManager : MonoBehaviour
     public event EventHandler WorkerAvailableChanged;
     public event EventHandler WorkerPlanChanged;
 
+    private Tile _highlightTile = null;
+
     public List<WorkerPlan> WorkerPlan { get; } = new();
 
     void Awake()
@@ -74,12 +76,21 @@ public class GameManager : MonoBehaviour
 
     public void OnMouseEnterTile(Tile tile)
     {
+        StopMouseActiveHighlight();
         tile.SetHighlight("mouse", true);
+        _highlightTile = tile;
     }
 
     public void OnMouseExitTile(Tile tile)
     {
         tile.SetHighlight("mouse", false);
+        StopMouseActiveHighlight();
+    }
+
+    public void StopMouseActiveHighlight()
+    {
+        _highlightTile?.SetHighlight("mouse", false);
+        _highlightTile = null;
     }
 
     public void OnMouseDownTile(Tile tile)
