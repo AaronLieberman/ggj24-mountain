@@ -10,6 +10,7 @@ public class DragController : MonoBehaviour
     public GameObject LinkedObj;
     public MouseButton MouseButtonDrag = MouseButton.Middle;
     public MouseButton MouseButtonReturnHome = MouseButton.Right;
+    public Vector3 StartPos;
 
     public enum MouseButton
     {
@@ -23,13 +24,14 @@ public class DragController : MonoBehaviour
 
     void ReturnHome()
     {
-        transform.localPosition = Vector3.zero;
+        transform.localPosition = StartPos;
         LinkedObj.transform.position = transform.position;
     }
 
     void Start()
     {
-        ReturnHome();
+        StartPos = LinkedObj.transform.position;
+        transform.position = StartPos;
     }
 
     void Update()
