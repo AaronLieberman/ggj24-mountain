@@ -5,6 +5,12 @@ using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+public class WorkerPlan
+{
+    public Card Card;
+    public Tile Tile;
+}
+
 public class GameManager : MonoBehaviour
 {
     public int MaxCards = 2;
@@ -140,6 +146,8 @@ public class GameManager : MonoBehaviour
         {
             worker.AddDestination(plan.Card, plan.Tile);
         }
+
+        Hand.DrawTillFull();
 
         WorkerPlan.Clear();
         Map.ClearPath();
