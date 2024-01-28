@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 public class Board : MonoBehaviour
@@ -53,5 +54,21 @@ public class Board : MonoBehaviour
         var worker = workerObj.GetComponent<Worker>();
 
         Workers.Add(worker);
+    }
+}
+
+
+[CustomEditor(typeof(Board))]
+public class BoardEditor : Editor
+{
+    public override void OnInspectorGUI()
+    {
+        DrawDefaultInspector();
+
+        var b = (Board)target;
+        if (GUILayout.Button("Clear"))
+        {
+            b.ClearActors();
+        }
     }
 }
