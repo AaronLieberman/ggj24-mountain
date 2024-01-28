@@ -85,10 +85,11 @@ public class GameManager : MonoBehaviour
     public void OnMouseEnterTile(Tile tile)
     {
         StopMouseActiveHighlight();
-        if (!Board.CanTarget(tile))
-        {
-            return;
-        }
+
+        // if (!Board.CanTarget(tile))
+        // {
+        //     return;
+        // }
 
         tile.SetHighlight("mouse", true);
         _highlightTile = tile;
@@ -187,7 +188,23 @@ public class GameManager : MonoBehaviour
         foreach (var tile in Map.GetComponentsInChildren<Tile>())
         {
             bool passable = Map.IsPathPassable(workerTile, WorkerPlan.Select(a => a.Tile).Concat(new[] { tile }));
-            tile.SetDisabled("path", !passable);
+            var placement = tile.GetComponentInChildren<Placement>();
+            bool cardCanBePlaced = placement.Actions.Count >= 0 && placement.Actions.Any(a => a.Cost == card.name || string.IsNullOrEmpty(a.Cost));
+
+            tile.SetDisabled("path", !passable || !cardCanBePlaced);
         }
+    }
+
+    public bool CanCardBePlaced(Card card, Tile tile)
+    {
+        if (!IsWorkerAvailable) return false;
+        var worker = GetFirstAvailableWorker();
+        if (WorkerPlan.Count() >= MaxCards) return false;
+
+        var workerTile = Map.GetTileAtObject(worker.transform);
+        bool passable = Map.IsPathPassable(workerTile, WorkerPlan.Select(a => a.Tile).Concat(new[] { tile }));
+        var placement = tile.GetComponentInChildren<Placement>();
+        bool canCardBePlaced = placement.Actions.Count >= 0 && placement.Actions.Any(a => a.Cost == card.name || string.IsNullOrEmpty(a.Cost));
+        return canCardBePlaced;
     }
 }

@@ -147,14 +147,20 @@ public class TileGridLayout : MonoBehaviour
 
     public void OnMouseUpTile(Tile tile)
     {
-        if (!GetComponent<Board>().CanTarget(tile))
+        // if (!GetComponent<Board>().CanTarget(tile))
+        // {
+        //     return;
+        // }
+
+        var handUI = Utilities.GetRootComponents<Canvas>()
+           .Select(c => c.GetComponentInChildren<HandUI>())
+           .First();
+
+        if (handUI.SelectedCardUI?.Card == null ||
+            !Utilities.GetRootComponent<GameManager>().CanCardBePlaced(handUI.SelectedCardUI.Card, tile))
         {
             return;
         }
-
-        var handUI = Utilities.GetRootComponents<Canvas>()
-            .Select(c => c.GetComponentInChildren<HandUI>())
-            .First();
 
         CardUI selectedCardUI = handUI.SelectedCardUI;
         if (selectedCardUI != null)
