@@ -8,6 +8,13 @@ public class ImportCards : EditorWindow
 {
     private static string CardsCSVPath = "/Editor/CSVs/Cards.csv";
 
+    public const int TILENAME = 2;
+    public const int BIOME = 3;
+    public const int CHANCETOLOST = 4;
+    public const int DIFFICULTY = 5;
+    public const int FLAVORTEXT = 6;
+
+
     [MenuItem("I Made An Editor Tool For A Game Jam Game/Import Cards")]
     public static void DoCardImport()
     {
@@ -16,7 +23,7 @@ public class ImportCards : EditorWindow
         {
             string[] splitData = s.Split(',');
 
-            string prefabName = "NewPrefab";
+            string prefabName = splitData[TILENAME];
             
             GameObject prefabTofill = FindOrCreatePrefab(prefabName);
 
