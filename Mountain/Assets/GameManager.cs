@@ -21,8 +21,8 @@ public class GameManager : MonoBehaviour
 
     void Awake()
     {
-        Board = Utilities.GetRootComponent<Board>();
-        Map = Utilities.GetRootComponent<TileGridLayout>();
+        Map = Utilities.GetRootComponentRecursive<TileGridLayout>();
+        Board = Map.GetComponent<Board>();
         Map.name = $"Map";
 
         Deck = Utilities.GetRootComponent<Deck>();

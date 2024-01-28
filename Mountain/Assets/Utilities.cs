@@ -6,12 +6,19 @@ public static class Utilities
 {
 	public static T GetRootComponent<T>() where T : Component
 	{
-		return SceneManager.GetActiveScene().GetRootGameObjects()
+        return SceneManager.GetActiveScene().GetRootGameObjects()
 			.Select(a => a.GetComponent<T>())
 			.Single(a => a != null);
 	}
 
-	public static void DestroyAllChildren(GameObject go)
+    public static T GetRootComponentRecursive<T>() where T : Component
+    {
+        return SceneManager.GetActiveScene().GetRootGameObjects()
+            .Select(a => a.GetComponentInChildren<T>())
+            .Single(a => a != null);
+    }
+
+    public static void DestroyAllChildren(GameObject go)
 	{
         for (int i = go.transform.childCount - 1; i >= 0; --i)
         {

@@ -14,7 +14,7 @@ TagManager:
   - MapController
   - PlacementTerrain
   - PlacementBase
-  - 
+  - Pathing
   - 
   - 
   - 
@@ -47,9 +47,6 @@ TagManager:
   - name: PlacementTerrain
     uniqueID: 177141557
     locked: 0
-  - name: PlacementTerrain2
-    uniqueID: 990226579
-    locked: 0
-  - name: PlacementTerrain3
-    uniqueID: 1675998893
+  - name: Pathing
+    uniqueID: 820398905
     locked: 0

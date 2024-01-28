@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Tile : MonoBehaviour
+public class Tile : MonoBehaviour, INeighborQueryable<Tile>
 {
     public Vector2Int Location { get; set; }
 
@@ -20,6 +20,16 @@ public class Tile : MonoBehaviour
 
         return Instantiate(placement, transform);
     }
+
+    public IEnumerable<Tile> GetNeighbors()
+        => GetComponentInParent<TileGridLayout>().GetNeighborsByTile(this);
+
+    
+    public float GetHeuristic()
+        => GetComponentInChildren<Placement>()?.PathingHeuristic ?? 1f;
+
+    public float CalcDist(Tile other)
+        => Vector3.Distance(transform.position, other.transform.position);
 
     private TileGridLayout Map => transform.parent.GetComponent<TileGridLayout>();
 

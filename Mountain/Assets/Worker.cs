@@ -62,9 +62,14 @@ public class Worker : MonoBehaviour
         if (_nextDestinationTileLoc == null)
         {
             var cell = _map.GetCellAtObject(transform);
+            if (!_map.IsValidLocation(cell))
+            {
+                Debug.LogWarning($"Invalid cell location: {cell.x},{cell.y}");
+                return;
+            }
 
-            var route = PathFinder.CalculateRoute(_map, cell, GetNextDestinationWaypointCell(), 1);
-            _nextDestinationTileLoc = route.SingleOrDefault();
+            var route = PathfinderAStar<Tile>.CalculateRoute(_map.GetTileFromLoc(cell), _map.GetTileFromLoc(GetNextDestinationWaypointCell()));
+            _nextDestinationTileLoc = route.Any() ? route.First().Location : null;
             if (_nextDestinationTileLoc == null)
                 return;
         }

@@ -3,10 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class MapController : MonoBehaviour
+public class DragController : MonoBehaviour
 {
     public LayerMask Mask = ~0;
     public Camera Camera;
+    public GameObject LinkedObj;
+    public MouseButton MouseButtonDrag = MouseButton.Middle;
+    public MouseButton MouseButtonReturnHome = MouseButton.Right;
+
+    public enum MouseButton
+    {
+        Left = 0,
+        Right = 1,
+        Middle = 2
+    }
 
     private Vector3? _lastHitMapPos = null;
     private Vector3 _offset;
@@ -14,6 +24,7 @@ public class MapController : MonoBehaviour
     void ReturnHome()
     {
         transform.localPosition = Vector3.zero;
+        LinkedObj.transform.position = transform.position;
     }
 
     void Start()
@@ -23,13 +34,13 @@ public class MapController : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(1))
+        if (Input.GetMouseButtonDown((int)MouseButtonReturnHome))
         {
             ReturnHome();
             return;
         }
 
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown((int)MouseButtonDrag))
         {
             Ray ray = Camera.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
@@ -49,7 +60,7 @@ public class MapController : MonoBehaviour
             return;
         }
 
-        if (_lastHitMapPos != null && Input.GetMouseButton(0))
+        if (_lastHitMapPos != null && Input.GetMouseButton((int)MouseButtonDrag))
         {
             Ray ray = Camera.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
@@ -62,5 +73,6 @@ public class MapController : MonoBehaviour
             }
         }
 
+        LinkedObj.transform.position = transform.position;
     }
 }

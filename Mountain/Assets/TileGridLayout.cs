@@ -22,13 +22,15 @@ public class TileGridLayout : MonoBehaviour
 
     public GameObject TilesContainer;
     public Vector2Int GridSize = new Vector2Int(20, 20);
-    public Vector3 StartPos;
 
     public Bounds Bounds = new Bounds();
 
     private Tile[,] _tiles = new Tile[0, 0]; // col major
 
     private Vector2Int _generatedGridSize = new Vector2Int(-1, -1);
+
+
+    public LineRenderer PathLines => GetComponentInChildren<LineRenderer>();
 
     void Start()
     {
@@ -87,14 +89,21 @@ public class TileGridLayout : MonoBehaviour
         var currentTile = startTile;
         foreach (var destination in destinations)
         {
-            foreach (var cell in PathFinder.CalculateRoute(this, currentTile.Location, destination.Location))
+            foreach (var tile in PathfinderAStar<Tile>.CalculateRoute(currentTile, destination))
             {
-                var tile = GetTileFromLoc(cell);
                 tile.SetHighlight(true);
             }
 
             currentTile = destination;
         }
+    }
+
+    public void OnMouseEnterTile(Tile tile)
+    {
+    }
+
+    public void OnMouseDownTile(Tile tile)
+    {
     }
 
     public void OnMouseUpTile(Tile tile)
@@ -144,9 +153,9 @@ public class TileGridLayout : MonoBehaviour
 
         // anchor along cameraX
         transform.position = new Vector3(
-            StartPos.x - Bounds.size.x / 2,
-            StartPos.y,
-            StartPos.z);
+            -Bounds.size.x / 2,
+            0,
+            0);
 
         refreshBounds();
 
@@ -177,6 +186,12 @@ public class TileGridLayout : MonoBehaviour
         return tile;
     }
 
+    public bool IsValidLocation(Vector2Int checkCoord)
+        => checkCoord.x >= 0
+            && checkCoord.x < GridSize.x
+            && checkCoord.y >= 0
+            && checkCoord.y < GridSize.y;
+
     void Update()
     {
 #if UNITY_EDITOR
@@ -185,7 +200,26 @@ public class TileGridLayout : MonoBehaviour
             Generate(GridSize);
         }
 #endif
+
+        //if ( Input.GetMouseButtonUp(0) )
+        //{
+        //    ClearPath();
+        //}
+        //else if ( Input.GetMouseButton(0)
+        //    && (_pathfindingPath?.Length ?? 0) > 1)
+        //{
+        //    PathLines.positionCount = _pathfindingPath.Length; 
+        //    for ( var i = 0; i < _pathfindingPath.Length; ++i )
+        //    {
+        //        PathLines.SetPosition(i, GetPositionFromTileCoord(_pathfindingPath[i]));
+        //    }
+        //}
     }
+
+    public IEnumerable<Tile> GetNeighborsByTile(Tile tile)
+        => PathFinder.GetAdjacentHexCoords(new Vector2Int(tile.Location.x, tile.Location.y))
+            .Where(checkCoord => IsValidLocation(checkCoord))
+            .Select(coord => GetTileFromLoc(coord));
 
     public void OnDrawGizmos()
     {
