@@ -6,9 +6,9 @@ using UnityEngine;
 [Serializable]
 public class TileAction
 {
-    public Card Cost;
-    public Tile Upgrade;
-    public MonoBehaviour Action;
+    public string Cost;
+    public Placement Upgrade;
+    public IUpgradeAction Action;
 }
 
 public class Placement : MonoBehaviour
