@@ -31,9 +31,7 @@ public class TileGridLayout : MonoBehaviour
 
     void Start()
     {
-        PathLines.material = new Material(Shader.Find("Unlit/Transparent"));
         PathLines.material.renderQueue = 5000;
-        //PathLines.material.color = new Color(1, 1, 1, 1);
     }
 
     public void Reset()
