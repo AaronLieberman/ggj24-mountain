@@ -22,8 +22,8 @@ public class GameManager : MonoBehaviour
 
     void Awake()
     {
-        Board = Utilities.GetRootComponent<Board>();
-        Map = Utilities.GetRootComponent<TileGridLayout>();
+        Map = Utilities.GetRootComponentRecursive<TileGridLayout>();
+        Board = Map.GetComponent<Board>();
         Map.name = $"Map";
 
         Deck = Utilities.GetRootComponent<Deck>();
@@ -103,6 +103,12 @@ public class GameManager : MonoBehaviour
 
     public void OnMouseEnterTile(Tile tile)
     {
+        tile.SetHighlight(true);
+    }
+
+    public void OnMouseExitTile(Tile tile)
+    {
+        tile.SetHighlight(false);
     }
 
     public void OnMouseDownTile(Tile tile)

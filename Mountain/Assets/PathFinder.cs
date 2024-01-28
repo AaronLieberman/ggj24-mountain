@@ -38,6 +38,7 @@ public class PathFinder
 
         int iterations = 0;
         var results = new List<Vector2Int>();
+        results.Add(fromCoord);
         while (currentCoord != toCoord && iterations < maxIterations)
         {
             iterations++;
