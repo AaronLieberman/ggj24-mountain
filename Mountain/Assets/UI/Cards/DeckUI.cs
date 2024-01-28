@@ -1,6 +1,7 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
 
-public class DeckUI : MonoBehaviour
+public class DeckUI : MonoBehaviour, IPointerEnterHandler
 {
     [SerializeField] private GameObject DeckSlotPrefab;
     [SerializeField] private Transform CardsSectionTransform;
@@ -26,5 +27,10 @@ public class DeckUI : MonoBehaviour
             
             cardSlot.GetComponent<CardUI>().SetTexture();
         }
+    }
+
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        Utilities.GetRootComponent<GameManager>().InvokeHideTooltip();
     }
 }

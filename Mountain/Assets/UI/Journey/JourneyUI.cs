@@ -3,8 +3,9 @@ using System.Linq;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
-public class JourneyUI : MonoBehaviour
+public class JourneyUI : MonoBehaviour, IPointerEnterHandler
 {
     [SerializeField] private GameObject JourneySlotPrefab;
     [SerializeField] private Transform JourneySectionTransform;
@@ -60,5 +61,10 @@ public class JourneyUI : MonoBehaviour
     {
         JourneyResetButton.interactable = Utilities.GetRootComponent<GameManager>().IsWorkerAvailable;
         JourneyGoButton.interactable = Utilities.GetRootComponent<GameManager>().IsWorkerAvailable;
+    }
+
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        Utilities.GetRootComponent<GameManager>().InvokeHideTooltip();
     }
 }

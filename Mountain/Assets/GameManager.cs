@@ -25,6 +25,8 @@ public class GameManager : MonoBehaviour
     public event EventHandler WorkerPlanChanged;
 
     private Tile _highlightTile = null;
+    public event EventHandler ShowTooltip;
+    public event EventHandler HideTooltip;
 
     public List<WorkerPlan> WorkerPlan { get; } = new();
 
@@ -85,12 +87,16 @@ public class GameManager : MonoBehaviour
         StopMouseActiveHighlight();
         tile.SetHighlight("mouse", true);
         _highlightTile = tile;
+
+        ShowTooltip.Invoke(null, null);
     }
 
     public void OnMouseExitTile(Tile tile)
     {
         tile.SetHighlight("mouse", false);
         StopMouseActiveHighlight();
+
+        InvokeHideTooltip();
     }
 
     public void StopMouseActiveHighlight()
@@ -153,5 +159,10 @@ public class GameManager : MonoBehaviour
         Map.ClearPath();
 
         WorkerPlanChanged.Invoke(null, null);
+    }
+
+    public void InvokeHideTooltip()
+    {
+        HideTooltip.Invoke(null, null);
     }
 }

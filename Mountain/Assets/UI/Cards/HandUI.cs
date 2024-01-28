@@ -5,8 +5,9 @@ using UnityEditor;
 using UnityEngine;
 using System.Linq;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
-public class HandUI : MonoBehaviour
+public class HandUI : MonoBehaviour, IPointerEnterHandler
 {
     [SerializeField] private GameObject CardSlotPrefab;
     [SerializeField] private Transform CardSectionTransform;
@@ -69,5 +70,10 @@ public class HandUI : MonoBehaviour
         {
             SelectedCardUI = null;
         }
+    }
+
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        Utilities.GetRootComponent<GameManager>().InvokeHideTooltip();
     }
 }
