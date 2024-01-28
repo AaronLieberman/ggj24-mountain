@@ -6,7 +6,7 @@ using System;
 
 public class ImportCards : EditorWindow
 {
-    private static string CardsCSVPath = "/Editor/CSVs/Cards.csv";
+    private static string CardsCSVPath = "/Editor/CSVs/Cards.tsv";
 
     public const int PRIORITY = 0;
     public const int CANBEDRAWN = 1;
@@ -34,7 +34,7 @@ public class ImportCards : EditorWindow
         string[] allLines = File.ReadAllLines(Application.dataPath + CardsCSVPath);
         foreach (string s in allLines)
         {
-            string[] splitData = s.Split(',');
+            string[] splitData = s.Split('\t');
 
             string prefabName = splitData[TILENAME];
 

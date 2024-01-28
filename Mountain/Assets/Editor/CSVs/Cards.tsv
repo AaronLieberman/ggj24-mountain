@@ -1,0 +1,575 @@
+Priority	Can be drawn	Name	Biome Type	Chance To Get Lost	Difficult	Impassable	Flavor Text	Ability	Secret Effect	On Reveal	On Reveal Text	On Visit	On Visit Text			Pool 1 Membership	Pool 2	Pool 3	Pool 4
+1	Yes	Grassland	Fields	0.10	1		Like a lawn the runs to the horizon.	Insert any tile to upgrade to Grassland Highway.								1	1	1	1
+2	Yes	Grassland Highway	Fields	0.00	1		Printer drones have spread this spindle of mountaintop plasphalt all the way to the horizon.									1	1	1	1
+	Yes	Temple of Saint Bread	Fields		4		After a cup of matcha latte, everything in life looks a little better.	Reveals your card to be a positive effect	The revealed random card is on the upper end of the spectrum of effects. It is revealed to be better than the average effect of that biome.							1	1	1	1
+1	Yes	Bandit Copse	Fields		-1		Insert any tile to not lose a tile when visiting. Insert a Woods tile to upgrade to a Forest.			Lose a random tile.						1	1	1	1
+	Yes	Winding Tunnel	Fields	0.00	2		Where does this go?	Skip the effects of the next tile.	None							1	1	1	1
+	Yes	Landmark	Fields		3		Did the ancient world use this spire as a point of reference? No other purpose is apparent.			Reduce the chance to get lost on all adjacent tiles by 20%						1	1	1	1
+2	Yes	Lodestone Outcropping	Fields	0.00	2		The knowledge required to make compasses was never lost to us, but on our tiny mountaintop, there was no need for them.					Explorers visiting here reduce their chance to get lost by 5%				1	1	1	1
+	Yes	Abandoned Wagon	Fields	0.00	2		Deep wagon ruts make it impossible to lose the way.			Reveal Wagon Caravan within 2 tiles						0	0	1	1
+	No	Wagon Caravan	Fields	0.00	0		These nomads have seen a hundred lands, but when they hear about the mountaintop, they promise to visit soon.	Insert a tile to deck 4 settlements, 4 fields, 4 forests, and 1 swamp. 								0	0	0	0
+	Yes	Croplands	Fields													1	1	1	1
+1	No	Unpassable	Mountaintop			TRUE	Too steep to climb.	Impassable								0	0	0	0
+1	No	Videonarium	Mountaintop				A crowd has gathered to complete the 9853rd Annual Series Marathon of Friends	insert forest to upgrade to Traveler's Forum.								0	0	0	0
+1	No	Traveler's Forum	Mountaintop				Lectures, memoirs, and scientific illustrations inspire the next generation of explorer dreams.	Insert Wasteland to upgrade to World Academy.		Plus 1 Explorer						0	0	0	0
+	No	World Academy	Mountaintop				Shocked by the dangers of a chaotic world, we systemitized prepartions for all explorers.			Plus 1 Explorer						0	0	0	0
+1	No	Database Protein Printer	Mountaintop				Today's Menu: Breakfast Bacon flavored protein porridge. Lunch Special! Chicken breast protein porridge. Dinner: Oatsimilie Protein Porridge.	Insert Fields to upgrade to Hydroponic Protein Printer.								0	0	0	0
+	No	Hydroponic Protein Printer	Mountaintop				Today's Menu: Breakfast: Whole Grain Chia Oats. Lunch Special! Bacon Protein BLT. Dinner: Chicken Salad With Celery.	Insert Swamp to upgrade to Gastroprint Farm		Plus 1 Journey Plan Slots						0	0	0	0
+	No	Gastroprint Farm	Mountaintop				Today's Menu: Breakfast Savory Cinnamon Oat Crepes, Lunch Special! Five Star Chicken Tikka Masala, Dinner: Maple Glazed Pancetta Charcuterie			Plus 1 Journey Plan Slots						0	0	0	0
+1	No	The Great Gate	Mountaintop			TRUE	Sealed against the cataclysm for 10,000 years.	Impassable. Insert forest to upgrade to Explorer's Gate.								0	0	0	0
+1	No	Explorer's Gate	Mountaintop				The plasticom tells us that the only biome more swarming with life than a forest is the ocean. But who among us has seen the sea?									0	0	0	0
+2	No	Purification Plant Maintenance Slough	Mountaintop			TRUE	A perfect water recycler, in 10,000 years it has not lost a drop.	Impassable. Insert Swamp to upgrade to The Great River Of Beyond								0	0	0	0
+2	No	The Great River Of Beyond	Mountaintop				Now we take in sludge, and give the world a crystal clear river.			Plus 1 Explorer						0	0	0	0
+	No	Plasticom	Mountaintop				The immortal intelligent computer that has kept Stratohaven running for 10,000 years.	Insert a Forest to upgrade to Global Datamentarian.								0	0	0	0
+	No	Global Datamentarian	Mountaintop				The Plasticom voraciously records all the updated information we bring it from outside Stratohaven.			Plus 1 Hand Size						0	0	0	0
+	No	Interwoven Intellect	Mountaintop							Plus 1 Hand Size						0	0	0	0
+	No	Airlock	Mountaintop	0.00			An airlock with simple controls: two buttons labeled 'Depart' and 'Seal'. Until recently, it has never been used.	Insert a Field to make passable		Reveal location of Fireworks	For a year, the airlock out of Stratohaven has stood unlocked, yet none dared venture beyond. Our haven in the clouds has provided all we needed. Why risk the barren lands below? But today, something changed. In the distance, bursts of light pierced the sky - fireworks, akin to those in our old TV shows. Are we truly alone? Curiosity stirs in Stratohaven. Our bravest will journey to uncover this enigma.					0	0	0	0
+	No	Complex Foundation	Mountaintop	0.00			A complex foundation to some kind of structure. The Plasticom has instructed us not to disturb it.	Insert Stratolink to upgrade.								0	0	0	0
+	No	Stratolink	Mountaintop	0.00			An optical communication beam emitter, capable of transmitting terrabytes of data thousands of miles along line of sight in an instant.	Insert a tile to open a Stratohaven.	Doesn't actually do anything aside from maybe keeping track of how many you've done.	Opens Beat The Game dialog						0	0	0	0
+1	Yes	Village	Settlement	0.04	1		Somehow these people have found a way to survive in 10,000 years of cataclysm.									0	1	1	1
+1	Yes	Friendly Tavern	Settlement	0.02	3		All who are weary are welcome to rest here and hear the tales of fellow travelers.	Insert a card to deck 1 card								0	1	1	1
+	Yes	Sprawling Hive City	Settlement	0.15	3			insert field to place an adjacent settlement tile.								0	1	1	1
+2	Yes	Honored Court	Settlement	0.00	5		Uh, you know what. We'll take you there ourselves.	Knights escort your explorer safely to the next waypoint. Skip effects on the way.								0	1	1	1
+	Yes	Quaint Village	Settlement		4		This tranquil collection of cottages must conceal something more sinister.	Insert a tile to investigate!	Your explorer is still there. Investigate ability upgrades to Wedding Festival	Kill the explorer	The Explorer has gone missing!					0	0	1	1
+	No	Wedding Festival	Settlement	0.00	0		The original Explorer has found love and settled with a local!	Insert a field to attend, deck a field. Insert a forest to attend, deck a forest. Insert a swamp to attend, deck a swamp.		Place the tiles that were lost		A wedding guest loved your toast so much they joined! Plus 1 explorer!				0	0	0	0
+	No	Endless Festival	Settlement	0.00	0		The original Explorer has found love and settled with a local!	Insert a field to attend, deck a field. Insert a forest to attend, deck a forest. Insert a swamp to attend, deck a swamp.								0	0	0	0
+	Yes	Lunar Vantage Array	Settlement	0.04	5		A 10,000 year old communication array is ready to recieve one last update from the Lunar Vantage Point Base. But what is it pointed at?	Insert Swamp to reduce the chance of being lost in all placed tiles by 4%, upgrade to Silent Array.								0	1	1	1
+	No	Silent Array	Settlement	0.00	0		A communcations array listening for a message that will never arrive. Scattered around the base of the array are images of the area from impossibly high above.									0	0	0	0
+	Yes	Lost Child	Settlement		4			Insert a tile to check on the child, deck a card. (maybe make 5 of these, one for each type so the deck is the same biome you spent)		Place A Worried Mother 3 tiles away						0	1	1	1
+	No	A Worried Mother	Settlement		0		I've looked everywhere!					If this Explorer has visited Lost Child, upgrade to Happy Reunion				0	0	0	0
+	No	Happy Reunion	Settlement	0.00	0					Deck 4 Settlements, 8 fields, 1 forest						0	0	0	0
+1	Yes	Wetland	Swamp	0.20	-1		Not for us, but the birds seem to enjoy it.									0	0	1	1
+	Yes	Crow Throne	Swamp	0.01	-4		On this throne sits a pessimistic oracle.	Reveals a random card in the Journey Plan.	The revealed random card is on the low end of the spectrum of effects. It is revealed to be worse than the average effect of that biome.							0	0	1	1
+	Yes	Predatory Distillery	Swamp	0.00	-3		Well… at least it was a good time.		Teleport the explorer to a random explored tile within 5 tiles.			Explorer gets drunk and awakens… somewhere.				0	0	1	1
+	Yes	Winewater Spring	Swamp		1		Unbelievable stories of a land long lost are told here. Something about these myths makes you believe they were once real.		None. This is a reference to the game Where The Water Tastes Like Wine, a strong influence on this game.	Deck 2 cards						0	0	1	1
+	Yes	Froggie Bog Pirates	Swamp		-2	TRUE	A twangy dirge drifts through the miasma acompanied by a croaking chrous that reveals a submerged stash.	Impassable.		Explorer is turned back, reveal Submerged Stash 2 hexes away.						0	0	1	1
+	No	Submerged Stash	Swamp		3	TRUE	The eclectic riches we found here may lead us back to their owners, but we should not return here once the theives discover what is missing.	Impassable. Insert Wood or Field to visit and deck 6 settlements. Upgrade to Sunken Stash.								0	0	0	0
+	No	Sunken Stash	Swamp		0	TRUE		Impassable.								0	0	0	0
+	Yes	Frozen Marsh	Swamp													0	0	1	1
+	Yes	Soggy Scrubland	Swamp													0	0	1	1
+	Yes	Quicksand	Swamp		-4			Insert a tile, 50% chance for all Explorers to move to an adjacent tile.				Explorers on this tile cannot leave.				0	0	1	1
+	Yes	Contagious Mangrove	Swamp		-2							30% chance to replace a tile in the Journey Plan with a Swamp				0	0	1	1
+	Yes	Riparian Glade	Swamp		-1	TRUE	Impassable. Insert a forest to pass and deck a forest.									0	0	1	1
+	Yes	Delta	Swamp		-3					Place 2 adjacent Speading Delta		Move to an adjacent Spreading Delta				0	0	1	1
+	No	Spreading Delta	Swamp		0					If next to a Spreading Delta, place 2 adjacent Delta Edges		Move to an adjacent Delta Edge				0	0	0	0
+	No	Delta Edge	Swamp		0											0	0	0	0
+	Yes	Mudflat	Swamp													0	0	1	1
+	Yes	Freshwater Bog	Swamp													0	0	1	1
+1	Yes	Barren Earth	Wasteland	0.30	-2		The ashy regolith of this place offers no comfort.									0	0	0	1
+	Yes	Giant Spider Lair	Wasteland		-5		insert wasteland, 30% chance to pass, insert fields 50% chance to pass, insert settlement for 90% chance to pass.									0	0	0	1
+	Yes	Triple Vortex	Wasteland	1.00	-4		I’ve a feeling we’re not in Kansas anymore.		Your explorer gets lost 100% of the time.							0	0	0	1
+	Yes	Smokey Canyon	Wasteland	0.30	-2		*cough* *cough* *hack* *snuff* *gasp*			Places Bonefire 3 hexes away.						0	0	0	1
+	No	Bonefire	Wasteland	0.05	1		Exhausted refugees huddle around a mound of burning bones and warn each other about the dangers they've encountered.	Insert one Wood to deck 5 cards and 7 Wastelands								0	0	0	0
+	Yes	Graveyard Crest	Wasteland	0.40	-2		Six gravestones worn smooth with time fill this small memorial. Five of them stand above gaping pits.	Insert a field to fill in the pits. Insert a wasteland to remove this desecration.	Inserting a wasteland upgrades to Vengeful Vantage, decks 5 wastelands. Insert a field upgrades to Barren Earth.							0	0	0	1
+	No	Vengeful Vantage	Wasteland	0.50	-3		Whistling wails haunt this hillock, whether by wraiths or the wind.			Increase lost chance in all surrounding tiles 20%						0	0	0	0
+1	Yes	Forest	Woods	0.10	1		The plasticom tells us that the only biome more swarming with life than a forest is the ocean. But who among us has seen the sea?									0	1	1	1
+3	Yes	Robot Buddha	Woods	0.03	1		Nearly as old as the Stratohaven, the Robot Buddha has learned to live sustainably in chaos. It wants nothing, it needs nothing.	None	None							0	1	1	1
+	Yes	Merchant Shack	Woods	0.01	-3		An old man lives here	Your explorer trades a tile for magic beans. Upgrade to Tattered Shack.	Lose a tile.							0	1	1	1
+	No	Tattered Shack	Woods	0.03	0		No one lives here.	None								0	0	0	0
+2	Yes	Smiling Rogue	Woods	0.30	3		A handsome rogue offers to show us the way, but the route is hard to remember.			Place a card on an adjacent space.						0	1	1	1
+2	Yes	Roguish Smile	Woods	0.10	-2		A handsome rogue offers to show us the way, but there's something off about his smile.			Lose a tile, ignore the next tile effect.						0	1	1	1
+	Yes	Thorngate	Woods		-2		Curtains of sharp briars grow so quickly they seem to move.	Insert a forest tile to clear the gateway.	Ability upgrades to Cleared Thorngate							0	1	1	1
+	Yes	Cleared Thorngate	Woods		0					Place adjacent Briar Passage. Place 4 adjacent Bristling Walls		Upgrade to Thorngate				0	0	0	1
+	No	Briar Passage	Woods		0			Insert a forest tile to clear the passageway.	Ability upgrades to Cleared Briar Passage							0	0	0	0
+	No	Cleared Briar Passage	Woods		0					Place adjacent Nettled Nest. Place an adjacent Bristling Wall.		Upgrade to Briar Passage				0	0	0	0
+	No	Nettled Nest	Woods		0			Insert a tile to deck 1 wasteland, 6 woods, 4 Settlements, 2 Fields.		Place 5 adjacent Bristling Walls						0	0	0	0
+	No	Empty Nest	Woods		0											0	0	0	0
+	No	Bristling Wall	Woods		0	TRUE		Impassable. Insert Wasteland to burn the thicket.	Upgrades to Wildfire							0	0	0	0
+	No	Wildfire	Wasteland		0					Upgrade adjacent Bristling Walls to Wildfire. Upgrade to Barren Earth						0	0	0	0
+	Yes	Orchard	Woods		2					Deck a Settlement						0	1	1	1
+	Yes	Toadstool Grove	Woods	0.07	-1		Towering toadstools shade the moist soil.	Insert a forest, deck 2 swamps								0	0	1	1
+	Yes	Green Canopy	Woods	0.07	2		Wind ripples an emerald ceiling, causing slivers of sunlight to dance across the carpet of ferns.	Insert a Settlement to upgrade to Canopy Village, Insert a Field to upgrade to Megalo Fruit Farm								0	1	1	1
+	No	Canopy Village	Woods	0.00	0			Insert a forest, 50% chance to deck a Settlement, 50% chance to deck any card.		Deck a forest						0	0	0	0
+	No	Megalo Fruit Farm	Woods	0.08	0		Each Megalofruit is as big as a man. Getting them down from the lofty canopy is a challenge.			Deck a forest		Deck a forest				0	0	0	0
+	Yes	Seed Vault	Settlement	0.05	2		Every seed the last of its kind. We'll restore each linage to the world.			Deck a forest, field, and swamp.						0	0	1	1
+	No	Fireworks	Fields	0.00	2					Deck 4 cards, Show Strider Village tile 1 space away	Our expedition below Stratohaven yielded the unimaginable – survivors! We believed the surface world extinct, yet here they thrive, ignorant of our technologies like protein printers or television screens. Among the survivors, they exclaim that our technology reminds them of 'talking metal' that their neighbor speaks of. They provide directions to their village, where tales of this device originated. Perhaps this is a clue to others from our world.					0	0	0	0
+	No	Strider Village	Settlement	0.00	2					Unlocks Pool 2, Deck 4 cards, Show Electronic Device tile on other side of The Great Gate	In the village, we found the old man named Bennett. Known among his neighbors for his eccentric interests, Bennett claims he's been experimenting with a strange, beeping box he found buried near the village a decade ago. He insists it's not just scrap metal. His description sounds eerily similar to our old communication devices. Could it be a lost relic from another Stratohaven? We decide to investigate further, hoping to uncover a piece of our forgotten past. He provides the location of where he hid the diary.					0	0	0	0
+	No	Electronic Device	Woods	0.00	2					Unlocks Pool 3, Deck 4 cards, Show Stasia's Residency tile on other side of Purification Plant Maintenance Slough	The device Bennett found indeed turned out to be an electronic diary, and it belonged to someone named Stasia. According to the diary, she lived in a place that sounds remarkably like our own Stratohaven. She mentions coordinates that she often visited. Maybe we can find her.					0	0	0	0
+	No	Stasia's Residency	Settlement	0.00	2					Unlocks Pool 4, Deck 4 cards, reveals Control room far away	We found Stasia's home, but she has been dead for many years now. Her husband, now an old man, guards her possessions like precious treasures. From her computer, we extract the coordinates - they lead to a location that's not on any of our maps. It's time to explore these unknown coordinates and unravel the mysteries they hold.					0	0	0	0
+	No	Control Room	Wasteland	0.00	2					Deck 10 cards	The coordinates lead us not to another city in the clouds, but to a secluded control room nestled on a lesser-known mountain. The room is filled with old technology and screens, some still flickering with life. Stasia's digital logs reveal she was a guardian of sorts, the most recent in a long line of clones, maintaining the technology that oversees these mountaintop settlements. The screens show several settlements like Stratohaven, yet ours is the only one with the gate marked 'open.' The question lingers in the air: If Stasia died before Stratohaven was unlocked, who unlocked our city, and why? We hope the Stratolink printplans we discovered will lead to answers.					0	0	0	0
+	Yes															0	0	0	0
+	Yes															0	0	0	0
+	Yes															0	0	0	0
+	Yes															0	0	0	0
+	Yes															0	0	0	0
+	Yes															0	0	0	0
+	Yes															0	0	0	0
+	Yes															0	0	0	0
+	Yes															0	0	0	0
+	Yes															0	0	0	0
+	Yes															0	0	0	0
+	Yes															0	0	0	0
+	Yes															0	0	0	0
+	Yes															0	0	0	0
+	Yes															0	0	0	0
+	Yes															0	0	0	0
+	Yes															0	0	0	0
+	Yes															0	0	0	0
+	Yes															0	0	0	0
+	Yes															0	0	0	0
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
+	Yes																		
