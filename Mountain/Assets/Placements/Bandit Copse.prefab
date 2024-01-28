@@ -205,7 +205,7 @@ GameObject:
   - component: {fileID: 7273772795233020873}
   - component: {fileID: 1365756699843689891}
   m_Layer: 0
-  m_Name: BanditCopse
+  m_Name: Bandit Copse
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 6077871893123026301}
   - component: {fileID: 3814133976299155109}
   m_Layer: 0
-  m_Name: BarrenEarth
+  m_Name: Barren Earth
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
