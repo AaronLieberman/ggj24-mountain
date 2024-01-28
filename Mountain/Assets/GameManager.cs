@@ -105,20 +105,6 @@ public class GameManager : MonoBehaviour
         _highlightTile = null;
     }
 
-    public void OnMouseDownTile(Tile tile)
-    {
-        //AddCardToWorkerPlan(Hand.GetComponentInChildren<Card>(), tile);
-    }
-    
-    public void OnMouseOverTile(Tile tile)
-    {
-        /*
-        if (Input.GetMouseButtonDown(1))
-        {
-            StartWorkerOnJourney();
-        }*/
-    }
-
     public void AddCardToWorkerPlan(Card card, Tile tile)
     {
         if (!IsWorkerAvailable) return;

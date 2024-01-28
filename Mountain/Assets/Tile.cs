@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class Tile : MonoBehaviour, INeighborQueryable<Tile>
 {
@@ -35,20 +36,25 @@ public class Tile : MonoBehaviour, INeighborQueryable<Tile>
 
     private TileGridLayout Map => transform.parent.GetComponent<TileGridLayout>();
 
+    private bool ShouldHandleMouseEvents => !EventSystem.current.IsPointerOverGameObject();
+
     private void OnMouseEnter()
-        => Utilities.GetRootComponent<GameManager>().OnMouseEnterTile(this);
+    {
+        if (ShouldHandleMouseEvents)
+            Utilities.GetRootComponent<GameManager>().OnMouseEnterTile(this);
+    }
 
     private void OnMouseExit()
-        => Utilities.GetRootComponent<GameManager>().OnMouseExitTile(this);
-
-    private void OnMouseDown()
-        => Utilities.GetRootComponent<GameManager>().OnMouseDownTile(this);
+    {
+        if (ShouldHandleMouseEvents)
+            Utilities.GetRootComponent<GameManager>().OnMouseExitTile(this);
+    }
 
     private void OnMouseUp()
-        => GetComponentInParent<TileGridLayout>().OnMouseUpTile(this);
-
-    private void OnMouseOver()
-        => Utilities.GetRootComponent<GameManager>().OnMouseOverTile(this);
+    {
+        if (ShouldHandleMouseEvents)
+            Utilities.GetRootComponent<TileGridLayout>().OnMouseUpTile(this);
+    }
 
     public void SetHighlight(string highlightReason, bool value)
     {
