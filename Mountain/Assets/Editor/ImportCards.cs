@@ -8,12 +8,23 @@ public class ImportCards : EditorWindow
 {
     private static string CardsCSVPath = "/Editor/CSVs/Cards.csv";
 
+    public const int PRIORITY = 0;
+    public const int CANBEDRAWN = 1;
     public const int TILENAME = 2;
     public const int BIOME = 3;
     public const int CHANCETOLOST = 4;
     public const int DIFFICULTY = 5;
     public const int IMPASSABLE = 5;
     public const int FLAVORTEXT = 7;
+    public const int ABILITY = 8;
+    public const int SECRETEFFECT = 9;
+    public const int ONREVEAL = 10;
+    public const int ONREVEALTEXT = 11;
+    public const int ONVISIT = 12;
+    public const int POOL1 = 16;
+    public const int POOL2 = 17;
+    public const int POOL3 = 18;
+    public const int POOL4 = 19;
 
 
     [MenuItem("I Made An Editor Tool For A Game Jam Game/Import Cards")]
@@ -77,6 +88,12 @@ public class ImportCards : EditorWindow
             {
                 tilePlacement.PathingHeuristic = 1.0f;
             }
+            tilePlacement.PaysCost = splitData[BIOME];
+            tilePlacement.OnRevealText = splitData[BIOME];
+            tilePlacement.OnVisitText = splitData[BIOME];
+
+
+
 
 
             // Destroy the instantiated GameObject
@@ -93,12 +110,11 @@ public class ImportCards : EditorWindow
     protected static GameObject FindOrCreatePrefab(string PrefabName)
     {
         Vector3 spawnPosition = Vector3.zero;
-        // TODO
-        if(false)
+        GameObject existingPrefab = AssetDatabase.LoadAssetAtPath<GameObject>(GetPrefabPath(PrefabName));
+        if(existingPrefab != null)
         {
             //Prefab exists
-           
-
+            return existingPrefab;
         }
         else
         {
