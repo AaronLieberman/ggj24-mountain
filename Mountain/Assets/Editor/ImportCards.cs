@@ -20,17 +20,13 @@ public class ImportCards : EditorWindow
             
             GameObject prefabTofill = FindOrCreatePrefab(prefabName);
 
-            // Create the prefab path
-            string prefabPath = "Assets/Placements/" + prefabName + ".prefab";
-            prefabPath = AssetDatabase.GenerateUniqueAssetPath(prefabPath);
-
             // Save the new GameObject as a prefab
-            GameObject prefabInstance = PrefabUtility.SaveAsPrefabAsset(prefabTofill, prefabPath);
+            GameObject prefabInstance = PrefabUtility.SaveAsPrefabAsset(prefabTofill, GetPrefabPath(prefabName));
 
             // Destroy the instantiated GameObject
             DestroyImmediate(prefabTofill);
 
-            Debug.Log("Prefab created at: " + prefabPath);
+            Debug.Log("Prefab created at: " + GetPrefabPath(prefabName));
         }
     }
 
@@ -41,5 +37,10 @@ public class ImportCards : EditorWindow
         GameObject newObject = new GameObject(PrefabName);
         newObject.transform.position = spawnPosition;
         return newObject;
+    }
+
+    protected static string GetPrefabPath(string prefabName)
+    {
+        return AssetDatabase.GenerateUniqueAssetPath("Assets/Placements/" + prefabName + ".prefab");
     }
 }
