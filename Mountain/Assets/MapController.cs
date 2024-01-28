@@ -31,11 +31,13 @@ public class MapController : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0))
         {
+            Debug.Log("DOWN");
             Ray ray = Camera.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
 
             if (Physics.Raycast(ray, out hit, Mathf.Infinity, Mask))
             {
+                Debug.Log($"HIT:{hit.collider.gameObject.name}");
                 if (hit.collider.gameObject == this.gameObject)
                 {
                     _lastHitMapPos = transform.position;
