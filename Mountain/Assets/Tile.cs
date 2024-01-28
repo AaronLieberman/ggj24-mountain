@@ -2,7 +2,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
-using UnityEngine.EventSystems;
 
 public class Tile : MonoBehaviour, INeighborQueryable<Tile>
 {
@@ -36,38 +35,20 @@ public class Tile : MonoBehaviour, INeighborQueryable<Tile>
 
     private TileGridLayout Map => transform.parent.GetComponent<TileGridLayout>();
 
-    private bool ShouldHandleMouseEvents
-        => !EventSystem.current.IsPointerOverGameObject();
-
     private void OnMouseEnter()
-    {
-        if (ShouldHandleMouseEvents)
-            Utilities.GetRootComponent<GameManager>().OnMouseEnterTile(this);
-    }
+        => Utilities.GetRootComponent<GameManager>().OnMouseEnterTile(this);
 
     private void OnMouseExit()
-    {
-        if (ShouldHandleMouseEvents)
-            Utilities.GetRootComponent<GameManager>().OnMouseExitTile(this);
-    }
+        => Utilities.GetRootComponent<GameManager>().OnMouseExitTile(this);
 
     private void OnMouseDown()
-    {
-        if (ShouldHandleMouseEvents)
-            Utilities.GetRootComponent<GameManager>().OnMouseDownTile(this);
-    }
+        => Utilities.GetRootComponent<GameManager>().OnMouseDownTile(this);
 
     private void OnMouseUp()
-    {
-        if (ShouldHandleMouseEvents)
-            Utilities.GetRootComponent<TileGridLayout>().OnMouseUpTile(this);
-    }
+        => GetComponentInParent<TileGridLayout>().OnMouseUpTile(this);
 
     private void OnMouseOver()
-    {
-        if (ShouldHandleMouseEvents)
-            Utilities.GetRootComponent<GameManager>().OnMouseOverTile(this);
-    }
+        => Utilities.GetRootComponent<GameManager>().OnMouseOverTile(this);
 
     public void SetHighlight(string highlightReason, bool value)
     {

@@ -765,7 +765,7 @@ PrefabInstance:
     - target: {fileID: 6782310348076255433, guid: d6966627641965a40aec1694a03a10e0, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 1847767331}
+      objectReference: {fileID: 1755656663}
     - target: {fileID: 8885921353240354183, guid: d6966627641965a40aec1694a03a10e0, type: 3}
       propertyPath: m_Name
       value: MapBasic
@@ -775,14 +775,15 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d6966627641965a40aec1694a03a10e0, type: 3}
---- !u!21 &1847767331
+--- !u!21 &1755656663
 Material:
   serializedVersion: 8
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Sprites-Default (Instance) (Instance) (Instance) (Instance)
+  m_Name: Sprites-Default (Instance) (Instance) (Instance) (Instance) (Instance)
+    (Instance)
   m_Shader: {fileID: 10753, guid: 0000000000000000f000000000000000, type: 0}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
