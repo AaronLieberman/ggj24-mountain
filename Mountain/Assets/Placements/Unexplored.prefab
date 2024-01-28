@@ -45,15 +45,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ff2a246e0d77fb46890804a37f3a542, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Actions: []
+  Actions:
+  - Cost: 
+    Upgrade: {fileID: 0}
+    OnUpgrade: {fileID: 0}
   Name: 
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
   LostChance: 0
+  OnVisit: {fileID: 0}
   Difficulty: 0
-  PathingHeuristic: 0
+  PathingHeuristic: 100000
   PaysCost: 
+  RevealAction: {fileID: 0}
 --- !u!1 &7622148774315504018
 GameObject:
   m_ObjectHideFlags: 0

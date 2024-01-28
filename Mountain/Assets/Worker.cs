@@ -72,8 +72,6 @@ public class Worker : MonoBehaviour
         var differenceDir = new Vector3(nextDestinationTilePos.x, nextDestinationTilePos.y, 0) - transform.localPosition;
         if (differenceDir.magnitude < _tileDistanceEpsilon)
         {
-            _map.RefreshVisibleTiles();
-
             var cell = _map.GetCellAtObject(transform);
 
             // force the worker to be exactly in the right local position
