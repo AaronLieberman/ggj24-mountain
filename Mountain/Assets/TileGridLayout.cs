@@ -25,11 +25,15 @@ public class TileGridLayout : MonoBehaviour
 
     private Vector2Int _generatedGridSize = new Vector2Int(-1, -1);
 
+    private List<Tile> _pathfindingPath = new List<Tile>();
 
     public LineRenderer PathLines => GetComponentInChildren<LineRenderer>();
 
     void Start()
     {
+        PathLines.material = new Material(Shader.Find("Unlit/Transparent"));
+        PathLines.material.renderQueue = 5000;
+        //PathLines.material.color = new Color(1, 1, 1, 1);
     }
 
     public void Reset()
@@ -72,6 +76,7 @@ public class TileGridLayout : MonoBehaviour
 
     public void ClearPath()
     {
+        _pathfindingPath.Clear();
         foreach (var tile in GetComponentsInChildren<Tile>())
         {
             tile.SetHighlight("path", false);
@@ -87,6 +92,7 @@ public class TileGridLayout : MonoBehaviour
         {
             foreach (var tile in PathfinderAStar<Tile>.CalculateRoute(currentTile, destination))
             {
+                _pathfindingPath.Add(tile);
                 tile.SetHighlight("path", true);
             }
 
@@ -199,14 +205,14 @@ public class TileGridLayout : MonoBehaviour
         }
 #endif
 
-        //if (_pathfindingPath?.Length ?? 0) > 1)
-        //{
-        //    PathLines.positionCount = _pathfindingPath.Length; 
-        //    for ( var i = 0; i < _pathfindingPath.Length; ++i )
-        //    {
-        //        PathLines.SetPosition(i, GetPositionFromTileCoord(_pathfindingPath[i]));
-        //    }
-        //}
+        if (_pathfindingPath.Count > 1)
+        {
+            PathLines.positionCount = _pathfindingPath.Count; 
+            for ( var i = 0; i < _pathfindingPath.Count; ++i )
+            {
+                PathLines.SetPosition(i, GetPositionFromTileCoord(_pathfindingPath[i].Location));
+            }
+        }
     }
 
     public IEnumerable<Tile> GetNeighborsByTile(Tile tile)
