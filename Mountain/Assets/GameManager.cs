@@ -17,7 +17,7 @@ public class GameManager : MonoBehaviour
     public bool IsWorkerAvailable { get; private set; }
     public event EventHandler WorkerAvailableChanged;
 
-    List<WorkerPlan> _workerPlan = new();
+    public List<WorkerPlan> WorkerPlan { get; } = new();
 
     void Awake()
     {
@@ -106,12 +106,12 @@ public class GameManager : MonoBehaviour
         if (!IsWorkerAvailable) return;
         var worker = GetFirstAvailableWorker();
         if (worker.GetComponentsInChildren<Card>().Count() > MaxCards) return;
-        _workerPlan.Add(new WorkerPlan() { Card = card, Tile = tile });
+        WorkerPlan.Add(new WorkerPlan() { Card = card, Tile = tile });
     }
 
     public void ClearWorkerPlan()
     {
-        _workerPlan.Clear();
+        WorkerPlan.Clear();
     }
 
     public void StartWorkerOnJourney()
@@ -120,7 +120,7 @@ public class GameManager : MonoBehaviour
 
         var worker = GetFirstAvailableWorker();
 
-        foreach (var plan in _workerPlan)
+        foreach (var plan in WorkerPlan)
         {
             worker.AddDestination(plan.Card, plan.Tile);
         }
