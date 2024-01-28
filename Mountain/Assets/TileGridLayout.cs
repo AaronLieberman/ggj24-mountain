@@ -49,6 +49,7 @@ public class TileGridLayout : MonoBehaviour
         HomeLocation = GetCenterTile();
         HomeInstance = GetTileFromLoc(HomeLocation).SpawnPlacement(HomePrefab);
         RefreshVisibleTiles();
+        Utilities.GetRootComponent<MapMaker>().MakeMap();
     }
 
     public void ClearTiles(bool clearCache)
