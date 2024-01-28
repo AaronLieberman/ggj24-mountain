@@ -6,8 +6,9 @@ using UnityEngine;
 using UnityEngine.UIElements;
 using UnityEngine.UI;
 using System.Linq;
+using UnityEngine.EventSystems;
 
-public class CardUI : MonoBehaviour
+public class CardUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     [SerializeField] private UnityEngine.UI.Image CardRenderer;
     [SerializeField] private GameObject SelectedBackground;
@@ -45,5 +46,15 @@ public class CardUI : MonoBehaviour
         var image = button.GetComponent<UnityEngine.UI.Image>();
         float s = inUse ? 0.5f : 1;
         image.color = new Color(s, s, s);
+    }
+
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        Utilities.GetRootComponent<GameManager>().InvokeShowTooltip();
+    }
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        Utilities.GetRootComponent<GameManager>().InvokeHideTooltip();
     }
 }

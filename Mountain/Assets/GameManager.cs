@@ -88,7 +88,7 @@ public class GameManager : MonoBehaviour
         tile.SetHighlight("mouse", true);
         _highlightTile = tile;
 
-        ShowTooltip.Invoke(null, null);
+        InvokeShowTooltip();
     }
 
     public void OnMouseExitTile(Tile tile)
@@ -159,6 +159,11 @@ public class GameManager : MonoBehaviour
         Map.ClearPath();
 
         WorkerPlanChanged.Invoke(null, null);
+    }
+
+    public void InvokeShowTooltip()
+    {
+        ShowTooltip.Invoke(null, null);
     }
 
     public void InvokeHideTooltip()
