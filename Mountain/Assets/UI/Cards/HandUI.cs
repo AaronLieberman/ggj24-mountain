@@ -8,7 +8,7 @@ public class HandUI : MonoBehaviour
 {
     [SerializeField] private GameObject CardSlotPrefab;
     [SerializeField] private Transform CardSectionTransform;
-    [SerializeField] private GameObject HandAvailabilityElement; 
+    [SerializeField] private GameObject HandAvailabilityElement;
 
     void Awake()
     {
@@ -36,5 +36,17 @@ public class HandUI : MonoBehaviour
     void RefreshHandAvailabilityUI()
     {
         HandAvailabilityElement.SetActive(Utilities.GetRootComponent<GameManager>().IsWorkerAvailable);
+    }
+
+    public CardUI SelectedCardUI { get; private set; }
+    public void SetSelectedCardUI(CardUI cardUI)
+    {
+        if (SelectedCardUI != null)
+        {
+            SelectedCardUI.SetSelected(false);
+        }
+
+        SelectedCardUI = cardUI;
+        SelectedCardUI.SetSelected(true);
     }
 }

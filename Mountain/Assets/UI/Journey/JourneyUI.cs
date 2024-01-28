@@ -25,12 +25,12 @@ public class JourneyUI : MonoBehaviour
 
     public void OnPressResetPlanningUI()
     {
-        Debug.Log("Reset planning setup.");
+        Utilities.GetRootComponent<GameManager>().ClearWorkerPlan();
     }
 
     public void OnPressGoPlanningUI()
     {
-         Debug.Log("Play planning setup.");
+         Utilities.GetRootComponent<GameManager>().StartWorkerOnJourney();
     }
 
     void RefreshDeckAvailabilityUI()

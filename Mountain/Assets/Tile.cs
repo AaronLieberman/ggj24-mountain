@@ -32,4 +32,7 @@ public class Tile : MonoBehaviour
     private void OnMouseDown()
         => GetComponentInParent<TileGridLayout>().OnMouseDownTile(this);
 
+    private void OnMouseUp()
+        => GetComponentInParent<TileGridLayout>().OnMouseUpTile(this);
+
 }

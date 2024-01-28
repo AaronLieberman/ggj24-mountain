@@ -8,8 +8,15 @@ using UnityEngine.UI;
 
 public class CardUI : MonoBehaviour
 {
-    [SerializeField] private UnityEngine.UI.Image CardRenderer;    
+    [SerializeField] private UnityEngine.UI.Image CardRenderer;
+    [SerializeField] private GameObject SelectedBackground; 
+
     public Card Card { get; set; }
+
+    public void SetSelected(bool selected)
+    {
+        SelectedBackground.SetActive(selected);
+    }
 
     public void SetTexture()
     {

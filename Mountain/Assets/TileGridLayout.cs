@@ -85,6 +85,18 @@ public class TileGridLayout : MonoBehaviour
         _clicked = tile;
     }
 
+    public void OnMouseUpTile(Tile tile)
+    {
+        CardUI selectedCardUI = Utilities.GetRootComponent<GameUIManager>().HandUI.SelectedCardUI;
+        if (selectedCardUI != null)
+        {
+            Card selectedCard = selectedCardUI.Card;
+            
+            Debug.Log("Adding to worker plan:" + " | Selected Card: " + selectedCard.name + "  | Tile: " + tile.name);
+            Utilities.GetRootComponent<GameManager>().AddCardToWorkerPlan(selectedCard, tile);
+        }
+    }
+
     public void Generate(Vector2Int size)
     {
         if (TilePrefab == null
