@@ -6,17 +6,6 @@ public class Tile : MonoBehaviour
 {
     public Vector2Int Location { get; set; }
 
-    // public enum TerrainType
-    // {
-    //     None,
-    //     Plains,
-    //     Forest,
-    //     Mountain,
-    //     MountainTunnel,
-    //     Quest,
-    //     Goal,
-    // }
-
     public Placement SpawnPlacement(Placement placement)
     {
         Utilities.DestroyAllChildren(transform);

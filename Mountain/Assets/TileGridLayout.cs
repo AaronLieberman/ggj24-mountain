@@ -16,7 +16,7 @@ public class TileGridLayout : MonoBehaviour
     public Placement HomePrefab;
 
     public Vector2Int HomeLocation;
-    public Placement HomeInstance { get; private set;}
+    public Placement HomeInstance { get; private set; }
 
     public GameObject TilesContainer;
     public Vector2Int GridSize = new Vector2Int(20, 20);
