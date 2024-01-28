@@ -6,7 +6,6 @@ using UnityEngine;
 
 public class HandUI : MonoBehaviour
 {
-
     [SerializeField] private GameObject CardSlotPrefab;
     [SerializeField] private Transform CardSectionTransform;
 

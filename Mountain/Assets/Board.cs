@@ -30,13 +30,6 @@ public class Board : MonoBehaviour
         Map.Reset();
         ClearActors();
         AddWorkerAtHome();
-
-        foreach (var coord in PathFinder.CalculateRoute(Map, new Vector2Int(1, 2), new Vector2Int(10, 6)))
-        {
-            var world = Map.GetComponent<Grid>().CellToWorld(new Vector3Int(coord.x, coord.y, 0));
-            var w = Instantiate(WorkerPrefab, world, Quaternion.identity, Map.transform);
-            w.GetComponentInChildren<SpriteRenderer>().color = Color.blue;
-        }
     }
 
     public void ClearActors()
