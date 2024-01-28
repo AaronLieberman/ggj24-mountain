@@ -20,7 +20,7 @@ public class Tile : MonoBehaviour, INeighborQueryable<Tile>
     {
         Utilities.DestroyAllChildren(transform);
 
-        return Instantiate(placement, transform);
+        return Instantiate(placement, transform, false);
     }
 
     public IEnumerable<Tile> GetNeighbors()

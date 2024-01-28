@@ -22,7 +22,11 @@ public class Card : MonoBehaviour
 
     public CardDetails CardDetails;
 
-    Unity.Mathematics.Random _random = new();
+    Unity.Mathematics.Random _random;
+    void Awake()
+    {
+        _random = new Unity.Mathematics.Random(42);
+    }
 
     public void SpawnOnTile(Tile tile)
     {
@@ -31,9 +35,12 @@ public class Card : MonoBehaviour
 
     Placement ChoosePlacementToSpawn()
     {
+        if (!TileSpawn.Any())
+            return null;
+
         var totalWeight = TileSpawn.Sum(a => a.Weight);
         if (totalWeight <= 0)
-            return null;
+            return TileSpawn[_random.NextInt(TileSpawn.Count)].Tile;
 
         var target = _random.NextFloat(totalWeight);
 

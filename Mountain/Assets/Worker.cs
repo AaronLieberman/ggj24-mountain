@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -91,7 +92,9 @@ public class Worker : MonoBehaviour
                 else
                 {
                     Debug.LogFormat("Reached waypoint {0} aka {1}", _nextDestinationTileLoc.Value, cell);
+                    var currentPlan = WorkerPlan.First();
                     WorkerPlan.RemoveAt(0);
+                    ExecutePlan(currentPlan);
                 }
             }
 
@@ -102,5 +105,10 @@ public class Worker : MonoBehaviour
             var moveDir = differenceDir.normalized * Mathf.Min(Speed * Time.deltaTime, differenceDir.magnitude);
             transform.localPosition += moveDir;
         }
+    }
+
+    private void ExecutePlan(WorkerPlan currentPlan)
+    {
+        currentPlan.Card.SpawnOnTile(currentPlan.Tile);
     }
 }
