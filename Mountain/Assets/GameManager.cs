@@ -143,6 +143,7 @@ public class GameManager : MonoBehaviour
             worker.AddDestination(plan.Card, plan.Tile);
         }
 
+        WorkerPlan.Clear();
         Map.ClearPath();
     }
 }
