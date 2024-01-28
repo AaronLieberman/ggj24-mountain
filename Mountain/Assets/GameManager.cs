@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
 
     public bool IsWorkerAvailable { get; private set; }
     public event EventHandler WorkerAvailableChanged;
+    public event EventHandler WorkerPlanChanged;
 
     public List<WorkerPlan> WorkerPlan { get; } = new();
 
@@ -62,6 +63,8 @@ public class GameManager : MonoBehaviour
         Hand.Reset();
 
         Hand.DrawTillFull();
+
+        WorkerPlanChanged.Invoke(null, null);
     }
 
     void SetupMap()
@@ -104,23 +107,28 @@ public class GameManager : MonoBehaviour
 
     public void OnMouseDownTile(Tile tile)
     {
-        AddCardToWorkerPlan(Hand.GetComponentInChildren<Card>(), tile);
+        //AddCardToWorkerPlan(Hand.GetComponentInChildren<Card>(), tile);
     }
     
     public void OnMouseOverTile(Tile tile)
     {
+        /*
         if (Input.GetMouseButtonDown(1))
         {
             StartWorkerOnJourney();
-        }
+        }*/
     }
 
     public void AddCardToWorkerPlan(Card card, Tile tile)
     {
         if (!IsWorkerAvailable) return;
         var worker = GetFirstAvailableWorker();
-        if (worker.GetComponentsInChildren<Card>().Count() > MaxCards) return;
+        if (WorkerPlan.Count() >= MaxCards) return;
+
+        Debug.Log("Adding to worker plan:" + " | Selected Card: " + card.name + "  | Tile: " + tile.name);
+
         WorkerPlan.Add(new WorkerPlan() { Card = card, Tile = tile });
+        WorkerPlanChanged.Invoke(null, null);
 
         var workerTile = Map.GetTileAtObject(worker.transform);
         Map.ShowPath(workerTile, WorkerPlan.Select(a => a.Tile));
@@ -130,6 +138,8 @@ public class GameManager : MonoBehaviour
     {
         WorkerPlan.Clear();
         Map.ClearPath();
+
+        WorkerPlanChanged.Invoke(null, null);
     }
 
     public void StartWorkerOnJourney()
@@ -145,5 +155,7 @@ public class GameManager : MonoBehaviour
 
         WorkerPlan.Clear();
         Map.ClearPath();
+
+        WorkerPlanChanged.Invoke(null, null);
     }
 }

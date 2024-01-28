@@ -21,5 +21,8 @@ public class CardUI : MonoBehaviour
     public void SetTexture()
     {
         CardRenderer.sprite = Card.CardDetails.CardSprite;
+        Color existingTextureColor = CardRenderer.color;
+        existingTextureColor.a = 1.0f;
+        CardRenderer.color = existingTextureColor;
     }
 }

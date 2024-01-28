@@ -13,6 +13,7 @@ public class JourneyUI : MonoBehaviour
     void Awake()
     {
         Utilities.GetRootComponent<GameManager>().WorkerAvailableChanged += (_, __) => RefreshDeckAvailabilityUI();
+        Utilities.GetRootComponent<GameManager>().WorkerPlanChanged += (_, __) => RefreshJourneyPlanningUI();
     }
 
     void RefreshJourneyPlanningUI()
@@ -20,6 +21,18 @@ public class JourneyUI : MonoBehaviour
         foreach (Transform child in JourneySectionTransform)
         {
             Destroy(child.gameObject);
+        }
+
+        List<WorkerPlan> workerPlan = Utilities.GetRootComponent<GameManager>().WorkerPlan;
+        for (int i = 0; i < Utilities.GetRootComponent<GameManager>().MaxCards; i++)
+        {
+            GameObject journeySlot = Instantiate(JourneySlotPrefab, JourneySectionTransform);
+
+            if (workerPlan.Count >= i + 1)
+            {
+                journeySlot.GetComponent<CardUI>().Card = Utilities.GetRootComponent<GameManager>().WorkerPlan[i].Card;
+                journeySlot.GetComponent<CardUI>().SetTexture();
+            }
         }
     }
 

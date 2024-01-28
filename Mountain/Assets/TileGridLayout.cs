@@ -101,8 +101,6 @@ public class TileGridLayout : MonoBehaviour
         if (selectedCardUI != null)
         {
             Card selectedCard = selectedCardUI.Card;
-            
-            Debug.Log("Adding to worker plan:" + " | Selected Card: " + selectedCard.name + "  | Tile: " + tile.name);
             Utilities.GetRootComponent<GameManager>().AddCardToWorkerPlan(selectedCard, tile);
         }
     }
