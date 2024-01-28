@@ -111,12 +111,16 @@ public class GameManager : MonoBehaviour
         var worker = GetFirstAvailableWorker();
         if (WorkerPlan.Count() >= MaxCards) return;
 
+        var workerTile = Map.GetTileAtObject(worker.transform);
+
+        var newDestination = new WorkerPlan() { Card = card, Tile = tile };
+        if (!Map.IsPathPassable(workerTile, WorkerPlan.Select(a => a.Tile).Concat(new[] { newDestination.Tile }))) return;
+
         Debug.Log("Adding to worker plan:" + " | Selected Card: " + card.name + "  | Tile: " + tile.name);
 
-        WorkerPlan.Add(new WorkerPlan() { Card = card, Tile = tile });
+        WorkerPlan.Add(newDestination);
         WorkerPlanChanged?.Invoke(null, null);
 
-        var workerTile = Map.GetTileAtObject(worker.transform);
         Map.ShowPath(workerTile, WorkerPlan.Select(a => a.Tile));
     }
 
@@ -158,5 +162,27 @@ public class GameManager : MonoBehaviour
     public void InvokeHideTooltip()
     {
         HideTooltip?.Invoke(null, null);
+    }
+
+    Card _cardBeingConsidered;
+    public void SetConsideringPlacingCard(Card card)
+    {
+        foreach (var tile in Map.GetComponentsInChildren<Tile>())
+        {
+            tile.SetDisabled("path", false);
+        }
+
+        if (_cardBeingConsidered == card) return;
+
+        if (!IsWorkerAvailable) return;
+        var worker = GetFirstAvailableWorker();
+        if (WorkerPlan.Count() >= MaxCards) return;
+
+        var workerTile = Map.GetTileAtObject(worker.transform);
+        foreach (var tile in Map.GetComponentsInChildren<Tile>())
+        {
+            bool passable = Map.IsPathPassable(workerTile, WorkerPlan.Select(a => a.Tile).Concat(new[] { tile }));
+            tile.SetDisabled("path", !passable);
+        }
     }
 }

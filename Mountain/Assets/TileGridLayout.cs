@@ -98,6 +98,20 @@ public class TileGridLayout : MonoBehaviour
         }
     }
 
+    public bool IsPathPassable(Tile startTile, IEnumerable<Tile> destinations)
+    {
+        var currentTile = startTile;
+        foreach (var destination in destinations)
+        {
+            var route = PathfinderAStar<Tile>.CalculateRoute(currentTile, destination);
+            if (route == null) return false;
+            if (!route.Any()) return false;
+            currentTile = destination;
+        }
+
+        return true;
+    }
+
     public void OnMouseEnterTile(Tile tile)
     {
     }
@@ -109,8 +123,8 @@ public class TileGridLayout : MonoBehaviour
     public void OnMouseUpTile(Tile tile)
     {
         var handUI = Utilities.GetRootComponents<Canvas>()
-			.Select(c => c.GetComponentInChildren<HandUI>())
-			.First();
+            .Select(c => c.GetComponentInChildren<HandUI>())
+            .First();
 
         CardUI selectedCardUI = handUI.SelectedCardUI;
         if (selectedCardUI != null)
@@ -205,8 +219,8 @@ public class TileGridLayout : MonoBehaviour
 
         if (_pathfindingPath.Count > 1)
         {
-            PathLines.positionCount = _pathfindingPath.Count; 
-            for ( var i = 0; i < _pathfindingPath.Count; ++i )
+            PathLines.positionCount = _pathfindingPath.Count;
+            for (var i = 0; i < _pathfindingPath.Count; ++i)
             {
                 PathLines.SetPosition(i, GetPositionFromTileCoord(_pathfindingPath[i].Location));
             }

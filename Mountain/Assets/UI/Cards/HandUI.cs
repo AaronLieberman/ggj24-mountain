@@ -30,6 +30,8 @@ public class HandUI : MonoBehaviour, IPointerEnterHandler
         Hand hand = Utilities.GetRootComponent<Hand>();
         List<WorkerPlan> workerPlan = Utilities.GetRootComponent<GameManager>().WorkerPlan;
 
+        bool isPlanFull = Utilities.GetRootComponent<GameManager>().WorkerPlan.Count >= Utilities.GetRootComponent<GameManager>().MaxCards;
+
         foreach (Transform child in hand.transform)
         {
             GameObject cardSlot = Instantiate(CardSlotPrefab, CardSectionTransform);
@@ -38,7 +40,7 @@ public class HandUI : MonoBehaviour, IPointerEnterHandler
             var cardUI = cardSlot.GetComponent<CardUI>();
             cardUI.Card = card;
             cardUI.SetTexture();
-            cardUI.SetInUse(workerPlan.Any(a => a.Card == card));
+            cardUI.SetInUse(isPlanFull || workerPlan.Any(a => a.Card == card));
         }
     }
 
@@ -50,6 +52,8 @@ public class HandUI : MonoBehaviour, IPointerEnterHandler
     public CardUI SelectedCardUI { get; private set; }
     public void SetSelectedCardUI(CardUI cardUI)
     {
+        Utilities.GetRootComponent<GameManager>().SetConsideringPlacingCard(null);
+
         if (cardUI != null && cardUI.InUse)
             return;
 
@@ -70,6 +74,8 @@ public class HandUI : MonoBehaviour, IPointerEnterHandler
         {
             SelectedCardUI = null;
         }
+
+        Utilities.GetRootComponent<GameManager>().SetConsideringPlacingCard(cardUI != null ? cardUI.Card : null);
     }
 
     public void OnPointerEnter(PointerEventData eventData)
