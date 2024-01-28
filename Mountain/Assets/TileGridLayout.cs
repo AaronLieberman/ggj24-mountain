@@ -16,6 +16,7 @@ public class TileGridLayout : MonoBehaviour
     public Placement HomePrefab;
 
     public Vector2Int HomeLocation;
+    public Placement HomeInstance { get; private set;}
 
     public GameObject TilesContainer;
     public Vector2Int GridSize = new Vector2Int(20, 20);
@@ -35,7 +36,7 @@ public class TileGridLayout : MonoBehaviour
     {
         Generate(GridSize);
         HomeLocation = GetCenterTile();
-        CreateTileFromLoc(HomeLocation).SpawnPlacement(HomePrefab);
+        HomeInstance = CreateTileFromLoc(HomeLocation).SpawnPlacement(HomePrefab);
     }
 
     public void ClearTiles(bool clearCache)

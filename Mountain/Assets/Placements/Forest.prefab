@@ -146,7 +146,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Actions: []
-  FlavorText: 
+  Name: Forest
+  FlavorText: The plasticom tells us that the only biome more swarming with life
+    than a forest is the ocean. But who among us has seen the sea?
+  LostChance: 0.1
+  Difficulty: 1
 --- !u!1 &1861969430247256808
 GameObject:
   m_ObjectHideFlags: 0

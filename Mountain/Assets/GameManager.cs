@@ -1,8 +1,15 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+
+public enum PlacementMode
+{
+    None,
+    PlanWorker,
+}
 
 public class GameManager : MonoBehaviour
 {
@@ -11,7 +18,13 @@ public class GameManager : MonoBehaviour
     public Deck Deck { get; private set; }
     public Hand Hand { get; private set; }
 
+    public PlacementMode PlacementMode { get; private set; }
+    public event EventHandler PlacementModeChanged;
 
+    public bool IsWorkerAvailable { get; private set; }
+    public event EventHandler WorkerAvailableChanged;
+
+    List<WorkerPlan> _workerPlan = new();
 
     void Awake()
     {
@@ -28,6 +41,35 @@ public class GameManager : MonoBehaviour
         StartGame();
     }
 
+    void Update()
+    {
+        SetWorkerAvailable(GetFirstAvailableWorker() != null);
+    }
+
+    Worker GetFirstAvailableWorker()
+    {
+        var grid = Map.GetComponent<Grid>();
+        var homeCell = grid.LocalToCell(Map.HomeInstance.transform.localPosition);
+
+        // update whether workers are available
+        var workers = Map.GetComponentsInChildren<Worker>();
+        return workers.FirstOrDefault(w => grid.LocalToCell(w.transform.localPosition) == homeCell);
+    }
+
+    void SetWorkerAvailable(bool value)
+    {
+        if (value == IsWorkerAvailable) return;
+        IsWorkerAvailable = value;
+        WorkerAvailableChanged.Invoke(null, null);
+    }
+
+    void SetPlacementMode(PlacementMode value)
+    {
+        if (value == PlacementMode) return;
+        PlacementMode = value;
+        PlacementModeChanged.Invoke(null, null);
+    }
+
     void StartGame()
     {
         SetupMap();
@@ -42,7 +84,6 @@ public class GameManager : MonoBehaviour
     void SetupMap()
     {
         Board.Reset();
-
         //var homeLoc = Map.GetComponent<Grid>().CellToWorld(new Vector3Int(10, 6, 0));
         //Instantiate(HomePrefab, homeLoc, quaternion.identity, Map.transform);
 
@@ -71,9 +112,29 @@ public class GameManager : MonoBehaviour
         //}
     }
 
-    public bool IsWorkerAvailable()
+    public void StartPlacingWorker()
     {
-        // var homePlacement = Map.GetComponentInChildren<
-        return false;
+        SetPlacementMode(PlacementMode.PlanWorker);
+    }
+
+    public void AddCardToWorkerPlan(Card card, Tile tile)
+    {
+        if (!IsWorkerAvailable) return;
+        var worker = GetFirstAvailableWorker();
+        if (worker.GetComponentsInChildren<Card>().Count() > worker.MaxCards) return;
+        _workerPlan.Add(new WorkerPlan() { Card = card, Tile = tile });
+    }
+
+    public void StartWorkerOnJourney()
+    {
+        if (PlacementMode != PlacementMode.PlanWorker) return;
+        if (!IsWorkerAvailable) return;
+
+        var worker = GetFirstAvailableWorker();
+
+        foreach (var plan in _workerPlan)
+        {
+            plan.Card.transform.parent = worker.transform;
+        }
     }
 }

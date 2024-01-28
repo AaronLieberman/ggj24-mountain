@@ -30,4 +30,14 @@ public static class Utilities
 			GameObject.Destroy(child.gameObject);
 		}
 	}
+
+	public static Vector2Int ToVec2I(Vector3Int v3i)
+	{
+		return new Vector2Int(v3i.x, v3i.y);
+	}
+
+	public static Vector3Int ToVec3I(Vector2Int v2i)
+	{
+		return new Vector3Int(v2i.x, v2i.y, 0);
+	}
 }
