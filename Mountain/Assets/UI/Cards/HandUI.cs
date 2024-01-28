@@ -51,5 +51,9 @@ public class HandUI : MonoBehaviour
             SelectedCardUI = cardUI;
             SelectedCardUI.SetSelected(true);
         }
+        else
+        {
+            SelectedCardUI = null;
+        }
     }
 }
