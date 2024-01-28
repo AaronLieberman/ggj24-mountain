@@ -108,7 +108,11 @@ public class TileGridLayout : MonoBehaviour
 
     public void OnMouseUpTile(Tile tile)
     {
-        CardUI selectedCardUI = Utilities.GetRootComponent<GameUIManager>().HandUI.SelectedCardUI;
+        var handUI = Utilities.GetRootComponents<Canvas>()
+			.Select(c => c.GetComponentInChildren<HandUI>())
+			.First();
+
+        CardUI selectedCardUI = handUI.SelectedCardUI;
         if (selectedCardUI != null)
         {
             Card selectedCard = selectedCardUI.Card;

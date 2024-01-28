@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+using System.Collections;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -9,6 +11,12 @@ public static class Utilities
         return SceneManager.GetActiveScene().GetRootGameObjects()
 			.Select(a => a.GetComponent<T>())
 			.Single(a => a != null);
+	}
+	
+	public static IEnumerable<T> GetRootComponents<T>() where T : Component
+	{
+		return SceneManager.GetActiveScene().GetRootGameObjects()
+			.SelectMany(a => a.GetComponents<T>());
 	}
 
     public static T GetRootComponentRecursive<T>() where T : Component
