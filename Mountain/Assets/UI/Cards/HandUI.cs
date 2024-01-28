@@ -50,7 +50,7 @@ public class HandUI : MonoBehaviour, IPointerEnterHandler
     public CardUI SelectedCardUI { get; private set; }
     public void SetSelectedCardUI(CardUI cardUI)
     {
-        if (cardUI.InUse)
+        if (cardUI != null && cardUI.InUse)
             return;
 
         if (Utilities.GetRootComponent<GameManager>().WorkerPlan.Count >= Utilities.GetRootComponent<GameManager>().MaxCards)

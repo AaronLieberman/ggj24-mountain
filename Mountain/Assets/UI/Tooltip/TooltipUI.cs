@@ -10,18 +10,19 @@ public class TooltipUI : MonoBehaviour
 
     void Awake()
     {
-        Utilities.GetRootComponent<GameManager>().ShowTooltip += (_, __) => ShowTooltipUI();
+        Utilities.GetRootComponent<GameManager>().ShowTooltip += (_, placement) => ShowTooltipUI(placement);
         Utilities.GetRootComponent<GameManager>().HideTooltip += (_, __) => HideTooltipUI();
     }
 
-    void ShowTooltipUI()
+    void ShowTooltipUI(Placement placement)
     {
+        Debug.Log(placement.Name);
         tooltipContentSection.transform.position = new Vector3(
             Input.mousePosition.x + tooltipOffset.x, 
             Input.mousePosition.y + tooltipOffset.y, 
             Input.mousePosition.z
         );
-        
+
         tooltipContentSection.SetActive(true);
     }
 

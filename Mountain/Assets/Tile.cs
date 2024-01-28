@@ -36,8 +36,7 @@ public class Tile : MonoBehaviour, INeighborQueryable<Tile>
 
     private TileGridLayout Map => transform.parent.GetComponent<TileGridLayout>();
 
-    private bool ShouldHandleMouseEvents
-        => !EventSystem.current.IsPointerOverGameObject();
+    private bool ShouldHandleMouseEvents => !EventSystem.current.IsPointerOverGameObject();
 
     private void OnMouseEnter()
     {
@@ -51,22 +50,10 @@ public class Tile : MonoBehaviour, INeighborQueryable<Tile>
             Utilities.GetRootComponent<GameManager>().OnMouseExitTile(this);
     }
 
-    private void OnMouseDown()
-    {
-        if (ShouldHandleMouseEvents)
-            Utilities.GetRootComponent<GameManager>().OnMouseDownTile(this);
-    }
-
     private void OnMouseUp()
     {
         if (ShouldHandleMouseEvents)
             Utilities.GetRootComponent<TileGridLayout>().OnMouseUpTile(this);
-    }
-
-    private void OnMouseOver()
-    {
-        if (ShouldHandleMouseEvents)
-            Utilities.GetRootComponent<GameManager>().OnMouseOverTile(this);
     }
 
     public void SetHighlight(string highlightReason, bool value)

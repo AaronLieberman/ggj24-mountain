@@ -44,8 +44,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8b3d0cb102b1f54cabf9732b77c4cd6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TileSpawn:
-  - Tile: {fileID: 4039720745246559038, guid: 3e33b4fbbc7942945bc3b65501002210, type: 3}
-    Weight: 1
+  PlacementToSpawn: {fileID: 4039720745246559038, guid: 3e33b4fbbc7942945bc3b65501002210, type: 3}
+  UnrevealedPlacement: {fileID: 0}
+  IsRevealed: 0
   CardDetails:
     CardSprite: {fileID: 510106708, guid: 6dfed9e8f1416d34bbd79deac2104118, type: 3}

@@ -50,7 +50,10 @@ public class CardUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        Utilities.GetRootComponent<GameManager>().InvokeShowTooltip();
+        if (Card != null)
+        {
+            Utilities.GetRootComponent<GameManager>().InvokeShowTooltip(Card.IsRevealed ? Card.PlacementToSpawn : Card.UnrevealedPlacement);
+        }
     }
 
     public void OnPointerExit(PointerEventData eventData)

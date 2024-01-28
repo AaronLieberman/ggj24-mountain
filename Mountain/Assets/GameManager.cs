@@ -25,7 +25,7 @@ public class GameManager : MonoBehaviour
     public event EventHandler WorkerPlanChanged;
 
     private Tile _highlightTile = null;
-    public event EventHandler ShowTooltip;
+    public event EventHandler<Placement> ShowTooltip;
     public event EventHandler HideTooltip;
 
     public List<WorkerPlan> WorkerPlan { get; } = new();
@@ -61,7 +61,7 @@ public class GameManager : MonoBehaviour
     {
         if (value == IsWorkerAvailable) return;
         IsWorkerAvailable = value;
-        WorkerAvailableChanged.Invoke(null, null);
+        WorkerAvailableChanged?.Invoke(null, null);
     }
 
     void StartGame()
@@ -74,7 +74,7 @@ public class GameManager : MonoBehaviour
 
         Hand.DrawTillFull();
 
-        WorkerPlanChanged.Invoke(null, null);
+        WorkerPlanChanged?.Invoke(null, null);
     }
 
     void SetupMap()
@@ -88,7 +88,7 @@ public class GameManager : MonoBehaviour
         tile.SetHighlight("mouse", true);
         _highlightTile = tile;
 
-        InvokeShowTooltip();
+        InvokeShowTooltip(tile.GetComponentInChildren<Placement>());
     }
 
     public void OnMouseExitTile(Tile tile)
@@ -105,20 +105,6 @@ public class GameManager : MonoBehaviour
         _highlightTile = null;
     }
 
-    public void OnMouseDownTile(Tile tile)
-    {
-        //AddCardToWorkerPlan(Hand.GetComponentInChildren<Card>(), tile);
-    }
-    
-    public void OnMouseOverTile(Tile tile)
-    {
-        /*
-        if (Input.GetMouseButtonDown(1))
-        {
-            StartWorkerOnJourney();
-        }*/
-    }
-
     public void AddCardToWorkerPlan(Card card, Tile tile)
     {
         if (!IsWorkerAvailable) return;
@@ -128,7 +114,7 @@ public class GameManager : MonoBehaviour
         Debug.Log("Adding to worker plan:" + " | Selected Card: " + card.name + "  | Tile: " + tile.name);
 
         WorkerPlan.Add(new WorkerPlan() { Card = card, Tile = tile });
-        WorkerPlanChanged.Invoke(null, null);
+        WorkerPlanChanged?.Invoke(null, null);
 
         var workerTile = Map.GetTileAtObject(worker.transform);
         Map.ShowPath(workerTile, WorkerPlan.Select(a => a.Tile));
@@ -139,7 +125,7 @@ public class GameManager : MonoBehaviour
         WorkerPlan.Clear();
         Map.ClearPath();
 
-        WorkerPlanChanged.Invoke(null, null);
+        WorkerPlanChanged?.Invoke(null, null);
     }
 
     public void StartWorkerOnJourney()
@@ -158,16 +144,19 @@ public class GameManager : MonoBehaviour
         WorkerPlan.Clear();
         Map.ClearPath();
 
-        WorkerPlanChanged.Invoke(null, null);
+        WorkerPlanChanged?.Invoke(null, null);
     }
 
-    public void InvokeShowTooltip()
+    public void InvokeShowTooltip(Placement placement)
     {
-        ShowTooltip.Invoke(null, null);
+        if (placement != null)
+        {
+            ShowTooltip?.Invoke(null, placement);
+        }
     }
 
     public void InvokeHideTooltip()
     {
-        HideTooltip.Invoke(null, null);
+        HideTooltip?.Invoke(null, null);
     }
 }
