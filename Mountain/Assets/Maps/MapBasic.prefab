@@ -294,9 +294,10 @@ MonoBehaviour:
   DefaultPrefab: {fileID: 1365756699843689891, guid: 817df214692c8234c88b99caf669e1ee, type: 3}
   TilePrefab: {fileID: 817930906879768510, guid: 792b6ce5e2c7aec4e966c8e725489139, type: 3}
   HomePrefab: {fileID: 3633046709800144003, guid: 349c7786a22200d48b631c408d4d1dbc, type: 3}
+  HighlightMaterial: {fileID: 2100000, guid: 1f803159c1999da40a7aea00e3fbba47, type: 2}
   HomeLocation: {x: 0, y: 0}
   TilesContainer: {fileID: 5797027995046154725}
-  GridSize: {x: 10, y: 10}
+  GridSize: {x: 15, y: 15}
   Bounds:
     m_Center: {x: 0, y: 0, z: 0}
     m_Extent: {x: 0, y: 0, z: 0}
