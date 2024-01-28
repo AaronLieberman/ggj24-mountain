@@ -203,12 +203,7 @@ public class TileGridLayout : MonoBehaviour
         }
 #endif
 
-        //if ( Input.GetMouseButtonUp(0) )
-        //{
-        //    ClearPath();
-        //}
-        //else if ( Input.GetMouseButton(0)
-        //    && (_pathfindingPath?.Length ?? 0) > 1)
+        //if (_pathfindingPath?.Length ?? 0) > 1)
         //{
         //    PathLines.positionCount = _pathfindingPath.Length; 
         //    for ( var i = 0; i < _pathfindingPath.Length; ++i )
