@@ -46,7 +46,10 @@ public class HandUI : MonoBehaviour
             SelectedCardUI.SetSelected(false);
         }
 
-        SelectedCardUI = cardUI;
-        SelectedCardUI.SetSelected(true);
+        if (Utilities.GetRootComponent<GameManager>().IsWorkerAvailable && cardUI != null)
+        {
+            SelectedCardUI = cardUI;
+            SelectedCardUI.SetSelected(true);
+        }
     }
 }

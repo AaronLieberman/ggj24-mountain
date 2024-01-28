@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Linq;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -39,11 +40,20 @@ public class JourneyUI : MonoBehaviour
     public void OnPressResetPlanningUI()
     {
         Utilities.GetRootComponent<GameManager>().ClearWorkerPlan();
+        ResetHandSelectionContext();
     }
 
     public void OnPressGoPlanningUI()
     {
          Utilities.GetRootComponent<GameManager>().StartWorkerOnJourney();
+         ResetHandSelectionContext();
+    }
+
+    void ResetHandSelectionContext()
+    {
+        Utilities.GetRootComponents<Canvas>()
+			.Select(c => c.GetComponentInChildren<HandUI>())
+			.First().SetSelectedCardUI(null);
     }
 
     void RefreshDeckAvailabilityUI()
