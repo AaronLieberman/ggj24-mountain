@@ -13,6 +13,8 @@ public class Tile : MonoBehaviour, INeighborQueryable<Tile>
     Material _highlightMaterial;
     Material _originalMaterial;
 
+    public Placement Placement => GetComponentInChildren<Placement>();
+
     void Awake()
     {
         _highlightMaterial = transform.GetComponentInParent<TileGridLayout>().HighlightMaterial;

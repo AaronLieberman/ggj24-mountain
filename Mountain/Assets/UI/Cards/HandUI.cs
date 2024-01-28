@@ -13,6 +13,8 @@ public class HandUI : MonoBehaviour, IPointerEnterHandler
     [SerializeField] private Transform CardSectionTransform;
     [SerializeField] private GameObject HandAvailabilityElement;
 
+    public event Action<Card, bool> OnCardSelectStateChange = delegate { };
+
     void Awake()
     {
         Utilities.GetRootComponent<Hand>().HandChanged += (_, __) => RefreshHandUI();
@@ -60,6 +62,9 @@ public class HandUI : MonoBehaviour, IPointerEnterHandler
         if (Utilities.GetRootComponent<GameManager>().WorkerPlan.Count >= Utilities.GetRootComponent<GameManager>().MaxCards)
             return;
 
+        if (SelectedCardUI?.Card != null)
+            OnCardSelectStateChange.Invoke(SelectedCardUI?.Card, false);
+
         if (SelectedCardUI != null)
         {
             SelectedCardUI.SetSelected(false);
@@ -76,6 +81,7 @@ public class HandUI : MonoBehaviour, IPointerEnterHandler
         }
 
         Utilities.GetRootComponent<GameManager>().SetConsideringPlacingCard(cardUI != null ? cardUI.Card : null);
+        OnCardSelectStateChange.Invoke(SelectedCardUI?.Card, SelectedCardUI != null);
     }
 
     public void OnPointerEnter(PointerEventData eventData)

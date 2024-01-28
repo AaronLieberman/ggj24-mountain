@@ -34,6 +34,15 @@ public class TileGridLayout : MonoBehaviour
         PathLines.material.renderQueue = 5000;
     }
 
+
+    public IEnumerable<Tile> EnumerateTiles()
+    {
+        foreach (var tile in _tiles)
+        {
+            yield return tile;
+        }
+    }
+
     public void Reset()
     {
         Generate(GridSize);
@@ -75,6 +84,7 @@ public class TileGridLayout : MonoBehaviour
     public void ClearPath()
     {
         _pathfindingPath.Clear();
+        PathLines.enabled = false;
         foreach (var tile in GetComponentsInChildren<Tile>())
         {
             tile.SetHighlight("path", false);
@@ -84,6 +94,7 @@ public class TileGridLayout : MonoBehaviour
     public void ShowPath(Tile startTile, IEnumerable<Tile> destinations)
     {
         ClearPath();
+        PathLines.enabled = true;
 
         var currentTile = startTile;
         foreach (var destination in destinations)
