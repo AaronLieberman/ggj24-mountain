@@ -47161,7 +47161,7 @@ MonoBehaviour:
     m_Bits: 64
   Camera: {fileID: 1267833737}
   LinkedObj: {fileID: 443941993}
-  MouseButtonDrag: 2
+  MouseButtonDrag: 0
   MouseButtonReturnHome: 1
   StartPos: {x: 0, y: 0, z: 0}
 --- !u!33 &1925735892
