@@ -2,10 +2,6 @@ using System;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 using UnityEditor;
-using static UnityEngine.GraphicsBuffer;
-using static UnityEditor.PlayerSettings;
-using System.Drawing;
-using UnityEngine.WSA;
 using System.Collections.Generic;
 using System.Linq;
 
