@@ -21,6 +21,7 @@ public class ImportCards : EditorWindow
     public const int ONREVEAL = 10;
     public const int ONREVEALTEXT = 11;
     public const int ONVISIT = 12;
+    public const int ONVISITTEXT = 13;
     public const int POOL1 = 16;
     public const int POOL2 = 17;
     public const int POOL3 = 18;
@@ -89,12 +90,8 @@ public class ImportCards : EditorWindow
                 tilePlacement.PathingHeuristic = 1.0f;
             }
             tilePlacement.PaysCost = splitData[BIOME];
-            tilePlacement.OnRevealText = splitData[BIOME];
-            tilePlacement.OnVisitText = splitData[BIOME];
-
-
-
-
+            tilePlacement.OnRevealText = splitData[ONREVEALTEXT];
+            tilePlacement.OnVisitText = splitData[ONVISITTEXT];
 
             // Destroy the instantiated GameObject
             DestroyImmediate(prefabTofill);
