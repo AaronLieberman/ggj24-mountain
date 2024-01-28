@@ -91,8 +91,8 @@ LineRenderer:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.39462027
-        value: 0.13617516
+        time: 0.33456168
+        value: 0.11873436
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -100,8 +100,8 @@ LineRenderer:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 0.7229732
-        value: 0.14010216
+        time: 0.7203487
+        value: 0.11684777
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -153,7 +153,7 @@ LineRenderer:
     numCornerVertices: 5
     numCapVertices: 5
     alignment: 0
-    textureMode: 0
+    textureMode: 3
     textureScale: {x: 1, y: 1}
     shadowBias: 0.5
     generateLightingData: 0

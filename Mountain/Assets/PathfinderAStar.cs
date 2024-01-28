@@ -6,7 +6,7 @@ using System.Linq;
 public interface INeighborQueryable<T>
 {
     IEnumerable<T> GetNeighbors();
-    float GetHeuristic();
+    float GetHeuristic(bool isEnd);
     float CalcDist(T other);
 }
 
@@ -33,7 +33,7 @@ public static class PathfinderAStar<T> where T : INeighborQueryable<T>
         minScore[start] = 0;
 
         var predScore = new Dictionary<T, float>();
-        predScore[start] = start.GetHeuristic();
+        predScore[start] = start.GetHeuristic(start.Equals(goal));
 
         while (openSet.Any())
         {
@@ -46,12 +46,16 @@ public static class PathfinderAStar<T> where T : INeighborQueryable<T>
 
             foreach (var neighbor in current.GetNeighbors())
             {
+                var weight = neighbor.GetHeuristic(neighbor.Equals(goal));
+                if ( weight >= 10000)
+                    continue;
+
                 float tentativeGScore = minScore[current] + current.CalcDist(neighbor);
                 if (tentativeGScore < minScore.GetValueOrDefault(neighbor, float.MaxValue))
                 {
                     cameFrom[neighbor] = current;
                     minScore[neighbor] = tentativeGScore;
-                    predScore[neighbor] = tentativeGScore + neighbor.GetHeuristic();
+                    predScore[neighbor] = tentativeGScore + weight;
                     if (!openSet.Contains(neighbor))
                         openSet.Add(neighbor);
                 }

@@ -1,17 +1,14 @@
-using System.Collections;
-using System.Collections.Generic;
-using Microsoft.Unity.VisualStudio.Editor;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.UIElements;
-using UnityEngine.UI;
 using System.Linq;
 using UnityEngine.EventSystems;
+using System;
+using UnityEditor;
 
 public class CardUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     [SerializeField] private UnityEngine.UI.Image CardRenderer;
     [SerializeField] private GameObject SelectedBackground;
+
 
     public Card Card { get; set; }
 

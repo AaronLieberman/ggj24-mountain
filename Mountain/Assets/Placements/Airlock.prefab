@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2176906942159763448
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3329339800751253644}
+  - component: {fileID: 8158027313759549239}
+  m_Layer: 0
+  m_Name: Airlock
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3329339800751253644
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2176906942159763448}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8158027313759549239
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2176906942159763448}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ff2a246e0d77fb46890804a37f3a542, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Actions: []
+  Name: Airlock
+  FlavorText: 'An airlock with simple controls: two buttons labeled ''Depart'' and
+    ''Seal''. Until recently, it has never been used.'
+  OnRevealText: For a year, the airlock out of Stratohaven has stood unlocked, yet
+    none dared venture beyond. Our haven in the clouds has provided all we needed.
+    Why risk the barren lands below? But today, something changed. In the distance,
+    bursts of light pierced the sky - fireworks, akin to those in our old TV shows.
+    Are we truly alone? Curiosity stirs in Stratohaven. Our bravest will journey
+    to uncover this enigma.
+  OnVisitText: 
+  LostChance: 0
+  Difficulty: 2147483647
+  PathingHeuristic: 100000
+  PaysCost: Mountaintop

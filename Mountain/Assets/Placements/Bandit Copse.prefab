@@ -251,10 +251,10 @@ MonoBehaviour:
     to upgrade to a Forest.
   OnRevealText: 
   OnVisitText: 
-  LostChance: 0.1
-  Difficulty: 1
-  PathingHeuristic: 1
-  PaysCost: 
+  LostChance: 0.05
+  Difficulty: -1
+  PathingHeuristic: 100000
+  PaysCost: Fields
 --- !u!1 &1861969430247256808
 GameObject:
   m_ObjectHideFlags: 0

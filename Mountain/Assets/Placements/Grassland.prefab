@@ -131,10 +131,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: Grassland
-  FlavorText: 
+  FlavorText: Like a lawn the runs to the horizon.
   OnRevealText: 
   OnVisitText: 
-  LostChance: 0
-  Difficulty: 0
-  PathingHeuristic: 1
-  PaysCost: 
+  LostChance: 0.1
+  Difficulty: 1
+  PathingHeuristic: 100000
+  PaysCost: Fields

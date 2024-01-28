@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8283726409731301674
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4607405045014864142}
+  - component: {fileID: 7779112155841060399}
+  m_Layer: 0
+  m_Name: Control Room
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4607405045014864142
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8283726409731301674}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7779112155841060399
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8283726409731301674}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ff2a246e0d77fb46890804a37f3a542, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Actions: []
+  Name: Control Room
+  FlavorText: 
+  OnRevealText: 'The coordinates lead us not to another city in the clouds, but to
+    a secluded control room nestled on a lesser-known mountain. The room is filled
+    with old technology and screens, some still flickering with life. Stasia''s digital
+    logs reveal she was a guardian of sorts, the most recent in a long line of clones,
+    maintaining the technology that oversees these mountaintop settlements. The screens
+    show several settlements like Stratohaven, yet ours is the only one with the
+    gate marked ''open.'' The question lingers in the air: If Stasia died before
+    Stratohaven was unlocked, who unlocked our city, and why? We hope the Stratolink
+    printplans we discovered will lead to answers.'
+  OnVisitText: 
+  LostChance: 0
+  Difficulty: 2
+  PathingHeuristic: 100000
+  PaysCost: Wasteland

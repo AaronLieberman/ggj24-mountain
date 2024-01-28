@@ -34,6 +34,15 @@ public class TileGridLayout : MonoBehaviour
         PathLines.material.renderQueue = 5000;
     }
 
+
+    public IEnumerable<Tile> EnumerateTiles()
+    {
+        foreach (var tile in _tiles)
+        {
+            yield return tile;
+        }
+    }
+
     public void Reset()
     {
         Generate(GridSize);
@@ -75,6 +84,7 @@ public class TileGridLayout : MonoBehaviour
     public void ClearPath()
     {
         _pathfindingPath.Clear();
+        PathLines.enabled = false;
         foreach (var tile in GetComponentsInChildren<Tile>())
         {
             tile.SetHighlight("path", false);
@@ -84,6 +94,7 @@ public class TileGridLayout : MonoBehaviour
     public void ShowPath(Tile startTile, IEnumerable<Tile> destinations)
     {
         ClearPath();
+        PathLines.enabled = true;
 
         var currentTile = startTile;
         foreach (var destination in destinations)
@@ -98,6 +109,20 @@ public class TileGridLayout : MonoBehaviour
         }
     }
 
+    public bool IsPathPassable(Tile startTile, IEnumerable<Tile> destinations)
+    {
+        var currentTile = startTile;
+        foreach (var destination in destinations)
+        {
+            var route = PathfinderAStar<Tile>.CalculateRoute(currentTile, destination);
+            if (route == null) return false;
+            if (!route.Any()) return false;
+            currentTile = destination;
+        }
+
+        return true;
+    }
+
     public void OnMouseEnterTile(Tile tile)
     {
     }
@@ -108,9 +133,14 @@ public class TileGridLayout : MonoBehaviour
 
     public void OnMouseUpTile(Tile tile)
     {
+        if (!GetComponent<Board>().CanTarget(tile))
+        {
+            return;
+        }
+
         var handUI = Utilities.GetRootComponents<Canvas>()
-			.Select(c => c.GetComponentInChildren<HandUI>())
-			.First();
+            .Select(c => c.GetComponentInChildren<HandUI>())
+            .First();
 
         CardUI selectedCardUI = handUI.SelectedCardUI;
         if (selectedCardUI != null)
@@ -205,8 +235,8 @@ public class TileGridLayout : MonoBehaviour
 
         if (_pathfindingPath.Count > 1)
         {
-            PathLines.positionCount = _pathfindingPath.Count; 
-            for ( var i = 0; i < _pathfindingPath.Count; ++i )
+            PathLines.positionCount = _pathfindingPath.Count;
+            for (var i = 0; i < _pathfindingPath.Count; ++i)
             {
                 PathLines.SetPosition(i, GetPositionFromTileCoord(_pathfindingPath[i].Location));
             }
