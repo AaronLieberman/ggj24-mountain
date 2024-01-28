@@ -45,6 +45,8 @@ public class Board : MonoBehaviour
 
     private List<Tile> _cardTargets = new List<Tile>();
 
+    public bool CanTarget(Tile tile) => _cardTargets.Contains(tile);
+
     public void ClearCardTargets()
     {
         foreach (var t in _cardTargets)

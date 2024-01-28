@@ -133,6 +133,11 @@ public class TileGridLayout : MonoBehaviour
 
     public void OnMouseUpTile(Tile tile)
     {
+        if (!GetComponent<Board>().CanTarget(tile))
+        {
+            return;
+        }
+
         var handUI = Utilities.GetRootComponents<Canvas>()
             .Select(c => c.GetComponentInChildren<HandUI>())
             .First();
