@@ -267,6 +267,7 @@ public class TileGridLayout : MonoBehaviour
     }
 }
 
+#if UNITY_EDITOR
 [CustomEditor(typeof(TileGridLayout))]
 public class TileGridLayoutEditor : Editor
 {
@@ -287,3 +288,4 @@ public class TileGridLayoutEditor : Editor
 
 
 }
+#endif

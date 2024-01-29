@@ -91,7 +91,7 @@ public class Board : MonoBehaviour
     }
 }
 
-
+#if UNITY_EDITOR
 [CustomEditor(typeof(Board))]
 public class BoardEditor : Editor
 {
@@ -106,3 +106,4 @@ public class BoardEditor : Editor
         }
     }
 }
+#endif
