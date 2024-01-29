@@ -17,11 +17,5 @@ public class Card : MonoBehaviour
 
     public CardDetails CardDetails;
 
-    public void SpawnOnTile(Tile tile)
-    {
-        if (PlacementToSpawn != null)
-        {
-            tile.SpawnPlacement(PlacementToSpawn);
-        }
-    }
+    public string PaysCost { get { return (IsRevealed ? PlacementToSpawn : UnrevealedPlacement).PaysCost; } }
 }
