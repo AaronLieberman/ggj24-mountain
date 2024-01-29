@@ -194,7 +194,8 @@ public class GameManager : MonoBehaviour
         {
             bool passable = Map.IsPathPassable(workerTile, WorkerPlan.Select(a => a.Tile).Concat(new[] { tile }));
             var placement = tile.GetComponentInChildren<Placement>();
-            bool cardCanBePlaced = placement.Actions.Count >= 0 && placement.Actions.Any(a => a.Cost == card.name || string.IsNullOrEmpty(a.Cost));
+            bool cardCanBePlaced = placement.Actions.Count == 0 ||
+                placement.Actions.Any(a => a.Cost == card.name || string.IsNullOrEmpty(a.Cost));
 
             tile.SetDisabled("path", !passable || !cardCanBePlaced);
         }

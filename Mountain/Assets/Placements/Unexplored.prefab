@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Actions:
-  - Cost: Foo
+  - Cost: 
     Upgrade: {fileID: 0}
     OnUpgrade: {fileID: 0}
   Name: Unexplored

@@ -17,5 +17,5 @@ public class Card : MonoBehaviour
 
     public CardDetails CardDetails;
 
-    public string PaysCost { get { return (IsRevealed ? PlacementToSpawn : UnrevealedPlacement).PaysCost; } }
+    public string PaysCost { get { return (IsRevealed ? PlacementToSpawn : UnrevealedPlacement)?.PaysCost ?? ""; } }
 }
