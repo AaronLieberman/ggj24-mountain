@@ -50,6 +50,30 @@ public class TooltipUI : MonoBehaviour
         tooltipPlacementNameText.text = placement.Name;
         tooltipPlacementDescriptionText.text = placement.FlavorText;
         tooltipPlacementLostChanceText.text = String.Format("Chance to get lost: {0}%", (placement.LostChance * 100));
-        
+        tooltipPlacementPassableText.text = placement.PathingHeuristic > 10000 ? "Impassable" : "Passable";
+
+        foreach (Transform child in tooltipPlacementAbilitiesSection)
+        {
+            Destroy(child.gameObject);
+        }
+
+        foreach (TileAction tileAction in placement.Actions)
+        {
+            GameObject abilityObject = Instantiate(tooltipPlacementAbilityPrefab, tooltipPlacementAbilitiesSection);
+            abilityObject.GetComponent<TooltipAbilityUI>().AbilityCostText.text = tileAction.Cost;
+            if (tileAction.Upgrade != null)
+                abilityObject.GetComponent<TooltipAbilityUI>().AbilityUpgradeToText.text =  String.Format("Upgrade to {0}", tileAction.Upgrade.Name);
+            else
+                abilityObject.GetComponent<TooltipAbilityUI>().AbilityUpgradeToText.text = "Unknown";
+        }
+
+        foreach (Transform child in tooltipPlacementOnVisitsSection)
+        {
+            Destroy(child.gameObject);
+        }
+
+        GameObject visitObject = Instantiate(tooltipPlacementOnVisitPrefab, tooltipPlacementOnVisitsSection);
+        visitObject.GetComponent<TooltipOnVisitUI>().OnVisitText.text = placement.OnVisitText;
+        visitObject.GetComponent<TooltipOnVisitUI>().OnVisitAddText.text = String.Format("Add {0} to your deck", placement.OnVisitText);
     }
 }

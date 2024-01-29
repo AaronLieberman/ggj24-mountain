@@ -46,13 +46,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Actions:
-  - Cost: 
+  - Cost: Foo
     Upgrade: {fileID: 0}
     OnUpgrade: {fileID: 0}
-  Name: 
-  FlavorText: 
+  Name: Unexplored
+  FlavorText: This tile is unexplored.
   OnRevealText: 
-  OnVisitText: 
+  OnVisitText: Not Known
   LostChance: 0
   OnVisit: {fileID: 0}
   Difficulty: 0
