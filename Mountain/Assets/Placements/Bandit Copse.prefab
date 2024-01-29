@@ -245,7 +245,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ff2a246e0d77fb46890804a37f3a542, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Actions: []
+  Actions:
+  - Cost: Woods
+    Upgrade: {fileID: 1365756699843689891, guid: 817df214692c8234c88b99caf669e1ee, type: 3}
+    OnUpgrade: {fileID: 0}
+  - Cost: 
+    Upgrade: {fileID: 0}
+    OnUpgrade: {fileID: 0}
   Name: Bandit Copse
   FlavorText: Insert any tile to not lose a tile when visiting. Insert a Woods tile
     to upgrade to a Forest.
