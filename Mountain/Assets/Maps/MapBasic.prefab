@@ -49794,7 +49794,7 @@ MonoBehaviour:
   PurificationPlantMaintenanceSlough: {fileID: 9068156614129714157, guid: 1e57b2ce1ffd25a41a3e9a9c17a88e72, type: 3}
   PurificationPlantMaintenanceSloughOffset: {x: 1, y: 1}
   ComplexFoundation: {fileID: 5724169106563232267, guid: 2d094555a67dd7c41803f377d9d489cd, type: 3}
-  ComplexFoundationOffset: {x: 1, y: -1}
+  ComplexFoundationOffset: {x: -1, y: 0}
   Unpassable: {fileID: 6514080990430841598, guid: 8567b668fda3edf4a9a985edbb56a9d6, type: 3}
 --- !u!1 &8888112525914087364
 GameObject:
