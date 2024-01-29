@@ -635,16 +635,11 @@ MonoBehaviour:
   Actions: []
   Name: Fireworks
   FlavorText: 
-  OnRevealText: "Our expedition below Stratohaven yielded the unimaginable \u2013
-    survivors! We believed the surface world extinct, yet here they thrive, ignorant
-    of our technologies like protein printers or television screens. Among the survivors,
-    they exclaim that our technology reminds them of 'talking metal' that their neighbor
-    speaks of. They provide directions to their village, where tales of this device
-    originated. Perhaps this is a clue to others from our world."
+  OnRevealText: 
   OnVisitText: 
   LostChance: 0
   OnVisit: {fileID: 0}
-  Difficulty: 2
+  Difficulty: 0
   PathingHeuristic: 1
   PaysCost: Fields
   RevealAction: {fileID: 0}
