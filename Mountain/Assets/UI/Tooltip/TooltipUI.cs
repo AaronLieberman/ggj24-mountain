@@ -47,6 +47,7 @@ public class TooltipUI : MonoBehaviour
 
     void RefreshTooltipUIContent(Placement placement)
     {
+        tooltipPlacementNameText.text = placement.Name;
         //tooltipPlacementNameText.text = placement.Name + " " + Utilities.GetRootComponent<Grid>().LocalToCell(placement.transform.parent.localPosition);
         tooltipPlacementDescriptionText.text = placement.FlavorText;
         tooltipPlacementLostChanceText.text = String.Format("Chance to get lost: {0}%", (placement.LostChance * 100));
