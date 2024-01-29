@@ -77,6 +77,8 @@ public class Worker : MonoBehaviour
             // force the worker to be exactly in the right local position
             transform.localPosition = _grid.CellToLocal(Utilities.ToVec3I(_nextDestinationTileLoc.Value));
 
+            OnVisit(_map.GetTileFromLoc(cell));
+
             if (_nextDestinationTileLoc == GetNextDestinationWaypointCell())
             {
                 if (IsHome)
@@ -103,6 +105,47 @@ public class Worker : MonoBehaviour
 
     void ExecutePlan(Card card, Tile tile)
     {
-        card.SpawnOnTile(tile);
+        var existingPlacement = tile.GetComponentInChildren<Placement>();
+        if (existingPlacement == null)
+            return;
+
+        if (existingPlacement.Actions.Count == 1)
+        {
+            var action = existingPlacement.Actions.Single();
+            if (string.IsNullOrWhiteSpace(action.Cost) && action.OnUpgrade == null && action.Upgrade == null)
+            {
+                var placementToSpawn = card.IsRevealed
+                    ? (card.PlacementToSpawn ?? card.UnrevealedPlacement)
+                    : (card.UnrevealedPlacement ?? card.PlacementToSpawn);
+                if (placementToSpawn != null)
+                {
+                    var instance = tile.SpawnPlacement(placementToSpawn);
+                    instance.RevealAction?.DoWork(this, instance, card);
+                }
+            }
+
+            return;
+        }
+
+        var relevantAction = existingPlacement.Actions.FirstOrDefault(a => a.Cost == card.PaysCost);
+        if (relevantAction != null)
+        {
+            if (relevantAction.Upgrade != null)
+            {
+                var instance = tile.SpawnPlacement(relevantAction.Upgrade);
+                instance.RevealAction?.DoWork(this, instance, card);
+            }
+
+            if (relevantAction.OnUpgrade != null) relevantAction.OnUpgrade.DoWork(this, existingPlacement, card);
+        }
+    }
+
+    void OnVisit(Tile tile)
+    {
+        var placement = tile.GetComponentInChildren<Placement>();
+        if (placement == null)
+            return;
+
+        placement.OnVisit?.DoWork(this, placement, null);
     }
 }
