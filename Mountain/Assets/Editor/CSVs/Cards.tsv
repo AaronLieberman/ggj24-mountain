@@ -19,7 +19,7 @@ Priority	Can be drawn	Name	Biome Type	Chance To Get Lost	Difficult	Impassable	Fl
 1	No	The Great Gate	Mountaintop		0	TRUE	Sealed against the cataclysm for 10,000 years.	Impassable. Insert forest to upgrade to Explorer's Gate.								0	0	0	0
 1	No	Explorer's Gate	Mountaintop		0		The plasticom tells us that the only biome more swarming with life than a forest is the ocean. But who among us has seen the sea?									0	0	0	0
 2	No	Purification Plant Maintenance Slough	Mountaintop		0	TRUE	A perfect water recycler, in 10,000 years it has not lost a drop.	Impassable. Insert Swamp to upgrade to The Great River Of Beyond								0	0	0	0
-2	No	The Great River Of Beyond	Mountaintop		0		Now we take in sludge, and give the world a crystal clear river.			Plus 1 Explorer						0	0	0	0
+2	No	The Great River Of Beyond	Mountaintop		0		Now we take in sludge, and give the world a crystal clear river.			Plus 1 Explorer, Place adjacent Crystal Clear River						0	0	0	0
 	No	Plasticom	Mountaintop		0		The immortal intelligent computer that has kept Stratohaven running for 10,000 years.	Insert a Forest to upgrade to Global Datamentarian.								0	0	0	0
 	No	Global Datamentarian	Mountaintop		0		The Plasticom voraciously records all the updated information we bring it from outside Stratohaven.			Plus 1 Hand Size						0	0	0	0
 	No	Interwoven Intellect	Mountaintop		0					Plus 1 Hand Size						0	0	0	0
@@ -87,9 +87,9 @@ Priority	Can be drawn	Name	Biome Type	Chance To Get Lost	Difficult	Impassable	Fl
 	No	Electronic Device	Woods	0.00	2					Unlocks Pool 3, Deck 4 cards, Show Stasia's Residency tile on other side of Purification Plant Maintenance Slough	The device Bennett found indeed turned out to be an electronic diary, and it belonged to someone named Stasia. According to the diary, she lived in a place that sounds remarkably like our own Stratohaven. She mentions coordinates that she often visited. Maybe we can find her.					0	0	0	0
 	No	Stasia's Residency	Settlement	0.00	2					Unlocks Pool 4, Deck 4 cards, reveals Control room far away	We found Stasia's home, but she has been dead for many years now. Her husband, now an old man, guards her possessions like precious treasures. From her computer, we extract the coordinates - they lead to a location that's not on any of our maps. It's time to explore these unknown coordinates and unravel the mysteries they hold.					0	0	0	0
 	No	Control Room	Wasteland	0.00	2					Deck 10 cards	The coordinates lead us not to another city in the clouds, but to a secluded control room nestled on a lesser-known mountain. The room is filled with old technology and screens, some still flickering with life. Stasia's digital logs reveal she was a guardian of sorts, the most recent in a long line of clones, maintaining the technology that oversees these mountaintop settlements. The screens show several settlements like Stratohaven, yet ours is the only one with the gate marked 'open.' The question lingers in the air: If Stasia died before Stratohaven was unlocked, who unlocked our city, and why? We hope the Stratolink printplans we discovered will lead to answers.					0	0	0	0
-	Yes															0	0	0	0
-	Yes															0	0	0	0
-	Yes															0	0	0	0
+	No	Crystal Clear River	Mountaintop	0.00	0		Like flowing glass.			Place an adjacent Tumbling River						0	0	0	0
+	No	Tumbling River	Mountaintop	0.00	0		Water tumbles head over heals down a thousand feet.			Place an adjacent Waterfall						0	0	0	0
+	No	Waterfall	Mountaintop	0.00	0		Mountain meets valley in a plume of mist.									0	0	0	0
 	Yes															0	0	0	0
 	Yes															0	0	0	0
 	Yes															0	0	0	0
