@@ -381,7 +381,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tooltipContentSection: {fileID: 1688931820456781836}
-  tooltipOffsetFactor: {x: 0.125, y: 0.25}
+  tooltipOffsetFactor: {x: 0.2, y: 0.25}
   tooltipPlacementNameText: {fileID: 25803945283474722}
   tooltipPlacementDescriptionText: {fileID: 5618700713520825807}
   tooltipPlacementLostChanceText: {fileID: 5329841351423964040}
