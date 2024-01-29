@@ -20,6 +20,8 @@ public class MapMaker : MonoBehaviour
     public Placement ComplexFoundation;
     public Vector2Int ComplexFoundationOffset = new Vector2Int(1,1);
     
+    public Vector2Int[] UnpassableTiles;
+
     public Placement Unpassable;
 
     public void MakeMap()
@@ -34,7 +36,11 @@ public class MapMaker : MonoBehaviour
         map.GetTileFromLoc(map.HomeLocation + VidonariumOffset).SpawnPlacement(Videonarium);
 
 
-        //map.GetTileFromLoc(new Vector2Int(map.HomeLocation.x + 1, map.HomeLocation.x)).SpawnPlacement(AirlockPlacement);
+        foreach (var tile in UnpassableTiles)
+        {
+            map.GetTileFromLoc(tile).SpawnPlacement(Unpassable);
+
+        }
 
 
 

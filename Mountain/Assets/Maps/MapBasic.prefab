@@ -49795,6 +49795,32 @@ MonoBehaviour:
   PurificationPlantMaintenanceSloughOffset: {x: 1, y: 1}
   ComplexFoundation: {fileID: 5724169106563232267, guid: 2d094555a67dd7c41803f377d9d489cd, type: 3}
   ComplexFoundationOffset: {x: -1, y: 0}
+  UnpassableTiles:
+  - {x: 9, y: 6}
+  - {x: 10, y: 6}
+  - {x: 11, y: 6}
+  - {x: 11, y: 7}
+  - {x: 12, y: 8}
+  - {x: 9, y: 8}
+  - {x: 10, y: 8}
+  - {x: 10, y: 9}
+  - {x: 7, y: 5}
+  - {x: 6, y: 6}
+  - {x: 6, y: 4}
+  - {x: 7, y: 9}
+  - {x: 9, y: 9}
+  - {x: 8, y: 10}
+  - {x: 10, y: 10}
+  - {x: 4, y: 5}
+  - {x: 9, y: 11}
+  - {x: 5, y: 7}
+  - {x: 6, y: 8}
+  - {x: 6, y: 9}
+  - {x: 5, y: 9}
+  - {x: 9, y: 12}
+  - {x: 5, y: 10}
+  - {x: 4, y: 11}
+  - {x: 8, y: 3}
   Unpassable: {fileID: 6514080990430841598, guid: 8567b668fda3edf4a9a985edbb56a9d6, type: 3}
 --- !u!1 &8888112525914087364
 GameObject:
