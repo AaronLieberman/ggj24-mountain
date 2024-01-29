@@ -395,6 +395,7 @@ MonoBehaviour:
   Difficulty: 0
   PathingHeuristic: 100000
   PaysCost: Mountaintop
+  RevealAction: {fileID: 0}
 --- !u!1 &8954943637133437648
 GameObject:
   m_ObjectHideFlags: 0
