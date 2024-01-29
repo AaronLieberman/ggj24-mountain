@@ -30,6 +30,9 @@ public class GameManager : MonoBehaviour
 
     public List<WorkerPlan> WorkerPlan { get; } = new();
 
+    public bool IsWorkRevealed { get; set; }
+    public event EventHandler ShowWorkRevealedUI;
+
     void Awake()
     {
         Map = Utilities.GetRootComponentRecursive<TileGridLayout>();
@@ -66,6 +69,8 @@ public class GameManager : MonoBehaviour
 
     void StartGame()
     {
+        IsWorkRevealed = false;
+
         SetupMap();
 
         Deck.Reset();
@@ -206,5 +211,10 @@ public class GameManager : MonoBehaviour
         var placement = tile.GetComponentInChildren<Placement>();
         bool canCardBePlaced = placement.Actions.Count >= 0 && placement.Actions.Any(a => a.Cost == card.name || string.IsNullOrEmpty(a.Cost));
         return canCardBePlaced;
+    }
+
+    public void InvokeShowRevealWorkUI()
+    {
+        ShowWorkRevealedUI?.Invoke(null, null);
     }
 }

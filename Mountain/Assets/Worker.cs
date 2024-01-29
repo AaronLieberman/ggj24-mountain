@@ -98,7 +98,7 @@ public class Worker : MonoBehaviour
         }
         else
         {
-            var moveDir = differenceDir.normalized * Mathf.Min(Speed * Time.deltaTime, differenceDir.magnitude);
+            var moveDir = differenceDir.normalized * Mathf.Min((Utilities.GetRootComponent<GameManager>().IsWorkRevealed ? 0 : Speed) * Time.deltaTime, differenceDir.magnitude);
             transform.localPosition += moveDir;
         }
     }
@@ -119,6 +119,7 @@ public class Worker : MonoBehaviour
                     : (card.UnrevealedPlacement ?? card.PlacementToSpawn);
                 if (placementToSpawn != null)
                 {
+
                     var instance = tile.SpawnPlacement(placementToSpawn);
                     instance.RevealAction?.DoWork(this, instance, card);
                 }
@@ -132,6 +133,7 @@ public class Worker : MonoBehaviour
         {
             if (relevantAction.Upgrade != null)
             {
+                Utilities.GetRootComponent<GameManager>().InvokeShowRevealWorkUI();
                 var instance = tile.SpawnPlacement(relevantAction.Upgrade);
                 instance.RevealAction?.DoWork(this, instance, card);
             }
