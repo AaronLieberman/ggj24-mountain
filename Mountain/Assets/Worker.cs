@@ -133,9 +133,7 @@ public class Worker : MonoBehaviour
         {
             if (relevantAction.Upgrade != null)
             {
-                Utilities.GetRootComponent<GameManager>().InvokeShowRevealWorkUI();
-                var instance = tile.SpawnPlacement(relevantAction.Upgrade);
-                instance.RevealAction?.DoWork(this, instance, card);
+                tile.SpawnPlacement(relevantAction.Upgrade);
             }
 
             if (relevantAction.OnUpgrade != null) relevantAction.OnUpgrade.DoWork(this, existingPlacement, card);

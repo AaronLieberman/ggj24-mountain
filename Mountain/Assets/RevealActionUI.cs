@@ -9,13 +9,13 @@ public class RevealActionUI : MonoBehaviour
 
     void Awake()
     {
-        Utilities.GetRootComponent<GameManager>().ShowWorkRevealedUI += (_, __) => ShowWorkRevealedUI();
+        Utilities.GetRootComponent<GameManager>().ShowOnRevealedUI += (_, __) => ShowOnRevealedUI();
     }
 
-    void ShowWorkRevealedUI()
+    void ShowOnRevealedUI()
     {
-        Utilities.GetRootComponent<GameManager>().IsWorkRevealed = true;
-        revealActionUI.SetActive(true);
+        // Utilities.GetRootComponent<GameManager>().IsWorkRevealed = true;
+        // revealActionUI.SetActive(true);
     }
 
     public void AcceptRevealedWork()

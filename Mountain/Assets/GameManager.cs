@@ -31,7 +31,7 @@ public class GameManager : MonoBehaviour
     public List<WorkerPlan> WorkerPlan { get; } = new();
 
     public bool IsWorkRevealed { get; set; }
-    public event EventHandler ShowWorkRevealedUI;
+    public event EventHandler<string> ShowOnRevealedUI;
 
     void Awake()
     {
@@ -214,8 +214,8 @@ public class GameManager : MonoBehaviour
         return canCardBePlaced;
     }
 
-    public void InvokeShowRevealWorkUI()
+    public void ShowOnRevealText(string text)
     {
-        ShowWorkRevealedUI?.Invoke(null, null);
+        ShowOnRevealedUI?.Invoke(null, text);
     }
 }

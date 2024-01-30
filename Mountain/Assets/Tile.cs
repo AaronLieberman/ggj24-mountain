@@ -20,11 +20,20 @@ public class Tile : MonoBehaviour, INeighborQueryable<Tile>
         _highlightMaterial = transform.GetComponentInParent<TileGridLayout>().HighlightMaterial;
     }
 
-    public Placement SpawnPlacement(Placement placement)
+    // worker may be null
+    public Placement SpawnPlacement(Worker worker, Placement placement)
     {
         Utilities.DestroyAllChildren(transform);
 
-        return Instantiate(placement, transform, false);
+        var instance = Instantiate(placement, transform, false);
+
+        if (!string.IsNullOrWhiteSpace(instance.OnRevealText))
+        {
+            Utilities.GetRootComponent<GameManager>().ShowOnRevealText(instance.OnRevealText);
+        }
+
+        instance.RevealAction?.DoWork(worker, instance, null);
+        return instance;
     }
 
     public IEnumerable<Tile> GetNeighbors()
