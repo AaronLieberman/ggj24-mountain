@@ -33,7 +33,7 @@ public class Board : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public void Reset()
@@ -79,15 +79,18 @@ public class Board : MonoBehaviour
         Workers.Clear();
     }
 
-    public void AddWorkerAtHome()
+    public void AddWorker(Vector2Int loc)
     {
-        //Instantiate(HomePrefab, homeLoc, quaternion.identity, Map.transform);
-
         var workerObj = Instantiate(WorkerPrefab, ActorsContainer.transform);
-        workerObj.transform.position = Map.GetPositionFromTileCoord(Map.HomeLocation);
+        workerObj.transform.position = Map.GetPositionFromTileCoord(loc);
         var worker = workerObj.GetComponent<Worker>();
 
         Workers.Add(worker);
+    }
+
+    public void AddWorkerAtHome()
+    {
+        AddWorker(Map.HomeLocation);
     }
 }
 

@@ -1,13 +1,14 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using UnityEditor.Playables;
 using UnityEngine;
 
 public class Worker : MonoBehaviour
 {
     public float Speed = 10f;
 
-    public List<(Card, Tile)> WorkerPlan { get; } = new();
+    public List<WorkerPlan> WorkerPlan { get; } = new();
     Vector2Int? _nextDestinationTileLoc;
     float _tileDistanceEpsilon = 0.01f;
 
@@ -17,7 +18,7 @@ public class Worker : MonoBehaviour
 
     public void AddDestination(Card card, Tile tile)
     {
-        WorkerPlan.Add((card, tile));
+        WorkerPlan.Add(new WorkerPlan() { Card = card, Tile = tile });
         card.transform.parent = transform;
     }
 
@@ -43,7 +44,7 @@ public class Worker : MonoBehaviour
     Vector2Int GetNextDestinationWaypointCell()
     {
         return WorkerPlan.Any()
-            ? Utilities.ToVec2I(_grid.LocalToCell(WorkerPlan.First().Item2.transform.localPosition))
+            ? Utilities.ToVec2I(_grid.LocalToCell(WorkerPlan.First().Tile.transform.localPosition))
             : _map.HomeLocation;
     }
 
@@ -90,7 +91,10 @@ public class Worker : MonoBehaviour
                     Debug.LogFormat("Reached waypoint {0} aka {1}", _nextDestinationTileLoc.Value, cell);
                     var currentPlan = WorkerPlan.First();
                     WorkerPlan.RemoveAt(0);
-                    ExecutePlan(currentPlan.Item1, currentPlan.Item2);
+                    if (currentPlan.Card != null)
+                    {
+                        ExecutePlan(currentPlan.Card, currentPlan.Tile);
+                    }
                 }
             }
 

@@ -253,7 +253,7 @@ public class TileGridLayout : MonoBehaviour
     }
 
     public IEnumerable<Tile> GetNeighborsByTile(Tile tile)
-        => PathFinder.GetAdjacentHexCoords(new Vector2Int(tile.Location.x, tile.Location.y))
+        => Utilities.GetAdjacentHexCoords(new Vector2Int(tile.Location.x, tile.Location.y))
             .Where(checkCoord => IsValidLocation(checkCoord))
             .Select(coord => GetTileFromLoc(coord));
 

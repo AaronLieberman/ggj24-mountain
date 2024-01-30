@@ -32,7 +32,7 @@ public class HandUI : MonoBehaviour, IPointerEnterHandler
         Hand hand = Utilities.GetRootComponent<Hand>();
         List<WorkerPlan> workerPlan = Utilities.GetRootComponent<GameManager>().WorkerPlan;
 
-        bool isPlanFull = Utilities.GetRootComponent<GameManager>().WorkerPlan.Count >= Utilities.GetRootComponent<GameManager>().MaxCards;
+        bool isPlanFull = Utilities.GetRootComponent<GameManager>().WorkerPlan.Count >= Utilities.GetRootComponent<GameManager>().MaxJourneySlots;
 
         foreach (Transform child in hand.transform)
         {
@@ -59,7 +59,7 @@ public class HandUI : MonoBehaviour, IPointerEnterHandler
         if (cardUI != null && cardUI.InUse)
             return;
 
-        if (Utilities.GetRootComponent<GameManager>().WorkerPlan.Count >= Utilities.GetRootComponent<GameManager>().MaxCards)
+        if (Utilities.GetRootComponent<GameManager>().WorkerPlan.Count >= Utilities.GetRootComponent<GameManager>().MaxJourneySlots)
             return;
 
         if (SelectedCardUI?.Card != null)

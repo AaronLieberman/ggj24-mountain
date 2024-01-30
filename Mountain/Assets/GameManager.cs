@@ -13,7 +13,7 @@ public class WorkerPlan
 
 public class GameManager : MonoBehaviour
 {
-    public int MaxCards = 2;
+    public int MaxJourneySlots = 2;
 
     public TileGridLayout Map { get; private set; }
     public Board Board { get; private set; }
@@ -120,7 +120,7 @@ public class GameManager : MonoBehaviour
     {
         if (!IsWorkerAvailable) return;
         var worker = GetFirstAvailableWorker();
-        if (WorkerPlan.Count() >= MaxCards) return;
+        if (WorkerPlan.Count() >= MaxJourneySlots) return;
 
         var workerTile = Map.GetTileAtObject(worker.transform);
 
@@ -187,7 +187,7 @@ public class GameManager : MonoBehaviour
 
         if (!IsWorkerAvailable) return;
         var worker = GetFirstAvailableWorker();
-        if (WorkerPlan.Count() >= MaxCards) return;
+        if (WorkerPlan.Count() >= MaxJourneySlots) return;
 
         var workerTile = Map.GetTileAtObject(worker.transform);
         foreach (var tile in Map.GetComponentsInChildren<Tile>())
@@ -205,7 +205,7 @@ public class GameManager : MonoBehaviour
     {
         if (!IsWorkerAvailable) return false;
         var worker = GetFirstAvailableWorker();
-        if (WorkerPlan.Count() >= MaxCards) return false;
+        if (WorkerPlan.Count() >= MaxJourneySlots) return false;
 
         var workerTile = Map.GetTileAtObject(worker.transform);
         bool passable = Map.IsPathPassable(workerTile, WorkerPlan.Select(a => a.Tile).Concat(new[] { tile }));

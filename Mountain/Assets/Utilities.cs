@@ -72,4 +72,32 @@ public static class Utilities
 	{
 		return new Vector3Int(v2i.x, v2i.y, 0);
 	}
+
+	readonly static Vector2Int[] _directionsEven = new Vector2Int[]
+    {
+        new (-1, 1), new (0, 1),
+        new (-1, 0), new (1, 0),
+        new (-1, -1), new (0, -1),
+    };
+
+    readonly static Vector2Int[] _directionsOdd = new Vector2Int[]
+    {
+        new (0, 1), new (1, 1), 
+        new (-1, 0), new (1, 0),
+        new (0, -1), new (1, -1),
+    };
+
+    public static IEnumerable<Vector2Int> GetAdjacentHexOffsets(Vector2Int coord)
+    {
+        return coord.y % 2 == 0
+            ? _directionsEven
+            : _directionsOdd;
+    }
+
+    public static IEnumerable<Vector2Int> GetAdjacentHexCoords(Vector2Int coord)
+    {
+        return coord.y % 2 == 0
+            ? _directionsEven.Select(d => coord + d)
+            : _directionsOdd.Select(d => coord + d);
+    }
 }

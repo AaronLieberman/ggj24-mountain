@@ -26,7 +26,7 @@ public class JourneyUI : MonoBehaviour, IPointerEnterHandler
         }
 
         List<WorkerPlan> workerPlan = Utilities.GetRootComponent<GameManager>().WorkerPlan;
-        for (int i = 0; i < Utilities.GetRootComponent<GameManager>().MaxCards; i++)
+        for (int i = 0; i < Utilities.GetRootComponent<GameManager>().MaxJourneySlots; i++)
         {
             GameObject journeySlot = Instantiate(JourneySlotPrefab, JourneySectionTransform);
 
