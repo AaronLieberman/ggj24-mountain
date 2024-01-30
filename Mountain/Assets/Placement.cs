@@ -15,6 +15,7 @@ public class Placement : MonoBehaviour
 {
     public List<TileAction> Actions;
     public string Name;
+    public Sprite CardSprite;
     public string FlavorText;
     public string OnRevealText;
     public string OnVisitText;

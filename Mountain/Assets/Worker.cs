@@ -113,7 +113,8 @@ public class Worker : MonoBehaviour
         if (existingPlacement == null)
             return;
 
-        var relevantAction = existingPlacement.Actions.FirstOrDefault(a => a.Cost == card.PaysCost);
+        var relevantAction = existingPlacement.Actions
+            .FirstOrDefault(a => string.IsNullOrEmpty(a.Cost) || string.Equals(a.Cost, card.PaysCost, StringComparison.InvariantCultureIgnoreCase));
         if (relevantAction != null)
         {
             if (relevantAction.Upgrade != null)

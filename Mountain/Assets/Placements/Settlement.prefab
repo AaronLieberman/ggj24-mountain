@@ -46,6 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: Settlement
+  CardSprite: {fileID: 793519832, guid: 6dfed9e8f1416d34bbd79deac2104118, type: 3}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 

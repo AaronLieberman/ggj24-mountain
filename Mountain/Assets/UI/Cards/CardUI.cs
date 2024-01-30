@@ -12,7 +12,7 @@ public class CardUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 
     public Card Card { get; set; }
 
-    public bool InUse{get;private set;}
+    public bool InUse { get; private set; }
 
     public void SetSelected(bool selected)
     {
@@ -21,7 +21,14 @@ public class CardUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 
     public void SetTexture()
     {
-        CardRenderer.sprite = Card.CardDetails.CardSprite;
+        var cardSprite = Card.IsRevealed
+            ? (Card.PlacementToSpawn != null && Card.PlacementToSpawn.CardSprite != null
+                ? Card.PlacementToSpawn.CardSprite
+                : (Card.UnrevealedPlacement != null ? Card.UnrevealedPlacement.CardSprite : null))
+            : (Card.UnrevealedPlacement != null && Card.UnrevealedPlacement.CardSprite != null
+                ? Card.UnrevealedPlacement.CardSprite
+                : (Card.PlacementToSpawn != null ? Card.PlacementToSpawn.CardSprite : null));
+        CardRenderer.sprite = cardSprite;
         Color existingTextureColor = CardRenderer.color;
         existingTextureColor.a = 1.0f;
         CardRenderer.color = existingTextureColor;
@@ -30,7 +37,7 @@ public class CardUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     public void SetInUse(bool inUse)
     {
         InUse = inUse;
-        
+
         var handUI = Utilities.GetRootComponents<Canvas>()
             .Select(c => c.GetComponentInChildren<HandUI>())
             .Single();

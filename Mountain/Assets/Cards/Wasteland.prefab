@@ -45,7 +45,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlacementToSpawn: {fileID: 3814133976299155109, guid: 8a65ef6377956d5499dcdee09d4425b4, type: 3}
-  UnrevealedPlacement: {fileID: 0}
+  UnrevealedPlacement: {fileID: 4111032941925707430, guid: 7976e35d001ec0249b53f029133651a3, type: 3}
   IsRevealed: 0
-  CardDetails:
-    CardSprite: {fileID: -491162440, guid: 6dfed9e8f1416d34bbd79deac2104118, type: 3}

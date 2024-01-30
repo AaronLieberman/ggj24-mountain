@@ -46,6 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: Woods
+  CardSprite: {fileID: 2088842820, guid: 6dfed9e8f1416d34bbd79deac2104118, type: 3}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
