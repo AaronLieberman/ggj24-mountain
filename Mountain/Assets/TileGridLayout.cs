@@ -206,7 +206,6 @@ public class TileGridLayout : MonoBehaviour
         {
             tile.SpawnPlacement(DefaultPrefab);
         }
-
     }
 
     public Tile GetTileFromLoc(Vector2Int coord)

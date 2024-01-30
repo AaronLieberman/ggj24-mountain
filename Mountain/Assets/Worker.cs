@@ -113,25 +113,6 @@ public class Worker : MonoBehaviour
         if (existingPlacement == null)
             return;
 
-        if (existingPlacement.Actions.Count == 1)
-        {
-            var action = existingPlacement.Actions.Single();
-            if (string.IsNullOrWhiteSpace(action.Cost) && action.OnUpgrade == null && action.Upgrade == null)
-            {
-                var placementToSpawn = card.IsRevealed
-                    ? (card.PlacementToSpawn ?? card.UnrevealedPlacement)
-                    : (card.UnrevealedPlacement ?? card.PlacementToSpawn);
-                if (placementToSpawn != null)
-                {
-
-                    var instance = tile.SpawnPlacement(placementToSpawn);
-                    instance.RevealAction?.DoWork(this, instance, card);
-                }
-            }
-
-            return;
-        }
-
         var relevantAction = existingPlacement.Actions.FirstOrDefault(a => a.Cost == card.PaysCost);
         if (relevantAction != null)
         {
