@@ -20,6 +20,11 @@ public class Tile : MonoBehaviour, INeighborQueryable<Tile>
         _highlightMaterial = transform.GetComponentInParent<TileGridLayout>().HighlightMaterial;
     }
 
+    public Placement SpawnPlacement(Placement placement)
+    {
+        return SpawnPlacement(null, placement);
+    }
+
     // worker may be null
     public Placement SpawnPlacement(Worker worker, Placement placement)
     {
