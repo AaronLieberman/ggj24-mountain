@@ -114,7 +114,7 @@ public class Worker : MonoBehaviour
             return;
 
         var relevantAction = existingPlacement.Actions
-            .FirstOrDefault(a => string.IsNullOrEmpty(a.Cost) || string.Equals(a.Cost, card.PaysCost, StringComparison.InvariantCultureIgnoreCase));
+            .FirstOrDefault(a => (a.Cost == null) || (a.Cost == card.PaysCost));
         if (relevantAction != null)
         {
             if (relevantAction.Upgrade != null)

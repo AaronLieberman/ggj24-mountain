@@ -9,5 +9,5 @@ public class Card : MonoBehaviour
     public Placement UnrevealedPlacement;
     public bool IsRevealed;
 
-    public string PaysCost { get { return (IsRevealed ? PlacementToSpawn : UnrevealedPlacement)?.PaysCost ?? ""; } }
+    public Placement PaysCost { get { return (IsRevealed ? PlacementToSpawn : UnrevealedPlacement)?.PaysCost ?? null; } }
 }

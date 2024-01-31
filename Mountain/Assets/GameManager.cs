@@ -195,7 +195,7 @@ public class GameManager : MonoBehaviour
             bool passable = Map.IsPathPassable(workerTile, WorkerPlan.Select(a => a.Tile).Concat(new[] { tile }));
             var placement = tile.GetComponentInChildren<Placement>();
             bool cardCanBePlaced = placement.Actions.Count == 0 ||
-                placement.Actions.Any(a => a.Cost == card.name || string.IsNullOrEmpty(a.Cost));
+                placement.Actions.Any(a => a.Cost == card.PaysCost || (a.Cost == null));
 
             tile.SetDisabled("path", !passable || !cardCanBePlaced);
         }
@@ -210,7 +210,7 @@ public class GameManager : MonoBehaviour
         var workerTile = Map.GetTileAtObject(worker.transform);
         bool passable = Map.IsPathPassable(workerTile, WorkerPlan.Select(a => a.Tile).Concat(new[] { tile }));
         var placement = tile.GetComponentInChildren<Placement>();
-        bool canCardBePlaced = placement.Actions.Count >= 0 && placement.Actions.Any(a => a.Cost == card.name || string.IsNullOrEmpty(a.Cost));
+        bool canCardBePlaced = placement.Actions.Count >= 0 && placement.Actions.Any(a => a.Cost == card.PaysCost || a.Cost== null);
         return canCardBePlaced;
     }
 
