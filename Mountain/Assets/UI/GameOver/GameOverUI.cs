@@ -12,7 +12,7 @@ public class GameOverUI : MonoBehaviour
         GameOverContent.SetActive(false);
     }
 
-    public void ShowGameOver()
+    public void ShowGameOverUI()
     {
         GameOverContent.SetActive(true);
     }

@@ -19,6 +19,7 @@ public class GameManager : MonoBehaviour
     public Board Board { get; private set; }
     public Deck Deck { get; private set; }
     public Hand Hand { get; private set; }
+    private GameOverUI GameOverUI { get; set; }
 
     public bool IsWorkerAvailable { get; private set; }
     public event EventHandler WorkerAvailableChanged;
@@ -41,6 +42,8 @@ public class GameManager : MonoBehaviour
 
         Deck = Utilities.GetRootComponent<Deck>();
         Hand = Utilities.GetRootComponent<Hand>();
+
+        GameOverUI = Utilities.GetRootComponentRecursive<GameOverUI>();
     }
 
     void Start()
@@ -160,6 +163,12 @@ public class GameManager : MonoBehaviour
         Map.ClearPath();
 
         WorkerPlanChanged?.Invoke(null, null);
+
+        // Check for Game Over state
+        if (Hand.GetHandCount() <= 0 && Deck.GetDeckCount() <= 0)
+        {
+            GameOverUI.ShowGameOverUI();
+        }
     }
 
     public void InvokeShowTooltip(Placement placement)

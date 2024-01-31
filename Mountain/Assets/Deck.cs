@@ -13,6 +13,11 @@ public class Deck : MonoBehaviour
 {
     public List<InitialCard> InitialCards;
 
+    public int GetDeckCount()
+    {
+        return transform.childCount;
+    }
+
     public void Reset()
     {
         Utilities.DestroyAllChildren(transform);
