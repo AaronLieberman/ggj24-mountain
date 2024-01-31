@@ -47,8 +47,10 @@ public class TooltipUI : MonoBehaviour
 
     void RefreshTooltipUIContent(Placement placement)
     {
-        var cell = Utilities.GetRootComponent<Grid>().LocalToCell(placement.transform.parent.localPosition);
-        tooltipPlacementNameText.text = placement.Name + $" ({cell.x}, {cell.y})";
+        var cell = placement.transform.parent != null
+            ? (Vector2Int?)Utilities.GetRootComponent<Grid>().LocalToCell(placement.transform.parent.localPosition)
+            : null;
+        tooltipPlacementNameText.text = placement.Name + (cell != null ? $" ({cell.Value.x}, {cell.Value.y})" : "");
         tooltipPlacementDescriptionText.text = placement.FlavorText;
         tooltipPlacementLostChanceText.text = String.Format("Chance to get lost: {0}%", placement.LostChance * 100);
         tooltipPlacementPassableText.text = placement.PathingHeuristic > 10000 ? "Impassable" : "Passable";
