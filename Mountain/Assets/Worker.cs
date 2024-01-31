@@ -52,7 +52,7 @@ public class Worker : MonoBehaviour
     {
         RefreshComponents();
 
-        if (IsHome) return;
+        if (_nextDestinationTileLoc == null && IsHome) return;
 
         if (_nextDestinationTileLoc == null)
         {
@@ -85,6 +85,8 @@ public class Worker : MonoBehaviour
                 if (IsHome)
                 {
                     Debug.LogFormat("Reached home {0} aka {1}", _nextDestinationTileLoc.Value, cell);
+                    GameObject.Destroy(gameObject);
+                    Utilities.GetRootComponent<Board>().AddWorkerAtHome();
                 }
                 else
                 {
