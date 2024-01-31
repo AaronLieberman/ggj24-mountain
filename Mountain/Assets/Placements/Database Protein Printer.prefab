@@ -614,7 +614,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ff2a246e0d77fb46890804a37f3a542, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Actions: []
+  Actions:
+  - Cost: {fileID: 6223766025237645061, guid: 0c3fc96df5b9e1d499c66e212164f0aa, type: 3}
+    Upgrade: {fileID: 5546885365884178955, guid: f3738251cd590d34caa5b5d6be0da7d5, type: 3}
+    OnUpgrade: {fileID: 0}
   Name: Database Protein Printer
   CardSprite: {fileID: 0}
   FlavorText: 'Today''s Menu: Breakfast Bacon flavored protein porridge. Lunch Special!

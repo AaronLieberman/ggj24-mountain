@@ -826,6 +826,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3617981593322253813}
   - component: {fileID: 2479795259110160227}
+  - component: {fileID: 2275755086847792891}
   m_Layer: 0
   m_Name: Friendly Tavern
   m_TagString: Untagged
@@ -865,7 +866,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ff2a246e0d77fb46890804a37f3a542, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Actions: []
+  Actions:
+  - Cost: {fileID: 0}
+    Upgrade: {fileID: 0}
+    OnUpgrade: {fileID: 2275755086847792891}
   Name: Friendly Tavern
   CardSprite: {fileID: 0}
   FlavorText: All who are weary are welcome to rest here and hear the tales of fellow
@@ -878,6 +882,24 @@ MonoBehaviour:
   PathingHeuristic: 1
   Biome: {fileID: 519853117350573946, guid: b422e4b1552e64241b81ca5134eb4510, type: 3}
   RevealAction: {fileID: 0}
+--- !u!114 &2275755086847792891
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7929326601307148440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f21808de4848a644cbe2296b9380dc14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NumberOfFieldsToAdd: 0
+  NumberOfForestsToAdd: 0
+  NumberOfSettlementsToAdd: 0
+  NumberOfSwampsToAdd: 0
+  NumberOfWastelandsToAdd: 0
+  NumberOfRandomTypeToAdd: 1
 --- !u!1 &8456111212345054483
 GameObject:
   m_ObjectHideFlags: 0

@@ -1943,6 +1943,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5244824591312832396}
   - component: {fileID: 5862119306748896703}
+  - component: {fileID: 7322753666149247120}
   m_Layer: 0
   m_Name: Fireworks Glenn
   m_TagString: Untagged
@@ -2013,7 +2014,25 @@ MonoBehaviour:
   Difficulty: 0
   PathingHeuristic: 1
   Biome: {fileID: 6223766025237645061, guid: 0c3fc96df5b9e1d499c66e212164f0aa, type: 3}
-  RevealAction: {fileID: 0}
+  RevealAction: {fileID: 7322753666149247120}
+--- !u!114 &7322753666149247120
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6259626365042224602}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f21808de4848a644cbe2296b9380dc14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NumberOfFieldsToAdd: 0
+  NumberOfForestsToAdd: 0
+  NumberOfSettlementsToAdd: 0
+  NumberOfSwampsToAdd: 0
+  NumberOfWastelandsToAdd: 0
+  NumberOfRandomTypeToAdd: 4
 --- !u!1 &7152120664772029439
 GameObject:
   m_ObjectHideFlags: 0

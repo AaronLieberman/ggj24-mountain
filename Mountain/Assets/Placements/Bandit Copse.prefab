@@ -247,7 +247,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Actions:
-  - Cost: {fileID: 0}
+  - Cost: {fileID: 6223766025237645061, guid: 0c3fc96df5b9e1d499c66e212164f0aa, type: 3}
     Upgrade: {fileID: 1365756699843689891, guid: 817df214692c8234c88b99caf669e1ee, type: 3}
     OnUpgrade: {fileID: 0}
   - Cost: {fileID: 0}

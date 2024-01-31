@@ -238,6 +238,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4765557386965636973}
   - component: {fileID: 4017005561122629154}
+  - component: {fileID: -6468599875290780398}
   m_Layer: 0
   m_Name: Megalo Fruit Farm
   m_TagString: Untagged
@@ -281,11 +282,29 @@ MonoBehaviour:
   OnRevealText: 
   OnVisitText: 
   LostChance: 0.08
-  OnVisit: {fileID: 0}
+  OnVisit: {fileID: -6468599875290780398}
   Difficulty: 0
   PathingHeuristic: 1
   Biome: {fileID: 5689664702476106266, guid: d207460ad79d71147a84f132fe13e8bc, type: 3}
-  RevealAction: {fileID: 0}
+  RevealAction: {fileID: -6468599875290780398}
+--- !u!114 &-6468599875290780398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4946825298739379678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f21808de4848a644cbe2296b9380dc14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NumberOfFieldsToAdd: 0
+  NumberOfForestsToAdd: 1
+  NumberOfSettlementsToAdd: 0
+  NumberOfSwampsToAdd: 0
+  NumberOfWastelandsToAdd: 0
+  NumberOfRandomTypeToAdd: 0
 --- !u!1 &5290227452026639852
 GameObject:
   m_ObjectHideFlags: 0

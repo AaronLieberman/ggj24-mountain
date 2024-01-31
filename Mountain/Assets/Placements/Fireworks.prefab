@@ -717,7 +717,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ff2a246e0d77fb46890804a37f3a542, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Actions: []
+  Actions:
+  - Cost: {fileID: 0}
+    Upgrade: {fileID: 5862119306748896703, guid: 842d3e79ab23ddb47bb1e5df2caab5e5, type: 3}
+    OnUpgrade: {fileID: 0}
   Name: Fireworks
   CardSprite: {fileID: 0}
   FlavorText: 

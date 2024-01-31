@@ -94,6 +94,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2208594472634672979}
   - component: {fileID: 7871966862562380555}
+  - component: {fileID: 6471751489159783868}
+  - component: {fileID: 8986128005474743835}
   m_Layer: 0
   m_Name: Canopy Village
   m_TagString: Untagged
@@ -129,7 +131,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ff2a246e0d77fb46890804a37f3a542, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Actions: []
+  Actions:
+  - Cost: {fileID: 5689664702476106266, guid: d207460ad79d71147a84f132fe13e8bc, type: 3}
+    Upgrade: {fileID: 0}
+    OnUpgrade: {fileID: 6471751489159783868}
   Name: Canopy Village
   CardSprite: {fileID: 0}
   FlavorText: 
@@ -140,7 +145,38 @@ MonoBehaviour:
   Difficulty: 0
   PathingHeuristic: 1
   Biome: {fileID: 5689664702476106266, guid: d207460ad79d71147a84f132fe13e8bc, type: 3}
-  RevealAction: {fileID: 0}
+  RevealAction: {fileID: 8986128005474743835}
+--- !u!114 &6471751489159783868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1376858630395274885}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3beeafebffa91c54a90d0ae1aaabb11c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ChanceForForest: 0.5
+--- !u!114 &8986128005474743835
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1376858630395274885}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f21808de4848a644cbe2296b9380dc14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NumberOfFieldsToAdd: 0
+  NumberOfForestsToAdd: 1
+  NumberOfSettlementsToAdd: 0
+  NumberOfSwampsToAdd: 0
+  NumberOfWastelandsToAdd: 0
+  NumberOfRandomTypeToAdd: 0
 --- !u!1 &3937635964197256504
 GameObject:
   m_ObjectHideFlags: 0

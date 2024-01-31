@@ -129,7 +129,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ff2a246e0d77fb46890804a37f3a542, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Actions: []
+  Actions:
+  - Cost: {fileID: 0}
+    Upgrade: {fileID: 4696977928925645101, guid: 489c82b55e2c7884ea5a05865b74f4c1, type: 3}
+    OnUpgrade: {fileID: 0}
   Name: Briar Passage
   CardSprite: {fileID: 0}
   FlavorText: 
