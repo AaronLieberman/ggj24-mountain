@@ -107,7 +107,6 @@ public class ImportCards : EditorWindow
             {
                 tilePlacement.PathingHeuristic = 1.0f;
             }
-            tilePlacement.PaysCost = GetPrefabFromName(splitData[BIOME]).GetComponentInChildren<Placement>(); ;
             tilePlacement.OnRevealText = splitData[ONREVEALTEXT];
             tilePlacement.OnVisitText = splitData[ONVISITTEXT];
 

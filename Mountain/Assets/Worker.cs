@@ -114,7 +114,7 @@ public class Worker : MonoBehaviour
             return;
 
         var relevantAction = existingPlacement.Actions
-            .FirstOrDefault(a => (a.Cost == null) || (a.Cost == card.PaysCost));
+            .FirstOrDefault(a => a.CanPayCost(card));
         if (relevantAction != null)
         {
             if (relevantAction.Upgrade != null)
