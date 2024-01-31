@@ -225,7 +225,9 @@ MonoBehaviour:
   SwampTerrain: {fileID: 1259272175642332849}
   SettlementTerrain: {fileID: 6842752936421756884}
   WastelandTerrain: {fileID: 3649682274789831060}
+  MountaintopTerrain: {fileID: 7571760489350300689}
   ErrorTile: {fileID: 6590226596614014984}
+  BiomeSetAs: 
 --- !u!1 &6590226596614014984
 GameObject:
   m_ObjectHideFlags: 0

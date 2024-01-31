@@ -13,30 +13,51 @@ public class AllTerrain : MonoBehaviour
     public GameObject SwampTerrain;
     public GameObject SettlementTerrain;
     public GameObject WastelandTerrain;
+    public GameObject MountaintopTerrain;
 
     public GameObject ErrorTile;
 
     public string BiomeSetAs;
 
-    public void UpdateBiome(String Biome)
+    public void UpdateBiome()
     {
-        BiomeSetAs = Biome;
-        switch (Biome)
+        ConnectedPlacement = GetComponentInParent<Placement>().Biome;
+        BiomeSetAs = ConnectedPlacement.Name;
+        switch (ConnectedPlacement.Name)
         {
             case "Fields":
-                FieldsTerrain.SetActive(true); break;
+                ErrorTile.SetActive(false);
+                FieldsTerrain.SetActive(true); 
+                break;
             case "Woods":
-                WoodsTerrain.SetActive(true); break;
+                ErrorTile.SetActive(false);
+                WoodsTerrain.SetActive(true); 
+                break;
             case "Swamp":
-                SwampTerrain.SetActive(true); break;
+                ErrorTile.SetActive(false);
+                SwampTerrain.SetActive(true); 
+                break;
             case "Settlement":
-                SettlementTerrain.SetActive(true); break;
+                ErrorTile.SetActive(false);
+                SettlementTerrain.SetActive(true); 
+                break;
             case "Wasteland":
-                WastelandTerrain.SetActive(true); break;
+                ErrorTile.SetActive(false);
+                WastelandTerrain.SetActive(true); 
+                break;
+            case "Mountaintop":
+                ErrorTile.SetActive(false);
+                WastelandTerrain.SetActive(true); 
+                break;
             default:
                 ErrorTile.SetActive(true);
-                Debug.Log("A biome that the AllTerrain doesn't recognize was passed in. It was: " + Biome);
+                Debug.Log("A biome that the AllTerrain doesn't recognize was selected. It was: " + BiomeSetAs);
                 break;
         }
+    }
+
+    public void Start()
+    {
+        UpdateBiome();
     }
 }

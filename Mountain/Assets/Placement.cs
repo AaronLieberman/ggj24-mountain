@@ -42,6 +42,6 @@ public class Placement : MonoBehaviour
     public PlacementAction OnVisit;
     public int Difficulty;
     public float PathingHeuristic;  // Impassable > 10000
-    public Placement PaysCost;
+    public Placement Biome;
     public PlacementAction RevealAction;
 }
