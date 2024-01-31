@@ -1,17 +1,29 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
+[Serializable]
+public class InitialCard
+{
+    public Placement Placement;
+    public bool IsRevealed;
+}
+
 public class Deck : MonoBehaviour
 {
-    public List<Card> InitialCards;
+    public List<InitialCard> InitialCards;
 
     public void Reset()
     {
         Utilities.DestroyAllChildren(transform);
 
-        foreach (var card in InitialCards)
+        foreach (var initialCard in InitialCards)
         {
-            Instantiate(card, transform);
+            var cardObject = new GameObject();
+            var card = cardObject.AddComponent<Card>();
+            card.PlacementToSpawn = initialCard.Placement;
+            card.IsRevealed = initialCard.IsRevealed;
+            card.transform.SetParent(transform);
         }
     }
 

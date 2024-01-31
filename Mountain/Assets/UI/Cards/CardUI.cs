@@ -60,6 +60,12 @@ public class CardUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 
     public void OnPointerEnter(PointerEventData eventData)
     {
+        if (Card == null)
+        {
+            Utilities.GetRootComponent<GameManager>().InvokeHideTooltip();
+            return;
+        }
+
         var placement = Card.IsRevealed ? Card.PlacementToSpawn : (Card.PlacementToSpawn != null ? Card.PlacementToSpawn.Biome : null);
         if (placement != null)
         {

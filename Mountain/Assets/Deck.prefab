@@ -45,11 +45,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   InitialCards:
-  - {fileID: 5975526219396173977, guid: e4c68d051c638a94ca6e4b97074ccd69, type: 3}
-  - {fileID: 2147558904164488030, guid: c3284cce3b3c9ea4b83e6b88f8abd233, type: 3}
-  - {fileID: 6894537915646913577, guid: 54e5548e754fff545be832f349ba00c8, type: 3}
-  - {fileID: 3677428001709918523, guid: 1de215b5fbce5924dbccc769e699da5c, type: 3}
-  - {fileID: 5975526219396173977, guid: e4c68d051c638a94ca6e4b97074ccd69, type: 3}
-  - {fileID: 5975526219396173977, guid: e4c68d051c638a94ca6e4b97074ccd69, type: 3}
-  - {fileID: 4052042229466996610, guid: 7ea33f83bf0f758439f49c3779c330f9, type: 3}
-  - {fileID: 4052042229466996610, guid: 7ea33f83bf0f758439f49c3779c330f9, type: 3}
+  - Placement: {fileID: 6223766025237645061, guid: 0c3fc96df5b9e1d499c66e212164f0aa, type: 3}
+    IsRevealed: 0
+  - Placement: {fileID: 519853117350573946, guid: b422e4b1552e64241b81ca5134eb4510, type: 3}
+    IsRevealed: 0
+  - Placement: {fileID: 4486575929425936965, guid: 91624b1fd6393594b85fce2f31dfbbc2, type: 3}
+    IsRevealed: 0
+  - Placement: {fileID: 5689664702476106266, guid: d207460ad79d71147a84f132fe13e8bc, type: 3}
+    IsRevealed: 0
+  - Placement: {fileID: 6223766025237645061, guid: 0c3fc96df5b9e1d499c66e212164f0aa, type: 3}
+    IsRevealed: 0
+  - Placement: {fileID: 6223766025237645061, guid: 0c3fc96df5b9e1d499c66e212164f0aa, type: 3}
+    IsRevealed: 0
+  - Placement: {fileID: 4111032941925707430, guid: 7976e35d001ec0249b53f029133651a3, type: 3}
+    IsRevealed: 0
+  - Placement: {fileID: 4111032941925707430, guid: 7976e35d001ec0249b53f029133651a3, type: 3}
+    IsRevealed: 0
