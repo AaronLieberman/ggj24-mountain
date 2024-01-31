@@ -29,14 +29,8 @@ public class TooltipUI : MonoBehaviour
 
     void ShowTooltipUI(Placement placement)
     {
-        tooltipContentSection.transform.position = new Vector3(
-            Input.mousePosition.x + (tooltipOffsetFactor.x * Screen.width), 
-            Input.mousePosition.y + (tooltipOffsetFactor.y * Screen.height), 
-            Input.mousePosition.z
-        );
-
+        PositionTooltipUI();
         RefreshTooltipUIContent(placement);
-
         tooltipContentSection.SetActive(true);
     }
 
@@ -45,14 +39,31 @@ public class TooltipUI : MonoBehaviour
         tooltipContentSection.SetActive(false);
     }
 
+    void PositionTooltipUI()
+    {
+        // If tooltip can fit on the right side of the cursor, position X as such else position it to the left.
+        if ((Input.mousePosition.x + (tooltipOffsetFactor.x * Screen.width) + tooltipContentSection.GetComponent<RectTransform>().rect.width) < Screen.width)
+            tooltipContentSection.transform.position = new Vector3(Input.mousePosition.x + (tooltipOffsetFactor.x * Screen.width), tooltipContentSection.transform.position.y, tooltipContentSection.transform.position.z);
+        else
+            tooltipContentSection.transform.position = new Vector3(Input.mousePosition.x - (tooltipOffsetFactor.x * Screen.width), tooltipContentSection.transform.position.y, tooltipContentSection.transform.position.z);
+
+        // If tooltip can fit on the top side of the cursor, position Y as such else position it under.
+        if ((Input.mousePosition.y + (tooltipOffsetFactor.y * Screen.height) + tooltipContentSection.GetComponent<RectTransform>().rect.height) < Screen.height)
+            tooltipContentSection.transform.position = new Vector3(tooltipContentSection.transform.position.x, Input.mousePosition.y + (tooltipOffsetFactor.y * Screen.height), tooltipContentSection.transform.position.z);
+        else
+            tooltipContentSection.transform.position = new Vector3(tooltipContentSection.transform.position.x, Input.mousePosition.y - (tooltipOffsetFactor.y * Screen.height), tooltipContentSection.transform.position.z);
+    }
+
     void RefreshTooltipUIContent(Placement placement)
     {
+        // Set general tooltip attributes section.
         tooltipPlacementNameText.text = placement.Name;
         //tooltipPlacementNameText.text = placement.Name + " " + Utilities.GetRootComponent<Grid>().LocalToCell(placement.transform.parent.localPosition);
         tooltipPlacementDescriptionText.text = placement.FlavorText;
-        tooltipPlacementLostChanceText.text = String.Format("Chance to get lost: {0}%", (placement.LostChance * 100));
+        tooltipPlacementLostChanceText.text = String.Format("Chance to get lost: {0}%", placement.LostChance * 100);
         tooltipPlacementPassableText.text = placement.PathingHeuristic > 10000 ? "Impassable" : "Passable";
 
+        // Refresh tooltip ability UI section.
         foreach (Transform child in tooltipPlacementAbilitiesSection)
         {
             Destroy(child.gameObject);
@@ -68,6 +79,7 @@ public class TooltipUI : MonoBehaviour
                 abilityObject.GetComponent<TooltipAbilityUI>().AbilityUpgradeToText.text = "Unknown";
         }
 
+        // Refresh tooltip OnVisit UI section.
         foreach (Transform child in tooltipPlacementOnVisitsSection)
         {
             Destroy(child.gameObject);
