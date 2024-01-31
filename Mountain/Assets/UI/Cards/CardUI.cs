@@ -9,7 +9,6 @@ public class CardUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     [SerializeField] private UnityEngine.UI.Image CardRenderer;
     [SerializeField] private GameObject SelectedBackground;
 
-
     public Card Card { get; set; }
 
     public bool InUse { get; private set; }
@@ -21,13 +20,20 @@ public class CardUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 
     public void SetTexture()
     {
+        if (Card.PlacementToSpawn == null)
+        {
+            CardRenderer.sprite = null;
+            CardRenderer.color = Color.white;
+            return;
+        }
+
         var cardSprite = Card.IsRevealed
-            ? (Card.PlacementToSpawn != null && Card.PlacementToSpawn.CardSprite != null
+            ? (Card.PlacementToSpawn.CardSprite != null
                 ? Card.PlacementToSpawn.CardSprite
-                : (Card.UnrevealedPlacement != null ? Card.UnrevealedPlacement.CardSprite : null))
-            : (Card.UnrevealedPlacement != null && Card.UnrevealedPlacement.CardSprite != null
-                ? Card.UnrevealedPlacement.CardSprite
-                : (Card.PlacementToSpawn != null ? Card.PlacementToSpawn.CardSprite : null));
+                : (Card.PlacementToSpawn.Biome != null ? Card.PlacementToSpawn.Biome.CardSprite : null))
+            : (Card.PlacementToSpawn.Biome != null && Card.PlacementToSpawn.Biome.CardSprite != null
+                ? Card.PlacementToSpawn.Biome.CardSprite
+                : Card.PlacementToSpawn.CardSprite);
         CardRenderer.sprite = cardSprite;
         Color existingTextureColor = CardRenderer.color;
         existingTextureColor.a = 1.0f;
@@ -54,9 +60,10 @@ public class CardUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        if (Card != null)
+        var placement = Card.IsRevealed ? Card.PlacementToSpawn : (Card.PlacementToSpawn != null ? Card.PlacementToSpawn.Biome : null);
+        if (placement != null)
         {
-            Utilities.GetRootComponent<GameManager>().InvokeShowTooltip(Card.IsRevealed ? Card.PlacementToSpawn : Card.UnrevealedPlacement);
+            Utilities.GetRootComponent<GameManager>().InvokeShowTooltip(placement);
         }
     }
 

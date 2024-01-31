@@ -17,16 +17,19 @@ public class TileAction
         if (Cost == null)
             return true;
 
+        if (card.PlacementToSpawn == null)
+            return false;
+
         // if the card is hidden, compare the cost to the hidden placement
         if (!card.IsRevealed)
-            return card.UnrevealedPlacement != null && card.UnrevealedPlacement.Name == Cost.Name;
+            return card.PlacementToSpawn.Biome != null && card.PlacementToSpawn.Biome.Name == Cost.Name;
 
         // if the card is revealed, compare the cost to the revealed placement
-        if (card.PlacementToSpawn != null && card.PlacementToSpawn.Name == Cost.Name)
+        if (card.PlacementToSpawn.Name == Cost.Name)
             return true;
 
-        // if the card is revealed, you can also pay using the unrevealed (base biome) placement
-        return card.UnrevealedPlacement != null && card.UnrevealedPlacement.Name == Cost.Name;
+        // if the card is revealed, you can also pay using the placement's biome
+        return card.PlacementToSpawn.Biome != null && card.PlacementToSpawn.Biome.Name == Cost.Name;
     }
 }
 
