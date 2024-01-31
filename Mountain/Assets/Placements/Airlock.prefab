@@ -160,7 +160,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efaa4c2211c62634fa54526ede33ba05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tiletoPlace: {fileID: 3340648647498721399, guid: bbda8dc89eaffb64a8ed0c834f5ce395, type: 3}
+  tileToPlace: {fileID: 3340648647498721399, guid: bbda8dc89eaffb64a8ed0c834f5ce395, type: 3}
   placementCoordinates: {x: 10, y: 7}
 --- !u!1 &2794840741613513883
 GameObject:

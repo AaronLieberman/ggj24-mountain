@@ -58,7 +58,7 @@ public class TooltipUI : MonoBehaviour
     {
         // Set general tooltip attributes section.
         tooltipPlacementNameText.text = placement.Name;
-        //tooltipPlacementNameText.text = placement.Name + " " + Utilities.GetRootComponent<Grid>().LocalToCell(placement.transform.parent.localPosition);
+        tooltipPlacementNameText.text = placement.Name + " " + Utilities.GetRootComponent<Grid>().LocalToCell(placement.transform.parent.localPosition);
         tooltipPlacementDescriptionText.text = placement.FlavorText;
         tooltipPlacementLostChanceText.text = String.Format("Chance to get lost: {0}%", placement.LostChance * 100);
         tooltipPlacementPassableText.text = placement.PathingHeuristic > 10000 ? "Impassable" : "Passable";

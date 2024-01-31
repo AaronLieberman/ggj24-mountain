@@ -1,12 +1,13 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 [Serializable]
 public class TileAction
 {
-    public string Cost;
+    public Placement Cost;
     public Placement Upgrade;
     public PlacementAction OnUpgrade;
 }
@@ -23,6 +24,7 @@ public class Placement : MonoBehaviour
     public PlacementAction OnVisit;
     public int Difficulty;
     public float PathingHeuristic;  // Impassable > 10000
-    public string PaysCost;
+    public Placement PaysCost;
     public PlacementAction RevealAction;
+
 }

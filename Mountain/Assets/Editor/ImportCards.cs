@@ -49,92 +49,108 @@ public class ImportCards : EditorWindow
 		//parse csv
 		string[] allLines = File.ReadAllLines(Application.dataPath + CardsCSVPath);
 		foreach (string s in allLines)
-		{
-			string[] splitData = s.Split('\t');
+        {
+            string[] splitData = s.Split('\t');
 
-			string prefabName = splitData[TILENAME];
+            string prefabName = splitData[TILENAME];
 
-			if (splitData[TILENAME] == "Name")
-			{
-				//This is the columns title row
-				Debug.Log("Skipping CSV row " + GetPrefabPath(prefabName));
+            if (splitData[TILENAME] == "Name")
+            {
+                //This is the columns title row
+                Debug.Log("Skipping CSV row " + GetPrefabPath(prefabName));
 
-				continue;
-			}
-			if (splitData[TILENAME] == "")
-			{
-				//This is a blank row
-				Debug.Log("Skipping blank CSV row");
-				continue;
-			}
-
-
-			Debug.Log("Filling prefab: " + GetPrefabPath(prefabName));
+                continue;
+            }
+            if (splitData[TILENAME] == "")
+            {
+                //This is a blank row
+                Debug.Log("Skipping blank CSV row");
+                continue;
+            }
 
 
-			GameObject prefabTofill = FindOrCreatePrefab(prefabName);
-
-			// // Save the new GameObject as a prefab
-			//GameObject prefabInstance = PrefabUtility.SaveAsPrefabAsset(prefabTofill, GetPrefabPath(prefabName));
-
-			//Placement tilePlacement = prefabInstance.GetComponent<Placement>();
-			Placement tilePlacement = prefabTofill.GetComponent<Placement>();
+            Debug.Log("Filling prefab: " + GetPrefabPath(prefabName));
 
 
-			if (splitData[CHANCETOLOST] == "")
-			{
-				tilePlacement.LostChance = 0.05f;
-			}
-			else
-			{
-				tilePlacement.LostChance = float.Parse(splitData[CHANCETOLOST]);
-			}
-			if (splitData[DIFFICULTY] == "")
-			{
-				tilePlacement.Difficulty = int.MaxValue;
-			}
-			else
-			{
-				tilePlacement.Difficulty = int.Parse(splitData[DIFFICULTY]);
-			}
-			tilePlacement.FlavorText = splitData[FLAVORTEXT];
-			tilePlacement.Name = splitData[TILENAME];
-			if(splitData[IMPASSABLE] == "TRUE")
-			{
-				tilePlacement.PathingHeuristic = 100000.0f;
-			}
-			else
-			{
-				tilePlacement.PathingHeuristic = 1.0f;
-			}
-			tilePlacement.PaysCost = splitData[BIOME];
-			tilePlacement.OnRevealText = splitData[ONREVEALTEXT];
-			tilePlacement.OnVisitText = splitData[ONVISITTEXT];
+            GameObject prefabTofill = FindOrCreatePrefab(prefabName);
 
-			//AssetDatabase.DeleteAsset(GetPrefabPath(prefabName));
-			// Save the new GameObject as a prefab
-			GameObject savedPrefab = PrefabUtility.SaveAsPrefabAsset(prefabTofill, GetPrefabPath(prefabName));
+            // // Save the new GameObject as a prefab
+            //GameObject prefabInstance = PrefabUtility.SaveAsPrefabAsset(prefabTofill, GetPrefabPath(prefabName));
 
-			//populate cardPools
-			for (int i = 0; i < cardPools.Length; i++)
-			{
-				// Check if the current row belongs to the current card pool
-				if (splitData[POOL1 + i] == "1")
-				{
-					cardPools[i].tilePlacementObjects.Add(savedPrefab);
-				}
-			}
+            //Placement tilePlacement = prefabInstance.GetComponent<Placement>();
+            Placement tilePlacement = prefabTofill.GetComponent<Placement>();
 
-			// Destroy the instantiated GameObject
-			DestroyImmediate(prefabTofill);
 
-			Debug.Log("Prefab created at: " + GetPrefabPath(prefabName));
-		}
-		Debug.Log("Finished importing cards!!!");
+            if (splitData[CHANCETOLOST] == "")
+            {
+                tilePlacement.LostChance = 0.05f;
+            }
+            else
+            {
+                tilePlacement.LostChance = float.Parse(splitData[CHANCETOLOST]);
+            }
+            if (splitData[DIFFICULTY] == "")
+            {
+                tilePlacement.Difficulty = int.MaxValue;
+            }
+            else
+            {
+                tilePlacement.Difficulty = int.Parse(splitData[DIFFICULTY]);
+            }
+            tilePlacement.FlavorText = splitData[FLAVORTEXT];
+            tilePlacement.Name = splitData[TILENAME];
+            if (splitData[IMPASSABLE] == "TRUE")
+            {
+                tilePlacement.PathingHeuristic = 100000.0f;
+            }
+            else
+            {
+                tilePlacement.PathingHeuristic = 1.0f;
+            }
+            //tilePlacement.PaysCost = splitData[BIOME];
+            tilePlacement.OnRevealText = splitData[ONREVEALTEXT];
+            tilePlacement.OnVisitText = splitData[ONVISITTEXT];
+
+            //AssetDatabase.DeleteAsset(GetPrefabPath(prefabName));
+            // Save the new GameObject as a prefab
+            GameObject savedPrefab = PrefabUtility.SaveAsPrefabAsset(prefabTofill, GetPrefabPath(prefabName));
+
+            //populate cardPools
+            for (int i = 0; i < cardPools.Length; i++)
+            {
+                // Check if the current row belongs to the current card pool
+                if (splitData[POOL1 + i] == "1")
+                {
+                    cardPools[i].tilePlacementObjects.Add(savedPrefab);
+                }
+            }
+
+            UpdateAllTerrainGameObject(tilePlacement, splitData[BIOME]);
+
+            // Destroy the instantiated GameObject
+            DestroyImmediate(prefabTofill);
+
+            Debug.Log("Prefab created at: " + GetPrefabPath(prefabName));
+        }
+        Debug.Log("Finished importing cards!!!");
 
 	}
 
-	protected static GameObject FindOrCreatePrefab(string PrefabName)
+    private static void UpdateAllTerrainGameObject(Placement tilePlacement, string BiomeText)
+    {
+        AllTerrain aT = tilePlacement.GetComponentInChildren<AllTerrain>();
+        if(aT== null)
+        { 
+            GameObject AllTerrainPrefab = GetPrefabFromName("AllTerrain");
+            GameObject newAllTerrain = Instantiate(AllTerrainPrefab);
+            newAllTerrain.transform.SetParent(tilePlacement.transform);
+            aT = newAllTerrain.GetComponent<AllTerrain>();
+
+        }
+        aT.UpdateBiome(BiomeText);
+    }
+
+    protected static GameObject FindOrCreatePrefab(string PrefabName)
 	{
 		Vector3 spawnPosition = Vector3.zero;
 		GameObject existingPrefab = AssetDatabase.LoadAssetAtPath<GameObject>(GetPrefabPath(PrefabName));
@@ -158,4 +174,9 @@ public class ImportCards : EditorWindow
 	{
 		return "Assets/Placements/" + prefabName + ".prefab";
 	}
+
+    protected static GameObject GetPrefabFromName(string prefabName)
+    {
+        return AssetDatabase.LoadAssetAtPath<GameObject>(GetPrefabPath("AllTerrain"));
+    }
 }
