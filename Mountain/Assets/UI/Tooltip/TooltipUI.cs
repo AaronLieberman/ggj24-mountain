@@ -11,7 +11,7 @@ public class TooltipUI : MonoBehaviour
     [SerializeField] private GameObject tooltipContentSection;
 
     [SerializeField] private Vector2 tooltipOffsetFactor;
-    
+
     [SerializeField] private TextMeshProUGUI tooltipPlacementNameText;
     [SerializeField] private TextMeshProUGUI tooltipPlacementDescriptionText;
     [SerializeField] private TextMeshProUGUI tooltipPlacementLostChanceText;
@@ -30,8 +30,8 @@ public class TooltipUI : MonoBehaviour
     void ShowTooltipUI(Placement placement)
     {
         tooltipContentSection.transform.position = new Vector3(
-            Input.mousePosition.x + (tooltipOffsetFactor.x * Screen.width), 
-            Input.mousePosition.y + (tooltipOffsetFactor.y * Screen.height), 
+            Input.mousePosition.x + (tooltipOffsetFactor.x * Screen.width),
+            Input.mousePosition.y + (tooltipOffsetFactor.y * Screen.height),
             Input.mousePosition.z
         );
 
@@ -47,25 +47,23 @@ public class TooltipUI : MonoBehaviour
 
     void RefreshTooltipUIContent(Placement placement)
     {
-        tooltipPlacementNameText.text = placement.Name;
-        tooltipPlacementNameText.text = placement.Name + " " + Utilities.GetRootComponent<Grid>().LocalToCell(placement.transform.parent.localPosition);
+        var cell = Utilities.GetRootComponent<Grid>().LocalToCell(placement.transform.parent.localPosition);
+        tooltipPlacementNameText.text = placement.Name + $" ({cell.x}, {cell.y})";
         tooltipPlacementDescriptionText.text = placement.FlavorText;
-        tooltipPlacementLostChanceText.text = String.Format("Chance to get lost: {0}%", (placement.LostChance * 100));
+        tooltipPlacementLostChanceText.text = String.Format("Chance to get lost: {0}%", placement.LostChance * 100);
         tooltipPlacementPassableText.text = placement.PathingHeuristic > 10000 ? "Impassable" : "Passable";
 
-        foreach (Transform child in tooltipPlacementAbilitiesSection)
-        {
-            Destroy(child.gameObject);
-        }
+        Utilities.DestroyAllChildren(tooltipPlacementAbilitiesSection);
 
         foreach (TileAction tileAction in placement.Actions)
         {
             GameObject abilityObject = Instantiate(tooltipPlacementAbilityPrefab, tooltipPlacementAbilitiesSection);
-            abilityObject.GetComponent<TooltipAbilityUI>().AbilityCostText.text = tileAction.Cost.Name;
-            if (tileAction.Upgrade != null)
-                abilityObject.GetComponent<TooltipAbilityUI>().AbilityUpgradeToText.text =  String.Format("Upgrade to {0}", tileAction.Upgrade.Name);
-            else
-                abilityObject.GetComponent<TooltipAbilityUI>().AbilityUpgradeToText.text = "Unknown";
+            abilityObject.GetComponent<TooltipAbilityUI>().AbilityCostText.text = tileAction.Cost != null
+                ? tileAction.Cost.Name
+                : "Any";
+            abilityObject.GetComponent<TooltipAbilityUI>().AbilityUpgradeToText.text = tileAction.Upgrade != null
+                ? String.Format("Upgrade to {0}", tileAction.Upgrade.Name)
+                : "Unknown";
         }
 
         foreach (Transform child in tooltipPlacementOnVisitsSection)
