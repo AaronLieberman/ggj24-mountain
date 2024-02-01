@@ -2891,7 +2891,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Bodie Lee,                      \t                      Art\nVictor Erickson,
     \t                      Programming\nJeremy, \t\t                      Programming\nAaron
-    Lieberman, \t                      Programming\nAnna, \t\t\t                     
+    Lieberman, \t                      Programming\nAnna Shabayev, \t                     
     Game Design\nEric Carter,\t\t                      Game Design"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 93a00bc65058e754696e16ca9abfd0db, type: 2}
