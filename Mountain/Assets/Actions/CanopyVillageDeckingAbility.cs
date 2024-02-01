@@ -13,12 +13,12 @@ public class CanopyVillageDeckingAbility : PlacementAction
         if( Random.value <= ChanceForWoods)
         {
             //Grant a forest
-            PlacementPoolManager.Instance.AddToDeckFromBiomeInPool(Utilities.GetRootComponent<Deck>().WoodsBiome, 1);
+            Utilities.GetRootComponent<PlacementPoolManager>().AddToDeckFromBiomeInPool(Utilities.GetRootComponent<Deck>().WoodsBiome, 1);
         }
         else
         {
             //Grant a settlement
-            PlacementPoolManager.Instance.AddToDeckFromBiomeInPool(Utilities.GetRootComponent<Deck>().FieldsBiome, 1);
+            Utilities.GetRootComponent<PlacementPoolManager>().AddToDeckFromBiomeInPool(Utilities.GetRootComponent<Deck>().FieldsBiome, 1);
         }
 
 

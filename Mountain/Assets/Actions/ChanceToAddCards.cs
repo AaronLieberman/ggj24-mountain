@@ -23,7 +23,7 @@ public class ChanceToAddCards : PlacementAction
         if ( Random.value <= ChanceToSucceed)
         {
             //Award cards from all the fields above
-            PlacementPoolManager.Instance.AddToDeckFromAllBiomesInPool(NumberOfFieldsToAdd, NumberOfWoodsToAdd, NumberOfSettlementsToAdd, NumberOfSwampsToAdd, NumberOfWastelandsToAdd, NumberOfRandomTypeToAdd);
+            Utilities.GetRootComponent<PlacementPoolManager>().AddToDeckFromAllBiomesInPool(NumberOfFieldsToAdd, NumberOfWoodsToAdd, NumberOfSettlementsToAdd, NumberOfSwampsToAdd, NumberOfWastelandsToAdd, NumberOfRandomTypeToAdd);
         }
 
 

@@ -17,7 +17,7 @@ public class AddCardsToDeck : PlacementAction
 
     public override void DoWork(Worker worker, Placement placement, Card card)
     {
-        PlacementPoolManager.Instance.AddToDeckFromAllBiomesInPool(NumberOfFieldsToAdd, NumberOfWoodsToAdd, NumberOfSettlementsToAdd, NumberOfSwampsToAdd, NumberOfWastelandsToAdd, NumberOfRandomTypeToAdd);
+        Utilities.GetRootComponent<PlacementPoolManager>().AddToDeckFromAllBiomesInPool(NumberOfFieldsToAdd, NumberOfWoodsToAdd, NumberOfSettlementsToAdd, NumberOfSwampsToAdd, NumberOfWastelandsToAdd, NumberOfRandomTypeToAdd);
 
     }
 }

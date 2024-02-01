@@ -6,42 +6,15 @@ using System;
 
 public class PlacementPoolManager : MonoBehaviour
 {
-	private static PlacementPoolManager _instance;
 	private CardPool[] cardPools;
 	[Tooltip("Don't set higher than 3. There are only 4 elements in cardPools.Length")]
 	[SerializeField] int currentCardPoolIndex = 0;
-	[SerializeField] private Deck playerDeck;
 
-	public static PlacementPoolManager Instance
-	{
-		get
-		{
-			if (_instance == null)
-			{
-				_instance = FindObjectOfType<PlacementPoolManager>();
-
-				if (_instance == null)
-				{
-					GameObject singletonObject = new GameObject("CardPoolManager");
-					_instance = singletonObject.AddComponent<PlacementPoolManager>();
-				}
-			}
-
-			return _instance;
-		}
-	}
+	Deck _playerDeck;
 
 	private void Awake()
 	{
-		if (_instance == null)
-		{
-			_instance = this;
-			DontDestroyOnLoad(this.gameObject);
-		}
-		else
-		{
-			Destroy(this.gameObject);
-		}
+		_playerDeck = Utilities.GetRootComponent<Deck>();
 
 		CardPool cardPool1 = AssetDatabase.LoadAssetAtPath<CardPool>("Assets/CardPool/CardPool1.asset");
 		CardPool cardPool2 = AssetDatabase.LoadAssetAtPath<CardPool>("Assets/CardPool/CardPool2.asset");
@@ -82,7 +55,7 @@ public class PlacementPoolManager : MonoBehaviour
 				return;
 			}
 
-			playerDeck.AddNewCardToDeck(randomPlacement, false);
+			_playerDeck.AddNewCardToDeck(randomPlacement, false);
 		}
 	}
 
@@ -136,7 +109,7 @@ public class PlacementPoolManager : MonoBehaviour
 				Placement randomPlacement = randomPlacementObject.GetComponent<Placement>();
 
 				// Add the random card to the player's deck
-				playerDeck.AddNewCardToDeck(randomPlacement.GetComponent<Placement>(), false);
+				_playerDeck.AddNewCardToDeck(randomPlacement.GetComponent<Placement>(), false);
 			}
 			else
 			{
