@@ -20,7 +20,5 @@ public class CanopyVillageDeckingAbility : PlacementAction
             //Grant a settlement
             Utilities.GetRootComponent<PlacementPoolManager>().AddToDeckFromBiomeInPool(Utilities.GetRootComponent<Deck>().FieldsBiome, 1);
         }
-
-
     }
 }
