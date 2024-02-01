@@ -158,7 +158,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3beeafebffa91c54a90d0ae1aaabb11c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ChanceForForest: 0.5
+  ChanceForWoods: 0.5
 --- !u!114 &8986128005474743835
 MonoBehaviour:
   m_ObjectHideFlags: 0

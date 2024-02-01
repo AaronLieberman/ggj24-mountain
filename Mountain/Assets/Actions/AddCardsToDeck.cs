@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class AddCardsToDeck : PlacementAction
 {
 
     public int NumberOfFieldsToAdd;
-    public int NumberOfForestsToAdd;
+    [FormerlySerializedAs("NumberOfForestsToAdd")]
+    public int NumberOfWoodsToAdd;
     public int NumberOfSettlementsToAdd;
     public int NumberOfSwampsToAdd;
     public int NumberOfWastelandsToAdd;
@@ -15,6 +17,7 @@ public class AddCardsToDeck : PlacementAction
 
     public override void DoWork(Worker worker, Placement placement, Card card)
     {
-        PlacementPoolManager.Instance.AddToDeckFromCurrentPool(NumberOfRandomTypeToAdd);
-	}
+        PlacementPoolManager.Instance.AddToDeckFromAllBiomesInPool(NumberOfFieldsToAdd, NumberOfWoodsToAdd, NumberOfSettlementsToAdd, NumberOfSwampsToAdd, NumberOfWastelandsToAdd, NumberOfRandomTypeToAdd);
+
+    }
 }

@@ -100,4 +100,18 @@ public static class Utilities
             ? _directionsEven.Select(d => coord + d)
             : _directionsOdd.Select(d => coord + d);
     }
+
+    public static List<Tile> GetAdjacentTiles(Vector2Int coord)
+    {
+        var map = GetRootComponent<TileGridLayout>();
+
+        IEnumerable<Vector2Int> adjacentCoords = GetAdjacentHexCoords(coord);
+		List<Tile> adjTiles = new List<Tile>();
+
+		foreach (var adjCoord in adjacentCoords)
+		{
+            adjTiles.Add( map.GetTileFromLoc(adjCoord) );
+		}
+		return adjTiles;
+    }
 }

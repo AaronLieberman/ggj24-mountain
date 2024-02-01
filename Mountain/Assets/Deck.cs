@@ -11,6 +11,14 @@ public class InitialCard
 
 public class Deck : MonoBehaviour
 {
+    //We need a way to declare biome types in switch statements and stuff, but biomes are placements,
+    //so put some global references to the types here so we don't have to search for the prefabs all the time.
+    public Placement WoodsBiome;
+    public Placement FieldsBiome;
+    public Placement SettlementBiome;
+    public Placement SwampBiome;
+    public Placement WastelandBiome;
+
     public List<InitialCard> InitialCards;
 
     public int GetDeckCount()

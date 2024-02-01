@@ -145,6 +145,18 @@ public class PlacementPoolManager : MonoBehaviour
 		}
 	}
 
+	public void AddToDeckFromAllBiomesInPool(int numberOfFields = 0, int numberOfWoods = 0, int numberOfSettlements = 0, int numberOfSwamps = 0, int numberOfWastelands = 0, int numberOfRandom = 0)
+	{
+		Deck deck = Utilities.GetRootComponent<Deck>();
+		AddToDeckFromBiomeInPool(deck.FieldsBiome, numberOfFields);
+		AddToDeckFromBiomeInPool(deck.WoodsBiome, numberOfWoods);
+		AddToDeckFromBiomeInPool(deck.SettlementBiome, numberOfSettlements);
+		AddToDeckFromBiomeInPool(deck.SwampBiome, numberOfSwamps);
+		AddToDeckFromBiomeInPool(deck.WastelandBiome, numberOfWastelands);
+
+		AddToDeckFromCurrentPool(numberOfRandom);
+    }
+
 	public CardPool GetCurrentCardPool()
 	{
 		return cardPools[currentCardPoolIndex];
