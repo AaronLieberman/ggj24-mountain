@@ -15,7 +15,6 @@ public class AddCardsToDeck : PlacementAction
 
     public override void DoWork(Worker worker, Placement placement, Card card)
     {
-     
-        //TODO: ANNA
-    }
+        PlacementPoolManager.Instance.AddToDeckFromCurrentPool(NumberOfRandomTypeToAdd);
+	}
 }

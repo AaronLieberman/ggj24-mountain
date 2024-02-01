@@ -65,30 +65,32 @@ public class PlacementPoolManager : MonoBehaviour
 		return currentCardPoolIndex;
 	}
 
-	public void AddToDeckFromCurrentPool()
+	public void AddToDeckFromCurrentPool(int numOfCardsToAdd = 1)
 	{
 		System.Random random = new System.Random();
-
 		CardPool currentCardPool = GetCurrentCardPool();
 
-		int randomIndex = random.Next(0, currentCardPool.tilePlacementObjects.Count);
-
-		GameObject randomPlacementObject = currentCardPool.tilePlacementObjects[randomIndex];
-		Placement randomPlacement = randomPlacementObject.GetComponent<Placement>();
-		if (randomPlacement == null)
+		for (int i = 0; i < numOfCardsToAdd; i++)
 		{
-			Debug.LogError("Object doesn't have a placement script on it!");
-			return;
-		}
+			int randomIndex = random.Next(0, currentCardPool.tilePlacementObjects.Count);
 
-		playerDeck.AddNewCardToDeck(randomPlacement, false);
+			GameObject randomPlacementObject = currentCardPool.tilePlacementObjects[randomIndex];
+			Placement randomPlacement = randomPlacementObject.GetComponent<Placement>();
+			if (randomPlacement == null)
+			{
+				Debug.LogError("Object doesn't have a placement script on it!");
+				return;
+			}
+
+			playerDeck.AddNewCardToDeck(randomPlacement, false);
+		}
 	}
 
-	public void AddToDeckFromBiomeInPool(Placement MatchingBiome)
+	public void AddToDeckFromBiomeInPool(Placement MatchingBiome, int numOfCardsToAdd = 1)
 	{
 		CardPool currentCardPool = GetCurrentCardPool();
 
-		if(currentCardPool.tilePlacementObjects.Count == 0)
+		if (currentCardPool.tilePlacementObjects.Count == 0)
 		{
 			Debug.Log("Current CardPool is empty. Did you populate it using the import cards script?");
 			return;
@@ -122,21 +124,24 @@ public class PlacementPoolManager : MonoBehaviour
 			}
 		}
 
-		// Check if there are matching cards
-		if (matchingIndices.Count > 0)
+		for (int i = 0; i < numOfCardsToAdd; i++)
 		{
-			int randomIndex = random.Next(0, matchingIndices.Count);
+			// Check if there are matching cards
+			if (matchingIndices.Count > 0)
+			{
+				int randomIndex = random.Next(0, matchingIndices.Count);
 
-			// Retrieve the random card from the current pool
-			GameObject randomPlacementObject = currentCardPool.tilePlacementObjects[matchingIndices[randomIndex]];
-			Placement randomPlacement = randomPlacementObject.GetComponent<Placement>();
+				// Retrieve the random card from the current pool
+				GameObject randomPlacementObject = currentCardPool.tilePlacementObjects[matchingIndices[randomIndex]];
+				Placement randomPlacement = randomPlacementObject.GetComponent<Placement>();
 
-			// Add the random card to the player's deck
-			playerDeck.AddNewCardToDeck(randomPlacement.GetComponent<Placement>(), true); //TODO
-		}
-		else
-		{
-			Debug.Log("No matching cards found in the current pool.");
+				// Add the random card to the player's deck
+				playerDeck.AddNewCardToDeck(randomPlacement.GetComponent<Placement>(), false);
+			}
+			else
+			{
+				Debug.Log("No matching cards found in the current pool.");
+			}
 		}
 	}
 
