@@ -2889,9 +2889,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Bodie Lee,                      \tArt\nVictor Erickson, \t             
-    \tProgramming\nJeremy, \t\tProgramming\nAaron Lieberman, \tProgramming\nAnna,
-    \t\t\tDesign\nEric,\t\t\tDesign"
+  m_text: "Bodie Lee,                      \t                      Art\nVictor Erickson,
+    \t                      Programming\nJeremy, \t\t                      Programming\nAaron
+    Lieberman, \t                      Programming\nAnna, \t\t\t                     
+    Game Design\nEric Carter,\t\t                      Game Design"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 93a00bc65058e754696e16ca9abfd0db, type: 2}
   m_sharedMaterial: {fileID: 2729783407907818771, guid: 93a00bc65058e754696e16ca9abfd0db, type: 2}
