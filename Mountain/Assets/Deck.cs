@@ -13,6 +13,11 @@ public class Deck : MonoBehaviour
 {
     public List<InitialCard> InitialCards;
 
+    public int GetDeckCount()
+    {
+        return transform.childCount;
+    }
+
     public void Reset()
     {
         Utilities.DestroyAllChildren(transform);
@@ -23,7 +28,8 @@ public class Deck : MonoBehaviour
             var card = cardObject.AddComponent<Card>();
             card.PlacementToSpawn = initialCard.Placement;
             card.IsRevealed = initialCard.IsRevealed;
-            card.transform.SetParent(transform);
+			card.gameObject.name = initialCard.Placement.gameObject.name;
+			card.transform.SetParent(transform);
         }
     }
 
@@ -33,4 +39,16 @@ public class Deck : MonoBehaviour
 
         return transform.GetChild(0).GetComponent<Card>();
     }
+
+	public void AddNewCardToDeck(Placement placementToSpawn, bool isRevealed)
+	{
+		GameObject newCardObject = new GameObject();
+		newCardObject.transform.parent = transform;
+		Card newCard = newCardObject.AddComponent<Card>();
+
+		newCard.PlacementToSpawn = placementToSpawn;
+		newCard.IsRevealed = isRevealed;
+        newCard.gameObject.name = placementToSpawn.gameObject.name;
+        newCard.transform.SetParent(transform);
+	}
 }

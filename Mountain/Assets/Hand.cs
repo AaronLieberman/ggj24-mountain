@@ -12,6 +12,11 @@ public class Hand : MonoBehaviour
     public event EventHandler HandChanged;
     public event EventHandler DeckChanged;
 
+    public int GetHandCount()
+    {
+        return transform.childCount;
+    }
+
     public void Reset()
     {
         foreach (Transform child in transform)
