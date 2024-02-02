@@ -10,6 +10,7 @@ public class TileAction
     public Placement Cost;
     public Placement Upgrade;
     public PlacementAction OnUpgrade;
+    public bool SkipOnVisit;
 
     public bool CanPayCost(Card card)
     {

@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using Unity.VisualScripting;
 using UnityEditor.Playables;
 using UnityEngine;
 
@@ -78,7 +79,7 @@ public class Worker : MonoBehaviour
             // force the worker to be exactly in the right local position
             transform.localPosition = _grid.CellToLocal(Utilities.ToVec3I(_nextDestinationTileLoc.Value));
 
-            OnVisit(_map.GetTileFromLoc(cell));
+            bool executeOnVisit = true;
 
             if (_nextDestinationTileLoc == GetNextDestinationWaypointCell())
             {
@@ -95,9 +96,14 @@ public class Worker : MonoBehaviour
                     WorkerPlan.RemoveAt(0);
                     if (currentPlan.Card != null)
                     {
-                        ExecutePlan(currentPlan.Card, currentPlan.Tile);
+                        ExecutePlan(currentPlan.Card, currentPlan.Tile, out executeOnVisit);
                     }
                 }
+            }
+
+            if (executeOnVisit)
+            {
+                OnVisit(_map.GetTileFromLoc(cell));
             }
 
             _nextDestinationTileLoc = null;
@@ -109,8 +115,10 @@ public class Worker : MonoBehaviour
         }
     }
 
-    void ExecutePlan(Card card, Tile tile)
+    void ExecutePlan(Card card, Tile tile, out bool executeOnVisit)
     {
+        executeOnVisit = true;
+
         var existingPlacement = tile.GetComponentInChildren<Placement>();
         if (existingPlacement == null)
             return;
@@ -124,7 +132,15 @@ public class Worker : MonoBehaviour
                 tile.SpawnPlacement(relevantAction.Upgrade);
             }
 
-            if (relevantAction.OnUpgrade != null) relevantAction.OnUpgrade.DoWork(this, existingPlacement, card);
+            if (relevantAction.OnUpgrade != null)
+            {
+                relevantAction.OnUpgrade.DoWork(this, existingPlacement, card);
+            }
+
+            if (relevantAction.SkipOnVisit)
+            {
+                executeOnVisit = false;
+            }
         }
     }
 
