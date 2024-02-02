@@ -2,31 +2,29 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using Unity.VisualScripting;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public class PlaceAdjacentTile : PlacementAction
 {
-    public Placement tileToPlace;
+    public Placement TileToPlace;
+    public bool useThisPlacementAsCenterCoordinates;
     public Vector2Int CenterCoordinates;
-    public int MinimumDistance = 1;
-    public int MaximumDistance = int.MaxValue;
+    public int MinimumDistanceByAdjacency = 1;
+    public int MaximumDistanceByAdjacency = int.MaxValue;
     public int MaximumDistanceByPathing = 100000;
     public bool MustBeUnexplored = true;
 
 
     public override void DoWork(Worker worker, Placement placement, Card card)
     {
-        if (tileToPlace == null)
+        if (TileToPlace == null)
             return;
 
         List<Tile> validTiles = GetValidTiles(placement);
 
-
-
-        //reference
-        var map = Utilities.GetRootComponent<TileGridLayout>();
-        map.GetTileFromLoc(CenterCoordinates).SpawnPlacement(tileToPlace);
+        int randomIndex = UnityEngine.Random.Range(0, validTiles.Count);
+        validTiles[randomIndex].SpawnPlacement(TileToPlace);
     }
 
     protected List<Tile> GetValidTiles(Placement placement)
@@ -60,11 +58,19 @@ public class PlaceAdjacentTile : PlacementAction
     private bool TileIsAValidPlacement(Tile tileToVisit)
     {
 
-        // If we only want unexplored tiles, and this tile is unexplored
-        if (MustBeUnexplored && tileToVisit.Placement.Name == Utilities.GetRootComponent<TileGridLayout>().DefaultPrefab.Name)
+        // If we only want unexplored tiles, and this tile is unexplored. Or we don't care.
+        if (( MustBeUnexplored && tileToVisit.Placement.Name == Utilities.GetRootComponent<TileGridLayout>().DefaultPrefab.Name ) || !MustBeUnexplored)
         {
-            //TODO check for more validity
-            return true;
+            //public int MaximumDistanceByPathing = 100000;
+
+            //TODO @AARON
+            if(MinimumDistanceByAdjacency <= 1 && 1 <= MaximumDistanceByAdjacency)
+            {
+            
+                if(PathfinderAStar<Tile>.CalculateRoute(tileToVisit, placement.GetComponentInParent<Tile>()))
+                return true;
+            }
+            
         }
         return false;
     }
