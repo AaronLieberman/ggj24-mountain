@@ -17,7 +17,7 @@ public class Board : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        var handUI = Utilities.GetRootComponentRecursive<HandUI>();
+        //var handUI = Utilities.GetRootComponentRecursive<HandUI>();
         // handUI.OnCardSelectStateChange += (card, enabled) =>
         // {
         //     if ( !enabled )

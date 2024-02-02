@@ -16,8 +16,7 @@ public class PathFinder
         var currentCoord = fromCoord;
 
         int iterations = 0;
-        var results = new List<Vector2Int>();
-        results.Add(fromCoord);
+        var results = new List<Vector2Int> { fromCoord };
         while (currentCoord != toCoord && iterations < maxIterations)
         {
             iterations++;
@@ -37,6 +36,33 @@ public class PathFinder
 
             currentCoord = closerCoord;
             results.Add(currentCoord);
+        }
+
+        return results;
+    }
+
+    public static Dictionary<Vector2Int, int> CalculateDistances(TileGridLayout tileGridLayout, Vector2Int fromCoord, int maxDistance)
+    {
+        var grid = tileGridLayout.GetComponent<Grid>();
+
+        var results = new Dictionary<Vector2Int, int>();
+
+        var stack = new Stack<(Vector2Int, int)>();
+        stack.Push((fromCoord, 0));
+
+        while (stack.Any())
+        {
+            var (current, distance) = stack.Pop();
+            Debug.Assert(!results.ContainsKey(current));
+            results[current] = distance;
+
+            if (distance < maxDistance)
+            {
+                foreach (var adjacent in Utilities.GetAdjacentHexCoords(current).Where(a => !results.ContainsKey(a)))
+                {
+                    stack.Push((adjacent, distance + 1));
+                }
+            }
         }
 
         return results;
