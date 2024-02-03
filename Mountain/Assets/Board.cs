@@ -17,6 +17,7 @@ public class Board : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //var a = PathFinder.CalculateDistances( new Vector2Int(7, 7), 200);
         //var handUI = Utilities.GetRootComponentRecursive<HandUI>();
         // handUI.OnCardSelectStateChange += (card, enabled) =>
         // {

@@ -23,7 +23,7 @@ public static class Utilities
 	{
 		return SceneManager.GetActiveScene().GetRootGameObjects()
 			.Select(a => a.GetComponentInChildren<T>())
-			.Single(a => a != null);
+			.SingleOrDefault(a => a != null);
 	}
 
 	public static void DestroyAllChildren(GameObject go)
