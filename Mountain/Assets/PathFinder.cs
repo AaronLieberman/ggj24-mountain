@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -41,11 +42,9 @@ public class PathFinder
         return results;
     }
 
-    public static Dictionary<Vector2Int, int> CalculateDistances(TileGridLayout tileGridLayout, Vector2Int fromCoord, int maxDistance)
+    public static Dictionary<Vector2Int, int> CalculateDistances(Vector2Int fromCoord, int maxDistance)
     {
-        maxDistance = System.Math.Min(maxDistance, 200); //don't infinitely traverse empty space, bail out early so we don't loop to something like int.MaxValue
-
-        var grid = tileGridLayout.GetComponent<Grid>();
+        maxDistance = Math.Min(maxDistance, 200); //don't infinitely traverse empty space, bail out early so we don't loop to something like int.MaxValue
 
         var results = new Dictionary<Vector2Int, int>();
 
