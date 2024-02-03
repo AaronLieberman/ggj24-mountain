@@ -99,8 +99,8 @@ Done	No	Megalo Fruit Farm	Woods	0.08	0		Each Megalofruit is as big as a man. Get
 	No	World Academy	Mountaintop		0		Shocked by the dangers of a chaotic world, we systemitized prepartions for all explorers.			Plus 1 Explorer						0	0	0	0
 	Yes	Pale Hall	Wasteland	0.05	-3		Color seeps out of this place until even skin is white with shock.					Add a Journey Plan stop to a random AdjacentDistance=2 tile	Explorer flees in fear.						
 	Yes	Creeping Fungus	Wasteland	0.20	-5		The sound the Stratohaven's fungal sweepers make when they encounter creeping fungus spores sounds like a mechanical cough, but the plasticom assures us this is just how recursive filtering sounds when it is functioning normally.		Place Creeping Fungus in an adjacent unexplored tile every 60 seconds.										
-	Yes	zzDEBUG Place 4 Adjacent	Mountaintop	0.00	0		This tile places 9 adjacent grasslands on unexplored tiles no more than 2 adjacency distance away.									DEBUG	DEBUG	DEBUG	DEBUG
-	Yes																		
+	Yes	zzDEBUG Place 9 Adjacent	Mountaintop	0.00	0		This tile places 9 adjacent grasslands on unexplored tiles no more than 2 adjacency distance away.									DEBUG	DEBUG	DEBUG	DEBUG
+	Yes	zzDebug Place 1 Adjacent	Mountaintop	0.00	0		This tile places 1 adjacent grasslands to the right of this tile.									DEBUG	DEBUG	DEBUG	DEBUG
 	Yes																		
 	Yes																		
 	Yes																		
