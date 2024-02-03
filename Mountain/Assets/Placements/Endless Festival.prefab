@@ -52,12 +52,15 @@ MonoBehaviour:
   - Cost: {fileID: 6223766025237645061, guid: 0c3fc96df5b9e1d499c66e212164f0aa, type: 3}
     Upgrade: {fileID: 0}
     OnUpgrade: {fileID: -8804475954240136066}
+    SkipOnVisit: 0
   - Cost: {fileID: 1365756699843689891, guid: 817df214692c8234c88b99caf669e1ee, type: 3}
     Upgrade: {fileID: 0}
     OnUpgrade: {fileID: 46078108528689386}
+    SkipOnVisit: 0
   - Cost: {fileID: 4486575929425936965, guid: 91624b1fd6393594b85fce2f31dfbbc2, type: 3}
     Upgrade: {fileID: 0}
     OnUpgrade: {fileID: -751660574476237573}
+    SkipOnVisit: 0
   Name: Endless Festival
   CardSprite: {fileID: 0}
   FlavorText: The original Explorer has found love and settled with a local!
@@ -82,7 +85,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NumberOfFieldsToAdd: 1
-  NumberOfForestsToAdd: 0
+  NumberOfWoodsToAdd: 0
   NumberOfSettlementsToAdd: 0
   NumberOfSwampsToAdd: 0
   NumberOfWastelandsToAdd: 0
@@ -100,7 +103,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NumberOfFieldsToAdd: 0
-  NumberOfForestsToAdd: 1
+  NumberOfWoodsToAdd: 1
   NumberOfSettlementsToAdd: 0
   NumberOfSwampsToAdd: 0
   NumberOfWastelandsToAdd: 0
@@ -118,7 +121,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NumberOfFieldsToAdd: 0
-  NumberOfForestsToAdd: 0
+  NumberOfWoodsToAdd: 0
   NumberOfSettlementsToAdd: 0
   NumberOfSwampsToAdd: 1
   NumberOfWastelandsToAdd: 0

@@ -1124,6 +1124,7 @@ MonoBehaviour:
   - Cost: {fileID: 1251490036842288569, guid: 7eedfe6edbef2b448820618520b219b9, type: 3}
     Upgrade: {fileID: 1251490036842288569, guid: 7eedfe6edbef2b448820618520b219b9, type: 3}
     OnUpgrade: {fileID: 0}
+    SkipOnVisit: 0
   Name: Complex Foundation
   CardSprite: {fileID: 0}
   FlavorText: A complex foundation to some kind of structure. The Plasticom has instructed

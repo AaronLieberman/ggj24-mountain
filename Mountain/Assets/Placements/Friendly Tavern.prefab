@@ -870,6 +870,7 @@ MonoBehaviour:
   - Cost: {fileID: 0}
     Upgrade: {fileID: 0}
     OnUpgrade: {fileID: 2275755086847792891}
+    SkipOnVisit: 0
   Name: Friendly Tavern
   CardSprite: {fileID: 0}
   FlavorText: All who are weary are welcome to rest here and hear the tales of fellow
@@ -895,7 +896,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NumberOfFieldsToAdd: 0
-  NumberOfForestsToAdd: 0
+  NumberOfWoodsToAdd: 0
   NumberOfSettlementsToAdd: 0
   NumberOfSwampsToAdd: 0
   NumberOfWastelandsToAdd: 0

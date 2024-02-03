@@ -2028,7 +2028,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NumberOfFieldsToAdd: 0
-  NumberOfForestsToAdd: 0
+  NumberOfWoodsToAdd: 0
   NumberOfSettlementsToAdd: 0
   NumberOfSwampsToAdd: 0
   NumberOfWastelandsToAdd: 0

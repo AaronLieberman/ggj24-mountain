@@ -8,7 +8,7 @@ using UnityEngine;
 public class PlaceAdjacentTile : PlacementAction
 {
     public Placement TileToPlace;
-    public bool UseThisPlacementInsteadOfCenterCoordinates;
+    public bool UseThisPlacementInsteadOfCenterCoordinates = true;
     public Vector2Int CenterCoordinates;
     public int MinimumDistanceByAdjacency = 1;
     public int MaximumDistanceByAdjacency = int.MaxValue;

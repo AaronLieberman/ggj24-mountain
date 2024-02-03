@@ -50,6 +50,7 @@ MonoBehaviour:
   - Cost: {fileID: 5689664702476106266, guid: d207460ad79d71147a84f132fe13e8bc, type: 3}
     Upgrade: {fileID: 6627413070052483727, guid: f7e0b60fe032e024681586cd1c96b434, type: 3}
     OnUpgrade: {fileID: -7430371990024067611}
+    SkipOnVisit: 0
   Name: Bonefire
   CardSprite: {fileID: 0}
   FlavorText: Exhausted refugees huddle around a mound of burning bones and warn
@@ -75,7 +76,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NumberOfFieldsToAdd: 0
-  NumberOfForestsToAdd: 0
+  NumberOfWoodsToAdd: 0
   NumberOfSettlementsToAdd: 0
   NumberOfSwampsToAdd: 0
   NumberOfWastelandsToAdd: 7

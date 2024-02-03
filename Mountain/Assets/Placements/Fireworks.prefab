@@ -721,6 +721,7 @@ MonoBehaviour:
   - Cost: {fileID: 0}
     Upgrade: {fileID: 5862119306748896703, guid: 842d3e79ab23ddb47bb1e5df2caab5e5, type: 3}
     OnUpgrade: {fileID: 0}
+    SkipOnVisit: 0
   Name: Fireworks
   CardSprite: {fileID: 0}
   FlavorText: 

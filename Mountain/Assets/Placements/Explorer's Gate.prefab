@@ -612,8 +612,7 @@ MonoBehaviour:
   Actions: []
   Name: Explorer's Gate
   CardSprite: {fileID: 0}
-  FlavorText: The plasticom tells us that the only biome more swarming with life
-    than a forest is the ocean. But who among us has seen the sea?
+  FlavorText: 
   OnRevealText: 
   OnVisitText: 
   LostChance: 0.05

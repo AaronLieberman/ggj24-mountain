@@ -135,6 +135,7 @@ MonoBehaviour:
   - Cost: {fileID: 5689664702476106266, guid: d207460ad79d71147a84f132fe13e8bc, type: 3}
     Upgrade: {fileID: 0}
     OnUpgrade: {fileID: 6471751489159783868}
+    SkipOnVisit: 0
   Name: Canopy Village
   CardSprite: {fileID: 0}
   FlavorText: 
@@ -172,7 +173,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NumberOfFieldsToAdd: 0
-  NumberOfForestsToAdd: 1
+  NumberOfWoodsToAdd: 1
   NumberOfSettlementsToAdd: 0
   NumberOfSwampsToAdd: 0
   NumberOfWastelandsToAdd: 0

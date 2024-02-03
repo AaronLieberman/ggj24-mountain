@@ -529,9 +529,11 @@ MonoBehaviour:
   - Cost: {fileID: 519853117350573946, guid: b422e4b1552e64241b81ca5134eb4510, type: 3}
     Upgrade: {fileID: 7871966862562380555, guid: 653963a5c6a8ec7459119d247ff24468, type: 3}
     OnUpgrade: {fileID: 0}
+    SkipOnVisit: 0
   - Cost: {fileID: 6223766025237645061, guid: 0c3fc96df5b9e1d499c66e212164f0aa, type: 3}
     Upgrade: {fileID: 4017005561122629154, guid: 0c2152eedfbf64948bba090d755e1c5a, type: 3}
     OnUpgrade: {fileID: 0}
+    SkipOnVisit: 0
   Name: Green Canopy
   CardSprite: {fileID: 0}
   FlavorText: Wind ripples an emerald ceiling, causing slivers of sunlight to dance

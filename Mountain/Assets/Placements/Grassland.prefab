@@ -614,6 +614,7 @@ MonoBehaviour:
   - Cost: {fileID: 0}
     Upgrade: {fileID: 3484426104028936687, guid: 33c57654b00bf3644a9952072eb8ddd2, type: 3}
     OnUpgrade: {fileID: 0}
+    SkipOnVisit: 0
   Name: Grassland
   CardSprite: {fileID: 0}
   FlavorText: Like a lawn the runs to the horizon.

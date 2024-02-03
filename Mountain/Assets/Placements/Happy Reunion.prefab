@@ -50,6 +50,7 @@ MonoBehaviour:
   - Cost: {fileID: 0}
     Upgrade: {fileID: 0}
     OnUpgrade: {fileID: 0}
+    SkipOnVisit: 0
   Name: Happy Reunion
   CardSprite: {fileID: 0}
   FlavorText: 
@@ -74,7 +75,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NumberOfFieldsToAdd: 8
-  NumberOfForestsToAdd: 0
+  NumberOfWoodsToAdd: 0
   NumberOfSettlementsToAdd: 4
   NumberOfSwampsToAdd: 0
   NumberOfWastelandsToAdd: 0
