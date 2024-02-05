@@ -204,7 +204,9 @@ public class TileGridLayout : MonoBehaviour
     }
 
     public Tile GetTileFromLoc(Vector2Int coord)
-        => _tiles[coord.x, coord.y];
+        => coord.x >= 0 && coord.y >= 0 && coord.x < _tiles.GetLength(0) && coord.y < _tiles.GetLength(1)
+            ?  _tiles[coord.x, coord.y]
+            : null;
 
     public Tile CreateTileFromLoc(Vector2Int coord)
     {
