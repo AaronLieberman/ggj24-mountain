@@ -44,5 +44,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a4a321f4f1d0874f96628ab09098473, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cardPools:
+  - {fileID: 11400000, guid: 71a0193528f679141a3ac741dfb4186f, type: 2}
+  - {fileID: 11400000, guid: c00a61f63bb1f4c47b53792cb4ed9ffe, type: 2}
+  - {fileID: 11400000, guid: 133b504808176054e9900b691a7bf60f, type: 2}
+  - {fileID: 11400000, guid: 1fda0e5f21eda114b84c3680fce29240, type: 2}
   currentCardPoolIndex: 0
-  playerDeck: {fileID: 0}

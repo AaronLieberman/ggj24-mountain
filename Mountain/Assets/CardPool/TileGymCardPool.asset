@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 929218d3c603a2d45b90e1b97fdf2a39, type: 3}
+  m_Name: TileGymCardPool
+  m_EditorClassIdentifier: 
+  poolName: Tile Gym Card Pool
+  tilePlacementObjects:
+  - {fileID: 6068616569870599975, guid: d6a45ddf0db5b064c8390c73dca554df, type: 3}
+  - {fileID: 5622669144648578358, guid: 792d01cc798e0b848874eefd99783405, type: 3}
+  - {fileID: 6912136889527552661, guid: 0c3fc96df5b9e1d499c66e212164f0aa, type: 3}
+  - {fileID: 449788240802564400, guid: 817df214692c8234c88b99caf669e1ee, type: 3}
+  - {fileID: 3549516090109160139, guid: a657e7c3604eab74bbe1eeb59ca2e015, type: 3}
+  - {fileID: 5222206493808271405, guid: 6b87e8959f3db2849bfcaef3f76ac9be, type: 3}
+  - {fileID: 3089711392925214749, guid: 759b686511f5e1b4aa6e5ca187915b33, type: 3}
+  - {fileID: 6868135906047443029, guid: 3e33b4fbbc7942945bc3b65501002210, type: 3}
+  - {fileID: 2646643988901559927, guid: 2664b437e198f064f86639c06c9320ca, type: 3}

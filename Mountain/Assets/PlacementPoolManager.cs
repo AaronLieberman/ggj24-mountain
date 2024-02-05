@@ -6,7 +6,7 @@ using System;
 
 public class PlacementPoolManager : MonoBehaviour
 {
-	private CardPool[] cardPools;
+	public CardPool[] cardPools;
 	[Tooltip("Don't set higher than 3. There are only 4 elements in cardPools.Length")]
 	[SerializeField] int currentCardPoolIndex = 0;
 
@@ -15,13 +15,6 @@ public class PlacementPoolManager : MonoBehaviour
 	private void Awake()
 	{
 		_playerDeck = Utilities.GetRootComponent<Deck>();
-
-		CardPool cardPool1 = AssetDatabase.LoadAssetAtPath<CardPool>("Assets/CardPool/CardPool1.asset");
-		CardPool cardPool2 = AssetDatabase.LoadAssetAtPath<CardPool>("Assets/CardPool/CardPool2.asset");
-		CardPool cardPool3 = AssetDatabase.LoadAssetAtPath<CardPool>("Assets/CardPool/CardPool3.asset");
-		CardPool cardPool4 = AssetDatabase.LoadAssetAtPath<CardPool>("Assets/CardPool/CardPool4.asset");
-
-		cardPools = new CardPool[] { cardPool1, cardPool2, cardPool3, cardPool4 };
 	}
 
 	/// <returns>new CardPool Index</returns>
@@ -38,7 +31,7 @@ public class PlacementPoolManager : MonoBehaviour
 		return currentCardPoolIndex;
 	}
 
-	public void AddToDeckFromCurrentPool(int numOfCardsToAdd = 1)
+	public void AddToDeckFromCurrentPool(int numOfCardsToAdd = 1, bool isRevealed = false)
 	{
 		System.Random random = new System.Random();
 		CardPool currentCardPool = GetCurrentCardPool();
@@ -55,11 +48,11 @@ public class PlacementPoolManager : MonoBehaviour
 				return;
 			}
 
-			_playerDeck.AddNewCardToDeck(randomPlacement, false);
+			_playerDeck.AddNewCardToDeck(randomPlacement, isRevealed);
 		}
 	}
 
-	public void AddToDeckFromBiomeInPool(Placement MatchingBiome, int numOfCardsToAdd = 1)
+	public void AddToDeckFromBiomeInPool(Placement MatchingBiome, int numOfCardsToAdd = 1, bool isRevealed = false)
 	{
 		CardPool currentCardPool = GetCurrentCardPool();
 
@@ -109,7 +102,7 @@ public class PlacementPoolManager : MonoBehaviour
 				Placement randomPlacement = randomPlacementObject.GetComponent<Placement>();
 
 				// Add the random card to the player's deck
-				_playerDeck.AddNewCardToDeck(randomPlacement.GetComponent<Placement>(), false);
+				_playerDeck.AddNewCardToDeck(randomPlacement.GetComponent<Placement>(), isRevealed);
 			}
 			else
 			{
@@ -118,16 +111,16 @@ public class PlacementPoolManager : MonoBehaviour
 		}
 	}
 
-	public void AddToDeckFromAllBiomesInPool(int numberOfFields = 0, int numberOfWoods = 0, int numberOfSettlements = 0, int numberOfSwamps = 0, int numberOfWastelands = 0, int numberOfRandom = 0)
+	public void AddToDeckFromAllBiomesInPool(int numberOfFields = 0, int numberOfWoods = 0, int numberOfSettlements = 0, int numberOfSwamps = 0, int numberOfWastelands = 0, int numberOfRandom = 0, bool isRevealed = false)
 	{
 		Deck deck = Utilities.GetRootComponent<Deck>();
-		AddToDeckFromBiomeInPool(deck.FieldsBiome, numberOfFields);
-		AddToDeckFromBiomeInPool(deck.WoodsBiome, numberOfWoods);
-		AddToDeckFromBiomeInPool(deck.SettlementBiome, numberOfSettlements);
-		AddToDeckFromBiomeInPool(deck.SwampBiome, numberOfSwamps);
-		AddToDeckFromBiomeInPool(deck.WastelandBiome, numberOfWastelands);
+		AddToDeckFromBiomeInPool(deck.FieldsBiome, numberOfFields, isRevealed);
+		AddToDeckFromBiomeInPool(deck.WoodsBiome, numberOfWoods, isRevealed);
+		AddToDeckFromBiomeInPool(deck.SettlementBiome, numberOfSettlements, isRevealed);
+		AddToDeckFromBiomeInPool(deck.SwampBiome, numberOfSwamps, isRevealed);
+		AddToDeckFromBiomeInPool(deck.WastelandBiome, numberOfWastelands, isRevealed);
 
-		AddToDeckFromCurrentPool(numberOfRandom);
+		AddToDeckFromCurrentPool(numberOfRandom, isRevealed);
     }
 
 	public CardPool GetCurrentCardPool()
