@@ -9,7 +9,7 @@ public class CanopyVillageDeckingAbility : PlacementAction
 
     public override void DoWork(Worker worker, Placement placement, Card card)
     {
-        Debug.LogError("Random Chance was larger than 1.0, so higher than 100%. Chance was: " + ChanceForWoods);
+        if(ChanceForWoods> 1.0f) Debug.LogError("Random Chance was larger than 1.0, so higher than 100%. Chance was: " + ChanceForWoods);
         if( Random.value <= ChanceForWoods)
         {
             //Grant a forest

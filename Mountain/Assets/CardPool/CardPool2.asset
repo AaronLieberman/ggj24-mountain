@@ -12,5 +12,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 929218d3c603a2d45b90e1b97fdf2a39, type: 3}
   m_Name: CardPool2
   m_EditorClassIdentifier: 
-  poolName: 1
-  tilePlacements: []
+  poolName: Main Pool 2
+  tilePlacementObjects:
+  - {fileID: 449788240802564400, guid: 3722a7fc09dba1040a766eb7cdc54c69, type: 3}
+  - {fileID: 3858378050955318814, guid: 045ba936fd074f249886ee29e87a2f0e, type: 3}
+  - {fileID: 449788240802564400, guid: 817df214692c8234c88b99caf669e1ee, type: 3}
+  - {fileID: 7929326601307148440, guid: 0eb79fe11e902e8409e20eeaa3c1846b, type: 3}
+  - {fileID: 6868135906047443029, guid: 3e33b4fbbc7942945bc3b65501002210, type: 3}
+  - {fileID: 248106658034112929, guid: 33c57654b00bf3644a9952072eb8ddd2, type: 3}
+  - {fileID: 3125108289571728524, guid: fdeac29e9d2dc21439eca4cf8fcd37ba, type: 3}
+  - {fileID: 5954103792120514573, guid: 04aa45654a370884c810e649f2648800, type: 3}
+  - {fileID: 7213889319353221773, guid: f35880064150cc04d9c1602093868cd7, type: 3}
+  - {fileID: 407792718105623623, guid: 24a554b02b5cab54fbcfbc1aa96f9c2d, type: 3}
+  - {fileID: 8423983653403193059, guid: dedf347cb20baa441a36bd2d47698ca4, type: 3}
+  - {fileID: 2213949058125023164, guid: 9397741fb3082e8459f14c7fba7639e4, type: 3}
+  - {fileID: 6314776412672608784, guid: e296be00c656e1a4d94313480ea76227, type: 3}
+  - {fileID: 8060467576137469558, guid: 975a591f34f4bcb4f80b5f2b55ad7bbf, type: 3}
+  - {fileID: 8041633387930806463, guid: d5bd771cef2d3e343a9804c7b213b3dd, type: 3}
+  - {fileID: 27186932582328235, guid: 677683397b3d6d645a3e3e709af43889, type: 3}
+  - {fileID: 7326162982779552030, guid: 2429f5eedc6dcb641b265eb980b187ef, type: 3}
+  - {fileID: 5901805364419072825, guid: 7f67eff4357d4cc40bcf5d3608e59de5, type: 3}
+  - {fileID: 4855308988839201746, guid: 978bd91f7382ac44a8dd0443ba48418f, type: 3}
+  - {fileID: 6757721742913648052, guid: fcc4b28569550a0438814faafd0ac150, type: 3}
+  - {fileID: 3089711392925214749, guid: 759b686511f5e1b4aa6e5ca187915b33, type: 3}
+  - {fileID: 8714118179226651725, guid: 09918bcdf492cdd41a098a4d5d7de893, type: 3}

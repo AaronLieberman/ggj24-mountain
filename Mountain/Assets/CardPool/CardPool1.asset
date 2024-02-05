@@ -12,5 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 929218d3c603a2d45b90e1b97fdf2a39, type: 3}
   m_Name: CardPool1
   m_EditorClassIdentifier: 
-  poolName: 1
-  tilePlacements: []
+  poolName: Main Pool 1
+  tilePlacementObjects:
+  - {fileID: 449788240802564400, guid: 3722a7fc09dba1040a766eb7cdc54c69, type: 3}
+  - {fileID: 3858378050955318814, guid: 045ba936fd074f249886ee29e87a2f0e, type: 3}
+  - {fileID: 6868135906047443029, guid: 3e33b4fbbc7942945bc3b65501002210, type: 3}
+  - {fileID: 248106658034112929, guid: 33c57654b00bf3644a9952072eb8ddd2, type: 3}
+  - {fileID: 7213889319353221773, guid: f35880064150cc04d9c1602093868cd7, type: 3}
+  - {fileID: 407792718105623623, guid: 24a554b02b5cab54fbcfbc1aa96f9c2d, type: 3}
+  - {fileID: 4855308988839201746, guid: 978bd91f7382ac44a8dd0443ba48418f, type: 3}
+  - {fileID: 8714118179226651725, guid: 09918bcdf492cdd41a098a4d5d7de893, type: 3}
