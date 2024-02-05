@@ -26,8 +26,6 @@ public class PlaceAdjacentTile : PlacementAction
             CenterCoordinates = placement.GetComponentInParent<Tile>().Location;
         }
 
-        calculatedDistances = PathFinder.CalculateDistances(CenterCoordinates, MaximumDistanceByAdjacency);
-
         List<Tile> validTiles = GetValidTiles(placement);
 
         if (validTiles.Count > 0)
