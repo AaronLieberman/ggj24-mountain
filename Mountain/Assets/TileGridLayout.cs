@@ -48,7 +48,7 @@ public class TileGridLayout : MonoBehaviour
     public void Reset()
     {
         Generate(GridSize);
-        HomeLocation = GetCenterTile();
+        HomeLocation = GetCenterCell();
         HomeInstance = GetTileFromLoc(HomeLocation).SpawnPlacement(HomePrefab);
         Utilities.GetRootComponent<MapMaker>().MakeMap();
     }
@@ -67,7 +67,7 @@ public class TileGridLayout : MonoBehaviour
         }
     }
 
-    public Vector2Int GetCenterTile()
+    public Vector2Int GetCenterCell()
         => new Vector2Int(GridSize.x / 2, GridSize.y / 2);
 
     public Vector3 GetPositionFromTileCoord(Vector2Int coord)
@@ -102,7 +102,7 @@ public class TileGridLayout : MonoBehaviour
         var currentTile = startTile;
         foreach (var destination in destinations)
         {
-            foreach (var tile in PathfinderAStar<Tile>.CalculateRoute(currentTile, destination))
+            foreach (var tile in TilePathfinderAStar.CalculateRoute(currentTile, destination))
             {
                 _pathfindingPath.Add(tile);
                 tile.SetHighlight("path", true);
@@ -117,7 +117,7 @@ public class TileGridLayout : MonoBehaviour
         var currentTile = startTile;
         foreach (var destination in destinations)
         {
-            var route = PathfinderAStar<Tile>.CalculateRoute(currentTile, destination);
+            var route = TilePathfinderAStar.CalculateRoute(currentTile, destination);
             if (route == null) return false;
             if (!route.Any()) return false;
             currentTile = destination;
@@ -136,11 +136,6 @@ public class TileGridLayout : MonoBehaviour
 
     public void OnMouseUpTile(Tile tile)
     {
-        // if (!GetComponent<Board>().CanTarget(tile))
-        // {
-        //     return;
-        // }
-
         var handUI = Utilities.GetRootComponents<Canvas>()
            .Select(c => c.GetComponentInChildren<HandUI>())
            .First();

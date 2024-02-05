@@ -4,7 +4,7 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class Tile : MonoBehaviour, INeighborQueryable<Tile>
+public class Tile : MonoBehaviour
 {
     public Vector2Int Location { get; set; }
 
@@ -40,16 +40,6 @@ public class Tile : MonoBehaviour, INeighborQueryable<Tile>
         instance.RevealAction?.DoWork(worker, instance, null);
         return instance;
     }
-
-    public IEnumerable<Tile> GetNeighbors()
-        => GetComponentInParent<TileGridLayout>().GetNeighborsByTile(this);
-
-
-    public float GetHeuristic(bool isEnd)
-        => isEnd ? 0 : GetComponentInChildren<Placement>()?.PathingHeuristic ?? 1f;
-
-    public float CalcDist(Tile other)
-        => Vector3.Distance(transform.position, other.transform.position);
 
     private TileGridLayout Map => transform.parent.GetComponent<TileGridLayout>();
 
@@ -135,4 +125,16 @@ public class Tile : MonoBehaviour, INeighborQueryable<Tile>
             }
         }
     }
+}
+
+class TileNeighborQuierier : INeighborQuerier<Tile>
+{
+    public IEnumerable<Tile> GetNeighbors(Tile tile)
+        => tile.GetComponentInParent<TileGridLayout>().GetNeighborsByTile(tile);
+
+    public float GetHeuristic(Tile tile, bool isEnd)
+        => isEnd ? 0 : tile.GetComponentInChildren<Placement>()?.PathingHeuristic ?? 1f;
+
+    public float CalcDist(Tile tile, Tile other)
+        => Vector3.Distance(tile.transform.position, other.transform.position);
 }

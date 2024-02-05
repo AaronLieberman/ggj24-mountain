@@ -94,11 +94,6 @@ public class GameManager : MonoBehaviour
     {
         StopMouseActiveHighlight();
 
-        // if (!Board.CanTarget(tile))
-        // {
-        //     return;
-        // }
-
         tile.SetHighlight("mouse", true);
         _highlightTile = tile;
 

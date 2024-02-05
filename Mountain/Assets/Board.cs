@@ -13,66 +13,12 @@ public class Board : MonoBehaviour
 
     public List<Worker> Workers = new List<Worker>();
 
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        //var a = PathFinder.CalculateDistances( new Vector2Int(7, 7), 200);
-        //var handUI = Utilities.GetRootComponentRecursive<HandUI>();
-        // handUI.OnCardSelectStateChange += (card, enabled) =>
-        // {
-        //     if ( !enabled )
-        //     {
-        //         ClearCardTargets();
-        //         return;
-        //     }
-
-        //     HighlightActionsForCard(card);
-        // };
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
     public void Reset()
     {
         Map.Reset();
         ClearActors();
         AddWorkerAtHome();
     }
-
-    //private List<Tile> _cardTargets = new List<Tile>();
-
-    //public bool CanTarget(Tile tile) => _cardTargets.Contains(tile);
-
-    public void ClearCardTargets()
-    {
-        // foreach (var t in _cardTargets)
-        // {
-        //     t.SetHighlight("cardTarget", false);
-        // }
-
-        // _cardTargets.Clear();
-    }
-
-    public void HighlightActionsForCard(Card card)
-    {
-        // ClearCardTargets();
-
-        // foreach (var t in Map.EnumerateTiles()
-        //                      .Where(t => (t.Placement == null
-        //                                     || t.Placement.Actions.Count == 0
-        //                                     || t.Placement.Actions.Any(a => a.Cost == card.name || string.IsNullOrEmpty(a.Cost)))
-        //                                 && t.GetNeighbors().Any(n => !(n.Placement?.name ?? "Unexplored").StartsWith("Unexplored"))))
-        // {
-        //     t.SetHighlight("cardTarget", true);
-        //     _cardTargets.Add(t);
-        // }
-    }
-
 
     public void ClearActors()
     {

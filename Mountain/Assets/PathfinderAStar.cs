@@ -3,28 +3,28 @@ using System.Collections.Generic;
 using System;
 using System.Linq;
 
-public interface INeighborQueryable<T>
+public interface INeighborQuerier<T>
 {
-    IEnumerable<T> GetNeighbors();
-    float GetHeuristic(bool isEnd);
-    float CalcDist(T other);
+    IEnumerable<T> GetNeighbors(T t);
+    float GetHeuristic(T t, bool isEnd);
+    float CalcDist(T t, T other);
 }
 
 // https://en.wikipedia.org/wiki/A*_search_algorithm
-public static class PathfinderAStar<T> where T : INeighborQueryable<T>
+public static class PathfinderAStar
 {
-    private static List<T> ReconstructPath(Dictionary<T, T> cameFrom, T current)
+    static List<T> ReconstructPath<T>(Dictionary<T, T> cameFrom, T current)
     {
         var totalPath = new List<T> { current };
         while (cameFrom.ContainsKey(current))
         {
             current = cameFrom[current];
-            totalPath.Insert(0, current); 
+            totalPath.Insert(0, current);
         }
         return totalPath;
     }
 
-    public static List<T> CalculateRoute(T start, T goal) 
+    public static List<T> CalculateRoute<T>(INeighborQuerier<T> querier, T start, T goal)
     {
         var openSet = new HashSet<T> { start };
         var cameFrom = new Dictionary<T, T>();
@@ -33,7 +33,7 @@ public static class PathfinderAStar<T> where T : INeighborQueryable<T>
         minScore[start] = 0;
 
         var predScore = new Dictionary<T, float>();
-        predScore[start] = start.GetHeuristic(start.Equals(goal));
+        predScore[start] = querier.GetHeuristic(start, start.Equals(goal));
 
         while (openSet.Any())
         {
@@ -44,13 +44,13 @@ public static class PathfinderAStar<T> where T : INeighborQueryable<T>
 
             openSet.Remove(current);
 
-            foreach (var neighbor in current.GetNeighbors())
+            foreach (var neighbor in querier.GetNeighbors(current))
             {
-                var weight = neighbor.GetHeuristic(neighbor.Equals(goal));
-                if ( weight >= 10000)
+                var weight = querier.GetHeuristic(neighbor, neighbor.Equals(goal));
+                if (weight >= 10000)
                     continue;
 
-                float tentativeGScore = minScore[current] + current.CalcDist(neighbor);
+                float tentativeGScore = minScore[current] + querier.CalcDist(current, neighbor);
                 if (tentativeGScore < minScore.GetValueOrDefault(neighbor, float.MaxValue))
                 {
                     cameFrom[neighbor] = current;
@@ -63,5 +63,54 @@ public static class PathfinderAStar<T> where T : INeighborQueryable<T>
         }
 
         return null;
+    }
+
+    // public static HashSet<T> ComputeUnexploredDistance<T>(INeighborQuerier<T> querier, T start)
+    // {
+    //     var openSet = new HashSet<T> { start };
+    //     var cameFrom = new Dictionary<T, T>();
+
+    //     var minScore = new Dictionary<T, float>();
+    //     minScore[start] = 0;
+
+    //     var predScore = new Dictionary<T, float>();
+    //     predScore[start] = querier.GetHeuristic(start, start.Equals(goal));
+
+    //     while (openSet.Any())
+    //     {
+    //         var current = openSet.OrderBy(node => predScore.ContainsKey(node) ? predScore[node] : float.MaxValue).First();
+
+    //         if (EqualityComparer<T>.Default.Equals(current, goal))
+    //             return ReconstructPath(cameFrom, current);
+
+    //         openSet.Remove(current);
+
+    //         foreach (var neighbor in querier.GetNeighbors(current))
+    //         {
+    //             var weight = querier.GetHeuristic(neighbor, neighbor.Equals(goal));
+    //             if (weight >= 10000)
+    //                 continue;
+
+    //             float tentativeGScore = minScore[current] + querier.CalcDist(current, neighbor);
+    //             if (tentativeGScore < minScore.GetValueOrDefault(neighbor, float.MaxValue))
+    //             {
+    //                 cameFrom[neighbor] = current;
+    //                 minScore[neighbor] = tentativeGScore;
+    //                 predScore[neighbor] = tentativeGScore + weight;
+    //                 if (!openSet.Contains(neighbor))
+    //                     openSet.Add(neighbor);
+    //             }
+    //         }
+    //     }
+
+    //     return null;
+    // }
+}
+
+public static class TilePathfinderAStar
+{
+    public static List<Tile> CalculateRoute(Tile start, Tile end)
+    {
+        return PathfinderAStar.CalculateRoute(new TileNeighborQuierier(), start, end);
     }
 }

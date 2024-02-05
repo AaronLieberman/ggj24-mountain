@@ -2,7 +2,6 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public class PlaceAdjacentTile : PlacementAction
@@ -37,13 +36,13 @@ public class PlaceAdjacentTile : PlacementAction
 
     protected List<Tile> GetValidTiles(Placement placement)
     {
-        List<Tile> validTiles = new List<Tile>();
-        Queue<Tile> tilesToVisit = new Queue<Tile>();
-        HashSet<Tile> tilesAlreadyVisited = new HashSet<Tile>();
+        List<Tile> validTiles = new();
+        Queue<Tile> tilesToVisit = new();
+        HashSet<Tile> tilesAlreadyVisited = new();
 
         tilesToVisit.Enqueue(placement.GetComponentInParent<Tile>());
 
-        while(tilesToVisit.Count > 0)
+        while (tilesToVisit.Count > 0)
         {
             Tile thisTile = tilesToVisit.Dequeue();
             tilesAlreadyVisited.Add(thisTile);
@@ -54,7 +53,8 @@ public class PlaceAdjacentTile : PlacementAction
 
             List<Tile> adjTiles = Utilities.GetAdjacentTiles(thisTile.Location);
             //Add any of the adjacent tiles that we haven't already visited to the tilesToVisit:
-            foreach (Tile t in adjTiles.Where(tile => (!tilesAlreadyVisited.Contains(tile) && !tilesToVisit.Contains(tile)) && calculatedDistances[tile.Location] < MaximumDistanceByAdjacency)) { 
+            foreach (Tile t in adjTiles.Where(tile => !tilesAlreadyVisited.Contains(tile) && !tilesToVisit.Contains(tile) && calculatedDistances[tile.Location] < MaximumDistanceByAdjacency))
+            {
                 tilesToVisit.Enqueue(t);
             }
         }
@@ -65,9 +65,8 @@ public class PlaceAdjacentTile : PlacementAction
 
     private bool TileIsAValidPlacement(Tile tileToVisit)
     {
-
         // If we only want unexplored tiles, and this tile is unexplored. Or we don't care.
-        if (( MustBeUnexplored && tileToVisit.Placement.Name != Utilities.GetRootComponent<TileGridLayout>().DefaultPrefab.Name )) return false;
+        if (MustBeUnexplored && tileToVisit.Placement.Name != Utilities.GetRootComponent<TileGridLayout>().DefaultPrefab.Name) return false;
 
         Tile originTile = Utilities.GetRootComponent<TileGridLayout>().GetTileFromLoc(CenterCoordinates);
 
@@ -77,9 +76,9 @@ public class PlaceAdjacentTile : PlacementAction
         if (distanceByAdjacency > MaximumDistanceByAdjacency) return false;
 
         //Make sure we are close enough by pathfinding
-        int lengthOfPath = PathfinderAStar<Tile>.CalculateRoute(originTile, tileToVisit).Count;
+        int lengthOfPath = TilePathfinderAStar.CalculateRoute(originTile, tileToVisit).Count;
         if (lengthOfPath > MaximumDistanceByPathing) return false;
-        
+
         // We made it past all the checks!
         return true;
     }
