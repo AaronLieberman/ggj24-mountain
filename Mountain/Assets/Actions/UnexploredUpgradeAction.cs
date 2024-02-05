@@ -9,7 +9,6 @@ public class UnexploredUpgradeAction : PlacementAction
         if (card.PlacementToSpawn == null)
             return;
 
-        var instance = placement.GetComponentInParent<Tile>().SpawnPlacement(card.PlacementToSpawn);
-        instance.RevealAction?.DoWork(worker, instance, card);
+        placement.GetComponentInParent<Tile>().SpawnPlacement(worker, card.PlacementToSpawn);
     }
 }
