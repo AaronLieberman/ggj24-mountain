@@ -9,6 +9,7 @@ public class DeckUI : MonoBehaviour, IPointerEnterHandler
     void Awake()
     {
         Utilities.GetRootComponent<Hand>().DeckChanged += (_, __) => RefreshDeckUI();
+        Utilities.GetRootComponent<Deck>().DeckChanged += (_, __) => RefreshDeckUI();
     }
 
     void RefreshDeckUI()

@@ -21,6 +21,8 @@ public class Deck : MonoBehaviour
 
     public List<InitialCard> InitialCards;
 
+    public event EventHandler DeckChanged;
+
     public int GetDeckCount()
     {
         return transform.childCount;
@@ -67,5 +69,7 @@ public class Deck : MonoBehaviour
 		newCard.IsRevealed = isRevealed;
         newCard.gameObject.name = placementToSpawn.gameObject.name;
         newCard.transform.SetParent(transform);
-	}
+
+        DeckChanged?.Invoke(this, null);
+    }
 }
