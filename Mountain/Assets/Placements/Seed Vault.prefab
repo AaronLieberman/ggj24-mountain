@@ -94,6 +94,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2137903305146737819}
   - component: {fileID: 2893920812238874158}
+  - component: {fileID: 3438626832746531809}
   m_Layer: 0
   m_Name: Seed Vault
   m_TagString: Untagged
@@ -140,7 +141,26 @@ MonoBehaviour:
   Difficulty: 2
   PathingHeuristic: 1
   Biome: {fileID: 519853117350573946, guid: b422e4b1552e64241b81ca5134eb4510, type: 3}
-  RevealAction: {fileID: 0}
+  RevealAction: {fileID: 3438626832746531809}
+--- !u!114 &3438626832746531809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 920959038944158103}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f21808de4848a644cbe2296b9380dc14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NumberOfFieldsToAdd: 1
+  NumberOfWoodsToAdd: 1
+  NumberOfSettlementsToAdd: 0
+  NumberOfSwampsToAdd: 1
+  NumberOfWastelandsToAdd: 0
+  NumberOfRandomTypeToAdd: 0
+  ShouldBeRevealed: 0
 --- !u!1 &1874533268733326133
 GameObject:
   m_ObjectHideFlags: 0
