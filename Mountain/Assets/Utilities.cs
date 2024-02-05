@@ -110,8 +110,12 @@ public static class Utilities
 
 		foreach (var adjCoord in adjacentCoords)
 		{
-            adjTiles.Add( map.GetTileFromLoc(adjCoord) );
-		}
+            Tile tileForLoc = map.GetTileFromLoc(adjCoord);
+			if (tileForLoc != null)
+			{
+				adjTiles.Add(tileForLoc);
+			}
+        }
 		return adjTiles;
     }
 }

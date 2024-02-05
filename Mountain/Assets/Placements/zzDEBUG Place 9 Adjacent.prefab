@@ -543,7 +543,7 @@ MonoBehaviour:
   Difficulty: 0
   PathingHeuristic: 1
   Biome: {fileID: 6223766025237645061, guid: b30f520d510134f4da99aaf67f3f714b, type: 3}
-  RevealAction: {fileID: 0}
+  RevealAction: {fileID: -6706634751180964292}
 --- !u!114 &-6784325881455479468
 MonoBehaviour:
   m_ObjectHideFlags: 0

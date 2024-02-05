@@ -30,17 +30,25 @@ public class PlaceAdjacentTile : PlacementAction
 
         List<Tile> validTiles = GetValidTiles(placement);
 
-        int randomIndex = UnityEngine.Random.Range(0, validTiles.Count);
-        validTiles[randomIndex].SpawnPlacement(TileToPlace);
+        if (validTiles.Count > 0)
+        {
+            int randomIndex = UnityEngine.Random.Range(0, validTiles.Count);
+            validTiles[randomIndex].SpawnPlacement(TileToPlace);
+        }
+        else
+        {
+            Debug.Log("No valid tiles were found while placing adjacent.");
+        }
     }
 
     protected List<Tile> GetValidTiles(Placement placement)
     {
+        Tile originTile = placement.GetComponentInParent<Tile>();
         List<Tile> validTiles = new();
         Queue<Tile> tilesToVisit = new();
         HashSet<Tile> tilesAlreadyVisited = new();
 
-        tilesToVisit.Enqueue(placement.GetComponentInParent<Tile>());
+        tilesToVisit.Enqueue(originTile);
 
         while (tilesToVisit.Count > 0)
         {
@@ -53,7 +61,7 @@ public class PlaceAdjacentTile : PlacementAction
 
             List<Tile> adjTiles = Utilities.GetAdjacentTiles(thisTile.Location);
             //Add any of the adjacent tiles that we haven't already visited to the tilesToVisit:
-            foreach (Tile t in adjTiles.Where(tile => !tilesAlreadyVisited.Contains(tile) && !tilesToVisit.Contains(tile) && calculatedDistances[tile.Location] < MaximumDistanceByAdjacency))
+            foreach (Tile t in adjTiles.Where(tile => !tilesAlreadyVisited.Contains(tile) && !tilesToVisit.Contains(tile) && PathFinder.CalculateDistanceDirect(originTile, tile) <= MaximumDistanceByAdjacency))
             {
                 tilesToVisit.Enqueue(t);
             }
@@ -68,16 +76,16 @@ public class PlaceAdjacentTile : PlacementAction
         // If we only want unexplored tiles, and this tile is unexplored. Or we don't care.
         if (MustBeUnexplored && tileToVisit.Placement.Name != Utilities.GetRootComponent<TileGridLayout>().DefaultPrefab.Name) return false;
 
-        Tile originTile = Utilities.GetRootComponent<TileGridLayout>().GetTileFromLoc(CenterCoordinates);
 
         //Make sure we're within the adjacency distance
-        int distanceByAdjacency = calculatedDistances[tileToVisit.Location];
+        int distanceByAdjacency = PathFinder.CalculateDistanceDirect(CenterCoordinates, tileToVisit.Location);
         if (distanceByAdjacency < MinimumDistanceByAdjacency) return false;
         if (distanceByAdjacency > MaximumDistanceByAdjacency) return false;
 
         //Make sure we are close enough by pathfinding
-        int lengthOfPath = TilePathfinderAStar.CalculateRoute(originTile, tileToVisit).Count;
-        if (lengthOfPath > MaximumDistanceByPathing) return false;
+        Tile originTile = Utilities.GetRootComponent<TileGridLayout>().GetTileFromLoc(CenterCoordinates);
+        List<Tile> routeToTile = TilePathfinderAStar.CalculateRoute(originTile, tileToVisit);
+        if(routeToTile == null || routeToTile.Count > MaximumDistanceByPathing) return false;
 
         // We made it past all the checks!
         return true;

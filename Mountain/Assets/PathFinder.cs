@@ -43,6 +43,11 @@ public class PathFinder
         return results;
     }
 
+    public static int CalculateDistanceDirect(Tile p1, Tile p2)
+    {
+        return CalculateDistanceDirect(p1.Location, p2.Location);
+    }
+
     public static int CalculateDistanceDirect(Vector2Int p1, Vector2Int p2)
     {
         bool isEven(int v) => v % 2 == 0;
