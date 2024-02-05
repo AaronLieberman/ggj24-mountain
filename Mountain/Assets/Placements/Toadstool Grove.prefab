@@ -658,6 +658,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9075165360175876169}
   - component: {fileID: 6412502443555235813}
+  - component: {fileID: 7667342734979150902}
   m_Layer: 0
   m_Name: Toadstool Grove
   m_TagString: Untagged
@@ -693,7 +694,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ff2a246e0d77fb46890804a37f3a542, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Actions: []
+  Actions:
+  - Cost: {fileID: 5689664702476106266, guid: d207460ad79d71147a84f132fe13e8bc, type: 3}
+    Upgrade: {fileID: 0}
+    OnUpgrade: {fileID: 7667342734979150902}
+    SkipOnVisit: 0
   Name: Toadstool Grove
   CardSprite: {fileID: 0}
   FlavorText: Towering toadstools shade the moist soil.
@@ -705,3 +710,22 @@ MonoBehaviour:
   PathingHeuristic: 1
   Biome: {fileID: 5689664702476106266, guid: d207460ad79d71147a84f132fe13e8bc, type: 3}
   RevealAction: {fileID: 0}
+--- !u!114 &7667342734979150902
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7896167574474904550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f21808de4848a644cbe2296b9380dc14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NumberOfFieldsToAdd: 0
+  NumberOfWoodsToAdd: 0
+  NumberOfSettlementsToAdd: 0
+  NumberOfSwampsToAdd: 2
+  NumberOfWastelandsToAdd: 0
+  NumberOfRandomTypeToAdd: 0
+  ShouldBeRevealed: 0
