@@ -2,7 +2,7 @@ Priority	Can be drawn	Name	Biome Type	Chance To Get Lost	Difficult	Impassable	Fl
 	No	A Worried Mother	Settlement		0		I've looked everywhere!					If this Explorer has visited Lost Child, upgrade to Happy Reunion				0	0	0	0
 	Yes	Abandoned Wagon	Fields	0.00	2		Deep wagon ruts make it impossible to lose the way.			Reveal Wagon Caravan within 2 tiles						0	0	1	1
 	No	Airlock	Mountaintop	0.00	0		An airlock with simple controls: two buttons labeled 'Depart' and 'Seal'. Until recently, it has never been used.	Insert a Field to make passable		Reveal location of Fireworks	For a year, the airlock out of Stratohaven has stood unlocked, yet none dared venture beyond. Our haven in the clouds has provided all we needed. Why risk the barren lands below? But today, something changed. In the distance, bursts of light pierced the sky - fireworks, akin to those in our old TV shows. Are we truly alone? Curiosity stirs in Stratohaven. Our bravest will journey to uncover this enigma.					0	0	0	0
-1	Yes	Bandit Copse	Fields		-1		Insert any tile to not lose a tile when visiting. Insert a Woods tile to upgrade to a Forest.			Lose a random tile.						1	1	1	1
+1	Yes	Bandit Copse	Fields		-1		Insert any tile to not lose a tile when visiting. Insert a Woods tile to upgrade to a Forest.					Remove the tile in the first slot of the journey plan				1	1	1	1
 1	Yes	Barren Earth	Wasteland	0.30	-2		The ashy regolith of this place offers no comfort.									0	0	0	1
 Done	No	Bonefire	Wasteland	0.05	0		Exhausted refugees huddle around a mound of burning bones and warn each other about the dangers they've encountered.	Insert one Wood to deck 5 cards and 7 Wastelands and upgrade to Smouldering Bonefire								0	0	0	0
 Done	No	Smouldering Bonefire	Wasteland	0.05	0		Exhausted refugees huddle around a mound of burning bones and warn each other about the dangers they've encountered.									0	0	0	0
@@ -30,7 +30,7 @@ Done	No	Fireworks	Fields	0.00	0			Insert a tile to Upgrade to Fireworks Glenn			
 1	Yes	Forest	Woods	0.10	1		The plasticom tells us that the only biome more swarming with life than a forest is the ocean. But who among us has seen the sea?									0	1	1	1
 	Yes	Freshwater Bog	Swamp													0	0	1	1
 Done	Yes	Friendly Tavern	Settlement	0.02	3		All who are weary are welcome to rest here and hear the tales of fellow travelers.	Insert a card to deck 1 card								0	1	1	1
-	Yes	Froggie Bog Pirates	Swamp		-2	TRUE	A twangy dirge drifts through the miasma acompanied by a croaking chrous that reveals a submerged stash.	Impassable.		Explorer is turned back, reveal Submerged Stash 2 hexes away.						0	0	1	1
+Done	Yes	Froggie Bog Pirates	Swamp		-2	TRUE	A twangy dirge drifts through the miasma acompanied by a croaking chrous that reveals a submerged stash.	Impassable.		Explorer is turned back, reveal Submerged Stash 2 hexes away.						0	0	1	1
 	Yes	Frozen Marsh	Swamp													0	0	1	1
 	No	Gastroprint Farm	Mountaintop		0		Today's Menu: Breakfast Savory Cinnamon Oat Crepes, Lunch Special! Five Star Chicken Tikka Masala, Dinner: Maple Glazed Pancetta Charcuterie			Plus 1 Journey Plan Slots						0	0	0	0
 	Yes	Giant Spider Lair	Wasteland		-5		insert wasteland, 30% chance to pass, insert fields 50% chance to pass, insert settlement for 90% chance to pass.									0	0	0	1
@@ -60,7 +60,7 @@ Done	No	Megalo Fruit Farm	Woods	0.08	0		Each Megalofruit is as big as a man. Get
 	Yes	Riparian Glade	Swamp		-1	TRUE	Impassable. Insert a forest to pass and deck a forest.									0	0	1	1
 3	Yes	Robot Buddha	Woods	0.03	1		Nearly as old as the Stratohaven, the Robot Buddha has learned to live sustainably in chaos. It wants nothing, it needs nothing.	None	None							0	1	1	1
 2	Yes	Roguish Smile	Woods	0.10	-2		A handsome rogue offers to show us the way, but there's something off about his smile.			Lose a tile, ignore the next tile effect.						0	1	1	1
-	Yes	Seed Vault	Settlement	0.05	2		Every seed the last of its kind. We'll restore each linage to the world.			Deck a forest, field, and swamp.						0	0	1	1
+DONE	Yes	Seed Vault	Settlement	0.05	2		Every seed the last of its kind. We'll restore each linage to the world.			Deck a forest, field, and swamp.						0	0	1	1
 	Yes	Settlement	Settlement	0.00	0											0	0	0	0
 	No	Silent Array	Settlement	0.00	0		A communcations array listening for a message that will never arrive. Scattered around the base of the array are images of the area from impossibly high above.									0	0	0	0
 2	Yes	Smiling Rogue	Woods	0.30	3		A handsome rogue offers to show us the way, but the route is hard to remember.			Place a card on an adjacent space.						0	1	1	1
@@ -79,7 +79,7 @@ Done	No	Megalo Fruit Farm	Woods	0.08	0		Each Megalofruit is as big as a man. Get
 1	No	The Great Gate	Mountaintop		0	TRUE	Sealed against the cataclysm for 10,000 years.	Impassable. Insert forest to upgrade to Explorer's Gate.								0	0	0	0
 2	No	The Great River Of Beyond	Mountaintop		0		Now we take in sludge, and give the world a crystal clear river.			Plus 1 Explorer, Place adjacent Crystal Clear River						0	0	0	0
 	Yes	Thorngate	Woods		-2		Curtains of sharp briars grow so quickly they seem to move.	Insert a forest tile to clear the gateway.	Ability upgrades to Cleared Thorngate							0	1	1	1
-	Yes	Toadstool Grove	Woods	0.07	-1		Towering toadstools shade the moist soil.	Insert a forest, deck 2 swamps								0	0	1	1
+DONE	Yes	Toadstool Grove	Woods	0.07	-1		Towering toadstools shade the moist soil.	Insert a forest, deck 2 swamps								0	0	1	1
 1	No	Traveler's Forum	Mountaintop		0		Lectures, memoirs, and scientific illustrations inspire the next generation of explorer dreams.	Insert Wasteland to upgrade to World Academy.		Plus 1 Explorer						0	0	0	0
 	Yes	Triple Vortex	Wasteland	1.00	-4		I’ve a feeling we’re not in Kansas anymore.		Your explorer gets lost 100% of the time.							0	0	0	1
 	No	Tumbling River	Mountaintop	0.00	0		Water tumbles head over heals down a thousand feet.			Place an adjacent Waterfall						0	0	0	0
@@ -100,13 +100,13 @@ Done	No	Megalo Fruit Farm	Woods	0.08	0		Each Megalofruit is as big as a man. Get
 	Yes	Pale Hall	Wasteland	0.05	-3		Color seeps out of this place until even skin is white with shock.					Add a Journey Plan stop to a random AdjacentDistance=2 tile	Explorer flees in fear.						
 	Yes	Creeping Fungus	Wasteland	0.20	-5		The sound the Stratohaven's fungal sweepers make when they encounter creeping fungus spores sounds like a mechanical cough, but the plasticom assures us this is just how recursive filtering sounds when it is functioning normally.		Place Creeping Fungus in an adjacent unexplored tile every 60 seconds.										
 	Yes	zzDEBUG Place 9 Adjacent	Mountaintop	0.00	0		This tile places 9 adjacent grasslands on unexplored tiles no more than 2 adjacency distance away.									DEBUG	DEBUG	DEBUG	DEBUG
-	Yes	zzDebug Place 1 Adjacent	Mountaintop	0.00	0		This tile places 1 adjacent grasslands no more than distance 1.									DEBUG	DEBUG	DEBUG	DEBUG
-	Yes	zzDEBUG Draw 1 Card On Place	Mountaintop	0.00	0		This tile adds a card to your deck when you place it.			Draw 2 card						DEBUG	DEBUG	DEBUG	DEBUG
-	Yes	zzDEBUG Draw 10 Cards	Mountaintop	0.00	0		This card's ability takes any card and adds 10 cards to your deck.									DEBUG	DEBUG	DEBUG	DEBUG
-	Yes																		
-	Yes																		
-	Yes																		
-	Yes																		
+DONE	Yes	zzDebug Place 1 Adjacent	Mountaintop	0.00	0		This tile places 1 adjacent grasslands no more than distance 1.									DEBUG	DEBUG	DEBUG	DEBUG
+DONE	Yes	zzDEBUG Draw 1 Card On Place	Mountaintop	0.00	0		This tile adds a card to your deck when you place it.			Draw 2 card						DEBUG	DEBUG	DEBUG	DEBUG
+DONE	Yes	zzDEBUG Draw 10 Cards	Mountaintop	0.00	0		This card's ability takes any card and adds 10 cards to your deck.									DEBUG	DEBUG	DEBUG	DEBUG
+	Yes	zzDEBUG Remove First Plan Tile	Mountaintop	0.00	0		This card removes the first tile in the Journey plan, leaving an empty slot to the existing destination.			Remove first plan tile						DEBUG	DEBUG	DEBUG	DEBUG
+	Yes	zzDebug Remove Last Plan Tile	Mountaintop	0.00	0		This card removes the last tile in the Journey plan, leaving an empty slot to the existing destination.			remove last plan tile						DEBUG	DEBUG	DEBUG	DEBUG
+	Yes	zzDebug Remove Random Plan Tile	Mountaintop	0.00	0		This card removes a random tile in the Journey plan, leaving an empty slot to the existing destination.			remove random plan tile						DEBUG	DEBUG	DEBUG	DEBUG
+	Yes	zzDEBUG Remove All Plan Tiles	Mountaintop	0.00	0		This card removes all the tiles in the Journey plan, leaving empty slots to the existing destinations.			remove all plan tiles						DEBUG	DEBUG	DEBUG	DEBUG
 	Yes																		
 	Yes																		
 	Yes																		

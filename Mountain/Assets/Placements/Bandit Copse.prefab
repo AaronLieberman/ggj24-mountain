@@ -254,7 +254,7 @@ MonoBehaviour:
   - Cost: {fileID: 0}
     Upgrade: {fileID: 0}
     OnUpgrade: {fileID: 0}
-    SkipOnVisit: 0
+    SkipOnVisit: 1
   Name: Bandit Copse
   CardSprite: {fileID: 0}
   FlavorText: Insert any tile to not lose a tile when visiting. Insert a Woods tile

@@ -2033,6 +2033,7 @@ MonoBehaviour:
   NumberOfSwampsToAdd: 0
   NumberOfWastelandsToAdd: 0
   NumberOfRandomTypeToAdd: 4
+  ShouldBeRevealed: 0
 --- !u!1 &7152120664772029439
 GameObject:
   m_ObjectHideFlags: 0
