@@ -6,6 +6,6 @@ public class GoHomeAction : PlacementAction
 {
     public override void DoWork(Worker worker, Placement placement, Card card)
     {
-        worker.WorkerPlan.Clear();
+        worker.WorkerPlans.Clear();
     }
 }

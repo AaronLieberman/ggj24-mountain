@@ -9,7 +9,7 @@ public class Worker : MonoBehaviour
 {
     public float Speed = 10f;
 
-    public List<WorkerPlan> WorkerPlan { get; } = new();
+    public List<WorkerPlan> WorkerPlans { get; } = new();
     Vector2Int? _nextDestinationTileLoc;
     float _tileDistanceEpsilon = 0.01f;
 
@@ -19,7 +19,7 @@ public class Worker : MonoBehaviour
 
     public void AddDestination(Card card, Tile tile)
     {
-        WorkerPlan.Add(new WorkerPlan() { Card = card, Tile = tile });
+        WorkerPlans.Add(new WorkerPlan() { Card = card, Tile = tile });
         card.transform.parent = transform;
     }
 
@@ -28,7 +28,7 @@ public class Worker : MonoBehaviour
         get
         {
             RefreshComponents();
-            return !WorkerPlan.Any() && (transform.localPosition - _map.HomeInstance.transform.parent.localPosition).magnitude < _tileDistanceEpsilon;
+            return !WorkerPlans.Any() && (transform.localPosition - _map.HomeInstance.transform.parent.localPosition).magnitude < _tileDistanceEpsilon;
         }
     }
 
@@ -44,8 +44,8 @@ public class Worker : MonoBehaviour
 
     Vector2Int GetNextDestinationWaypointCell()
     {
-        return WorkerPlan.Any()
-            ? Utilities.ToVec2I(_grid.LocalToCell(WorkerPlan.First().Tile.transform.localPosition))
+        return WorkerPlans.Any()
+            ? Utilities.ToVec2I(_grid.LocalToCell(WorkerPlans.First().Tile.transform.localPosition))
             : _map.HomeLocation;
     }
 
@@ -100,8 +100,8 @@ public class Worker : MonoBehaviour
                 else
                 {
                     Debug.LogFormat("Reached waypoint {0} aka {1}", _nextDestinationTileLoc.Value, cell);
-                    var currentPlan = WorkerPlan.First();
-                    WorkerPlan.RemoveAt(0);
+                    var currentPlan = WorkerPlans.First();
+                    WorkerPlans.RemoveAt(0);
                     if (currentPlan.Card != null)
                     {
                         ExecutePlan(currentPlan.Card, currentPlan.Tile, out executeOnVisit);
