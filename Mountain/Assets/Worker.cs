@@ -141,6 +141,11 @@ public class Worker : MonoBehaviour
             {
                 executeOnVisit = false;
             }
+
+            if (card != null)
+            {
+                GameObject.Destroy(card.gameObject);
+            }
         }
     }
 
