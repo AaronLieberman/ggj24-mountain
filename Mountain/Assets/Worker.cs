@@ -86,7 +86,15 @@ public class Worker : MonoBehaviour
                 if (IsHome)
                 {
                     Debug.LogFormat("Reached home {0} aka {1}", _nextDestinationTileLoc.Value, cell);
-                    GameObject.Destroy(gameObject);
+
+					//put any leftover cards on the explorer back to the top of the deck
+					Card[] leftoverCards = GetComponentsInChildren<Card>();
+                    foreach(Card c in leftoverCards)
+                    {
+                        Utilities.GetRootComponent<Deck>().MoveCardToDeck(c);
+                    }
+
+					GameObject.Destroy(gameObject);
                     Utilities.GetRootComponent<Board>().AddWorkerAtHome();
                 }
                 else

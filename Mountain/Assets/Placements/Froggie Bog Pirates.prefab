@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2455791045407822393}
   - component: {fileID: 3069362418859776193}
+  - component: {fileID: 8953686275839567923}
   m_Layer: 0
   m_Name: Froggie Bog Pirates
   m_TagString: Untagged
@@ -57,7 +58,19 @@ MonoBehaviour:
   Difficulty: -2
   PathingHeuristic: 100000
   Biome: {fileID: 4486575929425936965, guid: 91624b1fd6393594b85fce2f31dfbbc2, type: 3}
-  RevealAction: {fileID: 0}
+  RevealAction: {fileID: 8953686275839567923}
+--- !u!114 &8953686275839567923
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1161453022209909491}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f8cac45a079ffc4ba40e597ba8ebb05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1456497987115045738
 GameObject:
   m_ObjectHideFlags: 0

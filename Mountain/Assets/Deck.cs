@@ -41,6 +41,15 @@ public class Deck : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Brings a card from outside of the Deck back into it and onto the top.
+    /// </summary>
+    public void MoveCardToDeck(Card card)
+    {
+        card.transform.SetParent(transform);
+        card.transform.SetAsFirstSibling();
+	}
+
     public Card GetTopCard()
     {
         if (transform.childCount == 0) return null;
