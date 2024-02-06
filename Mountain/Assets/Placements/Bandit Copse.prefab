@@ -204,6 +204,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7273772795233020873}
   - component: {fileID: 1365756699843689891}
+  - component: {fileID: -8995074401567529225}
   m_Layer: 0
   m_Name: Bandit Copse
   m_TagString: Untagged
@@ -262,11 +263,28 @@ MonoBehaviour:
   OnRevealText: 
   OnVisitText: 
   LostChance: 0.05
-  OnVisit: {fileID: 0}
+  OnVisit: {fileID: -8995074401567529225}
   Difficulty: -1
   PathingHeuristic: 1
   Biome: {fileID: 6223766025237645061, guid: 0c3fc96df5b9e1d499c66e212164f0aa, type: 3}
   RevealAction: {fileID: 0}
+--- !u!114 &-8995074401567529225
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 449788240802564400}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c151be423a6f2ee47bf3f68b8385169e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RemoveNextTile: 1
+  RemoveRandomTile: 0
+  RemoveAllTiles: 0
+  RemoveLastTile: 0
+  ShouldPutOnTopOfDeck: 0
 --- !u!1 &1524202940382277519
 GameObject:
   m_ObjectHideFlags: 0

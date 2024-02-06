@@ -313,6 +313,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -320,7 +321,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &80244532214119689
 GameObject:
@@ -635,6 +636,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -642,7 +644,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &146800938749701601
 GameObject:
@@ -691,6 +693,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -698,7 +701,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &178483915830487365
 GameObject:
@@ -838,6 +841,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -845,7 +849,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &179141727596834069
 GameObject:
@@ -1062,6 +1066,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -1069,7 +1074,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &220817980105625608
 GameObject:
@@ -1118,6 +1123,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -1125,7 +1131,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &245483879128264376
 GameObject:
@@ -1174,6 +1180,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -1181,7 +1188,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &260759502990551395
 GameObject:
@@ -1230,6 +1237,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -1237,7 +1245,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &264454971610817028
 GameObject:
@@ -1454,6 +1462,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -1461,7 +1470,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &337721401109915207
 GameObject:
@@ -2021,6 +2030,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -2028,7 +2038,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &379187720577416227
 GameObject:
@@ -2077,6 +2087,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -2084,7 +2095,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &427483704038243486
 GameObject:
@@ -2301,6 +2312,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -2308,7 +2320,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &458215268943271064
 GameObject:
@@ -2357,6 +2369,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -2364,7 +2377,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &458329702395378299
 GameObject:
@@ -2777,6 +2790,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -2784,7 +2798,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &560138517573083687
 GameObject:
@@ -3001,6 +3015,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -3008,7 +3023,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &599273574942568998
 GameObject:
@@ -3225,6 +3240,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -3232,7 +3248,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &617419007880733104
 GameObject:
@@ -3372,6 +3388,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -3379,7 +3396,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &663123012862124080
 GameObject:
@@ -3883,6 +3900,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -3890,7 +3908,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &717852943116088789
 GameObject:
@@ -4030,6 +4048,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -4037,7 +4056,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &744064923670526736
 GameObject:
@@ -4261,6 +4280,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -4268,7 +4288,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &832031555769320401
 GameObject:
@@ -4933,6 +4953,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -4940,7 +4961,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &970165145764750386
 GameObject:
@@ -5171,6 +5192,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -5178,7 +5200,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &994980005863265324
 GameObject:
@@ -5227,6 +5249,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -5234,7 +5257,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &1075286789434584510
 GameObject:
@@ -5283,6 +5306,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -5290,7 +5314,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &1087052522238990842
 GameObject:
@@ -5689,6 +5713,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -5696,7 +5721,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &1189611785035973330
 GameObject:
@@ -6018,6 +6043,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -6025,7 +6051,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &1215803896757690481
 GameObject:
@@ -6074,6 +6100,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -6081,7 +6108,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &1218050461242472811
 GameObject:
@@ -6487,6 +6514,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -6494,7 +6522,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &1295103166094860681
 GameObject:
@@ -6718,6 +6746,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -6725,7 +6754,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &1313992781259010039
 GameObject:
@@ -7033,6 +7062,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -7040,7 +7070,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &1349359390324173476
 GameObject:
@@ -7089,6 +7119,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -7096,7 +7127,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &1358989523269148486
 GameObject:
@@ -7145,6 +7176,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -7152,7 +7184,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &1361891591790437683
 GameObject:
@@ -7558,6 +7590,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -7565,7 +7598,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &1444643174013234978
 GameObject:
@@ -7880,6 +7913,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -7887,7 +7921,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &1499355955960265773
 GameObject:
@@ -8027,6 +8061,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -8034,7 +8069,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &1504102341604987662
 GameObject:
@@ -8083,6 +8118,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -8090,7 +8126,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &1551574857959241808
 GameObject:
@@ -8230,6 +8266,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -8237,7 +8274,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &1558152872344680218
 GameObject:
@@ -8454,6 +8491,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -8461,7 +8499,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &1584008241136818983
 GameObject:
@@ -8601,6 +8639,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -8608,7 +8647,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &1641785964198690139
 GameObject:
@@ -8832,6 +8871,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -8839,7 +8879,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &1677990651980829542
 GameObject:
@@ -9063,6 +9103,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -9070,7 +9111,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &1694713617649140857
 GameObject:
@@ -9119,6 +9160,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -9126,7 +9168,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &1704347590078455086
 GameObject:
@@ -9266,6 +9308,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -9273,7 +9316,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &1711586914361962551
 GameObject:
@@ -9665,6 +9708,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -9672,7 +9716,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &1768954591727028557
 GameObject:
@@ -9896,6 +9940,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -9903,7 +9948,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &1789320342984801059
 GameObject:
@@ -10211,6 +10256,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -10218,7 +10264,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &1887208936646864525
 GameObject:
@@ -10267,6 +10313,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -10274,7 +10321,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &1895545048333635767
 GameObject:
@@ -10575,6 +10622,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -10582,7 +10630,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &1920719586474420779
 GameObject:
@@ -10631,6 +10679,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -10638,7 +10687,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &1922957970383861766
 GameObject:
@@ -11121,6 +11170,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -11128,7 +11178,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &1978287188477789583
 GameObject:
@@ -11863,6 +11913,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -11870,7 +11921,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &2098775812940216297
 GameObject:
@@ -12094,6 +12145,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -12101,7 +12153,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &2169104680935529263
 GameObject:
@@ -12493,6 +12545,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -12500,7 +12553,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &2258567423443574357
 GameObject:
@@ -12899,6 +12952,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -12906,7 +12960,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &2312479787019346441
 GameObject:
@@ -13228,6 +13282,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -13235,7 +13290,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &2352440988650713938
 GameObject:
@@ -13627,6 +13682,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -13634,7 +13690,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &2412252271332890888
 GameObject:
@@ -13683,6 +13739,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -13690,7 +13747,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &2413646649150032901
 GameObject:
@@ -13823,6 +13880,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -13830,7 +13888,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &2425544152866221953
 GameObject:
@@ -13963,6 +14021,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -13970,7 +14029,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &2452021585527045565
 GameObject:
@@ -14019,6 +14078,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -14026,7 +14086,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &2506381739278199031
 GameObject:
@@ -14166,6 +14226,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -14173,7 +14234,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &2529220354014814673
 GameObject:
@@ -14572,6 +14633,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -14579,7 +14641,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &2618569605172108401
 GameObject:
@@ -14712,6 +14774,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -14719,7 +14782,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &2642611159230742635
 GameObject:
@@ -15475,6 +15538,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -15482,7 +15546,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &2705532354466018502
 GameObject:
@@ -15699,6 +15763,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -15706,7 +15771,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &2743449375259201995
 GameObject:
@@ -15937,6 +16002,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -15944,7 +16010,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &2793298870929246946
 GameObject:
@@ -16084,6 +16150,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -16091,7 +16158,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &2808348904880186436
 GameObject:
@@ -16567,6 +16634,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -16574,7 +16642,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &2886520097749557429
 GameObject:
@@ -16623,6 +16691,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -16630,7 +16699,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &2900199209708789799
 GameObject:
@@ -16854,6 +16923,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -16861,7 +16931,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &2930955740758743105
 GameObject:
@@ -17442,6 +17512,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -17449,7 +17520,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &2969630400614619905
 GameObject:
@@ -17498,6 +17569,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -17505,7 +17577,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &2974510763464267540
 GameObject:
@@ -17904,6 +17976,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -17911,7 +17984,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &3031543443890216334
 GameObject:
@@ -18310,6 +18383,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -18317,7 +18391,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &3104549905887551674
 GameObject:
@@ -18457,6 +18531,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -18464,7 +18539,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &3131252260372030202
 GameObject:
@@ -18772,6 +18847,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -18779,7 +18855,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &3222345375619057288
 GameObject:
@@ -19542,6 +19618,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -19549,7 +19626,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &3375783968964166227
 GameObject:
@@ -19689,6 +19766,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -19696,7 +19774,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &3420359426314959873
 GameObject:
@@ -20088,6 +20166,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -20095,7 +20174,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &3509605909561712485
 GameObject:
@@ -20403,6 +20482,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -20410,7 +20490,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &3531686137673763888
 GameObject:
@@ -20459,6 +20539,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -20466,7 +20547,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &3534893471325805137
 GameObject:
@@ -20599,6 +20680,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -20606,7 +20688,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &3539814972319501459
 GameObject:
@@ -20655,6 +20737,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -20662,7 +20745,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &3556050998203711126
 GameObject:
@@ -20893,6 +20976,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -20900,7 +20984,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &3589252777859263093
 GameObject:
@@ -21208,6 +21292,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -21215,7 +21300,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &3639255593269579276
 GameObject:
@@ -21439,6 +21524,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -21446,7 +21532,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &3670282888506350963
 GameObject:
@@ -21670,6 +21756,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -21677,7 +21764,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &3709145438564305947
 GameObject:
@@ -21726,6 +21813,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -21733,7 +21821,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &3722088214094608253
 GameObject:
@@ -21782,6 +21870,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -21789,7 +21878,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &3814585902379594679
 GameObject:
@@ -21838,6 +21927,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -21845,7 +21935,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &3827616153791837937
 GameObject:
@@ -21894,6 +21984,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -21901,7 +21992,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &3828391063475273182
 GameObject:
@@ -21950,6 +22041,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -21957,7 +22049,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &3844522128865680491
 GameObject:
@@ -22006,6 +22098,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -22013,7 +22106,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &3845565228793398681
 GameObject:
@@ -23007,6 +23100,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -23014,7 +23108,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &4064984853348090301
 GameObject:
@@ -23444,6 +23538,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -23451,7 +23546,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &4135785683959128014
 GameObject:
@@ -24011,6 +24106,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -24018,7 +24114,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &4172832252219547688
 GameObject:
@@ -24424,6 +24520,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -24431,7 +24528,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &4268931834267442449
 GameObject:
@@ -24480,6 +24577,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -24487,7 +24585,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &4270419995709707794
 GameObject:
@@ -24718,6 +24816,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -24725,7 +24824,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &4307489578878851110
 GameObject:
@@ -24774,6 +24873,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -24781,7 +24881,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &4311637468773287936
 GameObject:
@@ -25089,6 +25189,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -25096,7 +25197,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &4356206781538133548
 GameObject:
@@ -25495,6 +25596,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -25502,7 +25604,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &4463867299751931471
 GameObject:
@@ -25551,6 +25653,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -25558,7 +25661,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &4467908944136672643
 GameObject:
@@ -25607,6 +25710,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -25614,7 +25718,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &4469257573982144637
 GameObject:
@@ -25663,6 +25767,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -25670,7 +25775,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &4472066596783503375
 GameObject:
@@ -25719,6 +25824,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -25726,7 +25832,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &4478363359882206691
 GameObject:
@@ -25859,6 +25965,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -25866,7 +25973,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &4485070132881684470
 GameObject:
@@ -26524,6 +26631,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -26531,7 +26639,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &4540578792306081284
 GameObject:
@@ -26755,6 +26863,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -26762,7 +26871,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &4615291988472132860
 GameObject:
@@ -26811,6 +26920,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -26818,7 +26928,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &4617738500896838039
 GameObject:
@@ -27217,6 +27327,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -27224,7 +27335,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &4674751843916527763
 GameObject:
@@ -27364,6 +27475,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -27371,7 +27483,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &4685578384285348456
 GameObject:
@@ -27511,6 +27623,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -27518,7 +27631,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &4702588378396585077
 GameObject:
@@ -27994,6 +28107,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -28001,7 +28115,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &4852813292245894056
 GameObject:
@@ -28134,6 +28248,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -28141,7 +28256,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &4896641680460220048
 GameObject:
@@ -28190,6 +28305,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -28197,7 +28313,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &4899264554432537238
 GameObject:
@@ -28246,6 +28362,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -28253,7 +28370,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &4908988025453379285
 GameObject:
@@ -28470,6 +28587,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -28477,7 +28595,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &4957177089333849296
 GameObject:
@@ -28526,6 +28644,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -28533,7 +28652,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &4963942313973888722
 GameObject:
@@ -28666,6 +28785,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -28673,7 +28793,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &4992600514249343614
 GameObject:
@@ -28995,6 +29115,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -29002,7 +29123,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &5053686597649220620
 GameObject:
@@ -29051,6 +29172,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -29058,7 +29180,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &5060463471128315529
 GameObject:
@@ -29107,6 +29229,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -29114,7 +29237,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &5090819911224434789
 GameObject:
@@ -29247,6 +29370,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -29254,7 +29378,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &5105317529020724015
 GameObject:
@@ -29303,6 +29427,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -29310,7 +29435,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &5126691738377796612
 GameObject:
@@ -29443,6 +29568,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -29450,7 +29576,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &5163243554109565240
 GameObject:
@@ -29751,6 +29877,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -29758,7 +29885,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &5198032538218499411
 GameObject:
@@ -29807,6 +29934,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -29814,7 +29942,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &5212578120196989751
 GameObject:
@@ -30129,6 +30257,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -30136,7 +30265,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &5261329443842672774
 GameObject:
@@ -30451,6 +30580,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -30458,7 +30588,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &5300934809439231417
 GameObject:
@@ -30507,6 +30637,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -30514,7 +30645,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &5341854148469751648
 GameObject:
@@ -30822,6 +30953,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -30829,7 +30961,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &5380692826062924508
 GameObject:
@@ -30878,6 +31010,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -30885,7 +31018,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &5415441763635112091
 GameObject:
@@ -31025,6 +31158,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -31032,7 +31166,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &5446478660347110728
 GameObject:
@@ -31249,6 +31383,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -31256,7 +31391,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &5475046566818476596
 GameObject:
@@ -31739,6 +31874,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -31746,7 +31882,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &5508006240244120132
 GameObject:
@@ -31795,6 +31931,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -31802,7 +31939,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &5536685409603156712
 GameObject:
@@ -32201,6 +32338,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -32208,7 +32346,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &5599710057557183581
 GameObject:
@@ -32257,6 +32395,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -32264,7 +32403,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &5612436015151626803
 GameObject:
@@ -32313,6 +32452,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -32320,7 +32460,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &5625214097590088908
 GameObject:
@@ -32460,6 +32600,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -32467,7 +32608,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &5715952924261586575
 GameObject:
@@ -32684,6 +32825,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -32691,7 +32833,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &5751688638266907921
 GameObject:
@@ -32915,6 +33057,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -32922,7 +33065,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &5795745386548781534
 GameObject:
@@ -33409,6 +33552,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -33416,7 +33560,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &5855465951911177434
 GameObject:
@@ -33990,6 +34134,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -33997,7 +34142,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &5919482066376649706
 GameObject:
@@ -34046,6 +34191,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -34053,7 +34199,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &5924224500302898718
 GameObject:
@@ -34193,6 +34339,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -34200,7 +34347,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &6005454620031084883
 GameObject:
@@ -34249,6 +34396,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -34256,7 +34404,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &6039885596846772776
 GameObject:
@@ -34305,6 +34453,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -34312,7 +34461,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &6056269338767487179
 GameObject:
@@ -34361,6 +34510,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -34368,7 +34518,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &6077180579848805153
 GameObject:
@@ -34417,6 +34567,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -34424,7 +34575,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &6099937224211049498
 GameObject:
@@ -34655,6 +34806,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -34662,7 +34814,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &6123223799265071844
 GameObject:
@@ -34711,6 +34863,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -34718,7 +34871,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &6127197640219635905
 GameObject:
@@ -34851,6 +35004,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -34858,7 +35012,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &6167567214749547503
 GameObject:
@@ -35082,6 +35236,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -35089,7 +35244,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &6238436260708321567
 GameObject:
@@ -35222,6 +35377,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -35229,7 +35385,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &6247574382453196769
 GameObject:
@@ -35369,6 +35525,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -35376,7 +35533,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &6314106455684137209
 GameObject:
@@ -35516,6 +35673,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -35523,7 +35681,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &6349094745602055968
 GameObject:
@@ -35572,6 +35730,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -35579,7 +35738,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &6365025858625538946
 GameObject:
@@ -35796,6 +35955,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -35803,7 +35963,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &6410832711545524620
 GameObject:
@@ -35936,6 +36096,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -35943,7 +36104,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &6446548462911587445
 GameObject:
@@ -35992,6 +36153,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -35999,7 +36161,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &6454669175822566142
 GameObject:
@@ -36321,6 +36483,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -36328,7 +36491,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &6503417631803651077
 GameObject:
@@ -36909,6 +37072,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -36916,7 +37080,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &6595343309766993946
 GameObject:
@@ -37049,6 +37213,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -37056,7 +37221,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &6602745822519254701
 GameObject:
@@ -37189,6 +37354,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -37196,7 +37362,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &6614128916507868360
 GameObject:
@@ -37245,6 +37411,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -37252,7 +37419,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &6625091232020067832
 GameObject:
@@ -37819,6 +37986,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -37826,7 +37994,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &6690039462628090271
 GameObject:
@@ -39023,6 +39191,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -39030,7 +39199,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &6861962095129763080
 GameObject:
@@ -39254,6 +39423,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -39261,7 +39431,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &6865106197334252025
 GameObject:
@@ -39751,6 +39921,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -39758,7 +39929,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &6927800568225532420
 GameObject:
@@ -39891,6 +40062,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -39898,7 +40070,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &6982659150902495854
 GameObject:
@@ -40220,6 +40392,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -40227,7 +40400,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &7075637610036216640
 GameObject:
@@ -40535,6 +40708,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -40542,7 +40716,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &7115493309936793399
 GameObject:
@@ -40850,6 +41024,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -40857,7 +41032,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &7146389909547666985
 GameObject:
@@ -40906,6 +41081,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -40913,7 +41089,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &7168777548434322409
 GameObject:
@@ -41648,6 +41824,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -41655,7 +41832,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &7313697409186276143
 GameObject:
@@ -41704,6 +41881,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -41711,7 +41889,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &7314483890041673508
 GameObject:
@@ -41760,6 +41938,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -41767,7 +41946,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &7316504738598589484
 GameObject:
@@ -42075,6 +42254,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -42082,7 +42262,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &7367941876696511245
 GameObject:
@@ -42131,6 +42311,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -42138,7 +42319,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &7398898258795306073
 GameObject:
@@ -42362,6 +42543,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -42369,7 +42551,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &7423918679566310557
 GameObject:
@@ -42418,6 +42600,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -42425,7 +42608,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &7424220823845465853
 GameObject:
@@ -42474,6 +42657,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -42481,7 +42665,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &7428313438348050570
 GameObject:
@@ -42894,6 +43078,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -42901,7 +43086,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &7570793699823084363
 GameObject:
@@ -43300,6 +43485,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -43307,7 +43493,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &7628879996816541512
 GameObject:
@@ -43356,6 +43542,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -43363,7 +43550,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &7642448810501961966
 GameObject:
@@ -43412,6 +43599,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -43419,7 +43607,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &7736668015264079468
 GameObject:
@@ -43818,6 +44006,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -43825,7 +44014,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &7770628109367522975
 GameObject:
@@ -43874,6 +44063,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -43881,7 +44071,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &7778976502866341381
 GameObject:
@@ -44364,6 +44554,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -44371,7 +44562,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &7905179886176163511
 GameObject:
@@ -44420,6 +44611,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -44427,7 +44619,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &7921076606116943991
 GameObject:
@@ -44742,6 +44934,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -44749,7 +44942,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &8030007608758619330
 GameObject:
@@ -45134,6 +45327,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -45141,7 +45335,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &8073075690220189726
 GameObject:
@@ -45372,6 +45566,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -45379,7 +45574,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &8125204036388689539
 GameObject:
@@ -45519,6 +45714,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -45526,7 +45722,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &8163295557735203989
 GameObject:
@@ -45575,6 +45771,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -45582,7 +45779,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &8237932842511023809
 GameObject:
@@ -45715,6 +45912,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -45722,7 +45920,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &8256848676535612348
 GameObject:
@@ -46023,6 +46221,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -46030,7 +46229,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &8345217423070303220
 GameObject:
@@ -46429,6 +46628,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -46436,7 +46636,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &8382213223802241236
 GameObject:
@@ -46576,6 +46776,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -46583,7 +46784,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &8424915148072765244
 GameObject:
@@ -46807,6 +47008,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -46814,7 +47016,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &8498195176167700505
 GameObject:
@@ -46954,6 +47156,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -46961,7 +47164,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &8525940408604088430
 GameObject:
@@ -47010,6 +47213,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -47017,7 +47221,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &8530945891519962452
 GameObject:
@@ -47773,6 +47977,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -47780,7 +47985,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &8664942895704323669
 GameObject:
@@ -48102,6 +48307,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -48109,7 +48315,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &8724259366786935080
 GameObject:
@@ -48158,6 +48364,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -48165,7 +48372,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &8742654474960407618
 GameObject:
@@ -48816,6 +49023,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -48823,7 +49031,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &8814124037346626275
 GameObject:
@@ -48963,6 +49171,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -48970,7 +49179,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &8829419402928674135
 GameObject:
@@ -49019,6 +49228,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -49026,7 +49236,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &8830962959550347432
 GameObject:
@@ -49166,6 +49376,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -49173,7 +49384,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &8857689993283805625
 GameObject:
@@ -49474,6 +49685,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -49481,7 +49693,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &8876967148620913891
 GameObject:
@@ -49530,6 +49742,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -49537,7 +49750,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &8881723231376380871
 GameObject:
@@ -49586,6 +49799,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -49593,7 +49807,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &8885921353240354183
 GameObject:
@@ -49800,6 +50014,7 @@ MonoBehaviour:
   - {x: 10, y: 6}
   - {x: 11, y: 6}
   - {x: 11, y: 7}
+  - {x: 8, y: 5}
   - {x: 12, y: 8}
   - {x: 9, y: 8}
   - {x: 10, y: 8}
@@ -49821,6 +50036,7 @@ MonoBehaviour:
   - {x: 5, y: 10}
   - {x: 4, y: 11}
   - {x: 8, y: 3}
+  - {x: 5, y: 3}
   Unpassable: {fileID: 6514080990430841598, guid: 8567b668fda3edf4a9a985edbb56a9d6, type: 3}
 --- !u!1 &8888112525914087364
 GameObject:
@@ -50135,6 +50351,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -50142,7 +50359,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &8932237319033564020
 GameObject:
@@ -50366,6 +50583,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -50373,7 +50591,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &8988454085346597173
 GameObject:
@@ -50597,6 +50815,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -50604,7 +50823,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &9027822995395243605
 GameObject:
@@ -50828,6 +51047,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -50835,7 +51055,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &9049972138898507776
 GameObject:
@@ -50975,6 +51195,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -50982,7 +51203,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &9065197069942011362
 GameObject:
@@ -51822,6 +52043,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -51829,7 +52051,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &9148077689913460836
 GameObject:
@@ -51878,6 +52100,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -51885,7 +52108,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &9153177293592169810
 GameObject:
@@ -52298,6 +52521,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -52305,7 +52529,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &9193512388938289368
 GameObject:
@@ -52354,6 +52578,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -52361,7 +52586,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &9194036126176030065
 GameObject:
@@ -52501,6 +52726,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -52508,7 +52734,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &9200108522184572118
 GameObject:
@@ -52557,6 +52783,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Actions: []
   Name: 
+  CardSprite: {fileID: 0}
   FlavorText: 
   OnRevealText: 
   OnVisitText: 
@@ -52564,7 +52791,7 @@ MonoBehaviour:
   OnVisit: {fileID: 0}
   Difficulty: 0
   PathingHeuristic: 0
-  PaysCost: 
+  Biome: {fileID: 0}
   RevealAction: {fileID: 0}
 --- !u!1 &9201343453388300395
 GameObject:

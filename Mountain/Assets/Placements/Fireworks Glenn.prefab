@@ -1943,7 +1943,9 @@ GameObject:
   m_Component:
   - component: {fileID: 5244824591312832396}
   - component: {fileID: 5862119306748896703}
+  - component: {fileID: 3339502586697466969}
   - component: {fileID: 7322753666149247120}
+  - component: {fileID: -1660792323583450061}
   m_Layer: 0
   m_Name: Fireworks Glenn
   m_TagString: Untagged
@@ -2014,7 +2016,23 @@ MonoBehaviour:
   Difficulty: 0
   PathingHeuristic: 1
   Biome: {fileID: 6223766025237645061, guid: 0c3fc96df5b9e1d499c66e212164f0aa, type: 3}
-  RevealAction: {fileID: 7322753666149247120}
+  RevealAction: {fileID: 3339502586697466969}
+--- !u!114 &3339502586697466969
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6259626365042224602}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbb1dd6263f5a7e4caa9259035e21e61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MultipleActions:
+  - {fileID: 7322753666149247120}
+  - {fileID: -1660792323583450061}
+  NumberOfTimesToCallAllActions: 1
 --- !u!114 &7322753666149247120
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2034,6 +2052,20 @@ MonoBehaviour:
   NumberOfWastelandsToAdd: 0
   NumberOfRandomTypeToAdd: 4
   ShouldBeRevealed: 0
+--- !u!114 &-1660792323583450061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6259626365042224602}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efaa4c2211c62634fa54526ede33ba05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tileToPlace: {fileID: 8329840588115693003, guid: 4108c7bb7304bd14c9e773457ac5f132, type: 3}
+  placementCoordinates: {x: 11, y: 9}
 --- !u!1 &7152120664772029439
 GameObject:
   m_ObjectHideFlags: 0
