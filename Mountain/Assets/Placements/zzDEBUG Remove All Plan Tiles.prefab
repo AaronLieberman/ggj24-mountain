@@ -324,8 +324,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RemoveNextTile: 0
-  RemoveRandomTile: 0
   RemoveAllTiles: 1
+  RemoveRandomTile: 0
   RemoveLastTile: 0
   ShouldPutOnTopOfDeck: 0
 --- !u!1 &5846826685038009847

@@ -720,7 +720,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RemoveNextTile: 1
-  RemoveRandomTile: 0
   RemoveAllTiles: 0
+  RemoveRandomTile: 0
   RemoveLastTile: 0
   ShouldPutOnTopOfDeck: 0
