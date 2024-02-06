@@ -5,7 +5,7 @@ using UnityEngine.EventSystems;
 
 public class Hand : MonoBehaviour
 {
-    public int MaxHandSize;
+    public int MaxHandSize = 3;
 
     public Deck Deck { get; set; }
 
@@ -23,6 +23,14 @@ public class Hand : MonoBehaviour
         {
             Destroy(child.gameObject);
         }
+
+        HandChanged?.Invoke(this, null);
+        DeckChanged?.Invoke(this, null);
+    }
+
+    public void IncreaseHandSize()
+    {
+        MaxHandSize = MaxHandSize++;
 
         HandChanged?.Invoke(this, null);
         DeckChanged?.Invoke(this, null);

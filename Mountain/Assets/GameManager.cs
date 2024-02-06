@@ -141,6 +141,12 @@ public class GameManager : MonoBehaviour
         WorkerPlanChanged?.Invoke(null, null);
     }
 
+    public void IncreaseJourneyPlanSlots()
+    {
+        MaxJourneySlots = MaxJourneySlots++;
+        WorkerPlanChanged?.Invoke(null, null);
+    }
+
     public void StartWorkerOnJourney()
     {
         if (!IsWorkerAvailable) return;
