@@ -9,18 +9,33 @@ public class Worker : MonoBehaviour
 {
     public float Speed = 10f;
 
-    public List<WorkerPlan> WorkerPlans { get; } = new();
+    public IReadOnlyList<WorkerPlan> WorkerPlans { get => _workerPlans; }
     Vector2Int? _nextDestinationTileLoc;
     float _tileDistanceEpsilon = 0.01f;
 
     Transform _lastParent;
     TileGridLayout _map;
     Grid _grid;
+    readonly List<WorkerPlan> _workerPlans = new();
 
     public void AddDestination(Card card, Tile tile)
     {
-        WorkerPlans.Add(new WorkerPlan() { Card = card, Tile = tile });
+        _workerPlans.Add(new WorkerPlan() { Card = card, Tile = tile });
         card.transform.parent = transform;
+    }
+
+    WorkerPlan GetFirstValidWorkerPlan()
+    {
+        return _workerPlans.FirstOrDefault(p => p.Tile.Placement.Actions.Any(a => a.CanPayCost(p.Card)));
+    }
+
+    public void ClearWorkerPlans()
+    {
+        while (WorkerPlans.Count > 0)
+        {
+            Utilities.GetRootComponent<Deck>().MoveCardToDeck(WorkerPlans.Last().Card);
+            _workerPlans.RemoveAt(_workerPlans.Count - 1);
+        }
     }
 
     public bool IsHome
@@ -28,7 +43,7 @@ public class Worker : MonoBehaviour
         get
         {
             RefreshComponents();
-            return !WorkerPlans.Any() && (transform.localPosition - _map.HomeInstance.transform.parent.localPosition).magnitude < _tileDistanceEpsilon;
+            return GetFirstValidWorkerPlan() == null && (transform.localPosition - _map.HomeInstance.transform.parent.localPosition).magnitude < _tileDistanceEpsilon;
         }
     }
 
@@ -44,8 +59,9 @@ public class Worker : MonoBehaviour
 
     Vector2Int GetNextDestinationWaypointCell()
     {
-        return WorkerPlans.Any()
-            ? Utilities.ToVec2I(_grid.LocalToCell(WorkerPlans.First().Tile.transform.localPosition))
+        var firstValidWorkerPlan = GetFirstValidWorkerPlan();
+        return firstValidWorkerPlan != null
+            ? Utilities.ToVec2I(_grid.LocalToCell(firstValidWorkerPlan.Tile.transform.localPosition))
             : _map.HomeLocation;
     }
 
@@ -64,10 +80,28 @@ public class Worker : MonoBehaviour
                 return;
             }
 
-            var route = TilePathfinderAStar.CalculateRoute(_map.GetTileFromLoc(cell), _map.GetTileFromLoc(GetNextDestinationWaypointCell()));
-            _nextDestinationTileLoc = route != null && route.Count > 1 ? route.Skip(1).First().Location : null;
+            List<Tile> route;
+            while (_workerPlans.Any())
+            {
+                var plan = _workerPlans.First();
+                route = TilePathfinderAStar.CalculateRoute(_map.GetTileFromLoc(cell), plan.Tile);
+                if (route != null && route.Count > 1 && plan.Tile.Placement.Actions.Any(action => action.CanPayCost(plan.Card)))
+                {
+                    _nextDestinationTileLoc = plan.Tile.Location;
+                    break;
+                }
+
+                _workerPlans.RemoveAt(0);
+                if (plan.Card != null)
+                {
+                    Utilities.GetRootComponent<Deck>().MoveCardToDeck(plan.Card);
+                }
+            }
+
             if (_nextDestinationTileLoc == null)
-                return;
+            {
+                _nextDestinationTileLoc = _map.HomeLocation;
+            }
         }
 
         var nextDestinationTilePos = _grid.CellToLocal(Utilities.ToVec3I(_nextDestinationTileLoc.Value));
@@ -87,24 +121,27 @@ public class Worker : MonoBehaviour
                 {
                     Debug.LogFormat("Reached home {0} aka {1}", _nextDestinationTileLoc.Value, cell);
 
-					//put any leftover cards on the explorer back to the top of the deck
-					Card[] leftoverCards = GetComponentsInChildren<Card>();
-                    foreach(Card c in leftoverCards)
+                    //put any leftover cards on the explorer back to the top of the deck
+                    Card[] leftoverCards = GetComponentsInChildren<Card>();
+                    foreach (Card c in leftoverCards)
                     {
                         Utilities.GetRootComponent<Deck>().MoveCardToDeck(c);
                     }
 
-					GameObject.Destroy(gameObject);
+                    GameObject.Destroy(gameObject);
                     Utilities.GetRootComponent<Board>().AddWorkerAtHome();
                 }
                 else
                 {
                     Debug.LogFormat("Reached waypoint {0} aka {1}", _nextDestinationTileLoc.Value, cell);
-                    var currentPlan = WorkerPlans.First();
-                    WorkerPlans.RemoveAt(0);
-                    if (currentPlan.Card != null)
+                    var currentPlan = GetFirstValidWorkerPlan();
+                    if (currentPlan != null)
                     {
-                        ExecutePlan(currentPlan.Card, currentPlan.Tile, out executeOnVisit);
+                        _workerPlans.Remove(currentPlan);
+                        if (currentPlan.Card != null)
+                        {
+                            ExecutePlan(currentPlan.Card, currentPlan.Tile, out executeOnVisit);
+                        }
                     }
                 }
             }
@@ -127,7 +164,7 @@ public class Worker : MonoBehaviour
     {
         executeOnVisit = true;
 
-        var existingPlacement = tile.GetComponentInChildren<Placement>();
+        var existingPlacement = tile.Placement;
         if (existingPlacement == null)
             return;
 
@@ -159,7 +196,7 @@ public class Worker : MonoBehaviour
 
     void OnVisit(Tile tile)
     {
-        var placement = tile.GetComponentInChildren<Placement>();
+        var placement = tile.Placement;
         if (placement == null)
             return;
 

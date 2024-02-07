@@ -97,7 +97,7 @@ public class GameManager : MonoBehaviour
         tile.SetHighlight("mouse", true);
         _highlightTile = tile;
 
-        InvokeShowTooltip(tile.GetComponentInChildren<Placement>());
+        InvokeShowTooltip(tile.Placement);
     }
 
     public void OnMouseExitTile(Tile tile)
@@ -203,8 +203,7 @@ public class GameManager : MonoBehaviour
         foreach (var tile in Map.GetComponentsInChildren<Tile>())
         {
             bool passable = Map.IsPathPassable(workerTile, WorkerPlan.Select(a => a.Tile).Concat(new[] { tile }));
-            var placement = tile.GetComponentInChildren<Placement>();
-            bool cardCanBePlaced = placement.Actions.Any(a => a.CanPayCost(card));
+            bool cardCanBePlaced = tile.Placement.Actions.Any(a => a.CanPayCost(card));
 
             tile.SetDisabled("path", !passable || !cardCanBePlaced);
         }
@@ -218,8 +217,7 @@ public class GameManager : MonoBehaviour
 
         var workerTile = Map.GetTileAtObject(worker.transform);
         bool passable = Map.IsPathPassable(workerTile, WorkerPlan.Select(a => a.Tile).Concat(new[] { tile }));
-        var placement = tile.GetComponentInChildren<Placement>();
-        bool canCardBePlaced = placement.Actions.Any(a => a.CanPayCost(card));
+        bool canCardBePlaced = tile.Placement.Actions.Any(a => a.CanPayCost(card));
         return canCardBePlaced;
     }
 

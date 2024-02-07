@@ -18,7 +18,7 @@ public class TileAction
         if (Cost == null)
             return true;
 
-        if (card.PlacementToSpawn == null)
+        if (card == null || card.PlacementToSpawn == null)
             return false;
 
         // if the card is hidden, compare the cost to the hidden placement
