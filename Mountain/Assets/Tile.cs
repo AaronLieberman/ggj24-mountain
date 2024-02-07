@@ -38,6 +38,11 @@ public class Tile : MonoBehaviour
         }
 
         instance.RevealAction?.DoWork(worker, instance, null);
+        if (!string.IsNullOrEmpty(placement.OnRevealText))
+        {
+            // TODO: Show On Reveal dialog
+            Debug.Log(placement.OnRevealText);
+        }
         return instance;
     }
 

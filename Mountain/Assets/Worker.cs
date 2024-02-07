@@ -201,5 +201,10 @@ public class Worker : MonoBehaviour
             return;
 
         placement.OnVisitAction?.DoWork(this, placement, null);
+        if (!string.IsNullOrEmpty(placement.OnVisitText))
+        {
+            // TODO: Show On visit dialog
+            Debug.Log(placement.OnVisitText);
+        }
     }
 }
