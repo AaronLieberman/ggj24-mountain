@@ -52,13 +52,13 @@ MonoBehaviour:
   InitialCards:
   - Placement: {fileID: 7497921674361959213, guid: d3e21296f773f6841986f2239e0330d7, type: 3}
     IsRevealed: 0
-  - Placement: {fileID: 4039720745246559038, guid: 3e33b4fbbc7942945bc3b65501002210, type: 3}
+  - Placement: {fileID: 7497921674361959213, guid: d3e21296f773f6841986f2239e0330d7, type: 3}
+    IsRevealed: 0
+  - Placement: {fileID: 1365756699843689891, guid: 3722a7fc09dba1040a766eb7cdc54c69, type: 3}
     IsRevealed: 0
   - Placement: {fileID: 1365756699843689891, guid: 3722a7fc09dba1040a766eb7cdc54c69, type: 3}
     IsRevealed: 0
   - Placement: {fileID: 4039720745246559038, guid: 3e33b4fbbc7942945bc3b65501002210, type: 3}
     IsRevealed: 0
   - Placement: {fileID: 3484426104028936687, guid: 33c57654b00bf3644a9952072eb8ddd2, type: 3}
-    IsRevealed: 0
-  - Placement: {fileID: 4039720745246559038, guid: 3e33b4fbbc7942945bc3b65501002210, type: 3}
     IsRevealed: 0

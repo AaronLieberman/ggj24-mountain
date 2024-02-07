@@ -5,8 +5,12 @@ using UnityEngine.Serialization;
 
 public class IncreaseJourneyPlanSlots : PlacementAction
 {
+    public int MaxLevelToIncreaseTo = 99;
     public override void DoWork(Worker worker, Placement placement, Card card)
     {
-        Utilities.GetRootComponent<GameManager>().IncreaseJourneyPlanSlots();
+        if (Utilities.GetRootComponent<GameManager>().MaxJourneySlots < MaxLevelToIncreaseTo)
+        {
+            Utilities.GetRootComponent<GameManager>().IncreaseJourneyPlanSlots();
+        }
     }
 }

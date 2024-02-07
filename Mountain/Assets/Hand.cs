@@ -30,7 +30,7 @@ public class Hand : MonoBehaviour
 
     public void IncreaseHandSize()
     {
-        MaxHandSize = MaxHandSize++;
+        MaxHandSize = ++MaxHandSize;
 
         HandChanged?.Invoke(this, null);
         DeckChanged?.Invoke(this, null);

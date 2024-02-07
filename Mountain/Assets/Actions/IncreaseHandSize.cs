@@ -5,8 +5,12 @@ using UnityEngine.Serialization;
 
 public class IncreaseHandSize : PlacementAction
 {
+    public int MaxLevelToIncreaseTo = 99;
     public override void DoWork(Worker worker, Placement placement, Card card)
     {
-        Utilities.GetRootComponent<Hand>().IncreaseHandSize();
+        if (Utilities.GetRootComponent<Hand>().MaxHandSize < MaxLevelToIncreaseTo)
+        {
+            Utilities.GetRootComponent<Hand>().IncreaseHandSize();
+        }
     }
 }

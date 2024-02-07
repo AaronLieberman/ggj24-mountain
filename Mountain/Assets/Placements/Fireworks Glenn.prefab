@@ -1946,6 +1946,7 @@ GameObject:
   - component: {fileID: 3339502586697466969}
   - component: {fileID: 7322753666149247120}
   - component: {fileID: -1660792323583450061}
+  - component: {fileID: -1020584092762290869}
   m_Layer: 0
   m_Name: Fireworks Glenn
   m_TagString: Untagged
@@ -2032,6 +2033,7 @@ MonoBehaviour:
   MultipleActions:
   - {fileID: 7322753666149247120}
   - {fileID: -1660792323583450061}
+  - {fileID: -1020584092762290869}
   NumberOfTimesToCallAllActions: 1
 --- !u!114 &7322753666149247120
 MonoBehaviour:
@@ -2065,7 +2067,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tileToPlace: {fileID: 8329840588115693003, guid: 4108c7bb7304bd14c9e773457ac5f132, type: 3}
-  placementCoordinates: {x: 11, y: 9}
+  placementCoordinates: {x: 12, y: 10}
+--- !u!114 &-1020584092762290869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6259626365042224602}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cede75c5975197645b83effe1664d5c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxLevelToIncreaseTo: 2
 --- !u!1 &7152120664772029439
 GameObject:
   m_ObjectHideFlags: 0
