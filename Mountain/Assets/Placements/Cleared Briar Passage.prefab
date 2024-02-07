@@ -574,6 +574,10 @@ GameObject:
   m_Component:
   - component: {fileID: 8004038949993598846}
   - component: {fileID: 4696977928925645101}
+  - component: {fileID: 1309916585861030592}
+  - component: {fileID: 4201976835393300352}
+  - component: {fileID: -3240887233849756162}
+  - component: {fileID: 2179281574945799465}
   m_Layer: 0
   m_Name: Cleared Briar Passage
   m_TagString: Untagged
@@ -609,18 +613,89 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ff2a246e0d77fb46890804a37f3a542, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Actions: []
   Name: Cleared Briar Passage
   CardSprite: {fileID: 0}
-  FlavorText: 
-  OnRevealText: 
-  OnVisitText: 
-  LostChance: 0.05
-  OnVisit: {fileID: 0}
   Difficulty: 0
+  LostChance: 0.05
   PathingHeuristic: 1
+  FlavorText: 
   Biome: {fileID: 5689664702476106266, guid: d207460ad79d71147a84f132fe13e8bc, type: 3}
-  RevealAction: {fileID: 0}
+  OnRevealText: 
+  RevealAction: {fileID: 1309916585861030592}
+  OnVisitText: 
+  OnVisitAction: {fileID: 2179281574945799465}
+  Actions: []
+--- !u!114 &1309916585861030592
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7882522917656086244}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbb1dd6263f5a7e4caa9259035e21e61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Comment: On reveal, show the nestled nest and 1 remaining wall to seal up
+  MultipleActions:
+  - {fileID: 4201976835393300352}
+  - {fileID: -3240887233849756162}
+  NumberOfTimesToCallAllActions: 1
+--- !u!114 &4201976835393300352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7882522917656086244}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcdbce72b0d9a284da30e489098ba001, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Comment: 
+  TileToPlace: {fileID: 6108747156714237770, guid: 16023a573d478dc4598a9f61381f7e52, type: 3}
+  UseThisPlacementInsteadOfCenterCoordinates: 1
+  CenterCoordinates: {x: 0, y: 0}
+  MinimumDistanceByAdjacency: 1
+  MaximumDistanceByAdjacency: 1
+  MaximumDistanceByPathing: 1
+  MustBeUnexplored: 1
+--- !u!114 &-3240887233849756162
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7882522917656086244}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcdbce72b0d9a284da30e489098ba001, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Comment: 
+  TileToPlace: {fileID: 7080354615515036836, guid: 77358c475c8b597468f887d1253b8b3e, type: 3}
+  UseThisPlacementInsteadOfCenterCoordinates: 1
+  CenterCoordinates: {x: 0, y: 0}
+  MinimumDistanceByAdjacency: 1
+  MaximumDistanceByAdjacency: 1
+  MaximumDistanceByPathing: 1
+  MustBeUnexplored: 1
+--- !u!114 &2179281574945799465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7882522917656086244}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7df4822d487bc1140a4bd4323c4ebf2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Comment: 
+  UpgradeTo: {fileID: 2093988109160315506, guid: 3a1b92ea1b5113140a482d8e714cc8b6, type: 3}
 --- !u!1 &8833585056941457258
 GameObject:
   m_ObjectHideFlags: 0

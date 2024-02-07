@@ -262,6 +262,11 @@ GameObject:
   m_Component:
   - component: {fileID: 222939872852850798}
   - component: {fileID: 5712095282779624481}
+  - component: {fileID: 7840788306484370594}
+  - component: {fileID: 1835451572392180849}
+  - component: {fileID: -5631725326817982082}
+  - component: {fileID: 8692497874363732131}
+  - component: {fileID: -726416644617595092}
   m_Layer: 0
   m_Name: Cleared Thorngate
   m_TagString: Untagged
@@ -297,18 +302,105 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ff2a246e0d77fb46890804a37f3a542, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Actions: []
   Name: Cleared Thorngate
   CardSprite: {fileID: 0}
-  FlavorText: 
-  OnRevealText: 
-  OnVisitText: 
-  LostChance: 0.05
-  OnVisit: {fileID: 0}
   Difficulty: 0
+  LostChance: 0.05
   PathingHeuristic: 1
+  FlavorText: 
   Biome: {fileID: 5689664702476106266, guid: d207460ad79d71147a84f132fe13e8bc, type: 3}
-  RevealAction: {fileID: 0}
+  OnRevealText: 
+  RevealAction: {fileID: 7840788306484370594}
+  OnVisitText: 
+  OnVisitAction: {fileID: -726416644617595092}
+  Actions: []
+--- !u!114 &7840788306484370594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2855252491770970437}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbb1dd6263f5a7e4caa9259035e21e61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Comment: On Reveal
+  MultipleActions:
+  - {fileID: 1835451572392180849}
+  - {fileID: -5631725326817982082}
+  NumberOfTimesToCallAllActions: 1
+--- !u!114 &1835451572392180849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2855252491770970437}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcdbce72b0d9a284da30e489098ba001, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Comment: Multi Action On Reveal
+  TileToPlace: {fileID: 2093988109160315506, guid: 3a1b92ea1b5113140a482d8e714cc8b6, type: 3}
+  UseThisPlacementInsteadOfCenterCoordinates: 1
+  CenterCoordinates: {x: 0, y: 0}
+  MinimumDistanceByAdjacency: 1
+  MaximumDistanceByAdjacency: 1
+  MaximumDistanceByPathing: 1
+  MustBeUnexplored: 1
+--- !u!114 &-5631725326817982082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2855252491770970437}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbb1dd6263f5a7e4caa9259035e21e61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Comment: Second stage on reveal, surround with Bristling Wall
+  MultipleActions:
+  - {fileID: 8692497874363732131}
+  NumberOfTimesToCallAllActions: 4
+--- !u!114 &8692497874363732131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2855252491770970437}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcdbce72b0d9a284da30e489098ba001, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Comment: 
+  TileToPlace: {fileID: 7080354615515036836, guid: 77358c475c8b597468f887d1253b8b3e, type: 3}
+  UseThisPlacementInsteadOfCenterCoordinates: 1
+  CenterCoordinates: {x: 0, y: 0}
+  MinimumDistanceByAdjacency: 1
+  MaximumDistanceByAdjacency: 1
+  MaximumDistanceByPathing: 1
+  MustBeUnexplored: 1
+--- !u!114 &-726416644617595092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2855252491770970437}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7df4822d487bc1140a4bd4323c4ebf2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Comment: 
+  UpgradeTo: {fileID: 7945251628079340715, guid: fcc4b28569550a0438814faafd0ac150, type: 3}
 --- !u!1 &2936439092169826380
 GameObject:
   m_ObjectHideFlags: 0

@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 [Serializable]
 public class TileAction
@@ -36,16 +37,17 @@ public class TileAction
 
 public class Placement : MonoBehaviour
 {
-    public List<TileAction> Actions;
     public string Name;
     public Sprite CardSprite;
-    public string FlavorText;
-    public string OnRevealText;
-    public string OnVisitText;
-    public float LostChance;
-    public PlacementAction OnVisit;
     public int Difficulty;
+    public float LostChance;    
     public float PathingHeuristic;  // Impassable > 10000
+    public string FlavorText;
     public Placement Biome;
+    public string OnRevealText;
     public PlacementAction RevealAction;
+    public string OnVisitText;
+    [FormerlySerializedAs("OnVisit")]
+    public PlacementAction OnVisitAction;
+    public List<TileAction> Actions;
 }

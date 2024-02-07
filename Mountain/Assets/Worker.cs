@@ -200,6 +200,6 @@ public class Worker : MonoBehaviour
         if (placement == null)
             return;
 
-        placement.OnVisit?.DoWork(this, placement, null);
+        placement.OnVisitAction?.DoWork(this, placement, null);
     }
 }

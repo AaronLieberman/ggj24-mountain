@@ -658,6 +658,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4092344310449972438}
   - component: {fileID: 625181285149946036}
+  - component: {fileID: 5015770405332671674}
   m_Layer: 0
   m_Name: Abandoned Wagon
   m_TagString: Untagged
@@ -704,4 +705,23 @@ MonoBehaviour:
   Difficulty: 2
   PathingHeuristic: 1
   Biome: {fileID: 6223766025237645061, guid: 0c3fc96df5b9e1d499c66e212164f0aa, type: 3}
-  RevealAction: {fileID: 0}
+  RevealAction: {fileID: 5015770405332671674}
+--- !u!114 &5015770405332671674
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8432112586113719219}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcdbce72b0d9a284da30e489098ba001, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TileToPlace: {fileID: 8784003258234400664, guid: 4ca6336905b1477469eba6879b1b102e, type: 3}
+  UseThisPlacementInsteadOfCenterCoordinates: 1
+  CenterCoordinates: {x: 0, y: 0}
+  MinimumDistanceByAdjacency: 2
+  MaximumDistanceByAdjacency: 3
+  MaximumDistanceByPathing: 100000
+  MustBeUnexplored: 1
