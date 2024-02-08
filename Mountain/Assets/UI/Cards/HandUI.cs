@@ -24,10 +24,7 @@ public class HandUI : MonoBehaviour, IPointerEnterHandler
 
     void RefreshHandUI()
     {
-        foreach (Transform child in CardSectionTransform)
-        {
-            Destroy(child.gameObject);
-        }
+        Utilities.DestroyAllChildren(CardSectionTransform);
 
         Hand hand = Utilities.GetRootComponent<Hand>();
         List<WorkerPlan> workerPlan = Utilities.GetRootComponent<GameManager>().WorkerPlan;

@@ -4,6 +4,12 @@ using System.Linq;
 using Unity.Mathematics;
 using UnityEngine;
 
+public struct Passibility
+{
+    public bool Passable;
+    public int UnexploredDistance;
+}
+
 public class PathFinder
 {
     static float GetDistance(Grid grid, Vector2Int a, Vector2Int b)
@@ -59,33 +65,48 @@ public class PathFinder
         return math.max(math.abs(dy), math.abs(dx) + math.abs(dy) / 2 + penalty);
     }
 
-    public static Dictionary<Vector2Int, int> CalculateDistances(Vector2Int fromCoord, int maxDistance)
+    public static Dictionary<Vector2Int, Passibility> CalculateUnexploredDistance(Vector2Int fromCoord, int maxUnexplored)
     {
-        // don't infinitely traverse empty space, bail out early so we don't loop to something like int.MaxValue
-        maxDistance = Math.Min(maxDistance, 200);
+        var grid = Utilities.GetRootComponent<TileGridLayout>();
+        var unexploredPrefabName = grid.DefaultPrefab.Name;
 
-        var results = new Dictionary<Vector2Int, int>();
+        var results = new Dictionary<Vector2Int, Passibility>();
+        results[fromCoord] = new Passibility { Passable = true, UnexploredDistance = 0 };
 
         var queue = new Queue<(Vector2Int, int)>();
-        var seen = new HashSet<Vector2Int>() { fromCoord };
         queue.Enqueue((fromCoord, 0));
-        int directDistance = CalculateDistanceDirect(fromCoord, fromCoord);
-        Debug.Assert(directDistance == 0, $"direct={directDistance}, distance={0}");
 
         while (queue.Any())
         {
             var (current, distance) = queue.Dequeue();
-            Debug.Assert(!results.ContainsKey(current), $"already contains {current}");
-            results[current] = distance;
-            directDistance = CalculateDistanceDirect(fromCoord, current);
-            Debug.Assert(directDistance == distance, $"from={fromCoord}, to={current}, direct={directDistance}, distance={distance}");
 
-            if (distance < maxDistance)
+            foreach (var adjacent in Utilities.GetAdjacentHexCoords(current))
             {
-                foreach (var adjacent in Utilities.GetAdjacentHexCoords(current).Where(a => !seen.Contains(a)))
+                var tile = grid.GetTileFromLoc(adjacent);
+                if (tile == null)
+                    continue;
+
+                var adjacentDistance = distance;
+                var placement = tile.GetComponentInChildren<Placement>();
+                bool isUnexplored = placement.Name == unexploredPrefabName;
+                if (isUnexplored)
                 {
-                    seen.Add(adjacent);
-                    queue.Enqueue((adjacent, distance + 1));
+                    adjacentDistance++;
+                }
+                else if (placement.PathingHeuristic >= 10000)
+                {
+                    results[adjacent] = new Passibility { UnexploredDistance = -1 };
+                    continue;
+                }
+
+                if (!results.ContainsKey(adjacent) || adjacentDistance < results[adjacent].UnexploredDistance)
+                {
+                    results[adjacent] = results[adjacent] = new Passibility { Passable = true, UnexploredDistance = adjacentDistance };
+
+                    if (adjacentDistance < maxUnexplored)
+                    {
+                        queue.Enqueue((adjacent, adjacentDistance));
+                    }
                 }
             }
         }

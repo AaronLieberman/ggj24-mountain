@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using UnityEditor.Animations;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -19,10 +20,7 @@ public class Hand : MonoBehaviour
 
     public void Reset()
     {
-        foreach (Transform child in transform)
-        {
-            Destroy(child.gameObject);
-        }
+        Utilities.DestroyAllChildren(transform);
 
         HandChanged?.Invoke(this, null);
         DeckChanged?.Invoke(this, null);

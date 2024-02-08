@@ -22,7 +22,7 @@ public class Board : MonoBehaviour
 
     public void ClearActors()
     {
-        Utilities.DestroyAllChildren(ActorsContainer);
+        Utilities.DestroyAllChildren(ActorsContainer.transform);
         Workers.Clear();
     }
 

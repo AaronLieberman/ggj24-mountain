@@ -10,6 +10,7 @@ public class Tile : MonoBehaviour
 
     HashSet<string> _highlightReasons = new();
     HashSet<string> _disabledReasons = new();
+    HashSet<string> _hiddenReason = new();
     Material _highlightMaterial;
     Material _originalMaterial;
 
@@ -68,15 +69,15 @@ public class Tile : MonoBehaviour
             Utilities.GetRootComponent<TileGridLayout>().OnMouseUpTile(this);
     }
 
-    public void SetHighlight(string highlightReason, bool value)
+    public void SetHighlight(string reason, bool value)
     {
-        if (value && !_highlightReasons.Contains(highlightReason))
+        if (value && !_highlightReasons.Contains(reason))
         {
-            _highlightReasons.Add(highlightReason);
+            _highlightReasons.Add(reason);
         }
-        else if (!value && _highlightReasons.Contains(highlightReason))
+        else if (!value && _highlightReasons.Contains(reason))
         {
-            _highlightReasons.Remove(highlightReason);
+            _highlightReasons.Remove(reason);
         }
 
         if (_highlightReasons.Any())
@@ -103,31 +104,39 @@ public class Tile : MonoBehaviour
         }
     }
 
-    public void SetDisabled(string disabledReason, bool value)
+    public void SetDisabled(string reason, bool value)
     {
-        if (value && !_disabledReasons.Contains(disabledReason))
+        if (value && !_disabledReasons.Contains(reason))
         {
-            _disabledReasons.Add(disabledReason);
+            _disabledReasons.Add(reason);
         }
-        else if (!value && _disabledReasons.Contains(disabledReason))
+        else if (!value && _disabledReasons.Contains(reason))
         {
-            _disabledReasons.Remove(disabledReason);
+            _disabledReasons.Remove(reason);
         }
 
-        if (_disabledReasons.Any())
+        float s = 0.5f;
+
+        foreach (var sr in transform.GetComponentsInChildren<SpriteRenderer>())
         {
-            float s = 0.5f;
-            foreach (var sr in transform.GetComponentsInChildren<SpriteRenderer>())
-            {
-                sr.color = new Color(s, s, s);
-            }
+            sr.color = _disabledReasons.Any() ? new Color(s, s, s) : Color.white;
         }
-        else
+    }
+
+    public void SetHidden(string reason, bool value)
+    {
+        if (value && !_hiddenReason.Contains(reason))
         {
-            foreach (var sr in transform.GetComponentsInChildren<SpriteRenderer>())
-            {
-                sr.color = Color.white;
-            }
+            _hiddenReason.Add(reason);
+        }
+        else if (!value && _hiddenReason.Contains(reason))
+        {
+            _hiddenReason.Remove(reason);
+        }
+
+        foreach (var sr in transform.GetComponentsInChildren<SpriteRenderer>())
+        {
+            sr.enabled = !_hiddenReason.Any();
         }
     }
 }

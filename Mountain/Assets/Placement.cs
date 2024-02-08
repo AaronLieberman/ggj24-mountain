@@ -41,7 +41,7 @@ public class Placement : MonoBehaviour
     public Sprite CardSprite;
     public int Difficulty;
     public float LostChance;    
-    public float PathingHeuristic;  // Impassable > 10000
+    public float PathingHeuristic;  // Impassable >= 10000
     public string FlavorText;
     public Placement Biome;
     public string OnRevealText;

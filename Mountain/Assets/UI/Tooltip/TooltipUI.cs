@@ -59,14 +59,16 @@ public class TooltipUI : MonoBehaviour
 
     void RefreshTooltipUIContent(Placement placement)
     {
+        var distances = PathFinder.CalculateUnexploredDistance(Utilities.GetRootComponent<TileGridLayout>().HomeLocation, Utilities.GetRootComponent<GameManager>().MaxJourneySlots);
+
         // Set general tooltip attributes section.
         var cell = placement.transform.parent != null
             ? (Vector2Int?)Utilities.GetRootComponent<Grid>().LocalToCell(placement.transform.parent.localPosition)
             : null;
         tooltipPlacementNameText.text = placement.Name + (cell != null ? $" ({cell.Value.x}, {cell.Value.y})" : "");
-        tooltipPlacementDescriptionText.text = placement.FlavorText;
+        tooltipPlacementDescriptionText.text = "" + (cell.HasValue && distances.ContainsKey(cell.Value) ? (distances[cell.Value].Passable ? "passable: " + distances[cell.Value].UnexploredDistance : "impassible" ) : -1);
         tooltipPlacementLostChanceText.text = String.Format("Chance to get lost: {0}%", placement.LostChance * 100);
-        tooltipPlacementPassableText.text = placement.PathingHeuristic > 10000 ? "Impassable" : "Passable";
+        tooltipPlacementPassableText.text = placement.PathingHeuristic >= 10000 ? "Impassable" : "Passable";
 
         // Refresh tooltip ability UI section.
         Utilities.DestroyAllChildren(tooltipPlacementAbilitiesSection);
@@ -83,10 +85,7 @@ public class TooltipUI : MonoBehaviour
         }
 
         // Refresh tooltip OnVisit UI section.
-        foreach (Transform child in tooltipPlacementOnVisitsSection)
-        {
-            Destroy(child.gameObject);
-        }
+        Utilities.DestroyAllChildren(tooltipPlacementOnVisitsSection.transform);
 
         GameObject visitObject = Instantiate(tooltipPlacementOnVisitPrefab, tooltipPlacementOnVisitsSection);
         visitObject.GetComponent<TooltipOnVisitUI>().OnVisitText.text = placement.OnVisitText;

@@ -55,7 +55,7 @@ public class TileGridLayout : MonoBehaviour
 
     public void ClearTiles(bool clearCache)
     {
-        Utilities.DestroyAllChildren(TilesContainer);
+        Utilities.DestroyAllChildren(TilesContainer.transform);
 
         Bounds = new Bounds();
         GetComponent<Tilemap>().ClearAllTiles();

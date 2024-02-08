@@ -129,6 +129,7 @@ public class Worker : MonoBehaviour
                         Utilities.GetRootComponent<Deck>().MoveCardToDeck(c);
                     }
 
+                    gameObject.transform.SetParent(null);
                     GameObject.Destroy(gameObject);
                     Utilities.GetRootComponent<Board>().AddWorkerAtHome();
                 }
@@ -153,6 +154,8 @@ public class Worker : MonoBehaviour
             }
 
             _nextDestinationTileLoc = null;
+
+            Utilities.GetRootComponent<GameManager>().OnNextTurn();
         }
         else
         {
@@ -190,6 +193,7 @@ public class Worker : MonoBehaviour
 
             if (card != null)
             {
+                card.transform.SetParent(null);
                 GameObject.Destroy(card.gameObject);
             }
         }

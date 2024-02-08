@@ -83,11 +83,20 @@ public class GameManager : MonoBehaviour
         Hand.DrawTillFull();
 
         WorkerPlanChanged?.Invoke(null, null);
+
+        OnNextTurn();
     }
 
     void SetupMap()
     {
         Board.Reset();
+    }
+
+    // This should drive the rest of the game instead of the other way around. One consequence of this way of doing it
+    // is that multiple workers advance "turns" faster
+    public void OnNextTurn()
+    {
+        RefreshPassability();
     }
 
     public void OnMouseEnterTile(Tile tile)
@@ -166,7 +175,7 @@ public class GameManager : MonoBehaviour
         WorkerPlanChanged?.Invoke(null, null);
 
         // Check for Game Over state
-        if (Hand.GetHandCount() <= 0 && Deck.GetDeckCount() <= 0)
+        if (Hand.GetHandCount() <= 0 && Deck.GetDeckCount() <= 0 && GameOverUI != null)
         {
             GameOverUI.ShowGameOverUI();
         }
@@ -185,28 +194,39 @@ public class GameManager : MonoBehaviour
         HideTooltip?.Invoke(null, null);
     }
 
-    Card _cardBeingConsidered;
+    public void RefreshPassability()
+    {
+        var unexploredDistances = PathFinder.CalculateUnexploredDistance(Utilities.GetRootComponent<TileGridLayout>().HomeLocation, MaxJourneySlots);
+
+        foreach (var tile in Map.GetComponentsInChildren<Tile>())
+        {
+            var visible = unexploredDistances.ContainsKey(tile.Location) &&
+                (!unexploredDistances[tile.Location].Passable ||
+                    unexploredDistances[tile.Location].UnexploredDistance <= MaxJourneySlots );
+            tile.SetHidden("passability", !visible);
+        }
+    }
+
     public void SetConsideringPlacingCard(Card card)
     {
-        foreach (var tile in Map.GetComponentsInChildren<Tile>())
-        {
-            tile.SetDisabled("path", false);
-        }
+        RefreshPassability();
+        // foreach (var tile in Map.GetComponentsInChildren<Tile>())
+        // {
+        //     tile.SetDisabled("path", false);
+        // }
 
-        if (_cardBeingConsidered == card) return;
+        // if (!IsWorkerAvailable) return;
+        // var worker = GetFirstAvailableWorker();
+        // if (WorkerPlan.Count() >= MaxJourneySlots) return;
 
-        if (!IsWorkerAvailable) return;
-        var worker = GetFirstAvailableWorker();
-        if (WorkerPlan.Count() >= MaxJourneySlots) return;
+        // var workerTile = Map.GetTileAtObject(worker.transform);
+        // foreach (var tile in Map.GetComponentsInChildren<Tile>())
+        // {
+        //     bool passable = Map.IsPathPassable(workerTile, WorkerPlan.Select(a => a.Tile).Concat(new[] { tile }));
+        //     bool cardCanBePlaced = tile.Placement.Actions.Any(a => a.CanPayCost(card));
 
-        var workerTile = Map.GetTileAtObject(worker.transform);
-        foreach (var tile in Map.GetComponentsInChildren<Tile>())
-        {
-            bool passable = Map.IsPathPassable(workerTile, WorkerPlan.Select(a => a.Tile).Concat(new[] { tile }));
-            bool cardCanBePlaced = tile.Placement.Actions.Any(a => a.CanPayCost(card));
-
-            tile.SetDisabled("path", !passable || !cardCanBePlaced);
-        }
+        //     tile.SetDisabled("path", !passable || !cardCanBePlaced);
+        // }
     }
 
     public bool CanCardBePlaced(Card card, Tile tile)

@@ -20,10 +20,7 @@ public class JourneyUI : MonoBehaviour, IPointerEnterHandler
 
     void RefreshJourneyPlanningUI()
     {
-        foreach (Transform child in JourneySectionTransform)
-        {
-            Destroy(child.gameObject);
-        }
+        Utilities.DestroyAllChildren(JourneySectionTransform.transform);
 
         List<WorkerPlan> workerPlan = Utilities.GetRootComponent<GameManager>().WorkerPlan;
         for (int i = 0; i < Utilities.GetRootComponent<GameManager>().MaxJourneySlots; i++)

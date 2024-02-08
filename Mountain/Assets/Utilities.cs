@@ -26,23 +26,25 @@ public static class Utilities
 			.SingleOrDefault(a => a != null);
 	}
 
-	public static void DestroyAllChildren(GameObject go)
+	public static void DestroyAllChildren(Transform transform, bool immediate = false)
 	{
-		for (int i = go.transform.childCount - 1; i >= 0; --i)
+		while (transform.childCount > 0)
 		{
+			var child = transform.GetChild(transform.childCount - 1);
 #if UNITY_EDITOR
-			GameObject.DestroyImmediate(go.transform.GetChild(i).gameObject);
+			GameObject.DestroyImmediate(child.gameObject);
 #else
-			GameObject.Destroy(go.transform.GetChild(i).gameObject);
+			// generally, DestroyImmediate is consider bad to use
+			if (immediate)
+			{
+				GameObject.DestroyImmediate(child.gameObject);
+			}
+			else
+			{
+				child.transform.parent.SetParent(null);
+				GameObject.Destroy(child.gameObject);
+			}
 #endif
-		}
-	}
-
-	public static void DestroyAllChildren(Transform transform)
-	{
-		foreach (Transform child in transform)
-		{
-			GameObject.Destroy(child.gameObject);
 		}
 	}
 
@@ -74,48 +76,48 @@ public static class Utilities
 	}
 
 	readonly static Vector2Int[] _directionsEven = new Vector2Int[]
-    {
-        new (-1, 1), new (0, 1),
-        new (-1, 0), new (1, 0),
-        new (-1, -1), new (0, -1),
-    };
+	{
+		new (-1, 1), new (0, 1),
+		new (-1, 0), new (1, 0),
+		new (-1, -1), new (0, -1),
+	};
 
-    readonly static Vector2Int[] _directionsOdd = new Vector2Int[]
-    {
-        new (0, 1), new (1, 1), 
-        new (-1, 0), new (1, 0),
-        new (0, -1), new (1, -1),
-    };
+	readonly static Vector2Int[] _directionsOdd = new Vector2Int[]
+	{
+		new (0, 1), new (1, 1),
+		new (-1, 0), new (1, 0),
+		new (0, -1), new (1, -1),
+	};
 
-    public static IEnumerable<Vector2Int> GetAdjacentHexOffsets(Vector2Int coord)
-    {
-        return coord.y % 2 == 0
-            ? _directionsEven
-            : _directionsOdd;
-    }
+	public static IEnumerable<Vector2Int> GetAdjacentHexOffsets(Vector2Int coord)
+	{
+		return coord.y % 2 == 0
+			? _directionsEven
+			: _directionsOdd;
+	}
 
-    public static IEnumerable<Vector2Int> GetAdjacentHexCoords(Vector2Int coord)
-    {
-        return coord.y % 2 == 0
-            ? _directionsEven.Select(d => coord + d)
-            : _directionsOdd.Select(d => coord + d);
-    }
+	public static IEnumerable<Vector2Int> GetAdjacentHexCoords(Vector2Int coord)
+	{
+		return coord.y % 2 == 0
+			? _directionsEven.Select(d => coord + d)
+			: _directionsOdd.Select(d => coord + d);
+	}
 
-    public static List<Tile> GetAdjacentTiles(Vector2Int coord)
-    {
-        var map = GetRootComponent<TileGridLayout>();
+	public static List<Tile> GetAdjacentTiles(Vector2Int coord)
+	{
+		var map = GetRootComponent<TileGridLayout>();
 
-        IEnumerable<Vector2Int> adjacentCoords = GetAdjacentHexCoords(coord);
+		IEnumerable<Vector2Int> adjacentCoords = GetAdjacentHexCoords(coord);
 		List<Tile> adjTiles = new List<Tile>();
 
 		foreach (var adjCoord in adjacentCoords)
 		{
-            Tile tileForLoc = map.GetTileFromLoc(adjCoord);
+			Tile tileForLoc = map.GetTileFromLoc(adjCoord);
 			if (tileForLoc != null)
 			{
 				adjTiles.Add(tileForLoc);
 			}
-        }
+		}
 		return adjTiles;
-    }
+	}
 }

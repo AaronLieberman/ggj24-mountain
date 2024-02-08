@@ -64,53 +64,14 @@ public static class PathfinderAStar
 
         return null;
     }
-
-    // public static HashSet<T> ComputeUnexploredDistance<T>(INeighborQuerier<T> querier, T start)
-    // {
-    //     var openSet = new HashSet<T> { start };
-    //     var cameFrom = new Dictionary<T, T>();
-
-    //     var minScore = new Dictionary<T, float>();
-    //     minScore[start] = 0;
-
-    //     var predScore = new Dictionary<T, float>();
-    //     predScore[start] = querier.GetHeuristic(start, start.Equals(goal));
-
-    //     while (openSet.Any())
-    //     {
-    //         var current = openSet.OrderBy(node => predScore.ContainsKey(node) ? predScore[node] : float.MaxValue).First();
-
-    //         if (EqualityComparer<T>.Default.Equals(current, goal))
-    //             return ReconstructPath(cameFrom, current);
-
-    //         openSet.Remove(current);
-
-    //         foreach (var neighbor in querier.GetNeighbors(current))
-    //         {
-    //             var weight = querier.GetHeuristic(neighbor, neighbor.Equals(goal));
-    //             if (weight >= 10000)
-    //                 continue;
-
-    //             float tentativeGScore = minScore[current] + querier.CalcDist(current, neighbor);
-    //             if (tentativeGScore < minScore.GetValueOrDefault(neighbor, float.MaxValue))
-    //             {
-    //                 cameFrom[neighbor] = current;
-    //                 minScore[neighbor] = tentativeGScore;
-    //                 predScore[neighbor] = tentativeGScore + weight;
-    //                 if (!openSet.Contains(neighbor))
-    //                     openSet.Add(neighbor);
-    //             }
-    //         }
-    //     }
-
-    //     return null;
-    // }
 }
 
 public static class TilePathfinderAStar
 {
+    static readonly TileNeighborQuierier _quierier = new();
+
     public static List<Tile> CalculateRoute(Tile start, Tile end)
     {
-        return PathfinderAStar.CalculateRoute(new TileNeighborQuierier(), start, end);
+        return PathfinderAStar.CalculateRoute(_quierier, start, end);
     }
 }

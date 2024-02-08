@@ -14,8 +14,6 @@ public class PlaceAdjacentTile : PlacementAction
     public int MaximumDistanceByPathing = 100000;
     public bool MustBeUnexplored = true;
 
-    protected Dictionary<Vector2Int, int> calculatedDistances;
-
     public override void DoWork(Worker worker, Placement placement, Card card)
     {
         if (TileToPlace == null)
@@ -73,7 +71,6 @@ public class PlaceAdjacentTile : PlacementAction
     {
         // If we only want unexplored tiles, and this tile is unexplored. Or we don't care.
         if (MustBeUnexplored && tileToVisit.Placement.Name != Utilities.GetRootComponent<TileGridLayout>().DefaultPrefab.Name) return false;
-
 
         //Make sure we're within the adjacency distance
         int distanceByAdjacency = PathFinder.CalculateDistanceDirect(CenterCoordinates, tileToVisit.Location);

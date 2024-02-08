@@ -14,10 +14,7 @@ public class DeckUI : MonoBehaviour, IPointerEnterHandler
 
     void RefreshDeckUI()
     {
-        foreach (Transform child in CardsSectionTransform)
-        {
-            Destroy(child.gameObject);
-        }
+        Utilities.DestroyAllChildren(CardsSectionTransform);
 
         Deck deck = Utilities.GetRootComponent<Deck>();
         for (int i = deck.transform.childCount - 1; i >= 0; i--)
