@@ -34,6 +34,8 @@ public class GameManager : MonoBehaviour
     public bool IsWorkRevealed { get; set; }
     public event EventHandler<string> ShowOnRevealedUI;
 
+    public bool EnableDebugTools = false;
+
     void Awake()
     {
         Map = Utilities.GetRootComponentRecursive<TileGridLayout>();
