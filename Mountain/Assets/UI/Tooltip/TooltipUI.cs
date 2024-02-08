@@ -69,15 +69,16 @@ public class TooltipUI : MonoBehaviour
                 ? (Vector2Int?)Utilities.GetRootComponent<Grid>().LocalToCell(placement.transform.parent.localPosition)
                 : null;
             tooltipPlacementNameText.text = placement.Name + (cell != null ? $" ({cell.Value.x}, {cell.Value.y})" : "");
-            tooltipPlacementNameText.text = "" + (cell.HasValue && distances.ContainsKey(cell.Value) ? (distances[cell.Value].Passable ? "passable: " + distances[cell.Value].UnexploredDistance : "impassible") : -1);
+            tooltipPlacementPassableText.text = (placement.PathingHeuristic >= 10000 ? "Impassable" : "Passable") + (cell.HasValue && distances.ContainsKey(cell.Value) ? (distances[cell.Value].Passable ? " passable: " + distances[cell.Value].UnexploredDistance : " impassible") : -1);
+
         }
         else
         {
             tooltipPlacementNameText.text = placement.Name;
-            tooltipPlacementNameText.text = placement.FlavorText;
+            tooltipPlacementPassableText.text = placement.PathingHeuristic >= 10000 ? "Impassable" : "Passable";
         }
+        tooltipPlacementDescriptionText.text = placement.FlavorText;
         tooltipPlacementLostChanceText.text = String.Format("Chance to get lost: {0}%", placement.LostChance * 100);
-        tooltipPlacementPassableText.text = placement.PathingHeuristic >= 10000 ? "Impassable" : "Passable";
 
         // Refresh tooltip ability UI section.
         Utilities.DestroyAllChildren(tooltipPlacementAbilitiesSection);

@@ -1,16 +1,16 @@
 Priority	Can be drawn	Name	Biome Type	Chance To Get Lost	Difficult	Impassable	Flavor Text	Ability	Secret Effect	On Reveal	On Reveal Text	On Visit	On Visit Text			Pool 1 Membership	Pool 2	Pool 3	Pool 4
 	No	A Worried Mother	Settlement		0		I've looked everywhere!					If this Explorer has visited Lost Child, upgrade to Happy Reunion				0	0	0	0
-	Yes	Abandoned Wagon	Fields	0.00	2		Deep wagon ruts make it impossible to lose the way.			Reveal Wagon Caravan within 2 tiles						0	0	1	1
-	No	Airlock	Mountaintop	0.00	0		An airlock with simple controls: two buttons labeled 'Depart' and 'Seal'. Until recently, it has never been used.			Reveal location of Fireworks	For a year, the airlock out of Stratohaven has stood unlocked, yet none dared venture beyond. Our haven in the clouds has provided all we needed. Why risk the barren lands below? But today, something changed. In the distance, bursts of light pierced the sky - fireworks, akin to those in our old TV shows. Are we truly alone? Curiosity stirs in Stratohaven. Our bravest will journey to uncover this enigma.					0	0	0	0
+Done	Yes	Abandoned Wagon	Fields	0.00	2		Deep wagon ruts make it impossible to lose the way.			Reveal Wagon Caravan within 2 tiles						0	0	1	1
+Done	No	Airlock	Mountaintop	0.00	0		An airlock with simple controls: two buttons labeled 'Depart' and 'Seal'. Until recently, it has never been used.			Reveal location of Fireworks	For a year, the airlock out of Stratohaven has stood unlocked, yet none dared venture beyond. Our haven in the clouds has provided all we needed. Why risk the barren lands below? But today, something changed. In the distance, bursts of light pierced the sky - fireworks, akin to those in our old TV shows. Are we truly alone? Curiosity stirs in Stratohaven. Our bravest will journey to uncover this enigma.					0	0	0	0
 Done	Yes	Bandit Copse	Fields		-1		Insert any tile to not lose a tile when visiting. Insert a Woods tile to upgrade to a Forest.					Remove the tile in the first slot of the journey plan				1	1	1	1
 Done	Yes	Barren Earth	Wasteland	0.30	-2		The ashy regolith of this place offers no comfort.									0	0	0	1
 Done	No	Bonefire	Wasteland	0.05	0		Exhausted refugees huddle around a mound of burning bones and warn each other about the dangers they've encountered.	Insert one Wood to deck 5 cards and 7 Wastelands and upgrade to Smouldering Bonefire								0	0	0	0
 Done	No	Smouldering Bonefire	Wasteland	0.05	0		Exhausted refugees huddle around a mound of burning bones and warn each other about the dangers they've encountered.									0	0	0	0
-Done	No	Briar Passage	Woods		0			Insert a forest tile to clear the passageway.	Ability upgrades to Cleared Briar Passage							0	0	0	0
+Done	No	Briar Passage	Woods	0.05	0			Insert a forest tile to clear the passageway.	Ability upgrades to Cleared Briar Passage							0	0	0	0
 Done	No	Bristling Wall	Woods		0	TRUE		Impassable. Insert Wasteland to burn the thicket.	Upgrades to Wildfire							0	0	0	0
 Done	No	Canopy Village	Woods	0.00	0			Insert a forest, 50% chance to deck a Settlement, 50% chance to deck any card.		Deck a forest						0	0	0	0
-	No	Cleared Briar Passage	Woods		0					Place adjacent Nettled Nest. Place an adjacent Bristling Wall.		Upgrade to Briar Passage				0	0	0	0
-	Yes	Cleared Thorngate	Woods		0					Place adjacent Briar Passage. Place 4 adjacent Bristling Walls		Upgrade to Thorngate				0	0	0	1
+Done	No	Cleared Briar Passage	Woods	0.05	0					Place adjacent Nettled Nest. Place an adjacent Bristling Wall.		Upgrade to Briar Passage				0	0	0	0
+Done	Yes	Cleared Thorngate	Woods	0.05	0					Place adjacent Briar Passage. Place 4 adjacent Bristling Walls		Upgrade to Thorngate				0	0	0	1
 	No	Complex Foundation	Mountaintop	0.00	0		A complex foundation to some kind of structure. The Plasticom has instructed us not to disturb it.	Insert Stratolink to upgrade.								0	0	0	0
 	Yes	Contagious Mangrove	Swamp		-2							30% chance to replace a tile in the Journey Plan with a Swamp				0	0	1	1
 	No	Control Room	Wasteland	0.00	0					Deck 10 cards	The coordinates lead us not to another city in the clouds, but to a secluded control room nestled on a lesser-known mountain. The room is filled with old technology and screens, some still flickering with life. Stasia's digital logs reveal she was a guardian of sorts, the most recent in a long line of clones, maintaining the technology that oversees these mountaintop settlements. The screens show several settlements like Stratohaven, yet ours is the only one with the gate marked 'open.' The question lingers in the air: If Stasia died before Stratohaven was unlocked, who unlocked our city, and why? We hope the Stratolink printplans we discovered will lead to answers.					0	0	0	0
@@ -23,7 +23,7 @@ Done	No	Database Protein Printer	Mountaintop		0		Today's Menu: Breakfast Bacon f
 	No	Electronic Device	Woods	0.00	0					Unlocks Pool 3, Deck 4 cards, Show Stasia's Residency tile on other side of Purification Plant Maintenance Slough	The device Bennett found indeed turned out to be an electronic diary, and it belonged to someone named Stasia. According to the diary, she lived in a place that sounds remarkably like our own Stratohaven. She mentions coordinates that she often visited. Maybe we can find her.					0	0	0	0
 Done	No	Empty Nest	Woods		0											0	0	0	0
 Done	No	Endless Festival	Settlement	0.00	0		The original Explorer has found love and settled with a local!	Insert a field to attend, deck a field. Insert a forest to attend, deck a forest. Insert a swamp to attend, deck a swamp.								0	0	0	0
-Done	No	Explorer's Gate	Mountaintop		0											0	0	0	0
+Done	No	Explorer's Gate	Mountaintop		0		In 12 foot tall letters, 'Curiosity' is las-etched on the inside of the gate,  and 'Wonder' on the outside.									0	0	0	0
 Done	No	Fields	Fields	0.00	0											0	0	0	0
 Done	No	Fireworks	Fields	0.00	0	TRUE		Insert a tile to Upgrade to Fireworks Glenn								0	0	0	0
 Done	No	Fireworks Glenn	Fields	0.00	0					Deck 4 cards, Show Strider Village tile 1 space away, increase journey plan slots	Our expedition below Stratohaven yielded the unimaginable – survivors! We believed the surface world extinct, yet here they thrive, ignorant of our technologies like protein printers or television screens. Among the survivors, they exclaim that our technology reminds them of 'talking metal' that their neighbor speaks of. They provide directions to their village, where tales of this device originated. Perhaps this is a clue to others from our world.					0	0	0	0
@@ -76,7 +76,7 @@ Done	No	Strider Village	Settlement	0.00	0			Unlocks Pool 2, Deck 2 woods and 2 f
 	Yes	Swamp	Swamp	0.00	0											0	0	0	0
 	No	Tattered Shack	Woods	0.03	0		No one lives here.	None								0	0	0	0
 	Yes	Temple of Saint Bread	Fields		4		After a cup of matcha latte, everything in life looks a little better.	Reveals your card to be a positive effect	The revealed random card is on the upper end of the spectrum of effects. It is revealed to be better than the average effect of that biome.							1	1	1	1
-1	No	The Great Gate	Mountaintop		0	TRUE	Sealed against the cataclysm for 10,000 years.	Impassable. Insert forest to upgrade to Explorer's Gate.								0	0	0	0
+1	No	The Great Gate	Mountaintop	0.00	0	TRUE	Sealed against the cataclysm for 10,000 years.	Impassable. Insert forest to upgrade to Explorer's Gate.								0	0	0	0
 2	No	The Great River Of Beyond	Mountaintop		0		Now we take in sludge, and give the world a crystal clear river.			Plus 1 Explorer, Place adjacent Crystal Clear River						0	0	0	0
 	Yes	Thorngate	Woods		-2		Curtains of sharp briars grow so quickly they seem to move.	Insert a forest tile to clear the gateway.	Ability upgrades to Cleared Thorngate							0	1	1	1
 DONE	Yes	Toadstool Grove	Woods	0.07	-1		Towering toadstools shade the moist soil.	Insert a forest, deck 2 swamps								0	0	1	1

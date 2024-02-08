@@ -612,18 +612,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ff2a246e0d77fb46890804a37f3a542, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Actions: []
   Name: The Great Gate
   CardSprite: {fileID: 0}
-  FlavorText: Sealed against the cataclysm for 10,000 years.
-  OnRevealText: 
-  OnVisitText: 
-  LostChance: 0.05
-  OnVisit: {fileID: 0}
   Difficulty: 0
+  LostChance: 0.05
   PathingHeuristic: 100000
+  FlavorText: Sealed against the cataclysm for 10,000 years.
   Biome: {fileID: 6223766025237645061, guid: b30f520d510134f4da99aaf67f3f714b, type: 3}
+  OnRevealText: 
   RevealAction: {fileID: 0}
+  OnVisitText: 
+  OnVisitAction: {fileID: 0}
+  Actions:
+  - Cost: {fileID: 5689664702476106266, guid: d207460ad79d71147a84f132fe13e8bc, type: 3}
+    Upgrade: {fileID: 7439648521559203277, guid: 7c90ecad9a04a894dba464cb33597d33, type: 3}
+    OnUpgrade: {fileID: 0}
+    SkipOnVisit: 0
 --- !u!1 &6760619883949624606
 GameObject:
   m_ObjectHideFlags: 0
