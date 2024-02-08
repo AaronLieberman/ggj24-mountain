@@ -87,7 +87,7 @@ public class Worker : MonoBehaviour
                 route = TilePathfinderAStar.CalculateRoute(_map.GetTileFromLoc(cell), plan.Tile);
                 if (route != null && route.Count > 1 && plan.Tile.Placement.Actions.Any(action => action.CanPayCost(plan.Card)))
                 {
-                    _nextDestinationTileLoc = plan.Tile.Location;
+                    _nextDestinationTileLoc = route.ElementAt(1).Location;
                     break;
                 }
 
@@ -100,7 +100,8 @@ public class Worker : MonoBehaviour
 
             if (_nextDestinationTileLoc == null)
             {
-                _nextDestinationTileLoc = _map.HomeLocation;
+                route = TilePathfinderAStar.CalculateRoute(_map.GetTileFromLoc(cell), _map.GetTileFromLoc(_map.HomeLocation));
+                _nextDestinationTileLoc = route != null && route.Count > 1 ? route.ElementAt(1).Location : null;
             }
         }
 
