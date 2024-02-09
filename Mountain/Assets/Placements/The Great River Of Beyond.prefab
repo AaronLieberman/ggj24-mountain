@@ -96,6 +96,7 @@ GameObject:
   - component: {fileID: 4763468270997528533}
   - component: {fileID: -458205510028045406}
   - component: {fileID: -8251440677865644588}
+  - component: {fileID: 2471014811134711686}
   m_Layer: 0
   m_Name: The Great River Of Beyond
   m_TagString: Untagged
@@ -155,9 +156,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbb1dd6263f5a7e4caa9259035e21e61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Comment: 'TODO: +1 Explorer'
+  Comment: 
   MultipleActions:
   - {fileID: -8251440677865644588}
+  - {fileID: 2471014811134711686}
   NumberOfTimesToCallAllActions: 1
 --- !u!114 &-8251440677865644588
 MonoBehaviour:
@@ -177,8 +179,21 @@ MonoBehaviour:
   CenterCoordinates: {x: 0, y: 0}
   MinimumDistanceByAdjacency: 1
   MaximumDistanceByAdjacency: 1
-  MaximumDistanceByPathing: 1
+  MaximumDistanceByPathing: 100000
   MustBeUnexplored: 1
+--- !u!114 &2471014811134711686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2723331348539490859}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9840f1c3c5eec8e418063d072754ea3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Comment: 
 --- !u!1 &3882045656823030969
 GameObject:
   m_ObjectHideFlags: 0

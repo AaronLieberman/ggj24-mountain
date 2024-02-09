@@ -94,6 +94,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6968616457971449073}
   - component: {fileID: 29506051533292441}
+  - component: {fileID: 1105354367405908178}
   m_Layer: 0
   m_Name: Tumbling River
   m_TagString: Untagged
@@ -137,10 +138,30 @@ MonoBehaviour:
   FlavorText: Water tumbles head over heals down a thousand feet.
   Biome: {fileID: 6223766025237645061, guid: b30f520d510134f4da99aaf67f3f714b, type: 3}
   OnRevealText: 
-  RevealAction: {fileID: 0}
+  RevealAction: {fileID: 1105354367405908178}
   OnVisitText: 
   OnVisitAction: {fileID: 0}
   Actions: []
+--- !u!114 &1105354367405908178
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1291147506044065233}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcdbce72b0d9a284da30e489098ba001, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Comment: 
+  TileToPlace: {fileID: 5251380641064422628, guid: ecde176c319ed0c40be127c4aa844371, type: 3}
+  UseThisPlacementInsteadOfCenterCoordinates: 1
+  CenterCoordinates: {x: 0, y: 0}
+  MinimumDistanceByAdjacency: 1
+  MaximumDistanceByAdjacency: 1
+  MaximumDistanceByPathing: 100000
+  MustBeUnexplored: 1
 --- !u!1 &4328120095173579835
 GameObject:
   m_ObjectHideFlags: 0
