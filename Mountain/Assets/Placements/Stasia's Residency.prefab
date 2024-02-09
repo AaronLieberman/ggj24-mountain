@@ -693,19 +693,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ff2a246e0d77fb46890804a37f3a542, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Actions: []
   Name: Stasia's Residency
   CardSprite: {fileID: 0}
+  Difficulty: 0
+  LostChance: 0
+  PathingHeuristic: 1
   FlavorText: 
+  Biome: {fileID: 519853117350573946, guid: b422e4b1552e64241b81ca5134eb4510, type: 3}
   OnRevealText: We found Stasia's home, but she has been dead for many years now.
     Her husband, now an old man, guards her possessions like precious treasures.
     From her computer, we extract the coordinates - they lead to a location that's
     not on any of our maps. It's time to explore these unknown coordinates and unravel
     the mysteries they hold.
-  OnVisitText: 
-  LostChance: 0
-  OnVisit: {fileID: 0}
-  Difficulty: 0
-  PathingHeuristic: 1
-  Biome: {fileID: 519853117350573946, guid: b422e4b1552e64241b81ca5134eb4510, type: 3}
   RevealAction: {fileID: 0}
+  OnVisitText: 
+  OnVisitAction: {fileID: 0}
+  Actions: []

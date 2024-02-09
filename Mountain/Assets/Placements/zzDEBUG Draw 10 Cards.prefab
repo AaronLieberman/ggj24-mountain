@@ -130,22 +130,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ff2a246e0d77fb46890804a37f3a542, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Name: zzDEBUG Draw 10 Cards
+  CardSprite: {fileID: 0}
+  Difficulty: 0
+  LostChance: 0
+  PathingHeuristic: 1
+  FlavorText: This card's ability takes any card and adds 10 cards to your deck.
+  Biome: {fileID: 6223766025237645061, guid: b30f520d510134f4da99aaf67f3f714b, type: 3}
+  OnRevealText: 
+  RevealAction: {fileID: -6448678271093936442}
+  OnVisitText: 
+  OnVisitAction: {fileID: 0}
   Actions:
   - Cost: {fileID: 0}
     Upgrade: {fileID: 0}
     OnUpgrade: {fileID: -6448678271093936442}
     SkipOnVisit: 0
-  Name: zzDEBUG Draw 10 Cards
-  CardSprite: {fileID: 0}
-  FlavorText: This card's ability takes any card and adds 10 cards to your deck.
-  OnRevealText: 
-  OnVisitText: 
-  LostChance: 0
-  OnVisit: {fileID: 0}
-  Difficulty: 0
-  PathingHeuristic: 1
-  Biome: {fileID: 6223766025237645061, guid: b30f520d510134f4da99aaf67f3f714b, type: 3}
-  RevealAction: {fileID: -6448678271093936442}
 --- !u!114 &-6448678271093936442
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -158,6 +158,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f21808de4848a644cbe2296b9380dc14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Comment: 
   NumberOfFieldsToAdd: 0
   NumberOfWoodsToAdd: 0
   NumberOfSettlementsToAdd: 0
@@ -165,6 +166,7 @@ MonoBehaviour:
   NumberOfWastelandsToAdd: 0
   NumberOfRandomTypeToAdd: 10
   ShouldBeRevealed: 1
+  addAtTopOfDeck: 0
 --- !u!1 &3226344479186271038
 GameObject:
   m_ObjectHideFlags: 0

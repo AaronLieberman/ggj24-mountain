@@ -526,6 +526,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ff2a246e0d77fb46890804a37f3a542, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Name: Graveyard Crest
+  CardSprite: {fileID: 0}
+  Difficulty: -2
+  LostChance: 0.4
+  PathingHeuristic: 1
+  FlavorText: Six gravestones worn smooth with time fill this small memorial. Five
+    of them stand above gaping pits.
+  Biome: {fileID: 4111032941925707430, guid: 7976e35d001ec0249b53f029133651a3, type: 3}
+  OnRevealText: 
+  RevealAction: {fileID: 0}
+  OnVisitText: 
+  OnVisitAction: {fileID: 0}
   Actions:
   - Cost: {fileID: 4111032941925707430, guid: 7976e35d001ec0249b53f029133651a3, type: 3}
     Upgrade: {fileID: 1578472965886442668, guid: ee337954c6190d04da730a7abae775d4, type: 3}
@@ -535,18 +547,6 @@ MonoBehaviour:
     Upgrade: {fileID: 3814133976299155109, guid: 8a65ef6377956d5499dcdee09d4425b4, type: 3}
     OnUpgrade: {fileID: 0}
     SkipOnVisit: 0
-  Name: Graveyard Crest
-  CardSprite: {fileID: 0}
-  FlavorText: Six gravestones worn smooth with time fill this small memorial. Five
-    of them stand above gaping pits.
-  OnRevealText: 
-  OnVisitText: 
-  LostChance: 0.4
-  OnVisit: {fileID: 0}
-  Difficulty: -2
-  PathingHeuristic: 1
-  Biome: {fileID: 4111032941925707430, guid: 7976e35d001ec0249b53f029133651a3, type: 3}
-  RevealAction: {fileID: 0}
 --- !u!114 &344289657080835519
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -559,6 +559,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f21808de4848a644cbe2296b9380dc14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Comment: 
   NumberOfFieldsToAdd: 0
   NumberOfWoodsToAdd: 0
   NumberOfSettlementsToAdd: 0
@@ -566,6 +567,7 @@ MonoBehaviour:
   NumberOfWastelandsToAdd: 5
   NumberOfRandomTypeToAdd: 0
   ShouldBeRevealed: 0
+  addAtTopOfDeck: 0
 --- !u!1 &8517114229394060970
 GameObject:
   m_ObjectHideFlags: 0

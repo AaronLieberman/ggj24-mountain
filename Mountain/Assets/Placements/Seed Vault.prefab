@@ -130,18 +130,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ff2a246e0d77fb46890804a37f3a542, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Actions: []
   Name: Seed Vault
   CardSprite: {fileID: 0}
-  FlavorText: Every seed the last of its kind. We'll restore each linage to the world.
-  OnRevealText: 
-  OnVisitText: 
-  LostChance: 0.05
-  OnVisit: {fileID: 0}
   Difficulty: 2
+  LostChance: 0.05
   PathingHeuristic: 1
+  FlavorText: Every seed the last of its kind. We'll restore each linage to the world.
   Biome: {fileID: 519853117350573946, guid: b422e4b1552e64241b81ca5134eb4510, type: 3}
+  OnRevealText: 
   RevealAction: {fileID: 3438626832746531809}
+  OnVisitText: 
+  OnVisitAction: {fileID: 0}
+  Actions: []
 --- !u!114 &3438626832746531809
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -154,6 +154,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f21808de4848a644cbe2296b9380dc14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Comment: 
   NumberOfFieldsToAdd: 1
   NumberOfWoodsToAdd: 1
   NumberOfSettlementsToAdd: 0
@@ -161,6 +162,7 @@ MonoBehaviour:
   NumberOfWastelandsToAdd: 0
   NumberOfRandomTypeToAdd: 0
   ShouldBeRevealed: 0
+  addAtTopOfDeck: 0
 --- !u!1 &1874533268733326133
 GameObject:
   m_ObjectHideFlags: 0

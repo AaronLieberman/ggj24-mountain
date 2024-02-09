@@ -658,6 +658,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3174575451630162061}
   - component: {fileID: 6903418152083756756}
+  - component: {fileID: -2142712439607621181}
   m_Layer: 0
   m_Name: Traveler's Forum
   m_TagString: Untagged
@@ -693,16 +694,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ff2a246e0d77fb46890804a37f3a542, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Actions: []
   Name: Traveler's Forum
   CardSprite: {fileID: 0}
+  Difficulty: 0
+  LostChance: 0.05
+  PathingHeuristic: 1
   FlavorText: Lectures, memoirs, and scientific illustrations inspire the next generation
     of explorer dreams.
-  OnRevealText: 
-  OnVisitText: 
-  LostChance: 0.05
-  OnVisit: {fileID: 0}
-  Difficulty: 0
-  PathingHeuristic: 1
   Biome: {fileID: 6223766025237645061, guid: b30f520d510134f4da99aaf67f3f714b, type: 3}
-  RevealAction: {fileID: 0}
+  OnRevealText: 
+  RevealAction: {fileID: -2142712439607621181}
+  OnVisitText: 
+  OnVisitAction: {fileID: 0}
+  Actions:
+  - Cost: {fileID: 4111032941925707430, guid: 7976e35d001ec0249b53f029133651a3, type: 3}
+    Upgrade: {fileID: 1551150681272661962, guid: eceface345975c94abd2b7765bfff21c, type: 3}
+    OnUpgrade: {fileID: 0}
+    SkipOnVisit: 0
+--- !u!114 &-2142712439607621181
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7584554302041799802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9840f1c3c5eec8e418063d072754ea3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Comment: 

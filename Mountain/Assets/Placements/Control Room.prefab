@@ -609,10 +609,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ff2a246e0d77fb46890804a37f3a542, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Actions: []
   Name: Control Room
   CardSprite: {fileID: 0}
+  Difficulty: 0
+  LostChance: 0
+  PathingHeuristic: 1
   FlavorText: 
+  Biome: {fileID: 4111032941925707430, guid: 7976e35d001ec0249b53f029133651a3, type: 3}
   OnRevealText: 'The coordinates lead us not to another city in the clouds, but to
     a secluded control room nestled on a lesser-known mountain. The room is filled
     with old technology and screens, some still flickering with life. Stasia''s digital
@@ -622,13 +625,10 @@ MonoBehaviour:
     gate marked ''open.'' The question lingers in the air: If Stasia died before
     Stratohaven was unlocked, who unlocked our city, and why? We hope the Stratolink
     printplans we discovered will lead to answers.'
-  OnVisitText: 
-  LostChance: 0
-  OnVisit: {fileID: 0}
-  Difficulty: 0
-  PathingHeuristic: 1
-  Biome: {fileID: 4111032941925707430, guid: 7976e35d001ec0249b53f029133651a3, type: 3}
   RevealAction: {fileID: 0}
+  OnVisitText: 
+  OnVisitAction: {fileID: 0}
+  Actions: []
 --- !u!1 &8664789573834426405
 GameObject:
   m_ObjectHideFlags: 0

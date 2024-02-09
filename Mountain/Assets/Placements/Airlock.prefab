@@ -192,24 +192,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ff2a246e0d77fb46890804a37f3a542, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Actions: []
   Name: Airlock
   CardSprite: {fileID: 0}
+  Difficulty: 0
+  LostChance: 0
+  PathingHeuristic: 1
   FlavorText: 'An airlock with simple controls: two buttons labeled ''Depart'' and
     ''Seal''. Until recently, it has never been used.'
+  Biome: {fileID: 6223766025237645061, guid: b30f520d510134f4da99aaf67f3f714b, type: 3}
   OnRevealText: For a year, the airlock out of Stratohaven has stood unlocked, yet
     none dared venture beyond. Our haven in the clouds has provided all we needed.
     Why risk the barren lands below? But today, something changed. In the distance,
     bursts of light pierced the sky - fireworks, akin to those in our old TV shows.
     Are we truly alone? Curiosity stirs in Stratohaven. Our bravest will journey
     to uncover this enigma.
-  OnVisitText: 
-  LostChance: 0
-  OnVisit: {fileID: 0}
-  Difficulty: 0
-  PathingHeuristic: 1
-  Biome: {fileID: 6223766025237645061, guid: b30f520d510134f4da99aaf67f3f714b, type: 3}
   RevealAction: {fileID: 4514671431535678054}
+  OnVisitText: 
+  OnVisitAction: {fileID: 0}
+  Actions: []
 --- !u!114 &4514671431535678054
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -222,6 +222,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efaa4c2211c62634fa54526ede33ba05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Comment: 
   tileToPlace: {fileID: 3340648647498721399, guid: bbda8dc89eaffb64a8ed0c834f5ce395, type: 3}
   placementCoordinates: {x: 10, y: 7}
 --- !u!1 &2794840741613513883

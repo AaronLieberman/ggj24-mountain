@@ -273,19 +273,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ff2a246e0d77fb46890804a37f3a542, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Actions: []
   Name: Giant Spider Lair
   CardSprite: {fileID: 0}
+  Difficulty: -5
+  LostChance: 0.05
+  PathingHeuristic: 1
   FlavorText: insert wasteland, 30% chance to pass, insert fields 50% chance to pass,
     insert settlement for 90% chance to pass.
-  OnRevealText: 
-  OnVisitText: 
-  LostChance: 0.05
-  OnVisit: {fileID: 0}
-  Difficulty: -5
-  PathingHeuristic: 1
   Biome: {fileID: 4111032941925707430, guid: 7976e35d001ec0249b53f029133651a3, type: 3}
+  OnRevealText: 
   RevealAction: {fileID: 0}
+  OnVisitText: 
+  OnVisitAction: {fileID: 0}
+  Actions: []
 --- !u!1 &3507554646228344852
 GameObject:
   m_ObjectHideFlags: 0

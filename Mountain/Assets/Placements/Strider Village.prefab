@@ -765,7 +765,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Comment: add fields at bottom of deck
-  NumberOfFieldsToAdd: 2
+  NumberOfFieldsToAdd: 4
   NumberOfWoodsToAdd: 0
   NumberOfSettlementsToAdd: 0
   NumberOfSwampsToAdd: 0

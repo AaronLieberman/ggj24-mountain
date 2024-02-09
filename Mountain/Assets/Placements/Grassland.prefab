@@ -610,22 +610,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ff2a246e0d77fb46890804a37f3a542, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Name: Grassland
+  CardSprite: {fileID: 0}
+  Difficulty: 1
+  LostChance: 0.1
+  PathingHeuristic: 1
+  FlavorText: Like a lawn the runs to the horizon.
+  Biome: {fileID: 6223766025237645061, guid: 0c3fc96df5b9e1d499c66e212164f0aa, type: 3}
+  OnRevealText: 
+  RevealAction: {fileID: 0}
+  OnVisitText: 
+  OnVisitAction: {fileID: 0}
   Actions:
   - Cost: {fileID: 0}
     Upgrade: {fileID: 3484426104028936687, guid: 33c57654b00bf3644a9952072eb8ddd2, type: 3}
     OnUpgrade: {fileID: 0}
     SkipOnVisit: 0
-  Name: Grassland
-  CardSprite: {fileID: 0}
-  FlavorText: Like a lawn the runs to the horizon.
-  OnRevealText: 
-  OnVisitText: 
-  LostChance: 0.1
-  OnVisit: {fileID: 0}
-  Difficulty: 1
-  PathingHeuristic: 1
-  Biome: {fileID: 6223766025237645061, guid: 0c3fc96df5b9e1d499c66e212164f0aa, type: 3}
-  RevealAction: {fileID: 0}
 --- !u!1 &7587292263310235843
 GameObject:
   m_ObjectHideFlags: 0

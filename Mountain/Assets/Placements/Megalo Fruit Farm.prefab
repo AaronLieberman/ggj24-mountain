@@ -274,19 +274,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ff2a246e0d77fb46890804a37f3a542, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Actions: []
   Name: Megalo Fruit Farm
   CardSprite: {fileID: 0}
+  Difficulty: 0
+  LostChance: 0.08
+  PathingHeuristic: 1
   FlavorText: Each Megalofruit is as big as a man. Getting them down from the lofty
     canopy is a challenge.
-  OnRevealText: 
-  OnVisitText: 
-  LostChance: 0.08
-  OnVisit: {fileID: -6468599875290780398}
-  Difficulty: 0
-  PathingHeuristic: 1
   Biome: {fileID: 5689664702476106266, guid: d207460ad79d71147a84f132fe13e8bc, type: 3}
+  OnRevealText: 
   RevealAction: {fileID: -6468599875290780398}
+  OnVisitText: 
+  OnVisitAction: {fileID: -6468599875290780398}
+  Actions: []
 --- !u!114 &-6468599875290780398
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -299,6 +299,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f21808de4848a644cbe2296b9380dc14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Comment: 
   NumberOfFieldsToAdd: 0
   NumberOfWoodsToAdd: 1
   NumberOfSettlementsToAdd: 0
@@ -306,6 +307,7 @@ MonoBehaviour:
   NumberOfWastelandsToAdd: 0
   NumberOfRandomTypeToAdd: 0
   ShouldBeRevealed: 0
+  addAtTopOfDeck: 0
 --- !u!1 &5290227452026639852
 GameObject:
   m_ObjectHideFlags: 0

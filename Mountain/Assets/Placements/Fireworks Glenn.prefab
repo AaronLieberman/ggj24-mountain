@@ -2001,23 +2001,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ff2a246e0d77fb46890804a37f3a542, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Actions: []
   Name: Fireworks Glenn
   CardSprite: {fileID: 0}
+  Difficulty: 0
+  LostChance: 0
+  PathingHeuristic: 1
   FlavorText: 
+  Biome: {fileID: 6223766025237645061, guid: 0c3fc96df5b9e1d499c66e212164f0aa, type: 3}
   OnRevealText: "Our expedition below Stratohaven yielded the unimaginable \u2013
     survivors! We believed the surface world extinct, yet here they thrive, ignorant
     of our technologies like protein printers or television screens. Among the survivors,
     they exclaim that our technology reminds them of 'talking metal' that their neighbor
     speaks of. They provide directions to their village, where tales of this device
     originated. Perhaps this is a clue to others from our world."
-  OnVisitText: 
-  LostChance: 0
-  OnVisit: {fileID: 0}
-  Difficulty: 0
-  PathingHeuristic: 1
-  Biome: {fileID: 6223766025237645061, guid: 0c3fc96df5b9e1d499c66e212164f0aa, type: 3}
   RevealAction: {fileID: 3339502586697466969}
+  OnVisitText: 
+  OnVisitAction: {fileID: 0}
+  Actions: []
 --- !u!114 &3339502586697466969
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2030,6 +2030,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbb1dd6263f5a7e4caa9259035e21e61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Comment: 
   MultipleActions:
   - {fileID: 7322753666149247120}
   - {fileID: -1660792323583450061}
@@ -2047,6 +2048,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f21808de4848a644cbe2296b9380dc14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Comment: 
   NumberOfFieldsToAdd: 0
   NumberOfWoodsToAdd: 0
   NumberOfSettlementsToAdd: 0
@@ -2054,6 +2056,7 @@ MonoBehaviour:
   NumberOfWastelandsToAdd: 0
   NumberOfRandomTypeToAdd: 4
   ShouldBeRevealed: 0
+  addAtTopOfDeck: 0
 --- !u!114 &-1660792323583450061
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2066,6 +2069,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efaa4c2211c62634fa54526ede33ba05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Comment: 
   tileToPlace: {fileID: 8329840588115693003, guid: 4108c7bb7304bd14c9e773457ac5f132, type: 3}
   placementCoordinates: {x: 12, y: 10}
 --- !u!114 &-1020584092762290869
@@ -2080,6 +2084,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cede75c5975197645b83effe1664d5c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Comment: 
   MaxLevelToIncreaseTo: 2
 --- !u!1 &7152120664772029439
 GameObject:

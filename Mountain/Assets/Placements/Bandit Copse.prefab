@@ -248,6 +248,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ff2a246e0d77fb46890804a37f3a542, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Name: Bandit Copse
+  CardSprite: {fileID: 0}
+  Difficulty: -1
+  LostChance: 0.05
+  PathingHeuristic: 1
+  FlavorText: Insert any tile to not lose a tile when visiting. Insert a Woods tile
+    to upgrade to a Forest.
+  Biome: {fileID: 6223766025237645061, guid: 0c3fc96df5b9e1d499c66e212164f0aa, type: 3}
+  OnRevealText: 
+  RevealAction: {fileID: 3386777871070502634}
+  OnVisitText: 
+  OnVisitAction: {fileID: -8995074401567529225}
   Actions:
   - Cost: {fileID: 5689664702476106266, guid: d207460ad79d71147a84f132fe13e8bc, type: 3}
     Upgrade: {fileID: 1365756699843689891, guid: 817df214692c8234c88b99caf669e1ee, type: 3}
@@ -257,18 +269,6 @@ MonoBehaviour:
     Upgrade: {fileID: 0}
     OnUpgrade: {fileID: 0}
     SkipOnVisit: 1
-  Name: Bandit Copse
-  CardSprite: {fileID: 0}
-  FlavorText: Insert any tile to not lose a tile when visiting. Insert a Woods tile
-    to upgrade to a Forest.
-  OnRevealText: 
-  OnVisitText: 
-  LostChance: 0.05
-  OnVisit: {fileID: -8995074401567529225}
-  Difficulty: -1
-  PathingHeuristic: 1
-  Biome: {fileID: 6223766025237645061, guid: 0c3fc96df5b9e1d499c66e212164f0aa, type: 3}
-  RevealAction: {fileID: 3386777871070502634}
 --- !u!114 &-8995074401567529225
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -281,6 +281,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c151be423a6f2ee47bf3f68b8385169e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Comment: 
   RemoveNextTile: 1
   RemoveAllTiles: 0
   RemoveRandomTile: 0
@@ -298,6 +299,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3721025c405d0f4ab850385a66db544, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Comment: 
   MaxLevelToIncreaseTo: 2
 --- !u!1 &1524202940382277519
 GameObject:

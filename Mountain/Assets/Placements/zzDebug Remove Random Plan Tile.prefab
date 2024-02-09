@@ -46,19 +46,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ff2a246e0d77fb46890804a37f3a542, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Actions: []
   Name: zzDebug Remove Random Plan Tile
   CardSprite: {fileID: 0}
+  Difficulty: 0
+  LostChance: 0
+  PathingHeuristic: 1
   FlavorText: This card removes a random tile in the Journey plan, leaving an empty
     slot to the existing destination.
-  OnRevealText: 
-  OnVisitText: 
-  LostChance: 0
-  OnVisit: {fileID: 0}
-  Difficulty: 0
-  PathingHeuristic: 1
   Biome: {fileID: 6223766025237645061, guid: b30f520d510134f4da99aaf67f3f714b, type: 3}
+  OnRevealText: 
   RevealAction: {fileID: 7979257668175758473}
+  OnVisitText: 
+  OnVisitAction: {fileID: 0}
+  Actions: []
 --- !u!114 &7979257668175758473
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -71,6 +71,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c151be423a6f2ee47bf3f68b8385169e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Comment: 
   RemoveNextTile: 0
   RemoveAllTiles: 0
   RemoveRandomTile: 1

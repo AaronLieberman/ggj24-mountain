@@ -527,23 +527,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ff2a246e0d77fb46890804a37f3a542, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Name: zzDEBUG Place 9 Adjacent
+  CardSprite: {fileID: 0}
+  Difficulty: 0
+  LostChance: 0
+  PathingHeuristic: 1
+  FlavorText: This tile places 9 adjacent grasslands on unexplored tiles no more
+    than 2 adjacency distance away.
+  Biome: {fileID: 6223766025237645061, guid: b30f520d510134f4da99aaf67f3f714b, type: 3}
+  OnRevealText: 
+  RevealAction: {fileID: -6706634751180964292}
+  OnVisitText: 
+  OnVisitAction: {fileID: 0}
   Actions:
   - Cost: {fileID: 0}
     Upgrade: {fileID: 0}
     OnUpgrade: {fileID: -6706634751180964292}
     SkipOnVisit: 0
-  Name: zzDEBUG Place 9 Adjacent
-  CardSprite: {fileID: 0}
-  FlavorText: This tile places 9 adjacent grasslands on unexplored tiles no more
-    than 2 adjacency distance away.
-  OnRevealText: 
-  OnVisitText: 
-  LostChance: 0
-  OnVisit: {fileID: 0}
-  Difficulty: 0
-  PathingHeuristic: 1
-  Biome: {fileID: 6223766025237645061, guid: b30f520d510134f4da99aaf67f3f714b, type: 3}
-  RevealAction: {fileID: -6706634751180964292}
 --- !u!114 &-6784325881455479468
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -556,6 +556,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dcdbce72b0d9a284da30e489098ba001, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Comment: 
   TileToPlace: {fileID: 4039720745246559038, guid: 3e33b4fbbc7942945bc3b65501002210, type: 3}
   UseThisPlacementInsteadOfCenterCoordinates: 1
   CenterCoordinates: {x: 0, y: 0}
@@ -575,6 +576,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbb1dd6263f5a7e4caa9259035e21e61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Comment: 
   MultipleActions:
   - {fileID: -6784325881455479468}
   NumberOfTimesToCallAllActions: 9

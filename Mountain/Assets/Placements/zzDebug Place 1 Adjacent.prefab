@@ -526,18 +526,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ff2a246e0d77fb46890804a37f3a542, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Actions: []
   Name: zzDebug Place 1 Adjacent
   CardSprite: {fileID: 0}
-  FlavorText: This tile places 1 adjacent grasslands no more than distance 1.
-  OnRevealText: 
-  OnVisitText: 
-  LostChance: 0
-  OnVisit: {fileID: 0}
   Difficulty: 0
+  LostChance: 0
   PathingHeuristic: 1
+  FlavorText: This tile places 1 adjacent grasslands no more than distance 1.
   Biome: {fileID: 6223766025237645061, guid: b30f520d510134f4da99aaf67f3f714b, type: 3}
+  OnRevealText: 
   RevealAction: {fileID: 6915239778966484986}
+  OnVisitText: 
+  OnVisitAction: {fileID: 0}
+  Actions: []
 --- !u!114 &6915239778966484986
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -550,6 +550,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dcdbce72b0d9a284da30e489098ba001, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Comment: 
   TileToPlace: {fileID: 4039720745246559038, guid: 3e33b4fbbc7942945bc3b65501002210, type: 3}
   UseThisPlacementInsteadOfCenterCoordinates: 1
   CenterCoordinates: {x: 0, y: 0}

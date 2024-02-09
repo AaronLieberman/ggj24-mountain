@@ -549,20 +549,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ff2a246e0d77fb46890804a37f3a542, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Actions: []
   Name: Creeping Fungus
   CardSprite: {fileID: 0}
+  Difficulty: -5
+  LostChance: 0.2
+  PathingHeuristic: 1
   FlavorText: The sound the Stratohaven's fungal sweepers make when they encounter
     creeping fungus spores sounds like a mechanical cough, but the plasticom assures
     us this is just how recursive filtering sounds when it is functioning normally.
-  OnRevealText: 
-  OnVisitText: 
-  LostChance: 0.2
-  OnVisit: {fileID: 0}
-  Difficulty: -5
-  PathingHeuristic: 1
   Biome: {fileID: 4111032941925707430, guid: 7976e35d001ec0249b53f029133651a3, type: 3}
+  OnRevealText: 
   RevealAction: {fileID: 0}
+  OnVisitText: 
+  OnVisitAction: {fileID: 0}
+  Actions: []
 --- !u!1 &7044580989940099220
 GameObject:
   m_ObjectHideFlags: 0

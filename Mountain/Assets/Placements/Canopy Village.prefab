@@ -131,22 +131,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ff2a246e0d77fb46890804a37f3a542, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Name: Canopy Village
+  CardSprite: {fileID: 0}
+  Difficulty: 0
+  LostChance: 0
+  PathingHeuristic: 1
+  FlavorText: 
+  Biome: {fileID: 5689664702476106266, guid: d207460ad79d71147a84f132fe13e8bc, type: 3}
+  OnRevealText: 
+  RevealAction: {fileID: 8986128005474743835}
+  OnVisitText: 
+  OnVisitAction: {fileID: 0}
   Actions:
   - Cost: {fileID: 5689664702476106266, guid: d207460ad79d71147a84f132fe13e8bc, type: 3}
     Upgrade: {fileID: 0}
     OnUpgrade: {fileID: 6471751489159783868}
     SkipOnVisit: 0
-  Name: Canopy Village
-  CardSprite: {fileID: 0}
-  FlavorText: 
-  OnRevealText: 
-  OnVisitText: 
-  LostChance: 0
-  OnVisit: {fileID: 0}
-  Difficulty: 0
-  PathingHeuristic: 1
-  Biome: {fileID: 5689664702476106266, guid: d207460ad79d71147a84f132fe13e8bc, type: 3}
-  RevealAction: {fileID: 8986128005474743835}
 --- !u!114 &6471751489159783868
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -159,6 +159,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3beeafebffa91c54a90d0ae1aaabb11c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Comment: 
   ChanceForWoods: 0.5
 --- !u!114 &8986128005474743835
 MonoBehaviour:
@@ -172,6 +173,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f21808de4848a644cbe2296b9380dc14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Comment: 
   NumberOfFieldsToAdd: 0
   NumberOfWoodsToAdd: 1
   NumberOfSettlementsToAdd: 0
@@ -179,6 +181,7 @@ MonoBehaviour:
   NumberOfWastelandsToAdd: 0
   NumberOfRandomTypeToAdd: 0
   ShouldBeRevealed: 0
+  addAtTopOfDeck: 0
 --- !u!1 &3937635964197256504
 GameObject:
   m_ObjectHideFlags: 0

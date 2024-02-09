@@ -441,18 +441,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ff2a246e0d77fb46890804a37f3a542, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Actions: []
   Name: Wedding Festival
   CardSprite: {fileID: 0}
-  FlavorText: The original Explorer has found love and settled with a local!
-  OnRevealText: 
-  OnVisitText: 
-  LostChance: 0
-  OnVisit: {fileID: 0}
   Difficulty: 0
+  LostChance: 0
   PathingHeuristic: 1
+  FlavorText: The original Explorer has found love and settled with a local!
   Biome: {fileID: 519853117350573946, guid: b422e4b1552e64241b81ca5134eb4510, type: 3}
+  OnRevealText: 
   RevealAction: {fileID: 0}
+  OnVisitText: 
+  OnVisitAction: {fileID: 0}
+  Actions: []
 --- !u!1 &5986564751894377930
 GameObject:
   m_ObjectHideFlags: 0

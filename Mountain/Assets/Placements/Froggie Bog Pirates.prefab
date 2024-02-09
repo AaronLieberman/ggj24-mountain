@@ -48,19 +48,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ff2a246e0d77fb46890804a37f3a542, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Actions: []
   Name: Froggie Bog Pirates
   CardSprite: {fileID: 0}
+  Difficulty: -2
+  LostChance: 0.05
+  PathingHeuristic: 100000
   FlavorText: A twangy dirge drifts through the miasma acompanied by a croaking chrous
     that reveals a submerged stash.
-  OnRevealText: 
-  OnVisitText: 
-  LostChance: 0.05
-  OnVisit: {fileID: 0}
-  Difficulty: -2
-  PathingHeuristic: 100000
   Biome: {fileID: 4486575929425936965, guid: 91624b1fd6393594b85fce2f31dfbbc2, type: 3}
+  OnRevealText: 
   RevealAction: {fileID: -7454022072128483940}
+  OnVisitText: 
+  OnVisitAction: {fileID: 0}
+  Actions: []
 --- !u!114 &8953686275839567923
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -73,6 +73,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f8cac45a079ffc4ba40e597ba8ebb05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Comment: 
 --- !u!114 &-1009381177784780138
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -85,6 +86,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dcdbce72b0d9a284da30e489098ba001, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Comment: 
   TileToPlace: {fileID: 7277423047614280404, guid: c59f43f7efb06ed4cac039fd9e27e6f7, type: 3}
   UseThisPlacementInsteadOfCenterCoordinates: 1
   CenterCoordinates: {x: 0, y: 0}
@@ -104,6 +106,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbb1dd6263f5a7e4caa9259035e21e61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Comment: 
   MultipleActions:
   - {fileID: -1009381177784780138}
   - {fileID: 8953686275839567923}

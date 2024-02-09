@@ -20,7 +20,8 @@ Done	Yes	Cleared Thorngate	Woods	0.05	0					Place adjacent Briar Passage. Place 
 Done	No	Database Protein Printer	Mountaintop		0		Today's Menu: Breakfast Bacon flavored protein porridge. Lunch Special! Chicken breast protein porridge. Dinner: Oatsimilie Protein Porridge.	Insert Woods to upgrade to Hydroponic Protein Printer.								0	0	0	0
 	Yes	Delta	Swamp		-3					Place 2 adjacent Speading Delta		Move to an adjacent Spreading Delta				0	0	1	1
 	No	Delta Edge	Swamp		0											0	0	0	0
-	No	Electronic Device	Woods	0.00	0					Unlocks Pool 3, Deck 4 cards, Show Stasia's Residency tile on other side of Purification Plant Maintenance Slough	The device Bennett found indeed turned out to be an electronic diary, and it belonged to someone named Stasia. According to the diary, she lived in a place that sounds remarkably like our own Stratohaven. She mentions coordinates that she often visited. Maybe we can find her.					0	0	0	0
+	No	Electronic Device	Woods	0.00	0											0	0	0	0
+	No	Electronic Diary	Woods	0.00	0					Unlocks Pool 3, Deck 4 cards, Show Stasia's Residency tile on other side of Purification Plant Maintenance Slough	The device Bennett found indeed turned out to be an electronic diary, and it belonged to someone named Stasia. According to the diary, she lived in a place that sounds remarkably like our own Stratohaven. She mentions coordinates that she often visited. Maybe we can find her.					0	0	0	0
 Done	No	Empty Nest	Woods		0											0	0	0	0
 Done	No	Endless Festival	Settlement	0.00	0		The original Explorer has found love and settled with a local!	Insert a field to attend, deck a field. Insert a forest to attend, deck a forest. Insert a swamp to attend, deck a swamp.								0	0	0	0
 Done	No	Explorer's Gate	Mountaintop		0		In 12 foot tall letters, 'Curiosity' is las-etched on the inside of the gate,  and 'Wonder' on the outside.									0	0	0	0

@@ -1120,23 +1120,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ff2a246e0d77fb46890804a37f3a542, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Name: Complex Foundation
+  CardSprite: {fileID: 0}
+  Difficulty: 0
+  LostChance: 0
+  PathingHeuristic: 1
+  FlavorText: A complex foundation to some kind of structure. The Plasticom has instructed
+    us not to disturb it.
+  Biome: {fileID: 6223766025237645061, guid: b30f520d510134f4da99aaf67f3f714b, type: 3}
+  OnRevealText: 
+  RevealAction: {fileID: 0}
+  OnVisitText: 
+  OnVisitAction: {fileID: 0}
   Actions:
   - Cost: {fileID: 1251490036842288569, guid: 7eedfe6edbef2b448820618520b219b9, type: 3}
     Upgrade: {fileID: 1251490036842288569, guid: 7eedfe6edbef2b448820618520b219b9, type: 3}
     OnUpgrade: {fileID: 0}
     SkipOnVisit: 0
-  Name: Complex Foundation
-  CardSprite: {fileID: 0}
-  FlavorText: A complex foundation to some kind of structure. The Plasticom has instructed
-    us not to disturb it.
-  OnRevealText: 
-  OnVisitText: 
-  LostChance: 0
-  OnVisit: {fileID: 0}
-  Difficulty: 0
-  PathingHeuristic: 1
-  Biome: {fileID: 6223766025237645061, guid: b30f520d510134f4da99aaf67f3f714b, type: 3}
-  RevealAction: {fileID: 0}
 --- !u!1 &7555397469357412415
 GameObject:
   m_ObjectHideFlags: 0

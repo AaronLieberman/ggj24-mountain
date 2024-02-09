@@ -615,7 +615,7 @@ MonoBehaviour:
   Name: The Great Gate
   CardSprite: {fileID: 0}
   Difficulty: 0
-  LostChance: 0.05
+  LostChance: 0
   PathingHeuristic: 100000
   FlavorText: Sealed against the cataclysm for 10,000 years.
   Biome: {fileID: 6223766025237645061, guid: b30f520d510134f4da99aaf67f3f714b, type: 3}

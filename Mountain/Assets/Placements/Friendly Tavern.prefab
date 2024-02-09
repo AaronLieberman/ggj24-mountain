@@ -866,23 +866,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ff2a246e0d77fb46890804a37f3a542, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Name: Friendly Tavern
+  CardSprite: {fileID: 0}
+  Difficulty: 3
+  LostChance: 0.02
+  PathingHeuristic: 1
+  FlavorText: All who are weary are welcome to rest here and hear the tales of fellow
+    travelers.
+  Biome: {fileID: 519853117350573946, guid: b422e4b1552e64241b81ca5134eb4510, type: 3}
+  OnRevealText: 
+  RevealAction: {fileID: 0}
+  OnVisitText: 
+  OnVisitAction: {fileID: 0}
   Actions:
   - Cost: {fileID: 0}
     Upgrade: {fileID: 0}
     OnUpgrade: {fileID: 2275755086847792891}
     SkipOnVisit: 0
-  Name: Friendly Tavern
-  CardSprite: {fileID: 0}
-  FlavorText: All who are weary are welcome to rest here and hear the tales of fellow
-    travelers.
-  OnRevealText: 
-  OnVisitText: 
-  LostChance: 0.02
-  OnVisit: {fileID: 0}
-  Difficulty: 3
-  PathingHeuristic: 1
-  Biome: {fileID: 519853117350573946, guid: b422e4b1552e64241b81ca5134eb4510, type: 3}
-  RevealAction: {fileID: 0}
 --- !u!114 &2275755086847792891
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -895,6 +895,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f21808de4848a644cbe2296b9380dc14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Comment: 
   NumberOfFieldsToAdd: 0
   NumberOfWoodsToAdd: 0
   NumberOfSettlementsToAdd: 0
@@ -902,6 +903,7 @@ MonoBehaviour:
   NumberOfWastelandsToAdd: 0
   NumberOfRandomTypeToAdd: 1
   ShouldBeRevealed: 0
+  addAtTopOfDeck: 0
 --- !u!1 &8456111212345054483
 GameObject:
   m_ObjectHideFlags: 0

@@ -694,18 +694,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ff2a246e0d77fb46890804a37f3a542, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Actions: []
   Name: Abandoned Wagon
   CardSprite: {fileID: 0}
-  FlavorText: Deep wagon ruts make it impossible to lose the way.
-  OnRevealText: 
-  OnVisitText: 
-  LostChance: 0
-  OnVisit: {fileID: 0}
   Difficulty: 2
+  LostChance: 0
   PathingHeuristic: 1
+  FlavorText: Deep wagon ruts make it impossible to lose the way.
   Biome: {fileID: 6223766025237645061, guid: 0c3fc96df5b9e1d499c66e212164f0aa, type: 3}
+  OnRevealText: 
   RevealAction: {fileID: 5015770405332671674}
+  OnVisitText: 
+  OnVisitAction: {fileID: 0}
+  Actions: []
 --- !u!114 &5015770405332671674
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -718,6 +718,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dcdbce72b0d9a284da30e489098ba001, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Comment: 
   TileToPlace: {fileID: 8784003258234400664, guid: 4ca6336905b1477469eba6879b1b102e, type: 3}
   UseThisPlacementInsteadOfCenterCoordinates: 1
   CenterCoordinates: {x: 0, y: 0}

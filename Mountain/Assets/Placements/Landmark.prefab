@@ -609,19 +609,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ff2a246e0d77fb46890804a37f3a542, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Actions: []
   Name: Landmark
   CardSprite: {fileID: 0}
+  Difficulty: 3
+  LostChance: 0.05
+  PathingHeuristic: 1
   FlavorText: Did the ancient world use this spire as a point of reference? No other
     purpose is apparent.
-  OnRevealText: 
-  OnVisitText: 
-  LostChance: 0.05
-  OnVisit: {fileID: 0}
-  Difficulty: 3
-  PathingHeuristic: 1
   Biome: {fileID: 6223766025237645061, guid: 0c3fc96df5b9e1d499c66e212164f0aa, type: 3}
+  OnRevealText: 
   RevealAction: {fileID: 0}
+  OnVisitText: 
+  OnVisitAction: {fileID: 0}
+  Actions: []
 --- !u!1 &9188145835353546687
 GameObject:
   m_ObjectHideFlags: 0

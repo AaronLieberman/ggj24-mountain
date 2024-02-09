@@ -51,19 +51,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ff2a246e0d77fb46890804a37f3a542, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Actions: []
   Name: Videonarium
   CardSprite: {fileID: 0}
+  Difficulty: 0
+  LostChance: 0.05
+  PathingHeuristic: 1
   FlavorText: A crowd has gathered to complete the 9853rd Annual Series Marathon
     of Friends
-  OnRevealText: 
-  OnVisitText: 
-  LostChance: 0.05
-  OnVisit: {fileID: 0}
-  Difficulty: 0
-  PathingHeuristic: 1
   Biome: {fileID: 6223766025237645061, guid: b30f520d510134f4da99aaf67f3f714b, type: 3}
+  OnRevealText: 
   RevealAction: {fileID: 0}
+  OnVisitText: 
+  OnVisitAction: {fileID: 0}
+  Actions:
+  - Cost: {fileID: 5689664702476106266, guid: d207460ad79d71147a84f132fe13e8bc, type: 3}
+    Upgrade: {fileID: 6903418152083756756, guid: 48e71db57f66e7e439b8ea69dff3e9a3, type: 3}
+    OnUpgrade: {fileID: 0}
+    SkipOnVisit: 0
 --- !u!1 &824579942437752117
 GameObject:
   m_ObjectHideFlags: 0

@@ -995,7 +995,7 @@ GameObject:
   - component: {fileID: 8704519854635525585}
   - component: {fileID: 9068156614129714157}
   m_Layer: 0
-  m_Name: Purification Plant Maintenance Slough
+  m_Name: Purification Plant Maintenance Overflow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

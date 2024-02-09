@@ -441,21 +441,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ff2a246e0d77fb46890804a37f3a542, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Actions: []
   Name: Electronic Device
   CardSprite: {fileID: 0}
-  FlavorText: 
-  OnRevealText: The device Bennett found indeed turned out to be an electronic diary,
-    and it belonged to someone named Stasia. According to the diary, she lived in
-    a place that sounds remarkably like our own Stratohaven. She mentions coordinates
-    that she often visited. Maybe we can find her.
-  OnVisitText: 
-  LostChance: 0
-  OnVisit: {fileID: 0}
   Difficulty: 0
+  LostChance: 0
   PathingHeuristic: 1
+  FlavorText: 
   Biome: {fileID: 5689664702476106266, guid: d207460ad79d71147a84f132fe13e8bc, type: 3}
+  OnRevealText: 
   RevealAction: {fileID: 0}
+  OnVisitText: 
+  OnVisitAction: {fileID: 0}
+  Actions:
+  - Cost: {fileID: 0}
+    Upgrade: {fileID: 104564839103956139, guid: 5d6e6c8c4aaa5cf4eb1ab216026b0e47, type: 3}
+    OnUpgrade: {fileID: 0}
+    SkipOnVisit: 0
 --- !u!1 &4422742302291806688
 GameObject:
   m_ObjectHideFlags: 0

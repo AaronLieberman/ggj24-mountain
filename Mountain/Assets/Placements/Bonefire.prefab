@@ -46,23 +46,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ff2a246e0d77fb46890804a37f3a542, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Name: Bonefire
+  CardSprite: {fileID: 0}
+  Difficulty: 0
+  LostChance: 0.05
+  PathingHeuristic: 1
+  FlavorText: Exhausted refugees huddle around a mound of burning bones and warn
+    each other about the dangers they've encountered.
+  Biome: {fileID: 4111032941925707430, guid: 7976e35d001ec0249b53f029133651a3, type: 3}
+  OnRevealText: 
+  RevealAction: {fileID: 0}
+  OnVisitText: 
+  OnVisitAction: {fileID: 0}
   Actions:
   - Cost: {fileID: 5689664702476106266, guid: d207460ad79d71147a84f132fe13e8bc, type: 3}
     Upgrade: {fileID: 6627413070052483727, guid: f7e0b60fe032e024681586cd1c96b434, type: 3}
     OnUpgrade: {fileID: -7430371990024067611}
     SkipOnVisit: 0
-  Name: Bonefire
-  CardSprite: {fileID: 0}
-  FlavorText: Exhausted refugees huddle around a mound of burning bones and warn
-    each other about the dangers they've encountered.
-  OnRevealText: 
-  OnVisitText: 
-  LostChance: 0.05
-  OnVisit: {fileID: 0}
-  Difficulty: 0
-  PathingHeuristic: 1
-  Biome: {fileID: 4111032941925707430, guid: 7976e35d001ec0249b53f029133651a3, type: 3}
-  RevealAction: {fileID: 0}
 --- !u!114 &-7430371990024067611
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -75,6 +75,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f21808de4848a644cbe2296b9380dc14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Comment: 
   NumberOfFieldsToAdd: 0
   NumberOfWoodsToAdd: 0
   NumberOfSettlementsToAdd: 0
@@ -82,6 +83,7 @@ MonoBehaviour:
   NumberOfWastelandsToAdd: 7
   NumberOfRandomTypeToAdd: 5
   ShouldBeRevealed: 0
+  addAtTopOfDeck: 0
 --- !u!1 &734937183647092882
 GameObject:
   m_ObjectHideFlags: 0
