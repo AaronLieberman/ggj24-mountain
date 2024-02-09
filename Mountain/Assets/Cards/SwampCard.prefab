@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1913880217266438555}
   - component: {fileID: 6894537915646913577}
   m_Layer: 0
-  m_Name: Swamp
+  m_Name: SwampCard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

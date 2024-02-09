@@ -1033,15 +1033,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ff2a246e0d77fb46890804a37f3a542, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Actions: []
   Name: Purification Plant Maintenance Slough
   CardSprite: {fileID: 0}
-  FlavorText: A perfect water recycler, in 10,000 years it has not lost a drop.
-  OnRevealText: 
-  OnVisitText: 
-  LostChance: 0.05
-  OnVisit: {fileID: 0}
   Difficulty: 0
+  LostChance: 0.05
   PathingHeuristic: 100000
+  FlavorText: A perfect water recycler, in 10,000 years it has not lost a drop.
   Biome: {fileID: 6223766025237645061, guid: b30f520d510134f4da99aaf67f3f714b, type: 3}
+  OnRevealText: 
   RevealAction: {fileID: 0}
+  OnVisitText: 
+  OnVisitAction: {fileID: 0}
+  Actions:
+  - Cost: {fileID: 4486575929425936965, guid: 91624b1fd6393594b85fce2f31dfbbc2, type: 3}
+    Upgrade: {fileID: 4763468270997528533, guid: a1f4b10f683c72945b2841799aa3847d, type: 3}
+    OnUpgrade: {fileID: 0}
+    SkipOnVisit: 0

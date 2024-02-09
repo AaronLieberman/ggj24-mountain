@@ -346,6 +346,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7069852486265415427}
   - component: {fileID: 3550633385832906719}
+  - component: {fileID: 7451737758042480932}
   m_Layer: 0
   m_Name: Crystal Clear River
   m_TagString: Untagged
@@ -381,18 +382,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ff2a246e0d77fb46890804a37f3a542, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Actions: []
   Name: Crystal Clear River
   CardSprite: {fileID: 0}
-  FlavorText: Like flowing glass.
-  OnRevealText: 
-  OnVisitText: 
-  LostChance: 0
-  OnVisit: {fileID: 0}
   Difficulty: 0
+  LostChance: 0
   PathingHeuristic: 1
+  FlavorText: Like flowing glass.
   Biome: {fileID: 6223766025237645061, guid: b30f520d510134f4da99aaf67f3f714b, type: 3}
+  OnRevealText: 
   RevealAction: {fileID: 0}
+  OnVisitText: 
+  OnVisitAction: {fileID: 7451737758042480932}
+  Actions: []
+--- !u!114 &7451737758042480932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2895372615916742887}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcdbce72b0d9a284da30e489098ba001, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Comment: 
+  TileToPlace: {fileID: 29506051533292441, guid: 8cea1b4752a1c3943acef11312fd3957, type: 3}
+  UseThisPlacementInsteadOfCenterCoordinates: 1
+  CenterCoordinates: {x: 0, y: 0}
+  MinimumDistanceByAdjacency: 1
+  MaximumDistanceByAdjacency: 1
+  MaximumDistanceByPathing: 1
+  MustBeUnexplored: 1
 --- !u!1 &4974740697464639693
 GameObject:
   m_ObjectHideFlags: 0

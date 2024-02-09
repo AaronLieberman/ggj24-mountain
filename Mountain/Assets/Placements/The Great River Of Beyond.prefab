@@ -94,6 +94,8 @@ GameObject:
   m_Component:
   - component: {fileID: 8791934234342661596}
   - component: {fileID: 4763468270997528533}
+  - component: {fileID: -458205510028045406}
+  - component: {fileID: -8251440677865644588}
   m_Layer: 0
   m_Name: The Great River Of Beyond
   m_TagString: Untagged
@@ -129,18 +131,54 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ff2a246e0d77fb46890804a37f3a542, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Actions: []
   Name: The Great River Of Beyond
   CardSprite: {fileID: 0}
-  FlavorText: Now we take in sludge, and give the world a crystal clear river.
-  OnRevealText: 
-  OnVisitText: 
-  LostChance: 0.05
-  OnVisit: {fileID: 0}
   Difficulty: 0
+  LostChance: 0.05
   PathingHeuristic: 1
+  FlavorText: Now we take in sludge, and give the world a crystal clear river.
   Biome: {fileID: 6223766025237645061, guid: b30f520d510134f4da99aaf67f3f714b, type: 3}
-  RevealAction: {fileID: 0}
+  OnRevealText: 
+  RevealAction: {fileID: -458205510028045406}
+  OnVisitText: 
+  OnVisitAction: {fileID: 0}
+  Actions: []
+--- !u!114 &-458205510028045406
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2723331348539490859}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbb1dd6263f5a7e4caa9259035e21e61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Comment: 'TODO: +1 Explorer'
+  MultipleActions:
+  - {fileID: -8251440677865644588}
+  NumberOfTimesToCallAllActions: 1
+--- !u!114 &-8251440677865644588
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2723331348539490859}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcdbce72b0d9a284da30e489098ba001, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Comment: 
+  TileToPlace: {fileID: 3550633385832906719, guid: ad3cd3e438c42124c8a85f278fb61fb9, type: 3}
+  UseThisPlacementInsteadOfCenterCoordinates: 1
+  CenterCoordinates: {x: 0, y: 0}
+  MinimumDistanceByAdjacency: 1
+  MaximumDistanceByAdjacency: 1
+  MaximumDistanceByPathing: 1
+  MustBeUnexplored: 1
 --- !u!1 &3882045656823030969
 GameObject:
   m_ObjectHideFlags: 0
