@@ -17,9 +17,11 @@ public class AddCardsToDeck : PlacementAction
 
     public bool ShouldBeRevealed = false;
 
+    public bool addAtTopOfDeck = false;
+
     public override void DoWork(Worker worker, Placement placement, Card card)
     {
-        Utilities.GetRootComponent<PlacementPoolManager>().AddToDeckFromAllBiomesInPool(NumberOfFieldsToAdd, NumberOfWoodsToAdd, NumberOfSettlementsToAdd, NumberOfSwampsToAdd, NumberOfWastelandsToAdd, NumberOfRandomTypeToAdd, ShouldBeRevealed);
+        Utilities.GetRootComponent<PlacementPoolManager>().AddToDeckFromAllBiomesInPool(NumberOfFieldsToAdd, NumberOfWoodsToAdd, NumberOfSettlementsToAdd, NumberOfSwampsToAdd, NumberOfWastelandsToAdd, NumberOfRandomTypeToAdd, ShouldBeRevealed, addAtTopOfDeck);
 
     }
 }

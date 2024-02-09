@@ -59,7 +59,7 @@ public class Deck : MonoBehaviour
         return transform.GetChild(0).GetComponent<Card>();
     }
 
-	public void AddNewCardToDeck(Placement placementToSpawn, bool isRevealed)
+	public void AddNewCardToDeck(Placement placementToSpawn, bool isRevealed, bool AddAtTopOfDeck = false)
 	{
 		GameObject newCardObject = new GameObject();
 		newCardObject.transform.parent = transform;
@@ -69,6 +69,10 @@ public class Deck : MonoBehaviour
 		newCard.IsRevealed = isRevealed;
         newCard.gameObject.name = placementToSpawn.gameObject.name;
         newCard.transform.SetParent(transform);
+        if(AddAtTopOfDeck)
+        {
+            newCard.transform.SetAsFirstSibling();
+        }
 
         DeckChanged?.Invoke(this, null);
     }

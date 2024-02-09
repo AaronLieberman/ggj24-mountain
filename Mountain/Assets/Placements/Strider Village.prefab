@@ -662,6 +662,7 @@ GameObject:
   - component: {fileID: 6448638834191077366}
   - component: {fileID: -4870435898154419822}
   - component: {fileID: 8381347566616705377}
+  - component: {fileID: 1914711405789158872}
   m_Layer: 0
   m_Name: Strider Village
   m_TagString: Untagged
@@ -697,14 +698,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ff2a246e0d77fb46890804a37f3a542, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Actions:
-  - Cost: {fileID: 0}
-    Upgrade: {fileID: 0}
-    OnUpgrade: {fileID: -815845653963088715}
-    SkipOnVisit: 0
   Name: Strider Village
   CardSprite: {fileID: 0}
+  Difficulty: 0
+  LostChance: 0
+  PathingHeuristic: 1
   FlavorText: 
+  Biome: {fileID: 519853117350573946, guid: b422e4b1552e64241b81ca5134eb4510, type: 3}
   OnRevealText: In the village, we found the old man named Bennett. Known among his
     neighbors for his eccentric interests, Bennett claims he's been experimenting
     with a strange, beeping box he found buried near the village a decade ago. He
@@ -712,13 +712,14 @@ MonoBehaviour:
     old communication devices. Could it be a lost relic from another Stratohaven?
     We decide to investigate further, hoping to uncover a piece of our forgotten
     past. He provides the location of where he hid the diary.
-  OnVisitText: 
-  LostChance: 0
-  OnVisit: {fileID: 0}
-  Difficulty: 0
-  PathingHeuristic: 1
-  Biome: {fileID: 519853117350573946, guid: b422e4b1552e64241b81ca5134eb4510, type: 3}
   RevealAction: {fileID: 0}
+  OnVisitText: 
+  OnVisitAction: {fileID: 0}
+  Actions:
+  - Cost: {fileID: 0}
+    Upgrade: {fileID: 0}
+    OnUpgrade: {fileID: -815845653963088715}
+    SkipOnVisit: 0
 --- !u!114 &-815845653963088715
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -731,10 +732,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbb1dd6263f5a7e4caa9259035e21e61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Comment: 
   MultipleActions:
   - {fileID: 6448638834191077366}
   - {fileID: -4870435898154419822}
   - {fileID: 8381347566616705377}
+  - {fileID: 1914711405789158872}
   NumberOfTimesToCallAllActions: 1
 --- !u!114 &6448638834191077366
 MonoBehaviour:
@@ -748,6 +751,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ca6b2e78fdedd244b750fa50496d43e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Comment: 
 --- !u!114 &-4870435898154419822
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -760,13 +764,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f21808de4848a644cbe2296b9380dc14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Comment: add fields at bottom of deck
   NumberOfFieldsToAdd: 2
-  NumberOfWoodsToAdd: 2
+  NumberOfWoodsToAdd: 0
   NumberOfSettlementsToAdd: 0
   NumberOfSwampsToAdd: 0
   NumberOfWastelandsToAdd: 0
   NumberOfRandomTypeToAdd: 0
   ShouldBeRevealed: 0
+  addAtTopOfDeck: 0
 --- !u!114 &8381347566616705377
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -779,5 +785,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efaa4c2211c62634fa54526ede33ba05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Comment: 
   tileToPlace: {fileID: 123498065513786925, guid: 93bc1d542833d8145be12ff89db6d382, type: 3}
   placementCoordinates: {x: 9, y: 2}
+--- !u!114 &1914711405789158872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9196804490059343367}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f21808de4848a644cbe2296b9380dc14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Comment: Add woods at top of deck
+  NumberOfFieldsToAdd: 0
+  NumberOfWoodsToAdd: 2
+  NumberOfSettlementsToAdd: 0
+  NumberOfSwampsToAdd: 0
+  NumberOfWastelandsToAdd: 0
+  NumberOfRandomTypeToAdd: 0
+  ShouldBeRevealed: 0
+  addAtTopOfDeck: 1
