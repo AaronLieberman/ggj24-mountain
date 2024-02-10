@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Serialization;
 
-public class ShowPopupText : PlacementAction
+public class ShowOnVisitPopupTextAction : PlacementAction
 {
     public string textToPopUp = "A ShowPopUpText had no text set.";
     public override void DoWork(Worker worker, Placement placement, Card card)

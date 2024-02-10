@@ -44,9 +44,7 @@ public class Placement : MonoBehaviour
     public float PathingHeuristic;  // Impassable >= 10000
     public string FlavorText;
     public Placement Biome;
-    public string OnRevealText;
     public PlacementAction RevealAction;
-    [FormerlySerializedAs("OnRevealText")]
     public string OnVisitTooltipText;
     [FormerlySerializedAs("OnVisit")]
     public PlacementAction OnVisitAction;

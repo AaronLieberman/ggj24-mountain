@@ -23,7 +23,7 @@ public class ImportCards : EditorWindow
     public const int ONREVEALTEXT = 11;
     public const int ONVISIT = 12;
     public const int ONVISITTEXT = 13;
-    public const int POPUPTEXT = 14;
+    public const int ONVISITPOPUPTEXT = 14;
     public const int POOL1 = 16;
     public const int POOL2 = 17;
     public const int POOL3 = 18;
@@ -116,19 +116,28 @@ public class ImportCards : EditorWindow
                 Debug.LogError("No Placement component exists on " + prefab.name);
             }
             tilePlacement.Biome = prefabPlacement;
-            tilePlacement.OnRevealText = splitData[ONREVEALTEXT];
             tilePlacement.OnVisitTooltipText = splitData[ONVISITTEXT];
 
             UpdateAllTerrainGameObject(tilePlacement, splitData[BIOME]);
 
-            if(!string.IsNullOrEmpty(splitData[POPUPTEXT]))
+            if (!string.IsNullOrEmpty(splitData[ONREVEALTEXT]))
             {
-                ShowPopupText popupcomponent = prefabTofill.GetComponent<ShowPopupText>();
+                ShowOnRevealPopupTextAction popupcomponent = prefabTofill.GetComponent<ShowOnRevealPopupTextAction>();
+                if (popupcomponent == null)
+                {
+                    popupcomponent = prefabTofill.AddComponent<ShowOnRevealPopupTextAction>();
+                }
+                popupcomponent.textToPopUp = splitData[ONREVEALTEXT];
+            }
+
+            if (!string.IsNullOrEmpty(splitData[ONVISITPOPUPTEXT]))
+            {
+                ShowOnVisitPopupTextAction popupcomponent = prefabTofill.GetComponent<ShowOnVisitPopupTextAction>();
                 if(popupcomponent == null) 
                 {
-                    popupcomponent = prefabTofill.AddComponent<ShowPopupText>();
+                    popupcomponent = prefabTofill.AddComponent<ShowOnVisitPopupTextAction>();
                 }
-                popupcomponent.textToPopUp = splitData[POPUPTEXT];
+                popupcomponent.textToPopUp = splitData[ONVISITPOPUPTEXT];
             }
 
             //AssetDatabase.DeleteAsset(GetPrefabPath(prefabName));

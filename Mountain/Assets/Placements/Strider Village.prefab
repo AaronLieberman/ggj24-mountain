@@ -663,6 +663,7 @@ GameObject:
   - component: {fileID: -4870435898154419822}
   - component: {fileID: 8381347566616705377}
   - component: {fileID: 1914711405789158872}
+  - component: {fileID: 145022953597075454}
   m_Layer: 0
   m_Name: Strider Village
   m_TagString: Untagged
@@ -707,13 +708,7 @@ MonoBehaviour:
   Biome: {fileID: 519853117350573946, guid: b422e4b1552e64241b81ca5134eb4510, type: 3}
   OnRevealText: 
   RevealAction: {fileID: 0}
-  OnVisitTooltipText: In the village, we found the old man named Bennett. Known among
-    his neighbors for his eccentric interests, Bennett claims he's been experimenting
-    with a strange, beeping box he found buried near the village a decade ago. He
-    insists it's not just scrap metal. His description sounds eerily similar to our
-    old communication devices. Could it be a lost relic from another Stratohaven?
-    We decide to investigate further, hoping to uncover a piece of our forgotten
-    past. He provides the location of where he hid the diary.
+  OnVisitTooltipText: 
   OnVisitAction: {fileID: 0}
   Actions:
   - Cost: {fileID: 0}
@@ -809,3 +804,23 @@ MonoBehaviour:
   NumberOfRandomTypeToAdd: 0
   ShouldBeRevealed: 0
   addAtTopOfDeck: 1
+--- !u!114 &145022953597075454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9196804490059343367}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03da8653868ffaa4383b27ac57301c43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Comment: 
+  textToPopUp: In the village, we found the old man named Bennett. Known among his
+    neighbors for his eccentric interests, Bennett claims he's been experimenting
+    with a strange, beeping box he found buried near the village a decade ago. He
+    insists it's not just scrap metal. His description sounds eerily similar to our
+    old communication devices. Could it be a lost relic from another Stratohaven?
+    We decide to investigate further, hoping to uncover a piece of our forgotten
+    past. He provides the location of where he hid the diary.

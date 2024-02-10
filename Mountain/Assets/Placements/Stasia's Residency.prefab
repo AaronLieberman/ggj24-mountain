@@ -658,6 +658,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4307801510896772916}
   - component: {fileID: 8931215191045057513}
+  - component: {fileID: 4282109060034310635}
   m_Layer: 0
   m_Name: Stasia's Residency
   m_TagString: Untagged
@@ -709,3 +710,21 @@ MonoBehaviour:
   OnVisitTooltipText: 
   OnVisitAction: {fileID: 0}
   Actions: []
+--- !u!114 &4282109060034310635
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8377141676624294793}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f509cefe7ad4574e8e856c6985aedac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Comment: 
+  textToPopUp: We found Stasia's home, but she has been dead for many years now.
+    Her husband, now an old man, guards her possessions like precious treasures.
+    From her computer, we extract the coordinates - they lead to a location that's
+    not on any of our maps. It's time to explore these unknown coordinates and unravel
+    the mysteries they hold.

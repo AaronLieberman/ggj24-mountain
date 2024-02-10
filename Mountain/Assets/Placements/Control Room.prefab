@@ -574,6 +574,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4607405045014864142}
   - component: {fileID: 7779112155841060399}
+  - component: {fileID: 2802320457178581370}
   m_Layer: 0
   m_Name: Control Room
   m_TagString: Untagged
@@ -629,6 +630,28 @@ MonoBehaviour:
   OnVisitTooltipText: 
   OnVisitAction: {fileID: 0}
   Actions: []
+--- !u!114 &2802320457178581370
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8283726409731301674}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f509cefe7ad4574e8e856c6985aedac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Comment: 
+  textToPopUp: 'The coordinates lead us not to another city in the clouds, but to
+    a secluded control room nestled on a lesser-known mountain. The room is filled
+    with old technology and screens, some still flickering with life. Stasia''s digital
+    logs reveal she was a guardian of sorts, the most recent in a long line of clones,
+    maintaining the technology that oversees these mountaintop settlements. The screens
+    show several settlements like Stratohaven, yet ours is the only one with the
+    gate marked ''open.'' The question lingers in the air: If Stasia died before
+    Stratohaven was unlocked, who unlocked our city, and why? We hope the Stratolink
+    printplans we discovered will lead to answers.'
 --- !u!1 &8664789573834426405
 GameObject:
   m_ObjectHideFlags: 0
