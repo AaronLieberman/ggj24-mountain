@@ -43,6 +43,7 @@ public class RemoveTileFromJourneyPlan : PlacementAction
     public void RemoveTile(WorkerPlan plan)
     {
         if (ShouldPutOnTopOfDeck) PutOnDeck(plan);
+        Destroy(plan.Card);
         plan.Card = null;
     }
 

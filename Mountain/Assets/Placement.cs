@@ -15,12 +15,13 @@ public class TileAction
 
     public bool CanPayCost(Card card)
     {
+        // if you don't have a card then you can't use it to pay any cost
+        if (card == null || card.PlacementToSpawn == null)
+            return false;
+
         // cost is free, any card can pay it
         if (Cost == null)
             return true;
-
-        if (card == null || card.PlacementToSpawn == null)
-            return false;
 
         // if the card is hidden, compare the cost to the hidden placement
         if (!card.IsRevealed)
