@@ -627,8 +627,10 @@ MonoBehaviour:
     Stratohaven was unlocked, who unlocked our city, and why? We hope the Stratolink
     printplans we discovered will lead to answers.'
   RevealAction: {fileID: 0}
+  RevealActions: []
   OnVisitTooltipText: 
   OnVisitAction: {fileID: 0}
+  VisitActions: []
   Actions: []
 --- !u!114 &2802320457178581370
 MonoBehaviour:

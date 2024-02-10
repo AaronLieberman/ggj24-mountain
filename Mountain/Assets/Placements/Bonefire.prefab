@@ -56,8 +56,10 @@ MonoBehaviour:
   Biome: {fileID: 4111032941925707430, guid: 7976e35d001ec0249b53f029133651a3, type: 3}
   OnRevealText: 
   RevealAction: {fileID: 0}
+  RevealActions: []
   OnVisitTooltipText: 
   OnVisitAction: {fileID: 0}
+  VisitActions: []
   Actions:
   - Cost: {fileID: 5689664702476106266, guid: d207460ad79d71147a84f132fe13e8bc, type: 3}
     Upgrade: {fileID: 6627413070052483727, guid: f7e0b60fe032e024681586cd1c96b434, type: 3}

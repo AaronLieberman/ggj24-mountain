@@ -707,8 +707,10 @@ MonoBehaviour:
     not on any of our maps. It's time to explore these unknown coordinates and unravel
     the mysteries they hold.
   RevealAction: {fileID: 0}
+  RevealActions: []
   OnVisitTooltipText: 
   OnVisitAction: {fileID: 0}
+  VisitActions: []
   Actions: []
 --- !u!114 &4282109060034310635
 MonoBehaviour:

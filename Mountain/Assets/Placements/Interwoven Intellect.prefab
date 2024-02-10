@@ -222,8 +222,10 @@ MonoBehaviour:
   Biome: {fileID: 6223766025237645061, guid: b30f520d510134f4da99aaf67f3f714b, type: 3}
   OnRevealText: 
   RevealAction: {fileID: 0}
+  RevealActions: []
   OnVisitTooltipText: 
   OnVisitAction: {fileID: 0}
+  VisitActions: []
   Actions: []
 --- !u!1 &3950996043259930756
 GameObject:

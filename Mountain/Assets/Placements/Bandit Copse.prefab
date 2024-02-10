@@ -259,8 +259,10 @@ MonoBehaviour:
   Biome: {fileID: 6223766025237645061, guid: 0c3fc96df5b9e1d499c66e212164f0aa, type: 3}
   OnRevealText: 
   RevealAction: {fileID: 3386777871070502634}
+  RevealActions: []
   OnVisitTooltipText: Lose a tile.
   OnVisitAction: {fileID: -8995074401567529225}
+  VisitActions: []
   Actions:
   - Cost: {fileID: 5689664702476106266, guid: d207460ad79d71147a84f132fe13e8bc, type: 3}
     Upgrade: {fileID: 1365756699843689891, guid: 817df214692c8234c88b99caf669e1ee, type: 3}

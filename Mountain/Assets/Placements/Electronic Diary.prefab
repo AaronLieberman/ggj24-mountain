@@ -710,8 +710,10 @@ MonoBehaviour:
     a place that sounds remarkably like our own Stratohaven. She mentions coordinates
     that she often visited. Maybe we can find her.
   RevealAction: {fileID: 0}
+  RevealActions: []
   OnVisitTooltipText: 
   OnVisitAction: {fileID: 0}
+  VisitActions: []
   Actions: []
 --- !u!114 &-8190299020391417162
 MonoBehaviour:

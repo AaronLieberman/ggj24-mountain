@@ -450,8 +450,10 @@ MonoBehaviour:
   Biome: {fileID: 4486575929425936965}
   OnRevealText: 
   RevealAction: {fileID: 0}
+  RevealActions: []
   OnVisitTooltipText: 
   OnVisitAction: {fileID: 0}
+  VisitActions: []
   Actions: []
 --- !u!1 &5941734463354112276
 GameObject:

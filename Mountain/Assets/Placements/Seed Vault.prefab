@@ -139,8 +139,10 @@ MonoBehaviour:
   Biome: {fileID: 519853117350573946, guid: b422e4b1552e64241b81ca5134eb4510, type: 3}
   OnRevealText: 
   RevealAction: {fileID: 3438626832746531809}
+  RevealActions: []
   OnVisitTooltipText: 
   OnVisitAction: {fileID: 0}
+  VisitActions: []
   Actions: []
 --- !u!114 &3438626832746531809
 MonoBehaviour:

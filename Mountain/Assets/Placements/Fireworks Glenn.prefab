@@ -2016,8 +2016,10 @@ MonoBehaviour:
     speaks of. They provide directions to their village, where tales of this device
     originated. Perhaps this is a clue to others from our world."
   RevealAction: {fileID: 3339502586697466969}
+  RevealActions: []
   OnVisitTooltipText: 
   OnVisitAction: {fileID: 0}
+  VisitActions: []
   Actions: []
 --- !u!114 &3339502586697466969
 MonoBehaviour:
