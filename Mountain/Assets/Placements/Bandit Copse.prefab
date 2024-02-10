@@ -206,6 +206,7 @@ GameObject:
   - component: {fileID: 1365756699843689891}
   - component: {fileID: -8995074401567529225}
   - component: {fileID: 3386777871070502634}
+  - component: {fileID: 249642437801887206}
   m_Layer: 0
   m_Name: Bandit Copse
   m_TagString: Untagged
@@ -253,12 +254,12 @@ MonoBehaviour:
   Difficulty: -1
   LostChance: 0.05
   PathingHeuristic: 1
-  FlavorText: Insert any tile to not lose a tile when visiting. Insert a Woods tile
-    to upgrade to a Forest.
+  FlavorText: The goats know to stay away from this stand of trees, but traveler's
+    can't tell it from any other.
   Biome: {fileID: 6223766025237645061, guid: 0c3fc96df5b9e1d499c66e212164f0aa, type: 3}
   OnRevealText: 
   RevealAction: {fileID: 3386777871070502634}
-  OnVisitText: 
+  OnVisitTooltipText: 
   OnVisitAction: {fileID: -8995074401567529225}
   Actions:
   - Cost: {fileID: 5689664702476106266, guid: d207460ad79d71147a84f132fe13e8bc, type: 3}
@@ -301,6 +302,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Comment: 
   MaxLevelToIncreaseTo: 2
+--- !u!114 &249642437801887206
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 449788240802564400}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03da8653868ffaa4383b27ac57301c43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Comment: 
+  textToPopUp: Oh no! Bandits stole one of your explorer's cards!
 --- !u!1 &1524202940382277519
 GameObject:
   m_ObjectHideFlags: 0

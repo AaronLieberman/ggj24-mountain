@@ -705,15 +705,15 @@ MonoBehaviour:
   PathingHeuristic: 1
   FlavorText: 
   Biome: {fileID: 519853117350573946, guid: b422e4b1552e64241b81ca5134eb4510, type: 3}
-  OnRevealText: In the village, we found the old man named Bennett. Known among his
-    neighbors for his eccentric interests, Bennett claims he's been experimenting
+  OnRevealText: 
+  RevealAction: {fileID: 0}
+  OnVisitTooltipText: In the village, we found the old man named Bennett. Known among
+    his neighbors for his eccentric interests, Bennett claims he's been experimenting
     with a strange, beeping box he found buried near the village a decade ago. He
     insists it's not just scrap metal. His description sounds eerily similar to our
     old communication devices. Could it be a lost relic from another Stratohaven?
     We decide to investigate further, hoping to uncover a piece of our forgotten
     past. He provides the location of where he hid the diary.
-  RevealAction: {fileID: 0}
-  OnVisitText: 
   OnVisitAction: {fileID: 0}
   Actions:
   - Cost: {fileID: 0}

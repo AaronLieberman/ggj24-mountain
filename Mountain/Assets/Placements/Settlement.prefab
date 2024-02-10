@@ -702,6 +702,6 @@ MonoBehaviour:
   Biome: {fileID: 519853117350573946}
   OnRevealText: 
   RevealAction: {fileID: 0}
-  OnVisitText: 
+  OnVisitTooltipText: 
   OnVisitAction: {fileID: 0}
   Actions: []

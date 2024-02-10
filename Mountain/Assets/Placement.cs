@@ -46,7 +46,8 @@ public class Placement : MonoBehaviour
     public Placement Biome;
     public string OnRevealText;
     public PlacementAction RevealAction;
-    public string OnVisitText;
+    [FormerlySerializedAs("OnRevealText")]
+    public string OnVisitTooltipText;
     [FormerlySerializedAs("OnVisit")]
     public PlacementAction OnVisitAction;
     public List<TileAction> Actions;

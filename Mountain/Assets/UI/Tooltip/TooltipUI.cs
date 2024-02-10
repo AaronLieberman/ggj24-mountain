@@ -98,7 +98,7 @@ public class TooltipUI : MonoBehaviour
         Utilities.DestroyAllChildren(tooltipPlacementOnVisitsSection.transform);
 
         GameObject visitObject = Instantiate(tooltipPlacementOnVisitPrefab, tooltipPlacementOnVisitsSection);
-        visitObject.GetComponent<TooltipOnVisitUI>().OnVisitText.text = placement.OnVisitText;
-        visitObject.GetComponent<TooltipOnVisitUI>().OnVisitAddText.text = String.Format("Add {0} to your deck", placement.OnVisitText);
+        visitObject.GetComponent<TooltipOnVisitUI>().OnVisitText.text = placement.OnVisitTooltipText;
+        visitObject.GetComponent<TooltipOnVisitUI>().OnVisitAddText.text = String.Format("Add {0} to your deck", placement.OnVisitTooltipText);
     }
 }

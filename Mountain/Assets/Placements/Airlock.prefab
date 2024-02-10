@@ -207,7 +207,7 @@ MonoBehaviour:
     Are we truly alone? Curiosity stirs in Stratohaven. Our bravest will journey
     to uncover this enigma.
   RevealAction: {fileID: 4514671431535678054}
-  OnVisitText: 
+  OnVisitTooltipText: 
   OnVisitAction: {fileID: 0}
   Actions: []
 --- !u!114 &4514671431535678054

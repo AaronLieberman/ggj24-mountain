@@ -706,6 +706,6 @@ MonoBehaviour:
     not on any of our maps. It's time to explore these unknown coordinates and unravel
     the mysteries they hold.
   RevealAction: {fileID: 0}
-  OnVisitText: 
+  OnVisitTooltipText: 
   OnVisitAction: {fileID: 0}
   Actions: []

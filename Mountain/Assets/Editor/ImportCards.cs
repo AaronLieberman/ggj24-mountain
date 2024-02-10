@@ -23,6 +23,7 @@ public class ImportCards : EditorWindow
     public const int ONREVEALTEXT = 11;
     public const int ONVISIT = 12;
     public const int ONVISITTEXT = 13;
+    public const int POPUPTEXT = 14;
     public const int POOL1 = 16;
     public const int POOL2 = 17;
     public const int POOL3 = 18;
@@ -116,9 +117,19 @@ public class ImportCards : EditorWindow
             }
             tilePlacement.Biome = prefabPlacement;
             tilePlacement.OnRevealText = splitData[ONREVEALTEXT];
-            tilePlacement.OnVisitText = splitData[ONVISITTEXT];
+            tilePlacement.OnVisitTooltipText = splitData[ONVISITTEXT];
 
             UpdateAllTerrainGameObject(tilePlacement, splitData[BIOME]);
+
+            if(!string.IsNullOrEmpty(splitData[POPUPTEXT]))
+            {
+                ShowPopupText popupcomponent = prefabTofill.GetComponent<ShowPopupText>();
+                if(popupcomponent == null) 
+                {
+                    popupcomponent = prefabTofill.AddComponent<ShowPopupText>();
+                }
+                popupcomponent.textToPopUp = splitData[POPUPTEXT];
+            }
 
             //AssetDatabase.DeleteAsset(GetPrefabPath(prefabName));
             // Save the new GameObject as a prefab
