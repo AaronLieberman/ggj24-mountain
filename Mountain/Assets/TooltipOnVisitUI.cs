@@ -5,6 +5,5 @@ using UnityEngine;
 
 public class TooltipOnVisitUI : MonoBehaviour
 {
-    public TextMeshProUGUI OnVisitText;
-    public TextMeshProUGUI OnVisitAddText;
+    public TextMeshProUGUI OnVisitDescriptionText;
 }
