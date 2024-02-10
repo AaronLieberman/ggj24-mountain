@@ -120,15 +120,17 @@ public class ImportCards : EditorWindow
 
             UpdateAllTerrainGameObject(tilePlacement, splitData[BIOME]);
 
-            if (!string.IsNullOrEmpty(splitData[ONREVEALTEXT]))
-            {
-                ShowOnRevealPopupTextAction popupcomponent = prefabTofill.GetComponent<ShowOnRevealPopupTextAction>();
-                if (popupcomponent == null)
-                {
-                    popupcomponent = prefabTofill.AddComponent<ShowOnRevealPopupTextAction>();
-                }
-                popupcomponent.textToPopUp = splitData[ONREVEALTEXT];
-            }
+
+            tilePlacement.OnRevealText = splitData[ONREVEALTEXT];
+            //if (!string.IsNullOrEmpty(splitData[ONREVEALTEXT]))
+            //{
+            //    ShowOnRevealPopupTextAction popupcomponent = prefabTofill.GetComponent<ShowOnRevealPopupTextAction>();
+            //    if (popupcomponent == null)
+            //    {
+            //        popupcomponent = prefabTofill.AddComponent<ShowOnRevealPopupTextAction>();
+            //    }
+            //    popupcomponent.textToPopUp = splitData[ONREVEALTEXT];
+            //}
 
             if (!string.IsNullOrEmpty(splitData[ONVISITPOPUPTEXT]))
             {

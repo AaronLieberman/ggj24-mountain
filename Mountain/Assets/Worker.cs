@@ -206,5 +206,9 @@ public class Worker : MonoBehaviour
             return;
 
         placement.OnVisitAction?.DoWork(this, placement, null);
+        foreach(PlacementAction action in placement.VisitActions)
+        {
+            action.DoWork(this, placement, null);
+        }
     }
 }
