@@ -262,6 +262,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4374205243198534634}
   - component: {fileID: 7067039021182685359}
+  - component: {fileID: -4717289450009956142}
   m_Layer: 0
   m_Name: Riparian Glade
   m_TagString: Untagged
@@ -310,7 +311,32 @@ MonoBehaviour:
   OnVisitTooltipText: 
   OnVisitAction: {fileID: 0}
   VisitActions: []
-  Actions: []
+  Actions:
+  - Cost: {fileID: 5689664702476106266, guid: d207460ad79d71147a84f132fe13e8bc, type: 3}
+    Upgrade: {fileID: 0}
+    OnUpgrade: {fileID: -4717289450009956142}
+    SkipOnVisit: 1
+--- !u!114 &-4717289450009956142
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3408767413687380954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f21808de4848a644cbe2296b9380dc14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Comment: action
+  NumberOfFieldsToAdd: 0
+  NumberOfWoodsToAdd: 1
+  NumberOfSettlementsToAdd: 0
+  NumberOfSwampsToAdd: 0
+  NumberOfWastelandsToAdd: 0
+  NumberOfRandomTypeToAdd: 0
+  ShouldBeRevealed: 0
+  addAtTopOfDeck: 0
 --- !u!1 &5225332732175840070
 GameObject:
   m_ObjectHideFlags: 0
