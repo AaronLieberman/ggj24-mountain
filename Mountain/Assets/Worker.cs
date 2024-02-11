@@ -84,11 +84,19 @@ public class Worker : MonoBehaviour
             while (_workerPlans.Any())
             {
                 var plan = _workerPlans.First();
+
+                // CalculateRoute cheats a bit in that due to how GetHeuristic is implemented, the last item on the
+                // route is always considered passible, even when it's not. That allows us to decide on whether
+                // you're allowed to enter the tile here
                 route = TilePathfinderAStar.CalculateRoute(_map.GetTileFromLoc(cell), plan.Tile);
-                if (route != null && route.Count > 1 && plan.Tile.Placement.Actions.Any(action => action.CanPayCost(plan.Card)))
+                if (route != null && route.Count > 1)
                 {
-                    _nextDestinationTileLoc = route.ElementAt(1).Location;
-                    break;
+                    if (route.ElementAt(1).Placement.PathingHeuristic < 10000 ||
+                    plan.Tile.Placement.Actions.Any(action => action.CanPayCost(plan.Card)))
+                    {
+                        _nextDestinationTileLoc = route.ElementAt(1).Location;
+                        break;
+                    }
                 }
 
                 _workerPlans.RemoveAt(0);
@@ -132,6 +140,7 @@ public class Worker : MonoBehaviour
                     gameObject.transform.SetParent(null);
                     GameObject.Destroy(gameObject);
                     Utilities.GetRootComponent<Board>().AddWorkerAtHome();
+                    Utilities.GetRootComponent<Hand>().DrawTillFull();
                 }
                 else
                 {
@@ -206,7 +215,7 @@ public class Worker : MonoBehaviour
             return;
 
         placement.OnVisitAction?.DoWork(this, placement, null);
-        foreach(PlacementAction action in placement.VisitActions)
+        foreach (PlacementAction action in placement.VisitActions)
         {
             action.DoWork(this, placement, null);
         }
