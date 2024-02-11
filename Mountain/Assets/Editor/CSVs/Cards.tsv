@@ -109,7 +109,7 @@ done	No	zzDebug Remove Last Plan Tile	Mountaintop	0.00	0		This card removes the 
 done	No	zzDebug Remove Random Plan Tile	Mountaintop	0.00	0		This card removes a random tile in the Journey plan, leaving an empty slot to the existing destination.			remove random plan tile						DEBUG	DEBUG	DEBUG	DEBUG
 done	No	zzDEBUG Remove All Plan Tiles	Mountaintop	0.00	0		This card removes all the tiles in the Journey plan, leaving empty slots to the existing destinations.			remove all plan tiles						DEBUG	DEBUG	DEBUG	DEBUG
 done	No	Highland Plateau	Fields	0.00	0		Grazing animals have worn a thick path into the turf here.									0	0	0	0
-	Yes																		
+	No	Wolf Copse	Fields	0.05	0		The goats know to stay away from this stand of trees, but traveler's can't tell it from any other.	Insert any tile to not lose a tile when visiting. Insert a Woods tile to upgrade to a Forest.				Explorer flees back to Stratohaven.	Explorer flees back to Stratohaven.			0	0	0	0
 	Yes																		
 	Yes																		
 	Yes																		

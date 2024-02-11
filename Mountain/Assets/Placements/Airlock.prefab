@@ -122,8 +122,10 @@ MonoBehaviour:
     bursts of light pierced the sky - fireworks, akin to those in our old TV shows.
     Are we truly alone? Curiosity stirs in Stratohaven. Our bravest will journey
     to uncover this enigma.
-  RevealAction: {fileID: 4514671431535678054}
-  RevealActions: []
+  RevealAction: {fileID: 0}
+  RevealActions:
+  - {fileID: 4514671431535678054}
+  - {fileID: 924821009167441636}
   OnVisitTooltipText: 
   OnVisitAction: {fileID: 0}
   VisitActions: []

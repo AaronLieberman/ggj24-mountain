@@ -205,7 +205,6 @@ GameObject:
   - component: {fileID: 7273772795233020873}
   - component: {fileID: 1365756699843689891}
   - component: {fileID: -8995074401567529225}
-  - component: {fileID: 3386777871070502634}
   - component: {fileID: 249642437801887206}
   m_Layer: 0
   m_Name: Bandit Copse
@@ -258,11 +257,13 @@ MonoBehaviour:
     can't tell it from any other.
   Biome: {fileID: 6223766025237645061, guid: 0c3fc96df5b9e1d499c66e212164f0aa, type: 3}
   OnRevealText: 
-  RevealAction: {fileID: 3386777871070502634}
+  RevealAction: {fileID: 0}
   RevealActions: []
   OnVisitTooltipText: Lose a tile.
-  OnVisitAction: {fileID: -8995074401567529225}
-  VisitActions: []
+  OnVisitAction: {fileID: 0}
+  VisitActions:
+  - {fileID: -8995074401567529225}
+  - {fileID: 249642437801887206}
   Actions:
   - Cost: {fileID: 5689664702476106266, guid: d207460ad79d71147a84f132fe13e8bc, type: 3}
     Upgrade: {fileID: 1365756699843689891, guid: 817df214692c8234c88b99caf669e1ee, type: 3}
@@ -290,20 +291,6 @@ MonoBehaviour:
   RemoveRandomTile: 0
   RemoveLastTile: 0
   ShouldPutOnTopOfDeck: 0
---- !u!114 &3386777871070502634
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 449788240802564400}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f3721025c405d0f4ab850385a66db544, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Comment: 
-  MaxLevelToIncreaseTo: 2
 --- !u!114 &249642437801887206
 MonoBehaviour:
   m_ObjectHideFlags: 0
