@@ -49,9 +49,7 @@ public class JourneyUI : MonoBehaviour, IPointerEnterHandler
 
     void ResetHandSelectionContext()
     {
-        Utilities.GetRootComponents<Canvas>()
-			.Select(c => c.GetComponentInChildren<HandUI>())
-			.First().SetSelectedCardUI(null);
+        Utilities.GetRootComponent<Canvas>().GetComponentInChildren<HandUI>().SetSelectedCardUI(null);
     }
 
     void RefreshDeckAvailabilityUI()

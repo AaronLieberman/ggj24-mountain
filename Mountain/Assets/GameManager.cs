@@ -55,7 +55,10 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        SetWorkerAvailable(GetFirstAvailableWorker() != null);
+        var worker = GetFirstAvailableWorker();
+        if (worker == IsWorkerAvailable) return;
+        IsWorkerAvailable = worker;
+        WorkerAvailableChanged?.Invoke(null, null);
     }
 
     Worker GetFirstAvailableWorker()
@@ -63,13 +66,6 @@ public class GameManager : MonoBehaviour
         // update whether workers are available
         var workers = Map.GetComponentsInChildren<Worker>();
         return workers.FirstOrDefault(w => w.IsHome);
-    }
-
-    void SetWorkerAvailable(bool value)
-    {
-        if (value == IsWorkerAvailable) return;
-        IsWorkerAvailable = value;
-        WorkerAvailableChanged?.Invoke(null, null);
     }
 
     void StartGame()
@@ -105,7 +101,7 @@ public class GameManager : MonoBehaviour
     {
         StopMouseActiveHighlight();
 
-        tile.SetHighlight("mouse", true);
+        tile.SetStatus(TileStatus.Highlighted, "mouse", true);
         _highlightTile = tile;
 
         InvokeShowTooltip(tile.Placement);
@@ -113,7 +109,7 @@ public class GameManager : MonoBehaviour
 
     public void OnMouseExitTile(Tile tile)
     {
-        tile.SetHighlight("mouse", false);
+        tile.SetStatus(TileStatus.Highlighted, "mouse", false);
         StopMouseActiveHighlight();
 
         InvokeHideTooltip();
@@ -121,15 +117,14 @@ public class GameManager : MonoBehaviour
 
     public void StopMouseActiveHighlight()
     {
-        _highlightTile?.SetHighlight("mouse", false);
+        _highlightTile?.SetStatus(TileStatus.Highlighted, "mouse", false);
         _highlightTile = null;
     }
 
     public void AddCardToWorkerPlan(Card card, Tile tile)
     {
-        if (!IsWorkerAvailable) return;
         var worker = GetFirstAvailableWorker();
-        if (WorkerPlan.Count() >= MaxJourneySlots) return;
+        if (worker == null || WorkerPlan.Count() >= MaxJourneySlots) return;
 
         var workerTile = Map.GetTileAtObject(worker.transform);
 
@@ -142,6 +137,8 @@ public class GameManager : MonoBehaviour
         WorkerPlanChanged?.Invoke(null, null);
 
         Map.ShowPath(workerTile, WorkerPlan.Select(a => a.Tile));
+
+        SetConsideringPlacingCard(null);
     }
 
     public void ClearWorkerPlan()
@@ -160,9 +157,8 @@ public class GameManager : MonoBehaviour
 
     public void StartWorkerOnJourney()
     {
-        if (!IsWorkerAvailable) return;
-
         var worker = GetFirstAvailableWorker();
+        if (worker == null) return;
 
         foreach (var plan in WorkerPlan)
         {
@@ -204,38 +200,40 @@ public class GameManager : MonoBehaviour
         {
             var visible = unexploredDistances.ContainsKey(tile.Location) &&
                 (!unexploredDistances[tile.Location].Passable ||
-                    unexploredDistances[tile.Location].UnexploredDistance <= MaxJourneySlots );
-            tile.SetHidden("passability", !visible);
+                    unexploredDistances[tile.Location].UnexploredDistance <= MaxJourneySlots);
+            tile.SetStatus(TileStatus.Hidden, "passability", !visible);
         }
     }
 
     public void SetConsideringPlacingCard(Card card)
     {
-        RefreshPassability();
-        // foreach (var tile in Map.GetComponentsInChildren<Tile>())
-        // {
-        //     tile.SetDisabled("path", false);
-        // }
+        foreach (var tile in Map.GetComponentsInChildren<Tile>())
+        {
+            tile.SetStatus(TileStatus.Disabled, "place card", false);
+        }
 
-        // if (!IsWorkerAvailable) return;
-        // var worker = GetFirstAvailableWorker();
-        // if (WorkerPlan.Count() >= MaxJourneySlots) return;
+        // SetStatus(disabled) when there are workerplans?
+        // maybe here?
+        // need to make sure it resets at the appropriate time
 
-        // var workerTile = Map.GetTileAtObject(worker.transform);
-        // foreach (var tile in Map.GetComponentsInChildren<Tile>())
-        // {
-        //     bool passable = Map.IsPathPassable(workerTile, WorkerPlan.Select(a => a.Tile).Concat(new[] { tile }));
-        //     bool cardCanBePlaced = tile.Placement.Actions.Any(a => a.CanPayCost(card));
+        var worker = GetFirstAvailableWorker();
+        if (worker == null) return;
 
-        //     tile.SetDisabled("path", !passable || !cardCanBePlaced);
-        // }
+        var workerTile = Map.GetTileAtObject(worker.transform);
+        foreach (var tile in Map.GetComponentsInChildren<Tile>())
+        {
+            bool cardCanBePlaced = card != null &&
+                tile.Placement.Actions.Any(a => a.CanPayCost(card)) &&
+                !WorkerPlan.Any(p => p.Tile == tile);
+
+            tile.SetStatus(TileStatus.Disabled, "place card", !cardCanBePlaced);
+        }
     }
 
     public bool CanCardBePlaced(Card card, Tile tile)
     {
-        if (!IsWorkerAvailable) return false;
         var worker = GetFirstAvailableWorker();
-        if (WorkerPlan.Count() >= MaxJourneySlots) return false;
+        if (worker == null || WorkerPlan.Count() >= MaxJourneySlots) return false;
 
         var workerTile = Map.GetTileAtObject(worker.transform);
         bool passable = Map.IsPathPassable(workerTile, WorkerPlan.Select(a => a.Tile).Concat(new[] { tile }));

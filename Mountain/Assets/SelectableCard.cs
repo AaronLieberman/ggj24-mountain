@@ -8,8 +8,6 @@ public class SelectableCard : MonoBehaviour
 {
     public void OnCardSelected() 
 	{
-		Utilities.GetRootComponents<Canvas>()
-			.Select(c => c.GetComponentInChildren<HandUI>())
-			.First().SetSelectedCardUI(GetComponent<CardUI>());
+		Utilities.GetRootComponent<Canvas>().GetComponentInChildren<HandUI>().SetSelectedCardUI(GetComponent<CardUI>());
 	}
 }

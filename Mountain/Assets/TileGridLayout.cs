@@ -90,7 +90,7 @@ public class TileGridLayout : MonoBehaviour
         PathLines.enabled = false;
         foreach (var tile in GetComponentsInChildren<Tile>())
         {
-            tile.SetHighlight("path", false);
+            tile.SetStatus(TileStatus.Highlighted, "path", false);
         }
     }
 
@@ -105,7 +105,7 @@ public class TileGridLayout : MonoBehaviour
             foreach (var tile in TilePathfinderAStar.CalculateRoute(currentTile, destination))
             {
                 _pathfindingPath.Add(tile);
-                tile.SetHighlight("path", true);
+                tile.SetStatus(TileStatus.Highlighted, "path", true);
             }
 
             currentTile = destination;
@@ -136,9 +136,7 @@ public class TileGridLayout : MonoBehaviour
 
     public void OnMouseUpTile(Tile tile)
     {
-        var handUI = Utilities.GetRootComponents<Canvas>()
-           .Select(c => c.GetComponentInChildren<HandUI>())
-           .First();
+        var handUI = Utilities.GetRootComponent<Canvas>().GetComponentInChildren<HandUI>();
 
         if (handUI.SelectedCardUI?.Card == null ||
             !Utilities.GetRootComponent<GameManager>().CanCardBePlaced(handUI.SelectedCardUI.Card, tile))
@@ -205,7 +203,7 @@ public class TileGridLayout : MonoBehaviour
 
     public Tile GetTileFromLoc(Vector2Int coord)
         => coord.x >= 0 && coord.y >= 0 && coord.x < _tiles.GetLength(0) && coord.y < _tiles.GetLength(1)
-            ?  _tiles[coord.x, coord.y]
+            ? _tiles[coord.x, coord.y]
             : null;
 
     public Tile CreateTileFromLoc(Vector2Int coord)

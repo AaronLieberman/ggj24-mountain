@@ -44,9 +44,7 @@ public class CardUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     {
         InUse = inUse;
 
-        var handUI = Utilities.GetRootComponents<Canvas>()
-            .Select(c => c.GetComponentInChildren<HandUI>())
-            .Single();
+        var handUI = Utilities.GetRootComponent<Canvas>().GetComponentInChildren<HandUI>();
         if (inUse && handUI.SelectedCardUI == this)
         {
             handUI.SetSelectedCardUI(null);
