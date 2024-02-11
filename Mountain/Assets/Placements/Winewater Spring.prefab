@@ -658,6 +658,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1322141916568511827}
   - component: {fileID: 2870815657276223108}
+  - component: {fileID: 114924438184090726}
   m_Layer: 0
   m_Name: Winewater Spring
   m_TagString: Untagged
@@ -703,8 +704,30 @@ MonoBehaviour:
   Biome: {fileID: 4486575929425936965, guid: 91624b1fd6393594b85fce2f31dfbbc2, type: 3}
   OnRevealText: 
   RevealAction: {fileID: 0}
-  RevealActions: []
+  RevealActions:
+  - {fileID: 114924438184090726}
   OnVisitTooltipText: 
   OnVisitAction: {fileID: 0}
   VisitActions: []
   Actions: []
+--- !u!114 &114924438184090726
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7666332067142599413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f21808de4848a644cbe2296b9380dc14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Comment: 
+  NumberOfFieldsToAdd: 0
+  NumberOfWoodsToAdd: 0
+  NumberOfSettlementsToAdd: 0
+  NumberOfSwampsToAdd: 0
+  NumberOfWastelandsToAdd: 0
+  NumberOfRandomTypeToAdd: 2
+  ShouldBeRevealed: 0
+  addAtTopOfDeck: 0
