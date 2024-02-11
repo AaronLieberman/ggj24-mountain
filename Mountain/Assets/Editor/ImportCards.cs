@@ -30,7 +30,7 @@ public class ImportCards : EditorWindow
     public const int POOL4 = 19;
 
 
-    [MenuItem("I Made An Editor Tool For A Game Jam Game/Import Cards")]
+    [MenuItem("Fancy Tools/Import Cards")]
     public static void DoCardImport()
     {
         //initialize cardPool
