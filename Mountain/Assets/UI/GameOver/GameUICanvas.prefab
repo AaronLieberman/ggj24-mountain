@@ -292,7 +292,7 @@ GameObject:
   - component: {fileID: 8099328609852722400}
   - component: {fileID: 613516225260512883}
   m_Layer: 5
-  m_Name: TooltipDivider
+  m_Name: LostChanceDivider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -682,7 +682,7 @@ GameObject:
   - component: {fileID: 4194265931458351118}
   - component: {fileID: 2853793359726101724}
   m_Layer: 5
-  m_Name: TooltipDivider
+  m_Name: VisitsDivider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -802,8 +802,10 @@ MonoBehaviour:
   tooltipPlacementPassableText: {fileID: 1404040717449615076}
   tooltipPlacementAbilityPrefab: {fileID: 6304458354486603807, guid: a4b134d324b2e22479494d7a054e6706, type: 3}
   tooltipPlacementAbilitiesSection: {fileID: 4697641215691756272}
+  abilitiesDivider: {fileID: 5406648379605471300}
   tooltipPlacementOnVisitPrefab: {fileID: 8880517361658684251, guid: e23cc3512e4659c478bde2430e490cc1, type: 3}
-  tooltipPlacementOnVisitsSection: {fileID: 2209319264637862407}
+  tooltipPlacementOnVisitsSection: {fileID: 6829141231036930418}
+  visitsDivider: {fileID: 594907563418772737}
 --- !u!1 &835682048341409364
 GameObject:
   m_ObjectHideFlags: 0
@@ -1990,7 +1992,7 @@ GameObject:
   - component: {fileID: 3233467941832335054}
   - component: {fileID: 6349122330415703929}
   m_Layer: 5
-  m_Name: TooltipDivider
+  m_Name: FlavorTextDivider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3102,7 +3104,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Green Canopy of Great Awesomeness
+  m_text: Tooltip Test Island
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 93a00bc65058e754696e16ca9abfd0db, type: 2}
   m_sharedMaterial: {fileID: 2729783407907818771, guid: 93a00bc65058e754696e16ca9abfd0db, type: 2}
@@ -3357,7 +3359,7 @@ GameObject:
   - component: {fileID: 6549826904433984181}
   - component: {fileID: 1050702695885847953}
   m_Layer: 5
-  m_Name: TooltipDivider
+  m_Name: AbilitiesDivider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3632,7 +3634,7 @@ GameObject:
   - component: {fileID: 1319423703088319647}
   - component: {fileID: 5147190916706939653}
   m_Layer: 5
-  m_Name: TooltipDivider
+  m_Name: PassableDivider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

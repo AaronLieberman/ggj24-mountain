@@ -19,8 +19,10 @@ public class TooltipUI : MonoBehaviour
     [SerializeField] private TextMeshProUGUI tooltipPlacementPassableText;
     [SerializeField] private GameObject tooltipPlacementAbilityPrefab;
     [SerializeField] private Transform tooltipPlacementAbilitiesSection;
+    [SerializeField] private GameObject abilitiesDivider;
     [SerializeField] private GameObject tooltipPlacementOnVisitPrefab;
-    [SerializeField] private Transform tooltipPlacementOnVisitsSection;
+    [SerializeField] private GameObject tooltipPlacementOnVisitsSection;
+    [SerializeField] private GameObject visitsDivider;
 
     void Awake()
     {
@@ -83,8 +85,11 @@ public class TooltipUI : MonoBehaviour
         // Refresh tooltip ability UI section.
         Utilities.DestroyAllChildren(tooltipPlacementAbilitiesSection);
 
+        abilitiesDivider.SetActive(false);
         foreach (TileAction tileAction in placement.Actions)
         {
+            abilitiesDivider.SetActive(true);
+
             GameObject abilityObject = Instantiate(tooltipPlacementAbilityPrefab, tooltipPlacementAbilitiesSection);
             abilityObject.GetComponent<TooltipAbilityUI>().AbilityCostText.text = tileAction.Cost != null
                 ? tileAction.Cost.Name
@@ -96,8 +101,17 @@ public class TooltipUI : MonoBehaviour
 
         // Refresh tooltip OnVisit UI section.
         Utilities.DestroyAllChildren(tooltipPlacementOnVisitsSection.transform);
-
-        GameObject visitObject = Instantiate(tooltipPlacementOnVisitPrefab, tooltipPlacementOnVisitsSection);
-        visitObject.GetComponent<TooltipOnVisitUI>().OnVisitDescriptionText.text = placement.OnVisitTooltipText;
+        if (!string.IsNullOrEmpty(placement.OnVisitTooltipText))
+        {
+            tooltipPlacementOnVisitsSection.SetActive(true);
+            visitsDivider.SetActive(true);
+            GameObject visitObject = Instantiate(tooltipPlacementOnVisitPrefab, tooltipPlacementOnVisitsSection.transform);
+            visitObject.GetComponent<TooltipOnVisitUI>().OnVisitDescriptionText.text = placement.OnVisitTooltipText;
+        }
+        else
+        {
+            tooltipPlacementOnVisitsSection.SetActive(false);
+            visitsDivider.SetActive(false);
+        }
     }
 }
