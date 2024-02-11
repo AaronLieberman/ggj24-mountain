@@ -303,7 +303,7 @@ MonoBehaviour:
   Difficulty: -1
   LostChance: 0.05
   PathingHeuristic: 100000
-  FlavorText: Impassable. Insert a forest to pass and deck a forest.
+  FlavorText: 
   Biome: {fileID: 4486575929425936965, guid: 91624b1fd6393594b85fce2f31dfbbc2, type: 3}
   OnRevealText: 
   RevealAction: {fileID: 0}

@@ -250,10 +250,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Bandit Copse
   CardSprite: {fileID: 0}
-  Difficulty: -1
-  LostChance: 0.05
+  Difficulty: -2
+  LostChance: 0.03
   PathingHeuristic: 1
-  FlavorText: The goats know to stay away from this stand of trees, but traveler's
+  FlavorText: The locals know to stay away from this stand of trees, but traveler's
     can't tell it from any other.
   Biome: {fileID: 6223766025237645061, guid: 0c3fc96df5b9e1d499c66e212164f0aa, type: 3}
   OnRevealText: 
