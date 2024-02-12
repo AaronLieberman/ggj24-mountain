@@ -306,8 +306,8 @@ MonoBehaviour:
   ConnectedPlacement: {fileID: 4111032941925707430, guid: 7976e35d001ec0249b53f029133651a3, type: 3}
   FieldsTerrain: {fileID: 7334272580356858610}
   WoodsTerrain: {fileID: 481159196217670016}
-  SwampTerrain: {fileID: 6161964400151441574}
   SettlementTerrain: {fileID: 1433519379494236618}
+  SwampTerrain: {fileID: 6161964400151441574}
   WastelandTerrain: {fileID: 8664789573834426405}
   MountaintopTerrain: {fileID: 7107392661147448512}
   ErrorTile: {fileID: 2185300088914346068}
@@ -575,6 +575,7 @@ GameObject:
   - component: {fileID: 4607405045014864142}
   - component: {fileID: 7779112155841060399}
   - component: {fileID: 2802320457178581370}
+  - component: {fileID: -2367435484129578637}
   m_Layer: 0
   m_Name: Control Room
   m_TagString: Untagged
@@ -627,7 +628,8 @@ MonoBehaviour:
     Stratohaven was unlocked, who unlocked our city, and why? We hope the Stratolink
     printplans we discovered will lead to answers.'
   RevealAction: {fileID: 0}
-  RevealActions: []
+  RevealActions:
+  - {fileID: -2367435484129578637}
   OnVisitTooltipText: 
   OnVisitAction: {fileID: 0}
   VisitActions: []
@@ -654,6 +656,27 @@ MonoBehaviour:
     gate marked ''open.'' The question lingers in the air: If Stasia died before
     Stratohaven was unlocked, who unlocked our city, and why? We hope the Stratolink
     printplans we discovered will lead to answers.'
+--- !u!114 &-2367435484129578637
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8283726409731301674}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f21808de4848a644cbe2296b9380dc14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Comment: 
+  NumberOfFieldsToAdd: 0
+  NumberOfWoodsToAdd: 0
+  NumberOfSettlementsToAdd: 0
+  NumberOfSwampsToAdd: 0
+  NumberOfWastelandsToAdd: 0
+  NumberOfRandomTypeToAdd: 10
+  ShouldBeRevealed: 0
+  addAtTopOfDeck: 0
 --- !u!1 &8664789573834426405
 GameObject:
   m_ObjectHideFlags: 0
