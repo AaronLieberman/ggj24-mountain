@@ -100,7 +100,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &8518161783096844188
 Transform:
   m_ObjectHideFlags: 0
@@ -387,7 +387,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a12efbcba606de4f924c77a83451cee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ConnectedPlacement: {fileID: 6223766025237645061, guid: b30f520d510134f4da99aaf67f3f714b, type: 3}
+  ConnectedPlacement: {fileID: 5689664702476106266, guid: aab079bb3afeab346b3798f963a1f5fa, type: 3}
   FieldsTerrain: {fileID: 5913515875826964823}
   WoodsTerrain: {fileID: 8129040627695158874}
   SwampTerrain: {fileID: 1950797801759356896}
@@ -395,7 +395,7 @@ MonoBehaviour:
   WastelandTerrain: {fileID: 4733010374421981878}
   MountaintopTerrain: {fileID: 97487236401593624}
   ErrorTile: {fileID: 972272378223200040}
-  BiomeSetAs: Mountaintop
+  BiomeSetAs: zzDebug
 --- !u!1 &5913515875826964823
 GameObject:
   m_ObjectHideFlags: 0
@@ -534,7 +534,7 @@ MonoBehaviour:
   PathingHeuristic: 1
   FlavorText: This tile places 9 adjacent grasslands on unexplored tiles no more
     than 2 adjacency distance away.
-  Biome: {fileID: 6223766025237645061, guid: b30f520d510134f4da99aaf67f3f714b, type: 3}
+  Biome: {fileID: 5689664702476106266, guid: aab079bb3afeab346b3798f963a1f5fa, type: 3}
   OnRevealText: 
   RevealAction: {fileID: -6706634751180964292}
   RevealActions: []

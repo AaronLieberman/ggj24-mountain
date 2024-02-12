@@ -5,7 +5,6 @@ Done	No	Airlock	Mountaintop	0.00	0		An airlock with simple controls: two buttons
 Done	Yes	Bandit Copse	Fields	0.03	-2		The locals know to stay away from this stand of trees, but traveler's can't tell it from any other.	Insert any tile to not lose a tile when visiting. Insert a Woods tile to upgrade to a Forest.				Remove the tile in the first slot of the journey plan	Lose a tile.	Oh no! Bandits stole one of your explorer's cards!		0	1	1	1
 Done	Yes	Barren Earth	Wasteland	0.30	-2		The ashy regolith of this place offers no comfort.									0	0	0	1
 Done	No	Bonefire	Wasteland	0.05	0		Exhausted refugees huddle around a mound of burning bones and warn each other about the dangers they've encountered.	Insert one Wood to deck 5 cards and 7 Wastelands and upgrade to Smouldering Bonefire								0	0	0	0
-Done	No	Smouldering Bonefire	Wasteland	0.05	0		Exhausted refugees huddle around a mound of burning bones and warn each other about the dangers they've encountered.									0	0	0	0
 Done	No	Briar Passage	Woods	0.05	0			Insert a forest tile to clear the passageway.	Ability upgrades to Cleared Briar Passage							0	0	0	0
 Done	No	Bristling Wall	Woods		0	TRUE		Impassable. Insert Wasteland to burn the thicket.	Upgrades to Wildfire							0	0	0	0
 Done	No	Canopy Village	Woods	0.00	0			Insert a forest, 50% chance to deck a Settlement, 50% chance to deck any card.		Deck a forest						0	0	0	0
@@ -14,6 +13,7 @@ Done	Yes	Cleared Thorngate	Woods	0.05	0					Place adjacent Briar Passage. Place 
 	No	Complex Foundation	Mountaintop	0.00	0		A complex foundation to some kind of structure. The Plasticom has instructed us not to disturb it.	Insert Stratolink to upgrade.								0	0	0	0
 	Yes	Contagious Mangrove	Swamp		-2							30% chance to replace a tile in the Journey Plan with a Swamp				0	0	1	1
 	No	Control Room	Wasteland	0.00	0					Deck 10 cards	The coordinates lead us not to another city in the clouds, but to a secluded control room nestled on a lesser-known mountain. The room is filled with old technology and screens, some still flickering with life. Stasia's digital logs reveal she was a guardian of sorts, the most recent in a long line of clones, maintaining the technology that oversees these mountaintop settlements. The screens show several settlements like Stratohaven, yet ours is the only one with the gate marked 'open.' The question lingers in the air: If Stasia died before Stratohaven was unlocked, who unlocked our city, and why? We hope the Stratolink printplans we discovered will lead to answers.					0	0	0	0
+	Yes	Creeping Fungus	Wasteland	0.20	-5		The sound the Stratohaven's fungal sweepers make when they encounter creeping fungus spores sounds like a mechanical cough, but the plasticom assures us this is just how recursive filtering sounds when it is functioning normally.		Place Creeping Fungus in an adjacent unexplored tile every 60 seconds.										
 	Yes	Croplands	Fields													1	1	1	1
 	Yes	Crow Throne	Swamp	0.01	-4		On this throne sits a pessimistic oracle.	Reveals a random card in the Journey Plan.	The revealed random card is on the low end of the spectrum of effects. It is revealed to be worse than the average effect of that biome.							0	0	1	1
 Done	No	Crystal Clear River	Mountaintop	0.00	0		Like flowing glass.			Place an adjacent Tumbling River						0	0	0	0
@@ -28,7 +28,6 @@ Done	No	Explorer's Gate	Mountaintop		0		In 12 foot tall letters, 'Curiosity' is 
 Done	No	Fields	Fields	0.00	0											0	0	0	0
 Done	No	Fireworks	Fields	0.00	0	TRUE		Insert a tile to Upgrade to Fireworks Glenn								0	0	0	0
 Done	No	Fireworks Glen	Fields	0.00	0					Deck 4 cards, Show Strider Village tile 1 space away, increase journey plan slots	Our expedition below Stratohaven yielded the unimaginable – survivors! We believed the surface world extinct, yet here they thrive, ignorant of our technologies like protein printers or television screens. Among the survivors, they exclaim that our technology reminds them of 'talking metal' that their neighbor speaks of. They provide directions to their village, where tales of this device originated. Perhaps this is a clue to others from our world.					0	0	0	0
-Done	Yes	Pine Forest	Woods	0.10	1		The plasticom tells us that the only biome more swarming with life than a forest is the ocean. But who among us has seen the sea?									0	1	1	1
 	Yes	Freshwater Bog	Swamp													0	0	1	1
 Done	Yes	Friendly Tavern	Settlement	0.02	3		All who are weary are welcome to rest here and hear the tales of fellow travelers.	Insert a card to deck 1 card								0	1	1	1
 Done	Yes	Froggie Bog Pirates	Swamp		-2	TRUE	A twangy dirge drifts through the miasma acompanied by a croaking chrous that reveals a submerged stash.	Impassable.		Explorer is turned back, reveal Submerged Stash 2 hexes away.						0	0	1	1
@@ -41,6 +40,7 @@ Done	Yes	Grassland Highway	Fields	0.00	1		Printer drones have spread this spindl
 Done	Yes	Graveyard Crest	Wasteland	0.40	-2		Six gravestones worn smooth with time fill this small memorial. Five of them stand above gaping pits.	Insert a field to fill in the pits. Insert a wasteland to remove this desecration.	Inserting a wasteland upgrades to Vengeful Vantage, decks 5 wastelands. Insert a field upgrades to Barren Earth.							0	0	0	1
 Done	Yes	Green Canopy	Woods	0.07	2		Wind ripples an emerald ceiling, causing slivers of sunlight to dance across the carpet of ferns.	Insert a Settlement to upgrade to Canopy Village, Insert a Field to upgrade to Megalo Fruit Farm								0	1	1	1
 Done	No	Happy Reunion	Settlement	0.00	0					Deck 4 Settlements, 8 fields, 1 forest						0	0	0	0
+done	No	Highland Plateau	Fields	0.00	0		Grazing animals have worn a thick path into the turf here.									0	0	0	0
 2	Yes	Honored Court	Settlement	0.00	5		Uh, you know what. We'll take you there ourselves.	Knights escort your explorer safely to the next waypoint. Skip effects on the way.								0	1	1	1
 	No	Hydroponic Protein Printer	Mountaintop		0		Today's Menu: Breakfast: Whole Grain Chia Oats. Lunch Special! Bacon Protein BLT. Dinner: Chicken Salad With Celery.	Insert Swamp to upgrade to Gastroprint Farm		Plus 1 Journey Plan Slots						0	0	0	0
 	No	Interwoven Intellect	Mountaintop		0					Plus 1 Hand Size						0	0	0	0
@@ -53,6 +53,8 @@ Done	No	Megalo Fruit Farm	Woods	0.08	0		Each Megalofruit is as big as a man. Get
 	Yes	Mudflat	Swamp													0	0	1	1
 	No	Nettled Nest	Woods		0			Insert a tile to deck 1 wasteland, 6 woods, 4 Settlements, 2 Fields.		Place 5 adjacent Bristling Walls						0	0	0	0
 	Yes	Orchard	Woods		2					Deck a Settlement						0	1	1	1
+	Yes	Pale Hall	Wasteland	0.05	-3		Color seeps out of this place until even skin is white with shock.					Add a Journey Plan stop to a random AdjacentDistance=2 tile	Explorer flees in fear.						
+Done	Yes	Pine Forest	Woods	0.10	1		The plasticom tells us that the only biome more swarming with life than a forest is the ocean. But who among us has seen the sea?									0	1	1	1
 	No	Plasticom	Mountaintop		0		The immortal intelligent computer that has kept Stratohaven running for 10,000 years.	Insert a Forest to upgrade to Global Datamentarian.								0	0	0	0
 	Yes	Predatory Distillery	Swamp	0.00	-3		Well… at least it was a good time.		Teleport the explorer to a random explored tile within 5 tiles.			Explorer gets drunk and awakens… somewhere.				0	0	1	1
 Done	No	Purification Plant Maintenance Overflow	Mountaintop		0	TRUE	A perfect water recycler, in 10,000 years it has not lost a drop.	Impassable. Insert Swamp to upgrade to The Great River Of Beyond								0	0	0	0
@@ -63,16 +65,17 @@ Done	Yes	Robot Buddha	Woods	0.03	1		Nearly as old as the Stratohaven, the Robot 
 2	Yes	Roguish Smile	Woods	0.10	-2		A handsome rogue offers to show us the way, but there's something off about his smile.			Lose a tile, ignore the next tile effect.						0	1	1	1
 DONE	Yes	Seed Vault	Settlement	0.05	2		Every seed the last of its kind. We'll restore each linage to the world.			Deck a forest, field, and swamp.						0	0	1	1
 DONE	Yes	Settlement	Settlement	0.00	0											0	0	0	0
-	No	Silent Array	Settlement	0.00	0		A communcations array listening for a message that will never arrive. Scattered around the base of the array are images of the area from impossibly high above.									0	0	0	0
-2	Yes	Smiling Rogue	Woods	0.30	3		A handsome rogue offers to show us the way, but the route is hard to remember.			Place a card on an adjacent space.						0	1	1	1
-	Yes	Smokey Canyon	Wasteland	0.30	-2		*cough* *cough* *hack* *snuff* *gasp*			Places Bonefire 3 hexes away.						0	0	0	1
+DONE	No	Silent Array	Settlement	0.00	0		A communcations array listening for a message that will never arrive. Scattered around the base of the array are images of the area from impossibly high above.									0	0	0	0
+2	Yes	Smiling Rogue	Woods	0.30	3		A handsome rogue offers to show us the way, but the route is hard to remember.			Place a card from your hand on an adjacent space.						0	1	1	1
+DONE	Yes	Smokey Canyon	Wasteland	0.30	-2		*cough* *cough* *hack* *snuff* *gasp*			Places Bonefire 3 hexes away.						0	0	0	1
+Done	No	Smouldering Bonefire	Wasteland	0.05	0		Exhausted refugees huddle around a mound of burning bones and warn each other about the dangers they've encountered.									0	0	0	0
 	Yes	Soggy Scrubland	Swamp													0	0	1	1
 	Yes	Sprawling Hive City	Settlement	0.15	3			insert field to place an adjacent settlement tile.								0	1	1	1
 	No	Spreading Delta	Swamp		0					If next to a Spreading Delta, place 2 adjacent Delta Edges		Move to an adjacent Delta Edge				0	0	0	0
 	No	Stasia's Residency	Settlement	0.00	0					Unlocks Pool 4, Deck 4 cards, reveals Control room far away	We found Stasia's home, but she has been dead for many years now. Her husband, now an old man, guards her possessions like precious treasures. From her computer, we extract the coordinates - they lead to a location that's not on any of our maps. It's time to explore these unknown coordinates and unravel the mysteries they hold.					0	0	0	0
 	No	Stratolink	Mountaintop	0.00	0		An optical communication beam emitter, capable of transmitting terrabytes of data thousands of miles along line of sight in an instant.	Insert a tile to open a Stratohaven.	Doesn't actually do anything aside from maybe keeping track of how many you've done.	Opens Beat The Game dialog						0	0	0	0
 Done	No	Strider Village	Settlement	0.00	0			Unlocks Pool 2, Deck 2 woods and 2 forests, Show Electronic Device tile on other side of The Great Gate						In the village, we found the old man named Bennett. Known among his neighbors for his eccentric interests, Bennett claims he's been experimenting with a strange, beeping box he found buried near the village a decade ago. He insists it's not just scrap metal. His description sounds eerily similar to our old communication devices. Could it be a lost relic from another Stratohaven? We decide to investigate further, hoping to uncover a piece of our forgotten past. He provides the location of where he hid the diary.		0	0	0	0
-	No	Submerged Stash	Swamp		3	TRUE	The eclectic riches we found here may lead us back to their owners, but we should not return here once the theives discover what is missing.	Impassable. Insert Wood or Field to visit and deck 6 settlements. Upgrade to Sunken Stash.								0	0	0	0
+DONE	No	Submerged Stash	Swamp		3	TRUE	The eclectic riches we found here may lead us back to their owners, but we should not return here once the theives discover what is missing.	Impassable. Insert Wood or Field to visit and deck 6 settlements. Upgrade to Sunken Stash.								0	0	0	0
 Done	No	Sunken Stash	Swamp		0	TRUE		Impassable.								0	0	0	0
 Done	Yes	Swamp	Swamp	0.00	0											0	0	0	0
 	No	Tattered Shack	Woods	0.03	0		No one lives here.	None								0	0	0	0
@@ -96,21 +99,18 @@ Done	Yes	Wetland	Swamp	0.20	-1		Not for us, but the birds seem to enjoy it.					
 	No	Wildfire	Wasteland		0					Upgrade adjacent Bristling Walls to Wildfire. Upgrade to Barren Earth						0	0	0	0
 	Yes	Winding Tunnel	Fields	0.00	2		Where does this go?	Skip the effects of the next tile.	None							1	1	1	1
 Done	Yes	Winewater Spring	Swamp		1		Unbelievable stories of a land long lost are told here. Something about these myths makes you believe they were once real.		None. This is a reference to the game Where The Water Tastes Like Wine, a strong influence on this game.	Deck 2 cards						0	0	1	1
+Done	No	Wolf Copse	Fields	0.05	0		The goats know to stay away from this stand of trees, but traveler's can't tell it from any other.	Insert any tile to not lose a tile when visiting. Insert a Woods tile to upgrade to a Forest.				Explorer flees back to Stratohaven.	Explorer flees back to Stratohaven.			0	0	0	0
 Done	Yes	Woods	Woods	0.00	0		The plasticom tells us that the only biome more swarming with life than a forest is the ocean. But who among us has seen the sea?									0	0	0	0
 Done	No	World Academy	Mountaintop		0		Shocked by the dangers of a chaotic world, we systemitized prepartions for all explorers.			Plus 1 Explorer						0	0	0	0
-	Yes	Pale Hall	Wasteland	0.05	-3		Color seeps out of this place until even skin is white with shock.					Add a Journey Plan stop to a random AdjacentDistance=2 tile	Explorer flees in fear.						
-	Yes	Creeping Fungus	Wasteland	0.20	-5		The sound the Stratohaven's fungal sweepers make when they encounter creeping fungus spores sounds like a mechanical cough, but the plasticom assures us this is just how recursive filtering sounds when it is functioning normally.		Place Creeping Fungus in an adjacent unexplored tile every 60 seconds.										
-	No	zzDEBUG Place 9 Adjacent	Mountaintop	0.00	0		This tile places 9 adjacent grasslands on unexplored tiles no more than 2 adjacency distance away.									DEBUG	DEBUG	DEBUG	DEBUG
-DONE	No	zzDebug Place 1 Adjacent	Mountaintop	0.00	0		This tile places 1 adjacent grasslands no more than distance 1.									DEBUG	DEBUG	DEBUG	DEBUG
-DONE	No	zzDEBUG Draw 1 Card On Place	Mountaintop	0.00	0		This tile adds a card to your deck when you place it.			Draw 2 card						DEBUG	DEBUG	DEBUG	DEBUG
-DONE	No	zzDEBUG Draw 10 Cards	Mountaintop	0.00	0		This card's ability takes any card and adds 10 cards to your deck.									DEBUG	DEBUG	DEBUG	DEBUG
-done	No	zzDEBUG Remove First Plan Tile	Mountaintop	0.00	0		This card removes the first tile in the Journey plan, leaving an empty slot to the existing destination.			Remove first plan tile						DEBUG	DEBUG	DEBUG	DEBUG
-done	No	zzDebug Remove Last Plan Tile	Mountaintop	0.00	0		This card removes the last tile in the Journey plan, leaving an empty slot to the existing destination.			remove last plan tile						DEBUG	DEBUG	DEBUG	DEBUG
-done	No	zzDebug Remove Random Plan Tile	Mountaintop	0.00	0		This card removes a random tile in the Journey plan, leaving an empty slot to the existing destination.			remove random plan tile						DEBUG	DEBUG	DEBUG	DEBUG
-done	No	zzDEBUG Remove All Plan Tiles	Mountaintop	0.00	0		This card removes all the tiles in the Journey plan, leaving empty slots to the existing destinations.			remove all plan tiles						DEBUG	DEBUG	DEBUG	DEBUG
-done	No	Highland Plateau	Fields	0.00	0		Grazing animals have worn a thick path into the turf here.									0	0	0	0
-Done	No	Wolf Copse	Fields	0.05	0		The goats know to stay away from this stand of trees, but traveler's can't tell it from any other.	Insert any tile to not lose a tile when visiting. Insert a Woods tile to upgrade to a Forest.				Explorer flees back to Stratohaven.	Explorer flees back to Stratohaven.			0	0	0	0
-	Yes																		
+Done	No	zzDebug	zzDebug	0.00	0		This is the biome for debug testing cards.									DEBUG	DEBUG	DEBUG	DEBUG
+DONE	No	zzDEBUG Draw 1 Card On Place	zzDebug	0.00	0		This tile adds a card to your deck when you place it.			Draw 2 card						DEBUG	DEBUG	DEBUG	DEBUG
+DONE	No	zzDEBUG Draw 10 Cards	zzDebug	0.00	0		This card's ability takes any card and adds 10 cards to your deck.									DEBUG	DEBUG	DEBUG	DEBUG
+DONE	No	zzDebug Place 1 Adjacent	zzDebug	0.00	0		This tile places 1 adjacent grasslands no more than distance 1.									DEBUG	DEBUG	DEBUG	DEBUG
+	No	zzDEBUG Place 9 Adjacent	zzDebug	0.00	0		This tile places 9 adjacent grasslands on unexplored tiles no more than 2 adjacency distance away.									DEBUG	DEBUG	DEBUG	DEBUG
+done	No	zzDEBUG Remove All Plan Tiles	zzDebug	0.00	0		This card removes all the tiles in the Journey plan, leaving empty slots to the existing destinations.			remove all plan tiles						DEBUG	DEBUG	DEBUG	DEBUG
+done	No	zzDEBUG Remove First Plan Tile	zzDebug	0.00	0		This card removes the first tile in the Journey plan, leaving an empty slot to the existing destination.			Remove first plan tile						DEBUG	DEBUG	DEBUG	DEBUG
+done	No	zzDebug Remove Last Plan Tile	zzDebug	0.00	0		This card removes the last tile in the Journey plan, leaving an empty slot to the existing destination.			remove last plan tile						DEBUG	DEBUG	DEBUG	DEBUG
+done	No	zzDebug Remove Random Plan Tile	zzDebug	0.00	0		This card removes a random tile in the Journey plan, leaving an empty slot to the existing destination.			remove random plan tile						DEBUG	DEBUG	DEBUG	DEBUG
 	Yes																		
 	Yes																		
 	Yes																		

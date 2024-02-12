@@ -51,7 +51,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a12efbcba606de4f924c77a83451cee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ConnectedPlacement: {fileID: 6223766025237645061, guid: b30f520d510134f4da99aaf67f3f714b, type: 3}
+  ConnectedPlacement: {fileID: 5689664702476106266, guid: aab079bb3afeab346b3798f963a1f5fa, type: 3}
   FieldsTerrain: {fileID: 4591050575733111719}
   WoodsTerrain: {fileID: 7081081998462512738}
   SwampTerrain: {fileID: 7263764677915949482}
@@ -59,7 +59,7 @@ MonoBehaviour:
   WastelandTerrain: {fileID: 8856994651059324657}
   MountaintopTerrain: {fileID: 4668376026961611330}
   ErrorTile: {fileID: 9112691828041084266}
-  BiomeSetAs: Mountaintop
+  BiomeSetAs: zzDebug
 --- !u!1 &4591050575733111719
 GameObject:
   m_ObjectHideFlags: 0
@@ -281,7 +281,7 @@ MonoBehaviour:
   PathingHeuristic: 1
   FlavorText: This card removes the last tile in the Journey plan, leaving an empty
     slot to the existing destination.
-  Biome: {fileID: 6223766025237645061, guid: b30f520d510134f4da99aaf67f3f714b, type: 3}
+  Biome: {fileID: 5689664702476106266, guid: aab079bb3afeab346b3798f963a1f5fa, type: 3}
   OnRevealText: 
   RevealAction: {fileID: 7115170520449702395}
   RevealActions: []
@@ -659,7 +659,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &7425582103055447462
 Transform:
   m_ObjectHideFlags: 0

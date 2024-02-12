@@ -51,7 +51,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a12efbcba606de4f924c77a83451cee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ConnectedPlacement: {fileID: 6223766025237645061, guid: b30f520d510134f4da99aaf67f3f714b, type: 3}
+  ConnectedPlacement: {fileID: 5689664702476106266, guid: aab079bb3afeab346b3798f963a1f5fa, type: 3}
   FieldsTerrain: {fileID: 8311717633318862618}
   WoodsTerrain: {fileID: 6774965022437166401}
   SwampTerrain: {fileID: 1760679766177336862}
@@ -59,7 +59,7 @@ MonoBehaviour:
   WastelandTerrain: {fileID: 8403923192929588451}
   MountaintopTerrain: {fileID: 2504777675454452408}
   ErrorTile: {fileID: 3341308846896768517}
-  BiomeSetAs: Mountaintop
+  BiomeSetAs: zzDebug
 --- !u!1 &1173209057176672817
 GameObject:
   m_ObjectHideFlags: 0
@@ -328,7 +328,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &268673379590394748
 Transform:
   m_ObjectHideFlags: 0
@@ -448,7 +448,7 @@ MonoBehaviour:
   LostChance: 0
   PathingHeuristic: 1
   FlavorText: This tile adds a card to your deck when you place it.
-  Biome: {fileID: 6223766025237645061, guid: b30f520d510134f4da99aaf67f3f714b, type: 3}
+  Biome: {fileID: 5689664702476106266, guid: aab079bb3afeab346b3798f963a1f5fa, type: 3}
   OnRevealText: 
   RevealAction: {fileID: 1382901880636285473}
   RevealActions: []
@@ -661,7 +661,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2130724021612447532
 Transform:
   m_ObjectHideFlags: 0

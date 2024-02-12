@@ -184,7 +184,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1234614978939937057
 Transform:
   m_ObjectHideFlags: 0
@@ -639,7 +639,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a12efbcba606de4f924c77a83451cee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ConnectedPlacement: {fileID: 6223766025237645061, guid: b30f520d510134f4da99aaf67f3f714b, type: 3}
+  ConnectedPlacement: {fileID: 5689664702476106266, guid: aab079bb3afeab346b3798f963a1f5fa, type: 3}
   FieldsTerrain: {fileID: 108136269205701096}
   WoodsTerrain: {fileID: 1071656860289647924}
   SwampTerrain: {fileID: 2826139412104183043}
@@ -647,7 +647,7 @@ MonoBehaviour:
   WastelandTerrain: {fileID: 4648637862055290756}
   MountaintopTerrain: {fileID: 3114906852967399071}
   ErrorTile: {fileID: 2789161145600406974}
-  BiomeSetAs: Mountaintop
+  BiomeSetAs: zzDebug
 --- !u!1 &7564908569147012756
 GameObject:
   m_ObjectHideFlags: 0
@@ -701,7 +701,7 @@ MonoBehaviour:
   PathingHeuristic: 1
   FlavorText: This card removes the first tile in the Journey plan, leaving an empty
     slot to the existing destination.
-  Biome: {fileID: 6223766025237645061, guid: b30f520d510134f4da99aaf67f3f714b, type: 3}
+  Biome: {fileID: 5689664702476106266, guid: aab079bb3afeab346b3798f963a1f5fa, type: 3}
   OnRevealText: 
   RevealAction: {fileID: -7309123845016511130}
   RevealActions: []

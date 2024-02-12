@@ -136,7 +136,7 @@ MonoBehaviour:
   LostChance: 0
   PathingHeuristic: 1
   FlavorText: This card's ability takes any card and adds 10 cards to your deck.
-  Biome: {fileID: 6223766025237645061, guid: b30f520d510134f4da99aaf67f3f714b, type: 3}
+  Biome: {fileID: 5689664702476106266, guid: aab079bb3afeab346b3798f963a1f5fa, type: 3}
   OnRevealText: 
   RevealAction: {fileID: -6448678271093936442}
   RevealActions: []
@@ -269,7 +269,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &8258582381922032322
 Transform:
   m_ObjectHideFlags: 0
@@ -556,7 +556,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a12efbcba606de4f924c77a83451cee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ConnectedPlacement: {fileID: 6223766025237645061, guid: b30f520d510134f4da99aaf67f3f714b, type: 3}
+  ConnectedPlacement: {fileID: 5689664702476106266, guid: aab079bb3afeab346b3798f963a1f5fa, type: 3}
   FieldsTerrain: {fileID: 3226344479186271038}
   WoodsTerrain: {fileID: 5785027925716615404}
   SwampTerrain: {fileID: 7640878236666640141}
@@ -564,7 +564,7 @@ MonoBehaviour:
   WastelandTerrain: {fileID: 5734242347560429224}
   MountaintopTerrain: {fileID: 7009238461748451551}
   ErrorTile: {fileID: 3407218245322857477}
-  BiomeSetAs: Mountaintop
+  BiomeSetAs: zzDebug
 --- !u!1 &7009238461748451551
 GameObject:
   m_ObjectHideFlags: 0

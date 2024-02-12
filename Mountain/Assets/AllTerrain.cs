@@ -10,8 +10,8 @@ public class AllTerrain : MonoBehaviour
 
     public GameObject FieldsTerrain;
     public GameObject WoodsTerrain;
-    public GameObject SwampTerrain;
     public GameObject SettlementTerrain;
+    public GameObject SwampTerrain;
     public GameObject WastelandTerrain;
     public GameObject MountaintopTerrain;
 
@@ -23,6 +23,14 @@ public class AllTerrain : MonoBehaviour
     {
         ConnectedPlacement = GetComponentInParent<Placement>().Biome;
         BiomeSetAs = ConnectedPlacement.Name;
+
+        FieldsTerrain.SetActive(false);
+        WoodsTerrain.SetActive(false);
+        SwampTerrain.SetActive(false);
+        SettlementTerrain.SetActive(false);
+        WastelandTerrain.SetActive(false);
+        MountaintopTerrain.SetActive(false);
+
         switch (ConnectedPlacement.Name)
         {
             case "Fields":
@@ -48,6 +56,9 @@ public class AllTerrain : MonoBehaviour
             case "Mountaintop":
                 ErrorTile.SetActive(false);
                 WastelandTerrain.SetActive(true); 
+                break;
+            case "zzDebug":
+                ErrorTile.SetActive(true);
                 break;
             default:
                 ErrorTile.SetActive(true);

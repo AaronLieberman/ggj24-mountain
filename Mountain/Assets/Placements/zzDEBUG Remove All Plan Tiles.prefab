@@ -16,7 +16,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &3188718283051835327
 Transform:
   m_ObjectHideFlags: 0
@@ -305,7 +305,7 @@ MonoBehaviour:
   PathingHeuristic: 1
   FlavorText: This card removes all the tiles in the Journey plan, leaving empty
     slots to the existing destinations.
-  Biome: {fileID: 6223766025237645061, guid: b30f520d510134f4da99aaf67f3f714b, type: 3}
+  Biome: {fileID: 5689664702476106266, guid: aab079bb3afeab346b3798f963a1f5fa, type: 3}
   OnRevealText: 
   RevealAction: {fileID: 125681198649543654}
   RevealActions: []
@@ -718,7 +718,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a12efbcba606de4f924c77a83451cee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ConnectedPlacement: {fileID: 6223766025237645061, guid: b30f520d510134f4da99aaf67f3f714b, type: 3}
+  ConnectedPlacement: {fileID: 5689664702476106266, guid: aab079bb3afeab346b3798f963a1f5fa, type: 3}
   FieldsTerrain: {fileID: 6022343929928367697}
   WoodsTerrain: {fileID: 3663218385967907956}
   SwampTerrain: {fileID: 5846826685038009847}
@@ -726,4 +726,4 @@ MonoBehaviour:
   WastelandTerrain: {fileID: 6265705740892549133}
   MountaintopTerrain: {fileID: 6805935076156583343}
   ErrorTile: {fileID: 848055044332857857}
-  BiomeSetAs: Mountaintop
+  BiomeSetAs: zzDebug
