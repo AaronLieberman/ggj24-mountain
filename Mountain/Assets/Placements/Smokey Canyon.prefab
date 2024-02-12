@@ -658,6 +658,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5103225538762397059}
   - component: {fileID: 4061359808495194050}
+  - component: {fileID: 2593071921943169107}
   m_Layer: 0
   m_Name: Smokey Canyon
   m_TagString: Untagged
@@ -702,8 +703,29 @@ MonoBehaviour:
   Biome: {fileID: 4111032941925707430, guid: 7976e35d001ec0249b53f029133651a3, type: 3}
   OnRevealText: 
   RevealAction: {fileID: 0}
-  RevealActions: []
+  RevealActions:
+  - {fileID: 2593071921943169107}
   OnVisitTooltipText: 
   OnVisitAction: {fileID: 0}
   VisitActions: []
   Actions: []
+--- !u!114 &2593071921943169107
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7847057110685096179}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcdbce72b0d9a284da30e489098ba001, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Comment: reveal
+  TileToPlace: {fileID: 7642907767493609850, guid: a2ddb7c7e61911543a9cf9bb3f348fd3, type: 3}
+  UseThisPlacementInsteadOfCenterCoordinates: 1
+  CenterCoordinates: {x: 0, y: 0}
+  MinimumDistanceByAdjacency: 3
+  MaximumDistanceByAdjacency: 3
+  MaximumDistanceByPathing: 10
+  MustBeUnexplored: 1
