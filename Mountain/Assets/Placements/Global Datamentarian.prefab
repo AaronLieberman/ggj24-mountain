@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 106982954355507551}
   - component: {fileID: 4429442155057178590}
+  - component: {fileID: 2850713403839219010}
   m_Layer: 0
   m_Name: Global Datamentarian
   m_TagString: Untagged
@@ -55,11 +56,26 @@ MonoBehaviour:
   Biome: {fileID: 6223766025237645061, guid: b30f520d510134f4da99aaf67f3f714b, type: 3}
   OnRevealText: 
   RevealAction: {fileID: 0}
-  RevealActions: []
+  RevealActions:
+  - {fileID: 2850713403839219010}
   OnVisitTooltipText: 
   OnVisitAction: {fileID: 0}
   VisitActions: []
   Actions: []
+--- !u!114 &2850713403839219010
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2873485038352613450}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cede75c5975197645b83effe1664d5c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Comment: reveal
+  MaxLevelToIncreaseTo: 99
 --- !u!1 &3957693596265385990
 GameObject:
   m_ObjectHideFlags: 0
@@ -282,8 +298,8 @@ MonoBehaviour:
   ConnectedPlacement: {fileID: 6223766025237645061, guid: b30f520d510134f4da99aaf67f3f714b, type: 3}
   FieldsTerrain: {fileID: 8706212405929482681}
   WoodsTerrain: {fileID: 5714449130923750031}
-  SwampTerrain: {fileID: 5709978754883748936}
   SettlementTerrain: {fileID: 4090625113733680819}
+  SwampTerrain: {fileID: 5709978754883748936}
   WastelandTerrain: {fileID: 3957693596265385990}
   MountaintopTerrain: {fileID: 9086983775926412144}
   ErrorTile: {fileID: 6001648638810075260}
