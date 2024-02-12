@@ -178,6 +178,8 @@ GameObject:
   m_Component:
   - component: {fileID: 126819818063155975}
   - component: {fileID: 6108747156714237770}
+  - component: {fileID: 5319138824686536446}
+  - component: {fileID: 8506787573960137192}
   m_Layer: 0
   m_Name: Nettled Nest
   m_TagString: Untagged
@@ -222,11 +224,61 @@ MonoBehaviour:
   Biome: {fileID: 5689664702476106266, guid: d207460ad79d71147a84f132fe13e8bc, type: 3}
   OnRevealText: 
   RevealAction: {fileID: 0}
-  RevealActions: []
+  RevealActions:
+  - {fileID: 8506787573960137192}
+  - {fileID: 8506787573960137192}
+  - {fileID: 8506787573960137192}
+  - {fileID: 8506787573960137192}
+  - {fileID: 8506787573960137192}
   OnVisitTooltipText: 
   OnVisitAction: {fileID: 0}
   VisitActions: []
-  Actions: []
+  Actions:
+  - Cost: {fileID: 0}
+    Upgrade: {fileID: 0}
+    OnUpgrade: {fileID: 0}
+    SkipOnVisit: 0
+--- !u!114 &5319138824686536446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2618218010970735907}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f21808de4848a644cbe2296b9380dc14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Comment: 
+  NumberOfFieldsToAdd: 2
+  NumberOfWoodsToAdd: 6
+  NumberOfSettlementsToAdd: 4
+  NumberOfSwampsToAdd: 0
+  NumberOfWastelandsToAdd: 1
+  NumberOfRandomTypeToAdd: 0
+  ShouldBeRevealed: 0
+  addAtTopOfDeck: 0
+--- !u!114 &8506787573960137192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2618218010970735907}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcdbce72b0d9a284da30e489098ba001, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Comment: 
+  TileToPlace: {fileID: 7080354615515036836, guid: 77358c475c8b597468f887d1253b8b3e, type: 3}
+  UseThisPlacementInsteadOfCenterCoordinates: 1
+  CenterCoordinates: {x: 0, y: 0}
+  MinimumDistanceByAdjacency: 1
+  MaximumDistanceByAdjacency: 1
+  MaximumDistanceByPathing: 10
+  MustBeUnexplored: 1
 --- !u!1 &3655619472607891857
 GameObject:
   m_ObjectHideFlags: 0
@@ -533,8 +585,8 @@ MonoBehaviour:
   ConnectedPlacement: {fileID: 5689664702476106266, guid: d207460ad79d71147a84f132fe13e8bc, type: 3}
   FieldsTerrain: {fileID: 8746766138365193472}
   WoodsTerrain: {fileID: 3655619472607891857}
-  SwampTerrain: {fileID: 5837042880465428831}
   SettlementTerrain: {fileID: 136453063868261762}
+  SwampTerrain: {fileID: 5837042880465428831}
   WastelandTerrain: {fileID: 943659291469658688}
   MountaintopTerrain: {fileID: 7588444846565115593}
   ErrorTile: {fileID: 5625602354346745848}
