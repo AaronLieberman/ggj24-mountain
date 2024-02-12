@@ -117,7 +117,7 @@ public class GameManager : MonoBehaviour
 
     public void StopMouseActiveHighlight()
     {
-        _highlightTile?.SetStatus(TileStatus.Highlighted, "mouse", false);
+        if(_highlightTile != null) _highlightTile.SetStatus(TileStatus.Highlighted, "mouse", false);
         _highlightTile = null;
     }
 
