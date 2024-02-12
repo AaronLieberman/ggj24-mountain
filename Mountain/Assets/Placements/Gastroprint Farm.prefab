@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1038390318545389362}
   - component: {fileID: 4998653028399671678}
+  - component: {fileID: 4638541401705727790}
   m_Layer: 0
   m_Name: Gastroprint Farm
   m_TagString: Untagged
@@ -55,11 +56,26 @@ MonoBehaviour:
   Biome: {fileID: 6223766025237645061, guid: b30f520d510134f4da99aaf67f3f714b, type: 3}
   OnRevealText: 
   RevealAction: {fileID: 0}
-  RevealActions: []
+  RevealActions:
+  - {fileID: 4638541401705727790}
   OnVisitTooltipText: 
   OnVisitAction: {fileID: 0}
   VisitActions: []
   Actions: []
+--- !u!114 &4638541401705727790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1147919351911459365}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3721025c405d0f4ab850385a66db544, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Comment: reveal
+  MaxLevelToIncreaseTo: 99
 --- !u!1 &1631899505045369373
 GameObject:
   m_ObjectHideFlags: 0
@@ -618,8 +634,8 @@ MonoBehaviour:
   ConnectedPlacement: {fileID: 6223766025237645061, guid: b30f520d510134f4da99aaf67f3f714b, type: 3}
   FieldsTerrain: {fileID: 3889822117607400721}
   WoodsTerrain: {fileID: 7859600953526785721}
-  SwampTerrain: {fileID: 6934206750240041160}
   SettlementTerrain: {fileID: 1631899505045369373}
+  SwampTerrain: {fileID: 6934206750240041160}
   WastelandTerrain: {fileID: 6782778129665328201}
   MountaintopTerrain: {fileID: 4860938595244101483}
   ErrorTile: {fileID: 2333285097346601308}
