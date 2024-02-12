@@ -624,6 +624,7 @@ MonoBehaviour:
   OnVisitTooltipText: 
   OnVisitAction: {fileID: 0}
   VisitActions: []
+  VisitationParticleSystem: {fileID: 0}
   Actions: []
 --- !u!114 &2793759092975242119
 MonoBehaviour:

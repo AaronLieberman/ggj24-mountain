@@ -633,6 +633,7 @@ MonoBehaviour:
   OnVisitTooltipText: 
   OnVisitAction: {fileID: 0}
   VisitActions: []
+  VisitationParticleSystem: {fileID: 0}
   Actions: []
 --- !u!114 &2802320457178581370
 MonoBehaviour:

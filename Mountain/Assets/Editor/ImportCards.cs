@@ -24,6 +24,7 @@ public class ImportCards : EditorWindow
     public const int ONVISIT = 12;
     public const int ONVISITTEXT = 13;
     public const int ONVISITPOPUPTEXT = 14;
+    public const int VISITATIONSPRITE = 15;
     public const int POOL1 = 16;
     public const int POOL2 = 17;
     public const int POOL3 = 18;
@@ -120,6 +121,8 @@ public class ImportCards : EditorWindow
 
             UpdateAllTerrainGameObject(tilePlacement, splitData[BIOME]);
 
+            UpdateVisitationParticleSystemGameObject(tilePlacement, splitData[VISITATIONSPRITE]);
+
 
             tilePlacement.OnRevealText = splitData[ONREVEALTEXT];
             //if (!string.IsNullOrEmpty(splitData[ONREVEALTEXT]))
@@ -172,12 +175,35 @@ public class ImportCards : EditorWindow
         {
             Debug.Log("Adding AllTerrainComponent to " + tilePlacement.Name);
             GameObject AllTerrainPrefab = GetPrefabFromName("AllTerrain");
-            GameObject newAllTerrain = Instantiate(AllTerrainPrefab);
+            GameObject newAllTerrain = (GameObject)PrefabUtility.InstantiatePrefab(AllTerrainPrefab);
             newAllTerrain.transform.SetParent(tilePlacement.transform);
             aT = newAllTerrain.GetComponent<AllTerrain>();
 
         }
         aT.UpdateBiome();
+    }
+
+    private static void UpdateVisitationParticleSystemGameObject(Placement tilePlacement, string spriteName)
+    {
+        if (!string.IsNullOrEmpty(spriteName))
+        {
+            if (tilePlacement.VisitationParticleSystem == null)
+            {
+                Debug.Log("Adding VistationParticleSystem to " + tilePlacement.Name);
+                GameObject VistationPrefab = GetPrefabFromName("DefaultVisitationSpriteSystem");
+                GameObject newParticleSystem = (GameObject) PrefabUtility.InstantiatePrefab(VistationPrefab);
+                newParticleSystem.transform.SetParent(tilePlacement.transform);
+                tilePlacement.VisitationParticleSystem = newParticleSystem.GetComponent<ParticleSystem>();
+            }
+            Sprite visitIconSprite = GetSpriteFromName(spriteName);
+            tilePlacement.VisitationParticleSystem.textureSheetAnimation.RemoveSprite(0);
+            tilePlacement.VisitationParticleSystem.textureSheetAnimation.AddSprite(visitIconSprite);
+        }
+        else
+        {
+            DestroyImmediate(tilePlacement.VisitationParticleSystem);
+            tilePlacement.VisitationParticleSystem = null;
+        }
     }
 
     protected static GameObject FindOrCreatePrefab(string PrefabName)
@@ -225,6 +251,17 @@ public class ImportCards : EditorWindow
             Debug.LogError("No prefab exists at " + prefabPath);
         }
         return prefab;
+    }
+
+    protected static Sprite GetSpriteFromName(string spriteName)
+    {
+        string spritePath = "Assets/Textures/" + spriteName + ".png";
+        Sprite sprite = AssetDatabase.LoadAssetAtPath<Sprite>(spritePath);
+        if (sprite == null)
+        {
+            Debug.LogError("No sprite exists at " + spritePath);
+        }
+        return sprite;
     }
 
 

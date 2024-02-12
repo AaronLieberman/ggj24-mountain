@@ -213,11 +213,6 @@ public class Worker : MonoBehaviour
         var placement = tile.Placement;
         if (placement == null)
             return;
-
-        placement.OnVisitAction?.DoWork(this, placement, null);
-        foreach (PlacementAction action in placement.VisitActions)
-        {
-            action.DoWork(this, placement, null);
-        }
+        placement.Visited(this, placement);
     }
 }

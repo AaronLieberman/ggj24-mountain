@@ -53,5 +53,16 @@ public class Placement : MonoBehaviour
     [FormerlySerializedAs("OnVisit")]
     public PlacementAction OnVisitAction;
     public List<PlacementAction> VisitActions;
+    public ParticleSystem VisitationParticleSystem;
     public List<TileAction> Actions;
+
+    public void Visited(Worker worker, Placement placement)
+    {
+        placement.OnVisitAction?.DoWork(worker, placement, null);
+        foreach (PlacementAction action in placement.VisitActions)
+        {
+            action.DoWork(worker, placement, null);
+        }
+        if(VisitationParticleSystem) VisitationParticleSystem.Play();
+    }
 }

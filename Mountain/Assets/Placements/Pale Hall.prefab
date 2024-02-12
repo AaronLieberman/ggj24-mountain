@@ -474,8 +474,8 @@ MonoBehaviour:
   ConnectedPlacement: {fileID: 4111032941925707430, guid: 7976e35d001ec0249b53f029133651a3, type: 3}
   FieldsTerrain: {fileID: 8500079453131059785}
   WoodsTerrain: {fileID: 7160947413466532661}
-  SwampTerrain: {fileID: 6334607866042199074}
   SettlementTerrain: {fileID: 1348853355287454712}
+  SwampTerrain: {fileID: 6334607866042199074}
   WastelandTerrain: {fileID: 4966420228729937938}
   MountaintopTerrain: {fileID: 3449591716581872008}
   ErrorTile: {fileID: 3541005520408247638}
@@ -622,6 +622,7 @@ MonoBehaviour:
   OnVisitTooltipText: Explorer flees in fear.
   OnVisitAction: {fileID: 0}
   VisitActions: []
+  VisitationParticleSystem: {fileID: 0}
   Actions: []
 --- !u!1 &8500079453131059785
 GameObject:

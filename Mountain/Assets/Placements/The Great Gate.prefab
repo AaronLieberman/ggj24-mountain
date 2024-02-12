@@ -222,8 +222,8 @@ MonoBehaviour:
   ConnectedPlacement: {fileID: 6223766025237645061, guid: b30f520d510134f4da99aaf67f3f714b, type: 3}
   FieldsTerrain: {fileID: 2979244716427981543}
   WoodsTerrain: {fileID: 8186788499726078995}
-  SwampTerrain: {fileID: 6908187810462540282}
   SettlementTerrain: {fileID: 3246929039900942977}
+  SwampTerrain: {fileID: 6908187810462540282}
   WastelandTerrain: {fileID: 7861352870194483269}
   MountaintopTerrain: {fileID: 63226881824369812}
   ErrorTile: {fileID: 6760619883949624606}
@@ -540,6 +540,7 @@ MonoBehaviour:
   OnVisitTooltipText: 
   OnVisitAction: {fileID: 0}
   VisitActions: []
+  VisitationParticleSystem: {fileID: 0}
   Actions:
   - Cost: {fileID: 5689664702476106266, guid: d207460ad79d71147a84f132fe13e8bc, type: 3}
     Upgrade: {fileID: 7439648521559203277, guid: 7c90ecad9a04a894dba464cb33597d33, type: 3}
