@@ -34,12 +34,15 @@ public class Deck : MonoBehaviour
 
         foreach (var initialCard in InitialCards)
         {
+            if (initialCard.Placement == null)
+                continue;
+
             var cardObject = new GameObject();
             var card = cardObject.AddComponent<Card>();
             card.PlacementToSpawn = initialCard.Placement;
             card.IsRevealed = initialCard.IsRevealed;
-			card.gameObject.name = initialCard.Placement.gameObject.name;
-			card.transform.SetParent(transform);
+            card.gameObject.name = initialCard.Placement.gameObject.name;
+            card.transform.SetParent(transform);
         }
     }
 
@@ -50,7 +53,7 @@ public class Deck : MonoBehaviour
     {
         card.transform.SetParent(transform);
         card.transform.SetAsFirstSibling();
-	}
+    }
 
     public Card GetTopCard()
     {
@@ -59,17 +62,17 @@ public class Deck : MonoBehaviour
         return transform.GetChild(0).GetComponent<Card>();
     }
 
-	public void AddNewCardToDeck(Placement placementToSpawn, bool isRevealed, bool AddAtTopOfDeck = false)
-	{
-		GameObject newCardObject = new GameObject();
-		newCardObject.transform.parent = transform;
-		Card newCard = newCardObject.AddComponent<Card>();
+    public void AddNewCardToDeck(Placement placementToSpawn, bool isRevealed, bool AddAtTopOfDeck = false)
+    {
+        GameObject newCardObject = new GameObject();
+        newCardObject.transform.parent = transform;
+        Card newCard = newCardObject.AddComponent<Card>();
 
-		newCard.PlacementToSpawn = placementToSpawn;
-		newCard.IsRevealed = isRevealed;
+        newCard.PlacementToSpawn = placementToSpawn;
+        newCard.IsRevealed = isRevealed;
         newCard.gameObject.name = placementToSpawn.gameObject.name;
         newCard.transform.SetParent(transform);
-        if(AddAtTopOfDeck)
+        if (AddAtTopOfDeck)
         {
             newCard.transform.SetAsFirstSibling();
         }
