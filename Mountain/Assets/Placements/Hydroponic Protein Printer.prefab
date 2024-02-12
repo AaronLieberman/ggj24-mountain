@@ -94,6 +94,7 @@ GameObject:
   m_Component:
   - component: {fileID: 383154153780939730}
   - component: {fileID: 5546885365884178955}
+  - component: {fileID: 353140040264323115}
   m_Layer: 0
   m_Name: Hydroponic Protein Printer
   m_TagString: Untagged
@@ -139,7 +140,8 @@ MonoBehaviour:
   Biome: {fileID: 6223766025237645061, guid: b30f520d510134f4da99aaf67f3f714b, type: 3}
   OnRevealText: 
   RevealAction: {fileID: 0}
-  RevealActions: []
+  RevealActions:
+  - {fileID: 353140040264323115}
   OnVisitTooltipText: 
   OnVisitAction: {fileID: 0}
   VisitActions: []
@@ -148,6 +150,20 @@ MonoBehaviour:
     Upgrade: {fileID: 4998653028399671678, guid: 7683a48a9f96e574490b3aa35c05e67e, type: 3}
     OnUpgrade: {fileID: 0}
     SkipOnVisit: 0
+--- !u!114 &353140040264323115
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2894493963045508760}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3721025c405d0f4ab850385a66db544, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Comment: reveal
+  MaxLevelToIncreaseTo: 99
 --- !u!1 &3549843241414989235
 GameObject:
   m_ObjectHideFlags: 0
@@ -454,8 +470,8 @@ MonoBehaviour:
   ConnectedPlacement: {fileID: 6223766025237645061, guid: b30f520d510134f4da99aaf67f3f714b, type: 3}
   FieldsTerrain: {fileID: 4361699181355684543}
   WoodsTerrain: {fileID: 4896999861612660603}
-  SwampTerrain: {fileID: 5926351223698298021}
   SettlementTerrain: {fileID: 3549843241414989235}
+  SwampTerrain: {fileID: 5926351223698298021}
   WastelandTerrain: {fileID: 8836883550954666310}
   MountaintopTerrain: {fileID: 2075110378987198207}
   ErrorTile: {fileID: 8529787477986326630}
