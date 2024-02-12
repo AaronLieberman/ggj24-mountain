@@ -44,15 +44,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ff2a246e0d77fb46890804a37f3a542, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Actions: []
   Name: Mountaintop
-  CardSprite: {fileID: 510106708, guid: 6dfed9e8f1416d34bbd79deac2104118, type: 3}
-  FlavorText: 
-  OnRevealText: 
-  OnVisitText: 
-  LostChance: 0
-  OnVisit: {fileID: 0}
+  CardSprite: {fileID: 1044792434, guid: 6dfed9e8f1416d34bbd79deac2104118, type: 3}
   Difficulty: 0
+  LostChance: 0
   PathingHeuristic: 1
-  PaysCost: {fileID: 0}
+  FlavorText: 
+  Biome: {fileID: 0}
+  OnRevealText: 
   RevealAction: {fileID: 0}
+  RevealActions: []
+  OnVisitTooltipText: 
+  OnVisitAction: {fileID: 0}
+  VisitActions: []
+  Actions: []
