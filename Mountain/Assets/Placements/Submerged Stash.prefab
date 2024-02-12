@@ -238,6 +238,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4900951605241737685}
   - component: {fileID: 7277423047614280404}
+  - component: {fileID: 8401032991409085124}
+  - component: {fileID: 5892909095074195879}
   m_Layer: 0
   m_Name: Submerged Stash
   m_TagString: Untagged
@@ -287,7 +289,56 @@ MonoBehaviour:
   OnVisitTooltipText: 
   OnVisitAction: {fileID: 0}
   VisitActions: []
-  Actions: []
+  Actions:
+  - Cost: {fileID: 5689664702476106266, guid: d207460ad79d71147a84f132fe13e8bc, type: 3}
+    Upgrade: {fileID: 3915950955224868861, guid: 63876d9742bb01042bec69fe7a214021, type: 3}
+    OnUpgrade: {fileID: 5892909095074195879}
+    SkipOnVisit: 0
+  - Cost: {fileID: 6223766025237645061, guid: 0c3fc96df5b9e1d499c66e212164f0aa, type: 3}
+    Upgrade: {fileID: 3915950955224868861, guid: 63876d9742bb01042bec69fe7a214021, type: 3}
+    OnUpgrade: {fileID: 5892909095074195879}
+    SkipOnVisit: 0
+--- !u!114 &8401032991409085124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1172881910569107017}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcdbce72b0d9a284da30e489098ba001, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Comment: 
+  TileToPlace: {fileID: 0}
+  UseThisPlacementInsteadOfCenterCoordinates: 1
+  CenterCoordinates: {x: 0, y: 0}
+  MinimumDistanceByAdjacency: 1
+  MaximumDistanceByAdjacency: 2147483647
+  MaximumDistanceByPathing: 100000
+  MustBeUnexplored: 1
+--- !u!114 &5892909095074195879
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1172881910569107017}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f21808de4848a644cbe2296b9380dc14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Comment: action
+  NumberOfFieldsToAdd: 0
+  NumberOfWoodsToAdd: 0
+  NumberOfSettlementsToAdd: 6
+  NumberOfSwampsToAdd: 0
+  NumberOfWastelandsToAdd: 0
+  NumberOfRandomTypeToAdd: 0
+  ShouldBeRevealed: 0
+  addAtTopOfDeck: 0
 --- !u!1 &1680535997270829931
 GameObject:
   m_ObjectHideFlags: 0
