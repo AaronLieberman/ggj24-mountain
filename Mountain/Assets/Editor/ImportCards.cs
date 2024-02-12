@@ -76,10 +76,6 @@ public class ImportCards : EditorWindow
 
             GameObject prefabTofill = FindOrCreatePrefab(prefabName);
 
-            // // Save the new GameObject as a prefab
-            //GameObject prefabInstance = PrefabUtility.SaveAsPrefabAsset(prefabTofill, GetPrefabPath(prefabName));
-
-            //Placement tilePlacement = prefabInstance.GetComponent<Placement>();
             Placement tilePlacement = prefabTofill.GetComponent<Placement>();
 
 
@@ -145,9 +141,8 @@ public class ImportCards : EditorWindow
                 popupcomponent.textToPopUp = splitData[ONVISITPOPUPTEXT];
             }
 
-            //AssetDatabase.DeleteAsset(GetPrefabPath(prefabName));
-            // Save the new GameObject as a prefab
-            GameObject savedPrefab = PrefabUtility.SaveAsPrefabAsset(prefabTofill, GetPlacementPath(prefabName));
+            // Apply all the changes we've made to the prefab
+            PrefabUtility.ApplyPrefabInstance(prefabTofill, InteractionMode.AutomatedAction);
 
             //populate cardPools
             for (int i = 0; i < cardPools.Length; i++)
@@ -155,7 +150,7 @@ public class ImportCards : EditorWindow
                 // Check if the current row belongs to the current card pool
                 if (splitData[POOL1 + i] == "1")
                 {
-                    cardPools[i].tilePlacementObjects.Add(savedPrefab);
+                    cardPools[i].tilePlacementObjects.Add(GetPlacementPrefabFromName(prefabName));
                 }
             }
 
@@ -212,7 +207,7 @@ public class ImportCards : EditorWindow
         GameObject existingPrefab = AssetDatabase.LoadAssetAtPath<GameObject>(GetPlacementPath(PrefabName));
         if (existingPrefab != null)
         {
-            GameObject prefabInWorld = Instantiate(existingPrefab);
+            GameObject prefabInWorld = (GameObject) PrefabUtility.InstantiatePrefab(existingPrefab);
             //Prefab exists
             return prefabInWorld;
         }
@@ -222,6 +217,7 @@ public class ImportCards : EditorWindow
             GameObject newObject = new GameObject(PrefabName);
             newObject.transform.position = spawnPosition;
             newObject.AddComponent<Placement>();
+            PrefabUtility.SaveAsPrefabAsset(newObject, GetPlacementPath(PrefabName));
             return newObject;
         }
     }
