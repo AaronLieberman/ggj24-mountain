@@ -8,10 +8,11 @@ using UnityEngine.Serialization;
 [Serializable]
 public class TileAction
 {
+    [Tooltip("If cost is set to None, then any card can be used to pay the cost")]
     public Placement Cost;
     public Placement Upgrade;
     public PlacementAction OnUpgrade;
-    public bool SkipOnVisit;
+	public bool SkipOnVisit;
 
     public bool CanPayCost(Card card)
     {
