@@ -233,6 +233,7 @@ MonoBehaviour:
   OnVisitTooltipText: 
   OnVisitAction: {fileID: 0}
   VisitActions: []
+  VisitationParticleSystem: {fileID: 0}
   Actions:
   - Cost: {fileID: 0}
     Upgrade: {fileID: 0}

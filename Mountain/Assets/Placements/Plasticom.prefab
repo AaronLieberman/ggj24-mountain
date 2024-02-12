@@ -1047,6 +1047,7 @@ MonoBehaviour:
   OnVisitTooltipText: 
   OnVisitAction: {fileID: 0}
   VisitActions: []
+  VisitationParticleSystem: {fileID: 0}
   Actions:
   - Cost: {fileID: 5689664702476106266, guid: d207460ad79d71147a84f132fe13e8bc, type: 3}
     Upgrade: {fileID: 4429442155057178590, guid: 3d33f1c9729c1864d8e250bab742e391, type: 3}
