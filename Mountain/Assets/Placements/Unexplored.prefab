@@ -46,20 +46,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ff2a246e0d77fb46890804a37f3a542, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Name: Unexplored
+  CardSprite: {fileID: 0}
+  Difficulty: 0
+  LostChance: 0
+  PathingHeuristic: 100000
+  FlavorText: This tile is unexplored.
+  Biome: {fileID: 0}
+  OnRevealText: 
+  RevealAction: {fileID: 0}
+  RevealActions: []
+  OnVisitTooltipText: 
+  OnVisitAction: {fileID: 0}
+  VisitActions: []
   Actions:
-  - Cost: 
+  - Cost: {fileID: 0}
     Upgrade: {fileID: 0}
     OnUpgrade: {fileID: -2565153548658353096}
-  Name: Unexplored
-  FlavorText: This tile is unexplored.
-  OnRevealText: 
-  OnVisitText: Not Known
-  LostChance: 0
-  OnVisit: {fileID: 0}
-  Difficulty: 0
-  PathingHeuristic: 100000
-  PaysCost: 
-  RevealAction: {fileID: 0}
+    SkipOnVisit: 0
 --- !u!114 &-2565153548658353096
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -72,6 +76,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5864909b59203914fb8578b927192958, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Comment: 
 --- !u!1 &7622148774315504018
 GameObject:
   m_ObjectHideFlags: 0
@@ -145,7 +150,7 @@ SpriteRenderer:
   m_SortingLayerID: 1747406911
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1017691144, guid: 78a6885f628c2a548a8ef7edc20c08b0, type: 3}
+  m_Sprite: {fileID: 1525810671, guid: 78a6885f628c2a548a8ef7edc20c08b0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
