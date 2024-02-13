@@ -50,3 +50,6 @@ TagManager:
   - name: Pathing
     uniqueID: 820398905
     locked: 0
+  - name: VFX
+    uniqueID: 3343531021
+    locked: 0
