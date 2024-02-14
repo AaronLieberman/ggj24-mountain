@@ -80,7 +80,7 @@ public class PlaceAdjacentTile : PlacementAction
         //Make sure we are close enough by pathfinding
         Tile originTile = Utilities.GetRootComponent<TileGridLayout>().GetTileFromLoc(CenterCoordinates);
         List<Tile> routeToTile = TilePathfinderAStar.CalculateRoute(originTile, tileToVisit);
-        if(routeToTile == null || routeToTile.Count > MaximumDistanceByPathing) return false;
+        if(routeToTile == null || routeToTile.Count > MaximumDistanceByPathing + 1) return false; //The Count includes the origin, so we need to add a + 1
 
         // We made it past all the checks!
         return true;
