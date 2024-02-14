@@ -1,8 +1,5 @@
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using Unity.VisualScripting;
-using UnityEditor.Playables;
 using UnityEngine;
 
 public class Worker : MonoBehaviour
@@ -23,6 +20,26 @@ public class Worker : MonoBehaviour
         _workerPlans.Add(new WorkerPlan() { Card = card, Tile = tile });
         card.transform.parent = transform;
     }
+
+    //replaces a destination with an existing card
+    public void ReplaceDestination(int indexToReplace, Card card, Tile tile = null) 
+    {
+        Destroy(_workerPlans[indexToReplace].Card);
+        _workerPlans[indexToReplace].Card = card;
+        if(tile != null) _workerPlans[indexToReplace].Tile = tile;
+    }
+
+    // This version makes a game object for the card first.
+    public void ReplaceDestination(int indexToReplace, Placement placement, Tile tile = null)
+    {
+        GameObject newCardObject = new GameObject();
+        newCardObject.transform.parent = transform;
+        Card newCardComponent = newCardObject.AddComponent<Card>();
+        newCardComponent.PlacementToSpawn = placement;
+
+        ReplaceDestination(indexToReplace, newCardComponent, tile);
+    }
+
 
     WorkerPlan GetFirstValidWorkerPlan()
     {
