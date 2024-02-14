@@ -53,65 +53,84 @@ public class PlacementPoolManager : MonoBehaviour
 	}
 
 	public void AddToDeckFromBiomeInPool(Placement MatchingBiome, int numOfCardsToAdd = 1, bool isRevealed = false, bool addAtTopOfDeck = false)
-	{
-		CardPool currentCardPool = GetCurrentCardPool();
+    {
+        CardPool currentCardPool = GetCurrentCardPool();
 
-		if (currentCardPool.tilePlacementObjects.Count == 0)
-		{
-			Debug.Log("Current CardPool is empty. Did you populate it using the import cards script?");
-			return;
-		}
+        if (currentCardPool.tilePlacementObjects.Count == 0)
+        {
+            Debug.Log("Current CardPool is empty. Did you populate it using the import cards script?");
+            return;
+        }
 
-		System.Random random = new System.Random();
 
-		// Create a list to store indices of cards that match the condition
-		List<int> matchingIndices = new List<int>();
+        List<int> matchingIndices = FindAllCardsOfBiomeInCurrentPool(MatchingBiome, currentCardPool);
+        //_playerDeck.AddNewCardToDeck(randomPlacement.GetComponent<Placement>(), isRevealed, addAtTopOfDeck);
 
-		// Find all indices of cards in the current pool that match the condition
-		for (int i = 0; i < currentCardPool.tilePlacementObjects.Count; i++)
-		{
-			GameObject cardGameObject = currentCardPool.tilePlacementObjects[i];
-			Placement placement = cardGameObject.GetComponent<Placement>();
+        // Hey Aaron, I wanted to have a lambda that just fills in this one value for the AddNewCardToDeck() function,
+        // But lambdas want a return value, and can't be void. So I, uuuh... worked around that.
+        // This feels kinda gross. Is there a better way to do this?
+        Func<Placement, bool, bool> actOnCard = (Placement p, bool i) => {_playerDeck.AddNewCardToDeck(p, i, addAtTopOfDeck); return true;};
 
-			if (placement == null)
-			{
-				Debug.Log("No placement found!");
-				continue;
-			}
-			else if (placement.Biome == null)
-			{
-				Debug.Log("placement.Biome is null");
-				continue;
-			}
+        SelectRandomCards(matchingIndices, numOfCardsToAdd, isRevealed, actOnCard, currentCardPool);
+    }
 
-			if (placement.Biome == MatchingBiome)
-			{
-				matchingIndices.Add(i);
-			}
-		}
+    private static void SelectRandomCards(List<int> matchingIndices, int numOfCardsToAdd, bool isRevealed, Func<Placement, bool, bool> ActOnCard, CardPool currentCardPool)
+    {
 
-		for (int i = 0; i < numOfCardsToAdd; i++)
-		{
-			// Check if there are matching cards
-			if (matchingIndices.Count > 0)
-			{
-				int randomIndex = random.Next(0, matchingIndices.Count);
+        System.Random random = new System.Random();
+        for (int i = 0; i < numOfCardsToAdd; i++)
+        {
+            // Check if there are matching cards
+            if (matchingIndices.Count > 0)
+            {
+                int randomIndex = random.Next(0, matchingIndices.Count);
 
-				// Retrieve the random card from the current pool
-				GameObject randomPlacementObject = currentCardPool.tilePlacementObjects[matchingIndices[randomIndex]];
-				Placement randomPlacement = randomPlacementObject.GetComponent<Placement>();
+                // Retrieve the random card from the current pool
+                GameObject randomPlacementObject = currentCardPool.tilePlacementObjects[matchingIndices[randomIndex]];
+                Placement randomPlacement = randomPlacementObject.GetComponent<Placement>();
+                ActOnCard(randomPlacement.GetComponent<Placement>(), isRevealed);
 
-				// Add the random card to the player's deck
-				_playerDeck.AddNewCardToDeck(randomPlacement.GetComponent<Placement>(), isRevealed, addAtTopOfDeck);
-			}
-			else
-			{
-				Debug.Log("No matching cards found in the current pool.");
-			}
-		}
-	}
+                // Add the random card to the player's deck
+            }
+            else
+            {
+                Debug.Log("No matching cards found in the current pool.");
+            }
+        }
+    }
 
-	public void AddToDeckFromAllBiomesInPool(int numberOfFields = 0, int numberOfWoods = 0, int numberOfSettlements = 0, int numberOfSwamps = 0, int numberOfWastelands = 0, int numberOfRandom = 0, bool isRevealed = false, bool addAtTopOfDeck = false)
+    private static List<int> FindAllCardsOfBiomeInCurrentPool(Placement MatchingBiome, CardPool currentCardPool)
+    {
+        // Create a list to store indices of cards that match the condition
+        List<int> matchingIndices = new List<int>();
+
+        // Find all indices of cards in the current pool that match the condition
+        for (int i = 0; i < currentCardPool.tilePlacementObjects.Count; i++)
+        {
+            GameObject cardGameObject = currentCardPool.tilePlacementObjects[i];
+            Placement placement = cardGameObject.GetComponent<Placement>();
+
+            if (placement == null)
+            {
+                Debug.Log("No placement found!");
+                continue;
+            }
+            else if (placement.Biome == null)
+            {
+                Debug.Log("placement.Biome is null");
+                continue;
+            }
+
+            if (placement.Biome == MatchingBiome)
+            {
+                matchingIndices.Add(i);
+            }
+        }
+
+        return matchingIndices;
+    }
+
+    public void AddToDeckFromAllBiomesInPool(int numberOfFields = 0, int numberOfWoods = 0, int numberOfSettlements = 0, int numberOfSwamps = 0, int numberOfWastelands = 0, int numberOfRandom = 0, bool isRevealed = false, bool addAtTopOfDeck = false)
 	{
 		Deck deck = Utilities.GetRootComponent<Deck>();
 		AddToDeckFromBiomeInPool(deck.FieldsBiome, numberOfFields, isRevealed, addAtTopOfDeck);
@@ -123,7 +142,18 @@ public class PlacementPoolManager : MonoBehaviour
 		AddToDeckFromCurrentPool(numberOfRandom, isRevealed, addAtTopOfDeck);
     }
 
-	public CardPool GetCurrentCardPool()
+    //
+	public Placement GetRandomCardFromBiome(Placement biome)
+	{
+        Placement randomPlacement = null;
+        List<int> matchingIndices = FindAllCardsOfBiomeInCurrentPool(biome, GetCurrentCardPool());
+
+        SelectRandomCards(matchingIndices, 1, false, (Placement p, bool i) => randomPlacement = p, GetCurrentCardPool());
+
+        return randomPlacement;
+    }
+
+    public CardPool GetCurrentCardPool()
 	{
 		return cardPools[currentCardPoolIndex];
 	}
