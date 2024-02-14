@@ -659,6 +659,9 @@ GameObject:
   - component: {fileID: 4307801510896772916}
   - component: {fileID: 8931215191045057513}
   - component: {fileID: 4282109060034310635}
+  - component: {fileID: -2488427545127451448}
+  - component: {fileID: -4065651074601282568}
+  - component: {fileID: 133416353097678289}
   m_Layer: 0
   m_Name: Stasia's Residency
   m_TagString: Untagged
@@ -707,7 +710,11 @@ MonoBehaviour:
     not on any of our maps. It's time to explore these unknown coordinates and unravel
     the mysteries they hold.
   RevealAction: {fileID: 0}
-  RevealActions: []
+  RevealActions:
+  - {fileID: 4282109060034310635}
+  - {fileID: -2488427545127451448}
+  - {fileID: -4065651074601282568}
+  - {fileID: 133416353097678289}
   OnVisitTooltipText: 
   OnVisitAction: {fileID: 0}
   VisitActions: []
@@ -731,3 +738,52 @@ MonoBehaviour:
     From her computer, we extract the coordinates - they lead to a location that's
     not on any of our maps. It's time to explore these unknown coordinates and unravel
     the mysteries they hold.
+--- !u!114 &-2488427545127451448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8377141676624294793}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ca6b2e78fdedd244b750fa50496d43e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Comment: 4
+--- !u!114 &-4065651074601282568
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8377141676624294793}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efaa4c2211c62634fa54526ede33ba05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Comment: 
+  tileToPlace: {fileID: 7779112155841060399, guid: fef7690db01548143aa0590c0ec8e701, type: 3}
+  placementCoordinates: {x: 14, y: 0}
+--- !u!114 &133416353097678289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8377141676624294793}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f21808de4848a644cbe2296b9380dc14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Comment: 
+  NumberOfFieldsToAdd: 0
+  NumberOfWoodsToAdd: 0
+  NumberOfSettlementsToAdd: 0
+  NumberOfSwampsToAdd: 0
+  NumberOfWastelandsToAdd: 0
+  NumberOfRandomTypeToAdd: 10
+  ShouldBeRevealed: 0
+  addAtTopOfDeck: 0
