@@ -278,7 +278,7 @@ MonoBehaviour:
   Name: Submerged Stash
   CardSprite: {fileID: 0}
   Difficulty: 3
-  LostChance: 0.05
+  lostChance: 0.05
   PathingHeuristic: 100000
   FlavorText: The eclectic riches we found here may lead us back to their owners,
     but we should not return here once the theives discover what is missing.

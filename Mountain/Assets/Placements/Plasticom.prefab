@@ -1036,7 +1036,7 @@ MonoBehaviour:
   Name: Plasticom
   CardSprite: {fileID: 0}
   Difficulty: 0
-  LostChance: 0.05
+  lostChance: 0.05
   PathingHeuristic: 1
   FlavorText: The immortal intelligent computer that has kept Stratohaven running
     for 10,000 years.

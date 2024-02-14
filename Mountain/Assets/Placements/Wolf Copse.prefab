@@ -51,7 +51,7 @@ MonoBehaviour:
   Name: Wolf Copse
   CardSprite: {fileID: 0}
   Difficulty: 0
-  LostChance: 0.05
+  lostChance: 0.05
   PathingHeuristic: 1
   FlavorText: The goats know to stay away from this stand of trees, but traveler's
     can't tell it from any other.

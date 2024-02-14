@@ -444,7 +444,7 @@ MonoBehaviour:
   Name: Wasteland
   CardSprite: {fileID: -491162440, guid: 6dfed9e8f1416d34bbd79deac2104118, type: 3}
   Difficulty: 0
-  LostChance: 0
+  lostChance: 0
   PathingHeuristic: 1
   FlavorText: 
   Biome: {fileID: 4111032941925707430}

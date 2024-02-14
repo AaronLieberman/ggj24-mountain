@@ -132,7 +132,7 @@ MonoBehaviour:
   Name: Briar Passage
   CardSprite: {fileID: 0}
   Difficulty: 0
-  LostChance: 0.05
+  lostChance: 0.05
   PathingHeuristic: 1
   FlavorText: 
   Biome: {fileID: 5689664702476106266, guid: d207460ad79d71147a84f132fe13e8bc, type: 3}

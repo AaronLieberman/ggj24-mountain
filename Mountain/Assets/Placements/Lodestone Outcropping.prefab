@@ -216,7 +216,7 @@ MonoBehaviour:
   Name: Lodestone Outcropping
   CardSprite: {fileID: 0}
   Difficulty: 2
-  LostChance: 0
+  lostChance: 0
   PathingHeuristic: 1
   FlavorText: The knowledge required to make compasses was never lost to us, but
     on our tiny mountaintop, there was no need for them.

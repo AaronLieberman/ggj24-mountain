@@ -529,7 +529,7 @@ MonoBehaviour:
   Name: Graveyard Crest
   CardSprite: {fileID: 0}
   Difficulty: -2
-  LostChance: 0.4
+  lostChance: 0.4
   PathingHeuristic: 1
   FlavorText: Six gravestones worn smooth with time fill this small memorial. Five
     of them stand above gaping pits.

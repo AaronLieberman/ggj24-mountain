@@ -444,7 +444,7 @@ MonoBehaviour:
   Name: Smiling Rogue
   CardSprite: {fileID: 0}
   Difficulty: 3
-  LostChance: 0.3
+  lostChance: 0.3
   PathingHeuristic: 1
   FlavorText: A handsome rogue offers to show us the way, but the route is hard to
     remember.

@@ -530,7 +530,7 @@ MonoBehaviour:
   Name: zzDEBUG Place 9 Adjacent
   CardSprite: {fileID: 0}
   Difficulty: 0
-  LostChance: 0
+  lostChance: 0
   PathingHeuristic: 1
   FlavorText: This tile places 9 adjacent grasslands on unexplored tiles no more
     than 2 adjacency distance away.

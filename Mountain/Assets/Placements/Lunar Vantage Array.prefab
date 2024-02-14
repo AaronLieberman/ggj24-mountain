@@ -48,7 +48,7 @@ MonoBehaviour:
   Name: Lunar Vantage Array
   CardSprite: {fileID: 0}
   Difficulty: 5
-  LostChance: 0.04
+  lostChance: 0.04
   PathingHeuristic: 1
   FlavorText: A 10,000 year old communication array is ready to recieve one last
     update from the Lunar Vantage Point Base. But what is it pointed at?

@@ -42,7 +42,8 @@ public class Placement : MonoBehaviour
     public string Name;
     public Sprite CardSprite;
     public int Difficulty;
-    public float LostChance;    
+    [SerializeField]
+    private float lostChance;
     public float PathingHeuristic;  // Impassable >= 10000
     public string FlavorText;
     public Placement Biome;
@@ -55,6 +56,8 @@ public class Placement : MonoBehaviour
     public List<PlacementAction> VisitActions;
     public ParticleSystem VisitationParticleSystem;
     public List<TileAction> Actions;
+
+    public float LostChance { get => lostChance; set => lostChance = Math.Clamp( value, 0.0f, 1.0f); }
 
     public void Visited(Worker worker, Placement placement)
     {

@@ -444,7 +444,7 @@ MonoBehaviour:
   Name: Swamp
   CardSprite: {fileID: -223735957, guid: 6dfed9e8f1416d34bbd79deac2104118, type: 3}
   Difficulty: 0
-  LostChance: 0
+  lostChance: 0
   PathingHeuristic: 1
   FlavorText: 
   Biome: {fileID: 4486575929425936965}

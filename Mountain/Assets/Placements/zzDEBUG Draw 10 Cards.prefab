@@ -133,7 +133,7 @@ MonoBehaviour:
   Name: zzDEBUG Draw 10 Cards
   CardSprite: {fileID: 0}
   Difficulty: 0
-  LostChance: 0
+  lostChance: 0
   PathingHeuristic: 1
   FlavorText: This card's ability takes any card and adds 10 cards to your deck.
   Biome: {fileID: 5689664702476106266, guid: aab079bb3afeab346b3798f963a1f5fa, type: 3}

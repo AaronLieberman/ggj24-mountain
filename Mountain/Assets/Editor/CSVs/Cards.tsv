@@ -10,8 +10,8 @@ Done	No	Bristling Wall	Woods		0	TRUE		Impassable. Insert Wasteland to burn the t
 Done	No	Canopy Village	Woods	0.00	0			Insert a forest, 50% chance to deck a Settlement, 50% chance to deck any card.		Deck a forest						0	0	0	0
 Done	No	Cleared Briar Passage	Woods	0.05	0					Place adjacent Nettled Nest. Place an adjacent Bristling Wall.		Upgrade to Briar Passage				0	0	0	0
 Done	Yes	Cleared Thorngate	Woods	0.05	0					Place adjacent Briar Passage. Place 4 adjacent Bristling Walls		Upgrade to Thorngate				0	0	0	1
-	No	Complex Foundation	Mountaintop	0.00	0		A complex foundation to some kind of structure. The Plasticom has instructed us not to disturb it.	Insert Stratolink to upgrade.								0	0	0	0
-	Yes	Contagious Mangrove	Swamp		-2							30% chance to replace a tile in the Journey Plan with a Swamp				0	0	1	1
+Done	No	Complex Foundation	Mountaintop	0.00	0		A complex foundation to some kind of structure. The Plasticom has instructed us not to disturb it.	Insert Stratolink to upgrade.								0	0	0	0
+Done	Yes	Contagious Mangrove	Swamp		-2							30% chance to replace a tile in the Journey Plan with a Swamp			AIPlaceholderArt/MangroveIcon	0	0	1	1
 DONE	No	Control Room	Wasteland	0.00	0					Deck 10 cards	The coordinates lead us not to another city in the clouds, but to a secluded control room nestled on a lesser-known mountain. The room is filled with old technology and screens, some still flickering with life. Stasia's digital logs reveal she was a guardian of sorts, the most recent in a long line of clones, maintaining the technology that oversees these mountaintop settlements. The screens show several settlements like Stratohaven, yet ours is the only one with the gate marked 'open.' The question lingers in the air: If Stasia died before Stratohaven was unlocked, who unlocked our city, and why? We hope the Stratolink printplans we discovered will lead to answers.					0	0	0	0
 	Yes	Creeping Fungus	Wasteland	0.20	-5		The sound the Stratohaven's fungal sweepers make when they encounter creeping fungus spores sounds like a mechanical cough, but the plasticom assures us this is just how recursive filtering sounds when it is functioning normally.		Place Creeping Fungus in an adjacent unexplored tile every 60 seconds.										
 DONE	Yes	Croplands	Fields													1	1	1	1
@@ -44,10 +44,10 @@ done	No	Highland Plateau	Fields	0.00	0		Grazing animals have worn a thick path i
 2	Yes	Honored Court	Settlement	0.00	5		Uh, you know what. We'll take you there ourselves.	Knights escort your explorer safely to the next waypoint. Skip effects on the way.								0	1	1	1
 DONE	No	Hydroponic Protein Printer	Mountaintop		0		Today's Menu: Breakfast: Whole Grain Chia Oats. Lunch Special! Bacon Protein BLT. Dinner: Chicken Salad With Celery.	Insert Swamp to upgrade to Gastroprint Farm		Plus 1 Journey Plan Slots						0	0	0	0
 DONE	No	Interwoven Intellect	Mountaintop		0					Plus 1 Hand Size						0	0	0	0
-	Yes	Landmark	Fields		3		Did the ancient world use this spire as a point of reference? No other purpose is apparent.			Reduce the chance to get lost on all adjacent tiles by 20%						1	1	1	1
+Done	Yes	Landmark	Fields		3		Did the ancient world use this spire as a point of reference? No other purpose is apparent.			Reduce the chance to get lost on all adjacent tiles by 20%						0	1	1	1
 2	Yes	Lodestone Outcropping	Fields	0.00	2		The knowledge required to make compasses was never lost to us, but on our tiny mountaintop, there was no need for them.					Explorers visiting here reduce their chance to get lost by 5%				1	1	1	1
 	Yes	Lost Child	Settlement		4			Insert a tile to check on the child, deck a card. (maybe make 5 of these, one for each type so the deck is the same biome you spent)		Place A Worried Mother 3 tiles away						0	1	1	1
-	Yes	Lunar Vantage Array	Settlement	0.04	5		A 10,000 year old communication array is ready to recieve one last update from the Lunar Vantage Point Base. But what is it pointed at?	Insert Swamp to reduce the chance of being lost in all placed tiles by 4%, upgrade to Silent Array.								0	1	1	1
+	Yes	Lunar Vantage Array	Settlement	0.04	5		A 10,000 year old communication array is ready to recieve one last update from the Lunar Vantage Point Base. But what is it pointed at?	Insert Swamp to reduce the chance of being lost in all placed tiles by 4%, upgrade to Silent Array.								0	0	1	1
 Done	No	Megalo Fruit Farm	Woods	0.08	0		Each Megalofruit is as big as a man. Getting them down from the lofty canopy is a challenge.			Deck a forest		Deck a forest				0	0	0	0
 	Yes	Merchant Shack	Woods	0.01	-3		An old man lives here		Lose a tile.			Your explorer trades a tile for magic beans. Upgrade to Tattered Shack.				0	1	1	1
 DONE	Yes	Mudflat	Swamp													0	0	1	1
@@ -85,10 +85,10 @@ Done	No	The Great River Of Beyond	Mountaintop		0		Now we take in sludge, and giv
 DONE	Yes	Thorngate	Woods		-2	TRUE	Curtains of sharp briars grow so quickly they seem to move.	Insert a woods tile to clear the gateway.	Ability upgrades to Cleared Thorngate							0	1	1	1
 DONE	Yes	Toadstool Grove	Woods	0.07	-1		Towering toadstools shade the moist soil.	Insert a woods, deck 2 swamps								0	0	1	1
 Done	No	Traveler's Forum	Mountaintop		0		Lectures, memoirs, and scientific illustrations inspire the next generation of explorer dreams.	Insert Wasteland to upgrade to World Academy.		Plus 1 Explorer						0	0	0	0
-	Yes	Triple Vortex	Wasteland	1.00	-4		I’ve a feeling we’re not in Kansas anymore.		Your explorer gets lost 100% of the time.							0	0	0	1
+Done	Yes	Triple Vortex	Wasteland	1.00	-4		I’ve a feeling we’re not in Kansas anymore.		Your explorer gets lost 100% of the time.							0	0	0	1
 Done	No	Tumbling River	Mountaintop	0.00	0		Water tumbles head over heals down a thousand feet.			Place an adjacent Waterfall						0	0	0	0
 Done	No	Unpassable	Mountaintop		0	TRUE	Too steep to climb.	Impassable								0	0	0	0
-	No	Vengeful Vantage	Wasteland	0.50	-3		Whistling wails haunt this hillock, whether by wraiths or the wind.			Increase lost chance in all surrounding tiles 20%						0	0	0	0
+Done	No	Vengeful Vantage	Wasteland	0.50	-3		Whistling wails haunt this hillock, whether by wraiths or the wind.			Increase lost chance in all surrounding tiles 20%						0	0	0	0
 Done	No	Videonarium	Mountaintop	0.00	0		A crowd has gathered to complete the 9853rd Annual Series Marathon of Friends	insert forest to upgrade to Traveler's Forum.								0	0	0	0
 Done	Yes	Village	Settlement	0.04	1		Somehow these people have found a way to survive in 10,000 years of cataclysm.									0	1	1	1
 	No	Wagon Caravan	Fields	0.00	0		These nomads have seen a hundred lands, but when they hear about the mountaintop, they promise to visit soon.	Insert a tile to deck 4 settlements, 4 fields, 4 forests, and 1 swamp. Upgrade to Wagon Ruts								0	0	0	0
@@ -114,7 +114,7 @@ done	No	zzDebug Remove Random Plan Tile	zzDebug	0.00	0		This card removes a rand
 	No	Hive City Heart	Settlement	0.00	1											0	0	0	0
 	No	Wagon Ruts	Fields	0.00	0		Signs of travelers that passed through here									0	0	0	0
 	No	Ball of Nettles	Woods		0											0	0	0	0
-	Yes																		
+Done	No	zzDEBUG Place Random Swamp	zzDebug	0.00	0		This tile places a random swamp adjacent to this tile when placed.									DEBUG	DEBUG	DEBUG	DEBUG
 	Yes																		
 	Yes																		
 	Yes																		

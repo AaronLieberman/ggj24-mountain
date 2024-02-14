@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &6068616569870599975
+--- !u!1 &6459750476456728369
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,87 +8,103 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7682947533947042590}
-  - component: {fileID: 7545999850091651629}
-  - component: {fileID: 1382901880636285473}
+  - component: {fileID: 8590794499505308628}
+  - component: {fileID: 2707602500904139069}
+  - component: {fileID: -1758129603477650642}
+  - component: {fileID: 7331429010963300248}
   m_Layer: 0
-  m_Name: zzDEBUG Draw 1 Card On Place
+  m_Name: zzDEBUG Place Random Swamp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &7682947533947042590
+--- !u!4 &8590794499505308628
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6068616569870599975}
+  m_GameObject: {fileID: 6459750476456728369}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 6969598925002826998}
+  - {fileID: 4256913562268052858}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7545999850091651629
+--- !u!114 &2707602500904139069
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6068616569870599975}
+  m_GameObject: {fileID: 6459750476456728369}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5ff2a246e0d77fb46890804a37f3a542, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Name: zzDEBUG Draw 1 Card On Place
+  Name: zzDEBUG Place Random Swamp
   CardSprite: {fileID: 0}
   Difficulty: 0
   lostChance: 0
   PathingHeuristic: 1
-  FlavorText: This tile adds a card to your deck when you place it.
+  FlavorText: This tile places a random swamp adjacent to this tile when placed.
   Biome: {fileID: 5689664702476106266, guid: aab079bb3afeab346b3798f963a1f5fa, type: 3}
   OnRevealText: 
-  RevealAction: {fileID: 1382901880636285473}
-  RevealActions: []
+  RevealAction: {fileID: 0}
+  RevealActions:
+  - {fileID: -1758129603477650642}
   OnVisitTooltipText: 
   OnVisitAction: {fileID: 0}
   VisitActions: []
   VisitationParticleSystem: {fileID: 0}
   Actions: []
---- !u!114 &1382901880636285473
+--- !u!114 &-1758129603477650642
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6068616569870599975}
+  m_GameObject: {fileID: 6459750476456728369}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f21808de4848a644cbe2296b9380dc14, type: 3}
+  m_Script: {fileID: 11500000, guid: 858cbcb966fd8304488dd0764d551071, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Comment: We use the place adjacent to actually place the thing, but we select the
+    swamp with this script
+  PlaceAdjacentTile: {fileID: 7331429010963300248}
+--- !u!114 &7331429010963300248
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6459750476456728369}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcdbce72b0d9a284da30e489098ba001, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Comment: 
-  NumberOfFieldsToAdd: 0
-  NumberOfWoodsToAdd: 0
-  NumberOfSettlementsToAdd: 0
-  NumberOfSwampsToAdd: 0
-  NumberOfWastelandsToAdd: 0
-  NumberOfRandomTypeToAdd: 1
-  ShouldBeRevealed: 1
-  addAtTopOfDeck: 0
---- !u!1001 &3096379116455096243
+  TileToPlace: {fileID: 0}
+  UseThisPlacementInsteadOfCenterCoordinates: 1
+  CenterCoordinates: {x: 0, y: 0}
+  MinimumDistanceByAdjacency: 1
+  MaximumDistanceByAdjacency: 1
+  MaximumDistanceByPathing: 100000
+  MustBeUnexplored: 1
+--- !u!1001 &8166127258323723839
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 7682947533947042590}
+    m_TransformParent: {fileID: 8590794499505308628}
     m_Modifications:
     - target: {fileID: 2983632187027055591, guid: 858db9ca037eec946a6968cf244883db, type: 3}
       propertyPath: BiomeSetAs
@@ -147,8 +163,8 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 858db9ca037eec946a6968cf244883db, type: 3}
---- !u!4 &6969598925002826998 stripped
+--- !u!4 &4256913562268052858 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5350400795831601989, guid: 858db9ca037eec946a6968cf244883db, type: 3}
-  m_PrefabInstance: {fileID: 3096379116455096243}
+  m_PrefabInstance: {fileID: 8166127258323723839}
   m_PrefabAsset: {fileID: 0}

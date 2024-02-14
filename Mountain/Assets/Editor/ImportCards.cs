@@ -205,21 +205,21 @@ public class ImportCards : EditorWindow
     {
         Vector3 spawnPosition = Vector3.zero;
         GameObject existingPrefab = AssetDatabase.LoadAssetAtPath<GameObject>(GetPlacementPath(PrefabName));
-        if (existingPrefab != null)
+        if (existingPrefab == null)
         {
-            GameObject prefabInWorld = (GameObject) PrefabUtility.InstantiatePrefab(existingPrefab);
-            //Prefab exists
-            return prefabInWorld;
-        }
-        else
-        {
-            // Instantiate a new GameObject
+            // If we didn't find it, make a new one, save it out, then load that.
             GameObject newObject = new GameObject(PrefabName);
             newObject.transform.position = spawnPosition;
             newObject.AddComponent<Placement>();
             PrefabUtility.SaveAsPrefabAsset(newObject, GetPlacementPath(PrefabName));
-            return newObject;
+
+            // Unity's prefab editing is so weird, I don't know how to do it normal, so just try again with the thing we created.
+            existingPrefab = AssetDatabase.LoadAssetAtPath<GameObject>(GetPlacementPath(PrefabName));
         }
+
+        GameObject prefabInWorld = (GameObject)PrefabUtility.InstantiatePrefab(existingPrefab);
+        //Prefab exists
+        return prefabInWorld;
     }
 
     protected static string GetPlacementPath(string prefabName)

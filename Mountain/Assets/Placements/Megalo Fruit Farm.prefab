@@ -277,7 +277,7 @@ MonoBehaviour:
   Name: Megalo Fruit Farm
   CardSprite: {fileID: 0}
   Difficulty: 0
-  LostChance: 0.08
+  lostChance: 0.08
   PathingHeuristic: 1
   FlavorText: Each Megalofruit is as big as a man. Getting them down from the lofty
     canopy is a challenge.

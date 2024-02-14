@@ -51,7 +51,7 @@ MonoBehaviour:
   Name: Froggie Bog Pirates
   CardSprite: {fileID: 0}
   Difficulty: -2
-  LostChance: 0.05
+  lostChance: 0.05
   PathingHeuristic: 100000
   FlavorText: A twangy dirge drifts through the miasma acompanied by a croaking chrous
     that reveals a submerged stash.

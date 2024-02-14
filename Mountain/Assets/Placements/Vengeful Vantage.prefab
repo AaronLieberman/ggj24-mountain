@@ -430,6 +430,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8252789877042194704}
   - component: {fileID: 1578472965886442668}
+  - component: {fileID: 800506848560641192}
   m_Layer: 0
   m_Name: Vengeful Vantage
   m_TagString: Untagged
@@ -468,18 +469,33 @@ MonoBehaviour:
   Name: Vengeful Vantage
   CardSprite: {fileID: 0}
   Difficulty: -3
-  LostChance: 0.5
+  lostChance: 0.5
   PathingHeuristic: 1
   FlavorText: Whistling wails haunt this hillock, whether by wraiths or the wind.
   Biome: {fileID: 4111032941925707430, guid: 7976e35d001ec0249b53f029133651a3, type: 3}
   OnRevealText: 
   RevealAction: {fileID: 0}
-  RevealActions: []
+  RevealActions:
+  - {fileID: 800506848560641192}
   OnVisitTooltipText: 
   OnVisitAction: {fileID: 0}
   VisitActions: []
   VisitationParticleSystem: {fileID: 0}
   Actions: []
+--- !u!114 &800506848560641192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5100913936287831048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac6e50748580d3843b376e6d9b1b9238, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Comment: 
+  adjustmentToAdjacentLostChances: 20
 --- !u!1 &5885740113742231841
 GameObject:
   m_ObjectHideFlags: 0

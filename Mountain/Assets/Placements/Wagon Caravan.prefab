@@ -696,7 +696,7 @@ MonoBehaviour:
   Name: Wagon Caravan
   CardSprite: {fileID: 0}
   Difficulty: 0
-  LostChance: 0
+  lostChance: 0
   PathingHeuristic: 1
   FlavorText: These nomads have seen a hundred lands, but when they hear about the
     mountaintop, they promise to visit soon.

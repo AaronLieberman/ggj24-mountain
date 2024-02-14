@@ -301,7 +301,7 @@ MonoBehaviour:
   Name: zzDEBUG Remove All Plan Tiles
   CardSprite: {fileID: 0}
   Difficulty: 0
-  LostChance: 0
+  lostChance: 0
   PathingHeuristic: 1
   FlavorText: This card removes all the tiles in the Journey plan, leaving empty
     slots to the existing destinations.

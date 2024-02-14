@@ -612,7 +612,7 @@ MonoBehaviour:
   Name: Explorer's Gate
   CardSprite: {fileID: 0}
   Difficulty: 0
-  LostChance: 0.05
+  lostChance: 0.05
   PathingHeuristic: 1
   FlavorText: In 12 foot tall letters, 'Curiosity' is las-etched on the inside of
     the gate,  and 'Wonder' on the outside.

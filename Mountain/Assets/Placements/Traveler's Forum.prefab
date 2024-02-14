@@ -697,7 +697,7 @@ MonoBehaviour:
   Name: Traveler's Forum
   CardSprite: {fileID: 0}
   Difficulty: 0
-  LostChance: 0.05
+  lostChance: 0.05
   PathingHeuristic: 1
   FlavorText: Lectures, memoirs, and scientific illustrations inspire the next generation
     of explorer dreams.

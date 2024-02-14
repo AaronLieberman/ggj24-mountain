@@ -528,7 +528,7 @@ MonoBehaviour:
   Name: Green Canopy
   CardSprite: {fileID: 0}
   Difficulty: 2
-  LostChance: 0.07
+  lostChance: 0.07
   PathingHeuristic: 1
   FlavorText: Wind ripples an emerald ceiling, causing slivers of sunlight to dance
     across the carpet of ferns.

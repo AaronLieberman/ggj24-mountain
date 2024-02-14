@@ -697,7 +697,7 @@ MonoBehaviour:
   Name: Abandoned Wagon
   CardSprite: {fileID: 0}
   Difficulty: 2
-  LostChance: 0
+  lostChance: 0
   PathingHeuristic: 1
   FlavorText: Deep wagon ruts make it impossible to lose the way.
   Biome: {fileID: 6223766025237645061, guid: 0c3fc96df5b9e1d499c66e212164f0aa, type: 3}

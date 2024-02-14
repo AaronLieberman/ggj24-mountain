@@ -697,7 +697,7 @@ MonoBehaviour:
   Name: Toadstool Grove
   CardSprite: {fileID: 0}
   Difficulty: -1
-  LostChance: 0.07
+  lostChance: 0.07
   PathingHeuristic: 1
   FlavorText: Towering toadstools shade the moist soil.
   Biome: {fileID: 5689664702476106266, guid: d207460ad79d71147a84f132fe13e8bc, type: 3}

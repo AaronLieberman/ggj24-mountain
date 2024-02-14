@@ -276,7 +276,7 @@ MonoBehaviour:
   Name: Giant Spider Lair
   CardSprite: {fileID: 0}
   Difficulty: -5
-  LostChance: 0.05
+  lostChance: 0.05
   PathingHeuristic: 1
   FlavorText: insert wasteland, 30% chance to pass, insert fields 50% chance to pass,
     insert settlement for 90% chance to pass.

@@ -304,7 +304,7 @@ MonoBehaviour:
   Name: Wedding Festival
   CardSprite: {fileID: 0}
   Difficulty: 0
-  LostChance: 0
+  lostChance: 0
   PathingHeuristic: 1
   FlavorText: The original Explorer has found love and settled with a local!
   Biome: {fileID: 519853117350573946, guid: b422e4b1552e64241b81ca5134eb4510, type: 3}

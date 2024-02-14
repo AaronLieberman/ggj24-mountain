@@ -13,21 +13,19 @@ public class ContagiousMangroveAction : PlacementAction
             if (worker.WorkerPlans.Count > 0)
             {
                 int randomIndex = Random.Range(0, worker.WorkerPlans.Count);
-                RemoveTile(worker.WorkerPlans[randomIndex]);
+                PutOnDeck(worker.WorkerPlans[randomIndex].Card.PlacementToSpawn);
+
+                PlacementPoolManager ppm = Utilities.GetRootComponent<PlacementPoolManager>();
+                Placement newSwamp = ppm.GetRandomCardFromBiome(Utilities.GetRootComponent<Deck>().SwampBiome);
+
+                worker.ReplaceDestination(randomIndex, newSwamp);
             }
         }
     }
 
-    public void RemoveTile(WorkerPlan plan)
+    protected void PutOnDeck(Placement cardToAdd)
     {
-        PutOnDeck(plan);
-        Destroy(plan.Card);
-        plan.Card = null;
-    }
-
-    protected void PutOnDeck(WorkerPlan cardToAdd)
-    {
-        Utilities.GetRootComponent<Deck>().AddNewCardToDeck(cardToAdd.Card.PlacementToSpawn, true);
+        Utilities.GetRootComponent<Deck>().AddNewCardToDeck(cardToAdd, true);
     }
 
 }

@@ -552,7 +552,7 @@ MonoBehaviour:
   Name: Creeping Fungus
   CardSprite: {fileID: 0}
   Difficulty: -5
-  LostChance: 0.2
+  lostChance: 0.2
   PathingHeuristic: 1
   FlavorText: The sound the Stratohaven's fungal sweepers make when they encounter
     creeping fungus spores sounds like a mechanical cough, but the plasticom assures

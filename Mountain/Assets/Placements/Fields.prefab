@@ -552,7 +552,7 @@ MonoBehaviour:
   Name: Fields
   CardSprite: {fileID: 510106708, guid: 6dfed9e8f1416d34bbd79deac2104118, type: 3}
   Difficulty: 0
-  LostChance: 0
+  lostChance: 0
   PathingHeuristic: 1
   FlavorText: 
   Biome: {fileID: 6223766025237645061}

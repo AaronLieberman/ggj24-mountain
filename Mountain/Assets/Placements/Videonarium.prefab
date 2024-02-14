@@ -53,7 +53,7 @@ MonoBehaviour:
   Name: Videonarium
   CardSprite: {fileID: 0}
   Difficulty: 0
-  LostChance: 0
+  lostChance: 0
   PathingHeuristic: 1
   FlavorText: A crowd has gathered to complete the 9853rd Annual Series Marathon
     of Friends

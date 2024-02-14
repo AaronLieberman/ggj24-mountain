@@ -574,6 +574,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9119614795631718850}
   - component: {fileID: 4434180951444591043}
+  - component: {fileID: 1298375116285851525}
   m_Layer: 0
   m_Name: Landmark
   m_TagString: Untagged
@@ -612,19 +613,34 @@ MonoBehaviour:
   Name: Landmark
   CardSprite: {fileID: 0}
   Difficulty: 3
-  LostChance: 0.05
+  lostChance: 0.05
   PathingHeuristic: 1
   FlavorText: Did the ancient world use this spire as a point of reference? No other
     purpose is apparent.
   Biome: {fileID: 6223766025237645061, guid: 0c3fc96df5b9e1d499c66e212164f0aa, type: 3}
   OnRevealText: 
   RevealAction: {fileID: 0}
-  RevealActions: []
+  RevealActions:
+  - {fileID: 1298375116285851525}
   OnVisitTooltipText: 
   OnVisitAction: {fileID: 0}
   VisitActions: []
   VisitationParticleSystem: {fileID: 0}
   Actions: []
+--- !u!114 &1298375116285851525
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7213889319353221773}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac6e50748580d3843b376e6d9b1b9238, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Comment: 
+  adjustmentToAdjacentLostChances: -20
 --- !u!1 &9188145835353546687
 GameObject:
   m_ObjectHideFlags: 0

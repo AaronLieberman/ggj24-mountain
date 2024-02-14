@@ -132,7 +132,7 @@ MonoBehaviour:
   Name: zzDebug
   CardSprite: {fileID: 1044792434, guid: 6dfed9e8f1416d34bbd79deac2104118, type: 3}
   Difficulty: 0
-  LostChance: 0
+  lostChance: 0
   PathingHeuristic: 1
   FlavorText: This is the biome for debug testing cards.
   Biome: {fileID: 5689664702476106266}

@@ -249,7 +249,7 @@ MonoBehaviour:
   Name: Pine Forest
   CardSprite: {fileID: 0}
   Difficulty: 1
-  LostChance: 0.1
+  lostChance: 0.1
   PathingHeuristic: 1
   FlavorText: The plasticom tells us that the only biome more swarming with life
     than a forest is the ocean. But who among us has seen the sea?

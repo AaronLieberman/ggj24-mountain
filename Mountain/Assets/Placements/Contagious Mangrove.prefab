@@ -490,6 +490,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8548037495201578280}
   - component: {fileID: 1340390373298266226}
+  - component: {fileID: -1270119322532879587}
   m_Layer: 0
   m_Name: Contagious Mangrove
   m_TagString: Untagged
@@ -511,6 +512,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8417930629419095459}
+  - {fileID: 8868050312985295209}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1340390373298266226
@@ -528,7 +530,7 @@ MonoBehaviour:
   Name: Contagious Mangrove
   CardSprite: {fileID: 0}
   Difficulty: -2
-  LostChance: 0.05
+  lostChance: 0.05
   PathingHeuristic: 1
   FlavorText: 
   Biome: {fileID: 4486575929425936965, guid: 91624b1fd6393594b85fce2f31dfbbc2, type: 3}
@@ -537,9 +539,24 @@ MonoBehaviour:
   RevealActions: []
   OnVisitTooltipText: 
   OnVisitAction: {fileID: 0}
-  VisitActions: []
-  VisitationParticleSystem: {fileID: 0}
+  VisitActions:
+  - {fileID: -1270119322532879587}
+  VisitationParticleSystem: {fileID: 9181777896306635291}
   Actions: []
+--- !u!114 &-1270119322532879587
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5707238003041024040}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bedf2e413d8a1c4c8e2edf6708a5cc2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Comment: 
+  ChanceToSwampify: 30
 --- !u!1 &7510220621208177851
 GameObject:
   m_ObjectHideFlags: 0
@@ -708,3 +725,74 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &1728529749795490854
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 8548037495201578280}
+    m_Modifications:
+    - target: {fileID: 5884612550583953592, guid: 1f6eda7437051444c9a343741f267648, type: 3}
+      propertyPath: m_Name
+      value: DefaultVisitationSpriteSystem
+      objectReference: {fileID: 0}
+    - target: {fileID: 7534736578198027837, guid: 1f6eda7437051444c9a343741f267648, type: 3}
+      propertyPath: UVModule.sprites.Array.data[0].sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 55886a42dd7eb014886b548a7e0009f6, type: 3}
+    - target: {fileID: 7849031294767265103, guid: 1f6eda7437051444c9a343741f267648, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7849031294767265103, guid: 1f6eda7437051444c9a343741f267648, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7849031294767265103, guid: 1f6eda7437051444c9a343741f267648, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7849031294767265103, guid: 1f6eda7437051444c9a343741f267648, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7849031294767265103, guid: 1f6eda7437051444c9a343741f267648, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7849031294767265103, guid: 1f6eda7437051444c9a343741f267648, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7849031294767265103, guid: 1f6eda7437051444c9a343741f267648, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7849031294767265103, guid: 1f6eda7437051444c9a343741f267648, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7849031294767265103, guid: 1f6eda7437051444c9a343741f267648, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7849031294767265103, guid: 1f6eda7437051444c9a343741f267648, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 1f6eda7437051444c9a343741f267648, type: 3}
+--- !u!4 &8868050312985295209 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7849031294767265103, guid: 1f6eda7437051444c9a343741f267648, type: 3}
+  m_PrefabInstance: {fileID: 1728529749795490854}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &9181777896306635291 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 7534736578198027837, guid: 1f6eda7437051444c9a343741f267648, type: 3}
+  m_PrefabInstance: {fileID: 1728529749795490854}
+  m_PrefabAsset: {fileID: 0}

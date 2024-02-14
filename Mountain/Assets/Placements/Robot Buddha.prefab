@@ -612,7 +612,7 @@ MonoBehaviour:
   Name: Robot Buddha
   CardSprite: {fileID: 0}
   Difficulty: 1
-  LostChance: 0.03
+  lostChance: 0.03
   PathingHeuristic: 1
   FlavorText: Nearly as old as the Stratohaven, the Robot Buddha has learned to live
     sustainably in chaos. It wants nothing, it needs nothing.

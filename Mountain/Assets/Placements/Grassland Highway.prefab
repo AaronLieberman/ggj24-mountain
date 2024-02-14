@@ -49,7 +49,7 @@ MonoBehaviour:
   Name: Grassland Highway
   CardSprite: {fileID: 0}
   Difficulty: 1
-  LostChance: 0
+  lostChance: 0
   PathingHeuristic: 1
   FlavorText: Printer drones have spread this spindle of mountaintop plasphalt all
     the way to the horizon.
