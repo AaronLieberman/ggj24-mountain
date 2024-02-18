@@ -99,6 +99,11 @@ public class Tile : MonoBehaviour
         RefreshStatusEffects();
     }
 
+    public bool GetStatus(TileStatus status)
+    {
+        return _statusReasons[status].Any();
+    }
+
     public void RefreshStatusEffects()
     {
         var disabledReasons = _statusReasons[TileStatus.Disabled];

@@ -44,7 +44,7 @@ public class Placement : MonoBehaviour
     public int Difficulty;
     [SerializeField]
     private float lostChance;
-    public float PathingHeuristic;  // Impassable >= 10000
+    public float PathingHeuristic; // Impassable >= 10000
     public string FlavorText;
     public Placement Biome;
     public string OnRevealText;
@@ -58,6 +58,7 @@ public class Placement : MonoBehaviour
     public List<TileAction> Actions;
 
     public float LostChance { get => lostChance; set => lostChance = Math.Clamp( value, 0.0f, 1.0f); }
+    public bool Passable => PathingHeuristic < 10000;
 
     public void Visited(Worker worker, Placement placement)
     {

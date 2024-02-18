@@ -117,7 +117,7 @@ public class GameManager : MonoBehaviour
 
     public void StopMouseActiveHighlight()
     {
-        if(_highlightTile != null) _highlightTile.SetStatus(TileStatus.Highlighted, "mouse", false);
+        if (_highlightTile != null) _highlightTile.SetStatus(TileStatus.Highlighted, "mouse", false);
         _highlightTile = null;
     }
 
@@ -207,26 +207,55 @@ public class GameManager : MonoBehaviour
 
     public void SetConsideringPlacingCard(Card card)
     {
+        // initially, enable all tiles
         foreach (var tile in Map.GetComponentsInChildren<Tile>())
         {
             tile.SetStatus(TileStatus.Disabled, "place card", false);
         }
 
-        // SetStatus(disabled) when there are workerplans?
-        // maybe here?
-        // need to make sure it resets at the appropriate time
+        if (card == null) return;
 
         var worker = GetFirstAvailableWorker();
         if (worker == null) return;
 
-        var workerTile = Map.GetTileAtObject(worker.transform);
+        var startingTile = WorkerPlan.Count == 0
+            ? Map.GetTileAtObject(worker.transform)
+            : WorkerPlan.Last().Tile;
         foreach (var tile in Map.GetComponentsInChildren<Tile>())
         {
-            bool cardCanBePlaced = card != null &&
-                tile.Placement.Actions.Any(a => a.CanPayCost(card)) &&
-                !WorkerPlan.Any(p => p.Tile == tile);
+            if (!tile.GetStatus(TileStatus.Hidden))
+            {
+                bool cardCanBePlaced =
+                    tile.Placement.Actions.Any(a => a.CanPayCost(card)) &&
+                    !WorkerPlan.Any(p => p.Tile == tile);
 
-            tile.SetStatus(TileStatus.Disabled, "place card", !cardCanBePlaced);
+                if (cardCanBePlaced)
+                {
+                    // if the card could be placed in this tile, make sure that there's a path in which to do so
+                    var route = TilePathfinderAStar.CalculateRoute(startingTile, tile);
+                    if (route != null)
+                    {
+                        bool passable = true;
+                        // skip the first (starting location) and last items (one we're placing the card into) in the route
+                        foreach (var stepTile in route.Skip(1).Take(route.Count() - 2))
+                        {
+                            if (!stepTile.Placement.Passable)
+                            {
+                                passable = false;
+                                break;
+                            }
+                        }
+
+                        if (passable)
+                        {
+                            // we're already set to disabled=false from the top of this function so we're good to go
+                            continue;
+                        }
+                    }
+                }
+            }
+
+            tile.SetStatus(TileStatus.Disabled, "place card", true);
         }
     }
 
