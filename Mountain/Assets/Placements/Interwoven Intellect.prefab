@@ -49,7 +49,7 @@ MonoBehaviour:
   Name: Interwoven Intellect
   CardSprite: {fileID: 0}
   Difficulty: 0
-  lostChance: 0.05
+  lostChance: 0
   PathingHeuristic: 1
   FlavorText: 
   Biome: {fileID: 6223766025237645061, guid: b30f520d510134f4da99aaf67f3f714b, type: 3}

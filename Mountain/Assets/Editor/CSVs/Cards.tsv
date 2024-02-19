@@ -1,5 +1,5 @@
 Priority	Can be drawn	Name	Biome Type	Chance To Get Lost	Difficult	Impassable	Flavor Text	Ability	Secret Effect	On Reveal	On Reveal Text	On Visit	OnVisitTooltipOnVisitTooltipText	OnVisitPopupText	Vistation Sprite	Pool 1 Membership	Pool 2	Pool 3	Pool 4
-	No	A Worried Mother	Settlement		0		I've looked everywhere!					If this Explorer has visited Lost Child, upgrade to Happy Reunion				0	0	0	0
+	No	A Worried Mother	Settlement		0		I've looked everywhere!					If this Explorer has visited Lost Child, upgrade to Happy Reunion			AIPlaceholderArt/MotherAndChildIcon	0	0	0	0
 Done	Yes	Abandoned Wagon	Fields	0.00	2		Deep wagon ruts make it impossible to lose the way.			Reveal Wagon Caravan within 2 tiles						0	0	1	1
 Done	No	Airlock	Mountaintop	0.00	0		An airlock with simple controls: two buttons labeled 'Depart' and 'Seal'. Until recently, it has never been used.			Reveal location of Fireworks	For a year, the airlock out of Stratohaven has stood unlocked, yet none dared venture beyond. Our haven in the clouds has provided all we needed. Why risk the barren lands below? But today, something changed. In the distance, bursts of light pierced the sky - fireworks, akin to those in our old TV shows. Are we truly alone? Curiosity stirs in Stratohaven. Our bravest will journey to uncover this enigma.					0	0	0	0
 Done	Yes	Bandit Copse	Fields	0.03	-2		The locals know to stay away from this stand of trees, but traveler's can't tell it from any other.	Insert any tile to not lose a tile when visiting. Insert a Woods tile to upgrade to a Forest.				Remove the tile in the first slot of the journey plan	Lose a tile.	Oh no! Bandits stole one of your explorer's cards!		0	1	1	1
@@ -43,7 +43,7 @@ Done	No	Happy Reunion	Settlement	0.00	0					Deck 4 Settlements, 8 fields, 1 fore
 done	No	Highland Plateau	Fields	0.00	0		Grazing animals have worn a thick path into the turf here.									0	0	0	0
 2	Yes	Honored Court	Settlement	0.00	5		Uh, you know what. We'll take you there ourselves.	Knights escort your explorer safely to the next waypoint. Skip effects on the way.								0	1	1	1
 DONE	No	Hydroponic Protein Printer	Mountaintop		0		Today's Menu: Breakfast: Whole Grain Chia Oats. Lunch Special! Bacon Protein BLT. Dinner: Chicken Salad With Celery.	Insert Swamp to upgrade to Gastroprint Farm		Plus 1 Journey Plan Slots						0	0	0	0
-DONE	No	Interwoven Intellect	Mountaintop		0					Plus 1 Hand Size						0	0	0	0
+DONE	No	Interwoven Intellect	Mountaintop	0.00	0					Plus 1 Hand Size						0	0	0	0
 Done	Yes	Landmark	Fields		3		Did the ancient world use this spire as a point of reference? No other purpose is apparent.			Reduce the chance to get lost on all adjacent tiles by 20%						0	1	1	1
 2	Yes	Lodestone Outcropping	Fields	0.00	2		The knowledge required to make compasses was never lost to us, but on our tiny mountaintop, there was no need for them.					Explorers visiting here reduce their chance to get lost by 5%				1	1	1	1
 	Yes	Lost Child	Settlement		4			Insert a tile to check on the child, deck a card. (maybe make 5 of these, one for each type so the deck is the same biome you spent)		Place A Worried Mother 3 tiles away						0	1	1	1
@@ -72,7 +72,7 @@ Done	No	Smouldering Bonefire	Wasteland	0.05	0		Exhausted refugees huddle around 
 DONE	Yes	Soggy Scrubland	Swamp													0	0	1	1
 	Yes	Sprawling Hive City	Settlement	0.15	3			insert field to place an adjacent settlement tile. If that was the only adjacent settlement tile, upgrade to hive city heart		place an adjacent settlement tile. If that was the only adjacent settlement tile or there are no ajacent spots, upgrade to hive city heart						0	1	1	1
 	No	Spreading Delta	Swamp		0					If next to a Spreading Delta, place 2 adjacent Delta Edges		Move to an adjacent Delta Edge				0	0	0	0
-	No	Stasia's Residency	Settlement	0.00	0					Unlocks Pool 4, Deck 4 cards, reveals Control room far away	We found Stasia's home, but she has been dead for many years now. Her husband, now an old man, guards her possessions like precious treasures. From her computer, we extract the coordinates - they lead to a location that's not on any of our maps. It's time to explore these unknown coordinates and unravel the mysteries they hold.					0	0	0	0
+Done	No	Stasia's Residency	Settlement	0.00	0					Unlocks Pool 4, Deck 4 cards, reveals Control room far away	We found Stasia's home, but she has been dead for many years now. Her husband, now an old man, guards her possessions like precious treasures. From her computer, we extract the coordinates - they lead to a location that's not on any of our maps. It's time to explore these unknown coordinates and unravel the mysteries they hold.					0	0	0	0
 	No	Stratolink	Mountaintop	0.00	0		An optical communication beam emitter, capable of transmitting terrabytes of data thousands of miles along line of sight in an instant.	Insert a tile to open a Stratohaven.	Doesn't actually do anything aside from maybe keeping track of how many you've done.	Opens Beat The Game dialog						0	0	0	0
 Done	No	Strider Village	Settlement	0.00	0			Unlocks Pool 2, Deck 2 woods and 2 forests, Show Electronic Device tile on other side of The Great Gate						In the village, we found the old man named Bennett. Known among his neighbors for his eccentric interests, Bennett claims he's been experimenting with a strange, beeping box he found buried near the village a decade ago. He insists it's not just scrap metal. His description sounds eerily similar to our old communication devices. Could it be a lost relic from another Stratohaven? We decide to investigate further, hoping to uncover a piece of our forgotten past. He provides the location of where he hid the diary.		0	0	0	0
 DONE	No	Submerged Stash	Swamp		3	TRUE	The eclectic riches we found here may lead us back to their owners, but we should not return here once the theives discover what is missing.	Impassable. Insert Wood or Field to visit and deck 6 settlements. Upgrade to Sunken Stash.								0	0	0	0
@@ -111,9 +111,9 @@ done	No	zzDEBUG Remove All Plan Tiles	zzDebug	0.00	0		This card removes all the 
 done	No	zzDEBUG Remove First Plan Tile	zzDebug	0.00	0		This card removes the first tile in the Journey plan, leaving an empty slot to the existing destination.			Remove first plan tile						DEBUG	DEBUG	DEBUG	DEBUG
 done	No	zzDebug Remove Last Plan Tile	zzDebug	0.00	0		This card removes the last tile in the Journey plan, leaving an empty slot to the existing destination.			remove last plan tile						DEBUG	DEBUG	DEBUG	DEBUG
 done	No	zzDebug Remove Random Plan Tile	zzDebug	0.00	0		This card removes a random tile in the Journey plan, leaving an empty slot to the existing destination.			remove random plan tile						DEBUG	DEBUG	DEBUG	DEBUG
-	No	Hive City Heart	Settlement	0.00	1											0	0	0	0
-	No	Wagon Ruts	Fields	0.00	0		Signs of travelers that passed through here									0	0	0	0
-	No	Ball of Nettles	Woods		0											0	0	0	0
+Done	No	Hive City Heart	Settlement	0.00	1											0	0	0	0
+Done	No	Wagon Ruts	Fields	0.00	0		Signs of travelers that passed through here									0	0	0	0
+Done	No	Ball of Nettles	Woods		0											0	0	0	0
 Done	No	zzDEBUG Place Random Swamp	zzDebug	0.00	0		This tile places a random swamp adjacent to this tile when placed.									DEBUG	DEBUG	DEBUG	DEBUG
 	Yes																		
 	Yes																		
