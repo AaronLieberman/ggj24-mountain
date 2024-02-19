@@ -197,7 +197,7 @@ public class TileGridLayout : MonoBehaviour
 
         foreach (var tile in GetComponentsInChildren<Tile>())
         {
-            tile.SpawnPlacement(DefaultPrefab);
+            tile.SpawnPlacement(DefaultPrefab, false);
         }
     }
 

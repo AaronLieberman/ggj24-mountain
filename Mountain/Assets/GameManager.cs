@@ -198,16 +198,21 @@ public class GameManager : MonoBehaviour
 
         foreach (var tile in Map.GetComponentsInChildren<Tile>())
         {
-            var visible = unexploredDistances.ContainsKey(tile.Location) &&
+            var visible = tile.IsRevealed || (unexploredDistances.ContainsKey(tile.Location) &&
                 (!unexploredDistances[tile.Location].Passable ||
-                    unexploredDistances[tile.Location].UnexploredDistance <= MaxJourneySlots);
+                    unexploredDistances[tile.Location].UnexploredDistance <= MaxJourneySlots));
             tile.SetStatus(TileStatus.Hidden, "passability", !visible);
+
+            bool staticlyImpassable = !tile.Placement.Passable && !tile.Placement.Actions.Any();
+            tile.SetStatus(TileStatus.StaticallyImpassbile, "staticallyImpassible", staticlyImpassable);
         }
+
+        SetConsideringPlacingCard(null);
     }
 
     public void SetConsideringPlacingCard(Card card)
     {
-        // initially, enable all tiles
+        // initially, enable all tiles if they're passable
         foreach (var tile in Map.GetComponentsInChildren<Tile>())
         {
             tile.SetStatus(TileStatus.Disabled, "place card", false);

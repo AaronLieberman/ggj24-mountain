@@ -10,6 +10,7 @@ public enum TileStatus
     Hidden,
     Disabled,
     Highlighted,
+    StaticallyImpassbile,
 }
 
 public class Tile : MonoBehaviour
@@ -19,44 +20,51 @@ public class Tile : MonoBehaviour
     Dictionary<TileStatus, HashSet<string>> _statusReasons = new();
     Material _highlightMaterial;
     Material _originalMaterial;
+    bool _isRevealed = false;
 
     public Placement Placement => GetComponentInChildren<Placement>();
+    public bool IsRevealed => _isRevealed;
 
     void Awake()
     {
-        _statusReasons[TileStatus.Disabled] = new HashSet<string>();
-        _statusReasons[TileStatus.Hidden] = new HashSet<string>();
-        _statusReasons[TileStatus.Highlighted] = new HashSet<string>();
+        foreach (TileStatus ts in Enum.GetValues(typeof(TileStatus)))
+        {
+            _statusReasons[ts] = new HashSet<string>();
+        }
 
         _highlightMaterial = transform.GetComponentInParent<TileGridLayout>().HighlightMaterial;
     }
 
-    public Placement SpawnPlacement(Placement placement)
+    public Placement SpawnPlacement(Placement placement, bool isRevealed = true)
     {
-        return SpawnPlacement(null, placement);
+        return SpawnPlacement(null, placement, isRevealed);
     }
 
     // worker may be null
-    public Placement SpawnPlacement(Worker worker, Placement placement)
+    public Placement SpawnPlacement(Worker worker, Placement placement, bool isRevealed = false)
     {
         Utilities.DestroyAllChildren(transform);
 
         var instance = Instantiate(placement, transform, false);
+        _isRevealed = isRevealed;
 
         if (!string.IsNullOrWhiteSpace(instance.OnRevealText))
         {
             Utilities.GetRootComponent<GameManager>().ShowOnRevealText(instance.OnRevealText);
         }
 
-        instance.RevealAction?.DoWork(worker, instance, null);
+        if (instance.RevealAction != null)
+        {
+            instance.RevealAction.DoWork(worker, instance, null);
+        }
+
         foreach (PlacementAction action in placement.RevealActions)
         {
             action.DoWork(worker, instance, null);
         }
+
         return instance;
     }
-
-    private TileGridLayout Map => transform.parent.GetComponent<TileGridLayout>();
 
     private bool ShouldHandleMouseEvents => !EventSystem.current.IsPointerOverGameObject();
 
@@ -109,16 +117,26 @@ public class Tile : MonoBehaviour
         var disabledReasons = _statusReasons[TileStatus.Disabled];
         var hiddenReasons = _statusReasons[TileStatus.Hidden];
         var highlightedReasons = _statusReasons[TileStatus.Highlighted];
+        var staticallyImpassibleReasons = _statusReasons[TileStatus.StaticallyImpassbile];
 
         if (_originalMaterial == null)
         {
             _originalMaterial = transform.GetComponentsInChildren<SpriteRenderer>().Select(a => a.material).First();
         }
 
-        float disabledScale = 0.5f;
         foreach (var sr in transform.GetComponentsInChildren<SpriteRenderer>())
         {
-            sr.color = disabledReasons.Any() ? new Color(disabledScale, disabledScale, disabledScale) : Color.white;
+            float opacity = 1;
+            if (disabledReasons.Any())
+            {
+                opacity = 0.5f;
+            }
+            else if (staticallyImpassibleReasons.Any())
+            {
+                opacity = 0.75f;
+            }
+
+            sr.color = new Color(opacity, opacity, opacity);
             sr.enabled = !hiddenReasons.Any();
             sr.material = highlightedReasons.Any() ? _highlightMaterial : (_originalMaterial != null ? _originalMaterial : sr.material);
         }
