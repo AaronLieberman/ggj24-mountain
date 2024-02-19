@@ -54,8 +54,9 @@ MonoBehaviour:
   FlavorText: This tile adds a card to your deck when you place it.
   Biome: {fileID: 5689664702476106266, guid: aab079bb3afeab346b3798f963a1f5fa, type: 3}
   OnRevealText: 
-  RevealAction: {fileID: 1382901880636285473}
-  RevealActions: []
+  RevealAction: {fileID: 0}
+  RevealActions:
+  - {fileID: 1382901880636285473}
   OnVisitTooltipText: 
   OnVisitAction: {fileID: 0}
   VisitActions: []
