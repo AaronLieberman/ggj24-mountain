@@ -53,6 +53,7 @@ MonoBehaviour:
   PathingHeuristic: 1
   FlavorText: This tile places 1 adjacent grasslands no more than distance 1.
   Biome: {fileID: 5689664702476106266, guid: aab079bb3afeab346b3798f963a1f5fa, type: 3}
+  OnRevealTextTitle: 
   OnRevealText: 
   RevealAction: {fileID: 0}
   RevealActions:
@@ -80,7 +81,7 @@ MonoBehaviour:
   CenterCoordinates: {x: 0, y: 0}
   MinimumDistanceByAdjacency: 1
   MaximumDistanceByAdjacency: 1
-  MaximumDistanceByPathing: 100000
+  MaximumDistanceByPathing: -1
   MustBeUnexplored: 1
 --- !u!1001 &6897688301657196336
 PrefabInstance:

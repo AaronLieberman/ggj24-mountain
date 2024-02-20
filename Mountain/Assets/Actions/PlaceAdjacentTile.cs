@@ -11,7 +11,7 @@ public class PlaceAdjacentTile : PlacementAction
     public Vector2Int CenterCoordinates;
     public int MinimumDistanceByAdjacency = 1;
     public int MaximumDistanceByAdjacency = int.MaxValue;
-    public int MaximumDistanceByPathing = 100000;
+    public int MaximumDistanceByPathing = -1;
     public bool MustBeUnexplored = true;
 
     public override void DoWork(Worker worker, Placement placement, Card card)
@@ -77,10 +77,13 @@ public class PlaceAdjacentTile : PlacementAction
         if (distanceByAdjacency < MinimumDistanceByAdjacency) return false;
         if (distanceByAdjacency > MaximumDistanceByAdjacency) return false;
 
-        //Make sure we are close enough by pathfinding
-        Tile originTile = Utilities.GetRootComponent<TileGridLayout>().GetTileFromLoc(CenterCoordinates);
-        List<Tile> routeToTile = TilePathfinderAStar.CalculateRoute(originTile, tileToVisit);
-        if(routeToTile == null || routeToTile.Count > MaximumDistanceByPathing + 1) return false; //The Count includes the origin, so we need to add a + 1
+        if (MaximumDistanceByPathing > 0)
+        {
+            //Make sure we are close enough by pathfinding
+            Tile originTile = Utilities.GetRootComponent<TileGridLayout>().GetTileFromLoc(CenterCoordinates);
+            List<Tile> routeToTile = TilePathfinderAStar.CalculateRoute(originTile, tileToVisit);
+            if (routeToTile == null || routeToTile.Count > MaximumDistanceByPathing + 1) return false; //The Count includes the origin, so we need to add a + 1
+        }
 
         // We made it past all the checks!
         return true;

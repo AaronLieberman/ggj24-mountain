@@ -55,6 +55,7 @@ MonoBehaviour:
   FlavorText: This tile places 9 adjacent grasslands on unexplored tiles no more
     than 2 adjacency distance away.
   Biome: {fileID: 5689664702476106266, guid: aab079bb3afeab346b3798f963a1f5fa, type: 3}
+  OnRevealTextTitle: 
   OnRevealText: 
   RevealAction: {fileID: 0}
   RevealActions:
@@ -83,10 +84,10 @@ MonoBehaviour:
   Comment: 
   TileToPlace: {fileID: 4039720745246559038, guid: 3e33b4fbbc7942945bc3b65501002210, type: 3}
   UseThisPlacementInsteadOfCenterCoordinates: 1
-  CenterCoordinates: {x: 0, y: 0}
+  CenterCoordinates: {x: 5, y: 7}
   MinimumDistanceByAdjacency: 1
   MaximumDistanceByAdjacency: 2
-  MaximumDistanceByPathing: 100000
+  MaximumDistanceByPathing: -1
   MustBeUnexplored: 1
 --- !u!114 &-6706634751180964292
 MonoBehaviour:
