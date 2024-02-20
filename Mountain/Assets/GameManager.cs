@@ -11,6 +11,12 @@ public class WorkerPlan
     public Tile Tile;
 }
 
+public struct PopupText
+{
+    public string Title;
+    public string Body;
+}
+
 public class GameManager : MonoBehaviour
 {
     public int MaxJourneySlots = 2;
@@ -32,7 +38,7 @@ public class GameManager : MonoBehaviour
     public List<WorkerPlan> WorkerPlan { get; } = new();
 
     public bool IsDialogVisible { get; set; }
-    public event EventHandler<string> ShowOnRevealedUI;
+    public event EventHandler<PopupText> ShowOnRevealedUI;
 
     public bool EnableDebugTools = false;
 
@@ -275,8 +281,8 @@ public class GameManager : MonoBehaviour
         return canCardBePlaced;
     }
 
-    public void ShowOnRevealText(string text)
+    public void ShowOnRevealText(string title, string body)
     {
-        ShowOnRevealedUI?.Invoke(null, text);
+        ShowOnRevealedUI?.Invoke(null, new PopupText { Title = title, Body = body });
     }
 }

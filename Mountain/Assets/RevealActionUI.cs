@@ -7,6 +7,7 @@ using UnityEngine;
 public class RevealActionUI : MonoBehaviour
 {
     [SerializeField] private GameObject revealActionUI;
+    [SerializeField] private TMP_Text TitleText;
     [SerializeField] private TMP_Text BodyText;
 
     void Awake()
@@ -14,11 +15,19 @@ public class RevealActionUI : MonoBehaviour
         Utilities.GetRootComponent<GameManager>().ShowOnRevealedUI += (_, text) => ShowOnRevealedUI(text);
     }
 
-    void ShowOnRevealedUI(string text)
+    void ShowOnRevealedUI(PopupText popupText)
     {
         Utilities.GetRootComponent<GameManager>().IsDialogVisible = true;
         revealActionUI.SetActive(true);
-        BodyText.text = text;
+        if (TitleText != null)
+        {
+            TitleText.text = popupText.Title ?? "";
+        }
+
+        if (BodyText != null)
+        {
+            BodyText.text = popupText.Body;
+        }
     }
 
     public void AcceptRevealedWork()

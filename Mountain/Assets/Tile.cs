@@ -50,7 +50,7 @@ public class Tile : MonoBehaviour
 
         if (!string.IsNullOrWhiteSpace(instance.OnRevealText))
         {
-            Utilities.GetRootComponent<GameManager>().ShowOnRevealText(instance.OnRevealText);
+            Utilities.GetRootComponent<GameManager>().ShowOnRevealText(!string.IsNullOrWhiteSpace(instance.OnRevealTextTitle) ? instance.OnRevealTextTitle : instance.Name, instance.OnRevealText);
         }
 
         if (instance.RevealAction != null)

@@ -56,6 +56,7 @@ MonoBehaviour:
   FlavorText: 'An airlock with simple controls: two buttons labeled ''Depart'' and
     ''Seal''. Until recently, it has never been used.'
   Biome: {fileID: 6223766025237645061, guid: b30f520d510134f4da99aaf67f3f714b, type: 3}
+  OnRevealTextTitle: Stratohaven
   OnRevealText: For a year, the airlock out of Stratohaven has stood unlocked, yet
     none dared venture beyond. Our haven in the clouds has provided all we needed.
     Why risk the barren lands below? But today, something changed. In the distance,
