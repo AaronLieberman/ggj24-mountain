@@ -203,7 +203,7 @@ public class GameManager : MonoBehaviour
                     unexploredDistances[tile.Location].UnexploredDistance <= MaxJourneySlots));
             tile.SetStatus(TileStatus.Hidden, "passability", !visible);
 
-            bool staticlyImpassable = !tile.Placement.Passable && !tile.Placement.Actions.Any();
+            bool staticlyImpassable = !tile.Placement.IsPassable && !tile.Placement.Actions.Any();
             tile.SetStatus(TileStatus.StaticallyImpassbile, "staticallyImpassible", staticlyImpassable);
         }
 
@@ -244,7 +244,7 @@ public class GameManager : MonoBehaviour
                         // skip the first (starting location) and last items (one we're placing the card into) in the route
                         foreach (var stepTile in route.Skip(1).Take(route.Count() - 2))
                         {
-                            if (!stepTile.Placement.Passable)
+                            if (!stepTile.Placement.IsPassable)
                             {
                                 passable = false;
                                 break;

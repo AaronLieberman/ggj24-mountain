@@ -148,8 +148,14 @@ class TileNeighborQuierier : INeighborQuerier<Tile>
     public IEnumerable<Tile> GetNeighbors(Tile tile)
         => tile.GetComponentInParent<TileGridLayout>().GetNeighborsByTile(tile);
 
-    public float GetHeuristic(Tile tile, bool isEnd)
-        => isEnd ? 0 : tile.GetComponentInChildren<Placement>()?.PathingHeuristic ?? 1f;
+    public GetHeuristicResult GetHeuristic(Tile tile, bool isEnd)
+    {
+        if (isEnd) return new GetHeuristicResult { IsPassible = true, Weight = 0 };
+        var placement = tile.GetComponentInChildren<Placement>();
+        if (placement == null) return new GetHeuristicResult { IsPassible = true, Weight = 1 };
+
+        return new GetHeuristicResult { IsPassible = placement.IsPassable, Weight = placement.PathingHeuristic };
+    }
 
     public float CalcDist(Tile tile, Tile other)
         => Vector3.Distance(tile.transform.position, other.transform.position);

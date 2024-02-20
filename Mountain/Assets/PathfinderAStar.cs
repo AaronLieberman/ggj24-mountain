@@ -3,10 +3,16 @@ using System.Collections.Generic;
 using System;
 using System.Linq;
 
+public struct GetHeuristicResult
+{
+    public  bool IsPassible;
+    public  float Weight;
+}
+
 public interface INeighborQuerier<T>
 {
     IEnumerable<T> GetNeighbors(T t);
-    float GetHeuristic(T t, bool isEnd);
+    GetHeuristicResult GetHeuristic(T t, bool isEnd);
     float CalcDist(T t, T other);
 }
 
@@ -33,7 +39,8 @@ public static class PathfinderAStar
         minScore[start] = 0;
 
         var predScore = new Dictionary<T, float>();
-        predScore[start] = querier.GetHeuristic(start, start.Equals(goal));
+        var result = querier.GetHeuristic(start, start.Equals(goal));
+        predScore[start] = result.Weight;
 
         while (openSet.Any())
         {
@@ -46,8 +53,8 @@ public static class PathfinderAStar
 
             foreach (var neighbor in querier.GetNeighbors(current))
             {
-                var weight = querier.GetHeuristic(neighbor, neighbor.Equals(goal));
-                if (weight >= 10000)
+                result = querier.GetHeuristic(neighbor, neighbor.Equals(goal));
+                if (!result.IsPassible)
                     continue;
 
                 float tentativeGScore = minScore[current] + querier.CalcDist(current, neighbor);
@@ -55,7 +62,7 @@ public static class PathfinderAStar
                 {
                     cameFrom[neighbor] = current;
                     minScore[neighbor] = tentativeGScore;
-                    predScore[neighbor] = tentativeGScore + weight;
+                    predScore[neighbor] = tentativeGScore + result.Weight;
                     if (!openSet.Contains(neighbor))
                         openSet.Add(neighbor);
                 }

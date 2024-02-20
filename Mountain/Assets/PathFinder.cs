@@ -93,7 +93,7 @@ public class PathFinder
                 {
                     adjacentDistance++;
                 }
-                else if (placement.PathingHeuristic >= 10000)
+                else if (!placement.IsPassable)
                 {
                     results[adjacent] = new Passibility { UnexploredDistance = -1 };
                     continue;

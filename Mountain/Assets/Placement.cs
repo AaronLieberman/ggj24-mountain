@@ -58,7 +58,7 @@ public class Placement : MonoBehaviour
     public List<TileAction> Actions;
 
     public float LostChance { get => lostChance; set => lostChance = Math.Clamp( value, 0.0f, 1.0f); }
-    public bool Passable => PathingHeuristic < 10000;
+    public bool IsPassable => PathingHeuristic < 10000;
 
     public void Visited(Worker worker, Placement placement)
     {

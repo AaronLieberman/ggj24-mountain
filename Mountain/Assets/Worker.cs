@@ -108,7 +108,7 @@ public class Worker : MonoBehaviour
                 route = TilePathfinderAStar.CalculateRoute(_map.GetTileFromLoc(cell), plan.Tile);
                 if (route != null && route.Count > 1)
                 {
-                    if (route.ElementAt(1).Placement.PathingHeuristic < 10000 ||
+                    if (route.ElementAt(1).Placement.IsPassable ||
                     plan.Tile.Placement.Actions.Any(action => action.CanPayCost(plan.Card)))
                     {
                         _nextDestinationTileLoc = route.ElementAt(1).Location;
