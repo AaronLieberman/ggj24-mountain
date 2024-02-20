@@ -31,7 +31,7 @@ public class GameManager : MonoBehaviour
 
     public List<WorkerPlan> WorkerPlan { get; } = new();
 
-    public bool IsWorkRevealed { get; set; }
+    public bool IsDialogVisible { get; set; }
     public event EventHandler<string> ShowOnRevealedUI;
 
     public bool EnableDebugTools = false;
@@ -70,7 +70,7 @@ public class GameManager : MonoBehaviour
 
     void StartGame()
     {
-        IsWorkRevealed = false;
+        IsDialogVisible = false;
 
         SetupMap();
 

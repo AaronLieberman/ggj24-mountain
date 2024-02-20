@@ -43,7 +43,7 @@ public class DragController : MonoBehaviour
 
     void Update()
     {
-        if (!ShouldHandleMouseEvents)
+        if (!ShouldHandleMouseEvents || Utilities.GetRootComponent<GameManager>().IsDialogVisible)
         {
             _lastHitMapPos = null;
             transform.position = LinkedObj.transform.position;
