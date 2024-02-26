@@ -54,6 +54,7 @@ MonoBehaviour:
   FlavorText: This card removes all the tiles in the Journey plan, leaving empty
     slots to the existing destinations.
   Biome: {fileID: 5689664702476106266, guid: aab079bb3afeab346b3798f963a1f5fa, type: 3}
+  OnRevealTextTitle: zzDEBUG Remove All Plan Tiles
   OnRevealText: 
   RevealAction: {fileID: 0}
   RevealActions:

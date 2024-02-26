@@ -53,6 +53,7 @@ MonoBehaviour:
   PathingHeuristic: 1
   FlavorText: Whistling wails haunt this hillock, whether by wraiths or the wind.
   Biome: {fileID: 4111032941925707430, guid: 7976e35d001ec0249b53f029133651a3, type: 3}
+  OnRevealTextTitle: Vengeful Vantage
   OnRevealText: 
   RevealAction: {fileID: 0}
   RevealActions:

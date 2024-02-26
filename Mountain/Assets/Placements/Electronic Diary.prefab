@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 7344193610716770959}
   - component: {fileID: 6338482352565548064}
   - component: {fileID: 239933171473085248}
-  - component: {fileID: 4609327163251086722}
   m_Layer: 0
   m_Name: Electronic Diary
   m_TagString: Untagged
@@ -57,6 +56,7 @@ MonoBehaviour:
   PathingHeuristic: 1
   FlavorText: 
   Biome: {fileID: 5689664702476106266, guid: d207460ad79d71147a84f132fe13e8bc, type: 3}
+  OnRevealTextTitle: Electronic Diary
   OnRevealText: The device Bennett found indeed turned out to be an electronic diary,
     and it belonged to someone named Stasia. According to the diary, she lived in
     a place that sounds remarkably like our own Stratohaven. She mentions coordinates
@@ -135,23 +135,6 @@ MonoBehaviour:
   Comment: 
   tileToPlace: {fileID: 8931215191045057513, guid: 9c610bf085abe114e84c96fa3e6e1340, type: 3}
   placementCoordinates: {x: 10, y: 14}
---- !u!114 &4609327163251086722
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9024744818629451959}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f509cefe7ad4574e8e856c6985aedac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Comment: 
-  textToPopUp: The device Bennett found indeed turned out to be an electronic diary,
-    and it belonged to someone named Stasia. According to the diary, she lived in
-    a place that sounds remarkably like our own Stratohaven. She mentions coordinates
-    that she often visited. Maybe we can find her.
 --- !u!1001 &7243031604247936069
 PrefabInstance:
   m_ObjectHideFlags: 0

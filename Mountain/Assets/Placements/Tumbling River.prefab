@@ -53,6 +53,7 @@ MonoBehaviour:
   PathingHeuristic: 1
   FlavorText: Water tumbles head over heals down a thousand feet.
   Biome: {fileID: 6223766025237645061, guid: b30f520d510134f4da99aaf67f3f714b, type: 3}
+  OnRevealTextTitle: Tumbling River
   OnRevealText: 
   RevealAction: {fileID: 0}
   RevealActions:

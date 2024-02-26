@@ -53,6 +53,7 @@ MonoBehaviour:
   FlavorText: A 10,000 year old communication array is ready to recieve one last
     update from the Lunar Vantage Point Base. But what is it pointed at?
   Biome: {fileID: 519853117350573946, guid: b422e4b1552e64241b81ca5134eb4510, type: 3}
+  OnRevealTextTitle: Lunar Vantage Array
   OnRevealText: 
   RevealAction: {fileID: 0}
   RevealActions: []

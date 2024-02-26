@@ -307,6 +307,7 @@ MonoBehaviour:
   PathingHeuristic: 100000
   FlavorText: A perfect water recycler, in 10,000 years it has not lost a drop.
   Biome: {fileID: 6223766025237645061, guid: b30f520d510134f4da99aaf67f3f714b, type: 3}
+  OnRevealTextTitle: Purification Plant Maintenance Overflow
   OnRevealText: 
   RevealAction: {fileID: 0}
   RevealActions: []

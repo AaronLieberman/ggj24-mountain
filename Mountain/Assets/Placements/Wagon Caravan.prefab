@@ -53,6 +53,7 @@ MonoBehaviour:
   FlavorText: These nomads have seen a hundred lands, but when they hear about the
     mountaintop, they promise to visit soon.
   Biome: {fileID: 6223766025237645061, guid: 0c3fc96df5b9e1d499c66e212164f0aa, type: 3}
+  OnRevealTextTitle: Wagon Caravan
   OnRevealText: 
   RevealAction: {fileID: 0}
   RevealActions: []

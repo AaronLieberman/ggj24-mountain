@@ -121,15 +121,7 @@ public class ImportCards : EditorWindow
 
 
             tilePlacement.OnRevealText = splitData[ONREVEALTEXT];
-            //if (!string.IsNullOrEmpty(splitData[ONREVEALTEXT]))
-            //{
-            //    ShowOnRevealPopupTextAction popupcomponent = prefabTofill.GetComponent<ShowOnRevealPopupTextAction>();
-            //    if (popupcomponent == null)
-            //    {
-            //        popupcomponent = prefabTofill.AddComponent<ShowOnRevealPopupTextAction>();
-            //    }
-            //    popupcomponent.textToPopUp = splitData[ONREVEALTEXT];
-            //}
+            tilePlacement.OnRevealTextTitle = splitData[TILENAME];
 
             if (!string.IsNullOrEmpty(splitData[ONVISITPOPUPTEXT]))
             {

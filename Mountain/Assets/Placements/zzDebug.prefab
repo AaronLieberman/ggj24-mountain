@@ -52,6 +52,7 @@ MonoBehaviour:
   PathingHeuristic: 1
   FlavorText: This is the biome for debug testing cards.
   Biome: {fileID: 5689664702476106266}
+  OnRevealTextTitle: zzDebug
   OnRevealText: 
   RevealAction: {fileID: 0}
   RevealActions: []

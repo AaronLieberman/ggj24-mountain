@@ -53,6 +53,7 @@ MonoBehaviour:
   PathingHeuristic: 1
   FlavorText: This card's ability takes any card and adds 10 cards to your deck.
   Biome: {fileID: 5689664702476106266, guid: aab079bb3afeab346b3798f963a1f5fa, type: 3}
+  OnRevealTextTitle: zzDEBUG Draw 10 Cards
   OnRevealText: 
   RevealAction: {fileID: 0}
   RevealActions:

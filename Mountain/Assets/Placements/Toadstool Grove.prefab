@@ -53,6 +53,7 @@ MonoBehaviour:
   PathingHeuristic: 1
   FlavorText: Towering toadstools shade the moist soil.
   Biome: {fileID: 5689664702476106266, guid: d207460ad79d71147a84f132fe13e8bc, type: 3}
+  OnRevealTextTitle: Toadstool Grove
   OnRevealText: 
   RevealAction: {fileID: 0}
   RevealActions: []

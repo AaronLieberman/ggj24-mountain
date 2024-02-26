@@ -53,6 +53,7 @@ MonoBehaviour:
   PathingHeuristic: 1
   FlavorText: This tile adds a card to your deck when you place it.
   Biome: {fileID: 5689664702476106266, guid: aab079bb3afeab346b3798f963a1f5fa, type: 3}
+  OnRevealTextTitle: zzDEBUG Draw 1 Card On Place
   OnRevealText: 
   RevealAction: {fileID: 0}
   RevealActions:

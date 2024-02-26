@@ -53,6 +53,7 @@ MonoBehaviour:
   FlavorText: The plasticom tells us that the only biome more swarming with life
     than a forest is the ocean. But who among us has seen the sea?
   Biome: {fileID: 5689664702476106266}
+  OnRevealTextTitle: Woods
   OnRevealText: 
   RevealAction: {fileID: 0}
   RevealActions: []

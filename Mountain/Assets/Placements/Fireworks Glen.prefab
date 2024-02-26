@@ -1359,7 +1359,6 @@ GameObject:
   - component: {fileID: 7322753666149247120}
   - component: {fileID: -1660792323583450061}
   - component: {fileID: -1020584092762290869}
-  - component: {fileID: 273125955432408499}
   m_Layer: 0
   m_Name: Fireworks Glen
   m_TagString: Untagged
@@ -1421,6 +1420,7 @@ MonoBehaviour:
   PathingHeuristic: 1
   FlavorText: 
   Biome: {fileID: 6223766025237645061, guid: 0c3fc96df5b9e1d499c66e212164f0aa, type: 3}
+  OnRevealTextTitle: Fireworks Glen
   OnRevealText: "Our expedition below Stratohaven yielded the unimaginable \u2013
     survivors! We believed the surface world extinct, yet here they thrive, ignorant
     of our technologies like protein printers or television screens. Among the survivors,
@@ -1503,25 +1503,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Comment: 
   MaxLevelToIncreaseTo: 2
---- !u!114 &273125955432408499
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6259626365042224602}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f509cefe7ad4574e8e856c6985aedac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Comment: 
-  textToPopUp: "Our expedition below Stratohaven yielded the unimaginable \u2013
-    survivors! We believed the surface world extinct, yet here they thrive, ignorant
-    of our technologies like protein printers or television screens. Among the survivors,
-    they exclaim that our technology reminds them of 'talking metal' that their neighbor
-    speaks of. They provide directions to their village, where tales of this device
-    originated. Perhaps this is a clue to others from our world."
 --- !u!1 &7152120664772029439
 GameObject:
   m_ObjectHideFlags: 0

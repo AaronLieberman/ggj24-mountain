@@ -54,6 +54,7 @@ MonoBehaviour:
     Scattered around the base of the array are images of the area from impossibly
     high above.
   Biome: {fileID: 519853117350573946, guid: b422e4b1552e64241b81ca5134eb4510, type: 3}
+  OnRevealTextTitle: Silent Array
   OnRevealText: 
   RevealAction: {fileID: 0}
   RevealActions: []

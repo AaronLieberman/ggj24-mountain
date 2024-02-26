@@ -54,6 +54,7 @@ MonoBehaviour:
   FlavorText: This card removes the first tile in the Journey plan, leaving an empty
     slot to the existing destination.
   Biome: {fileID: 5689664702476106266, guid: aab079bb3afeab346b3798f963a1f5fa, type: 3}
+  OnRevealTextTitle: zzDEBUG Remove First Plan Tile
   OnRevealText: 
   RevealAction: {fileID: 0}
   RevealActions:

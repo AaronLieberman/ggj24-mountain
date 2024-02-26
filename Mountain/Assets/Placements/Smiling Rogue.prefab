@@ -449,6 +449,7 @@ MonoBehaviour:
   FlavorText: A handsome rogue offers to show us the way, but the route is hard to
     remember.
   Biome: {fileID: 5689664702476106266, guid: d207460ad79d71147a84f132fe13e8bc, type: 3}
+  OnRevealTextTitle: Smiling Rogue
   OnRevealText: 
   RevealAction: {fileID: 0}
   RevealActions: []

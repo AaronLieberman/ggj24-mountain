@@ -309,6 +309,7 @@ MonoBehaviour:
   FlavorText: 'Today''s Menu: Breakfast Bacon flavored protein porridge. Lunch Special!
     Chicken breast protein porridge. Dinner: Oatsimilie Protein Porridge.'
   Biome: {fileID: 6223766025237645061, guid: b30f520d510134f4da99aaf67f3f714b, type: 3}
+  OnRevealTextTitle: Database Protein Printer
   OnRevealText: 
   RevealAction: {fileID: 0}
   RevealActions: []

@@ -53,6 +53,7 @@ MonoBehaviour:
   FlavorText: In 12 foot tall letters, 'Curiosity' is las-etched on the inside of
     the gate,  and 'Wonder' on the outside.
   Biome: {fileID: 6223766025237645061, guid: b30f520d510134f4da99aaf67f3f714b, type: 3}
+  OnRevealTextTitle: Explorer's Gate
   OnRevealText: 
   RevealAction: {fileID: 0}
   RevealActions: []

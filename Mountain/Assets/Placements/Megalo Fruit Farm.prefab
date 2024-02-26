@@ -54,6 +54,7 @@ MonoBehaviour:
   FlavorText: Each Megalofruit is as big as a man. Getting them down from the lofty
     canopy is a challenge.
   Biome: {fileID: 5689664702476106266, guid: d207460ad79d71147a84f132fe13e8bc, type: 3}
+  OnRevealTextTitle: Megalo Fruit Farm
   OnRevealText: 
   RevealAction: {fileID: 0}
   RevealActions:

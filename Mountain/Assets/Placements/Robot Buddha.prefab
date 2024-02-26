@@ -53,6 +53,7 @@ MonoBehaviour:
   FlavorText: Nearly as old as the Stratohaven, the Robot Buddha has learned to live
     sustainably in chaos. It wants nothing, it needs nothing.
   Biome: {fileID: 5689664702476106266, guid: d207460ad79d71147a84f132fe13e8bc, type: 3}
+  OnRevealTextTitle: Robot Buddha
   OnRevealText: 
   RevealAction: {fileID: 0}
   RevealActions: []

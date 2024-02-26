@@ -53,6 +53,7 @@ MonoBehaviour:
   PathingHeuristic: 1
   FlavorText: I've looked everywhere!
   Biome: {fileID: 519853117350573946, guid: b422e4b1552e64241b81ca5134eb4510, type: 3}
+  OnRevealTextTitle: A Worried Mother
   OnRevealText: 
   RevealAction: {fileID: 0}
   RevealActions: []

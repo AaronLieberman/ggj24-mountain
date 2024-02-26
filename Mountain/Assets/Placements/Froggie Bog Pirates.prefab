@@ -56,6 +56,7 @@ MonoBehaviour:
   FlavorText: A twangy dirge drifts through the miasma acompanied by a croaking chrous
     that reveals a submerged stash.
   Biome: {fileID: 4486575929425936965, guid: 91624b1fd6393594b85fce2f31dfbbc2, type: 3}
+  OnRevealTextTitle: Froggie Bog Pirates
   OnRevealText: 
   RevealAction: {fileID: 0}
   RevealActions:

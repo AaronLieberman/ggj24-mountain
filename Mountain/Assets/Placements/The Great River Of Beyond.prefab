@@ -55,6 +55,7 @@ MonoBehaviour:
   PathingHeuristic: 1
   FlavorText: Now we take in sludge, and give the world a crystal clear river.
   Biome: {fileID: 6223766025237645061, guid: b30f520d510134f4da99aaf67f3f714b, type: 3}
+  OnRevealTextTitle: The Great River Of Beyond
   OnRevealText: 
   RevealAction: {fileID: 0}
   RevealActions:

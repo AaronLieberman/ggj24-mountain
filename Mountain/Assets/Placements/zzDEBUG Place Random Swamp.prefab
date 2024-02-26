@@ -54,6 +54,7 @@ MonoBehaviour:
   PathingHeuristic: 1
   FlavorText: This tile places a random swamp adjacent to this tile when placed.
   Biome: {fileID: 5689664702476106266, guid: aab079bb3afeab346b3798f963a1f5fa, type: 3}
+  OnRevealTextTitle: zzDEBUG Place Random Swamp
   OnRevealText: 
   RevealAction: {fileID: 0}
   RevealActions:

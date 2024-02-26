@@ -52,6 +52,7 @@ MonoBehaviour:
   PathingHeuristic: 1
   FlavorText: 
   Biome: {fileID: 4486575929425936965}
+  OnRevealTextTitle: Swamp
   OnRevealText: 
   RevealAction: {fileID: 0}
   RevealActions: []

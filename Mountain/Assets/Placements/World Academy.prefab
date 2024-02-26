@@ -54,6 +54,7 @@ MonoBehaviour:
   FlavorText: Shocked by the dangers of a chaotic world, we systemitized prepartions
     for all explorers.
   Biome: {fileID: 6223766025237645061, guid: b30f520d510134f4da99aaf67f3f714b, type: 3}
+  OnRevealTextTitle: World Academy
   OnRevealText: 
   RevealAction: {fileID: 0}
   RevealActions: []

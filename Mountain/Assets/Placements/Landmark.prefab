@@ -54,6 +54,7 @@ MonoBehaviour:
   FlavorText: Did the ancient world use this spire as a point of reference? No other
     purpose is apparent.
   Biome: {fileID: 6223766025237645061, guid: 0c3fc96df5b9e1d499c66e212164f0aa, type: 3}
+  OnRevealTextTitle: Landmark
   OnRevealText: 
   RevealAction: {fileID: 0}
   RevealActions:

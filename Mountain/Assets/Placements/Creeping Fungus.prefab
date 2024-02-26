@@ -54,6 +54,7 @@ MonoBehaviour:
     creeping fungus spores sounds like a mechanical cough, but the plasticom assures
     us this is just how recursive filtering sounds when it is functioning normally.
   Biome: {fileID: 4111032941925707430, guid: 7976e35d001ec0249b53f029133651a3, type: 3}
+  OnRevealTextTitle: Creeping Fungus
   OnRevealText: 
   RevealAction: {fileID: 0}
   RevealActions: []

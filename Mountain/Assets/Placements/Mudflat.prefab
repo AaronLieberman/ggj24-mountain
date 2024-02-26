@@ -52,6 +52,7 @@ MonoBehaviour:
   PathingHeuristic: 1
   FlavorText: 
   Biome: {fileID: 4486575929425936965, guid: 91624b1fd6393594b85fce2f31dfbbc2, type: 3}
+  OnRevealTextTitle: Mudflat
   OnRevealText: 
   RevealAction: {fileID: 0}
   RevealActions: []

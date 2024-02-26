@@ -53,6 +53,7 @@ MonoBehaviour:
   FlavorText: Exhausted refugees huddle around a mound of burning bones and warn
     each other about the dangers they've encountered.
   Biome: {fileID: 4111032941925707430, guid: 7976e35d001ec0249b53f029133651a3, type: 3}
+  OnRevealTextTitle: Smouldering Bonefire
   OnRevealText: 
   RevealAction: {fileID: 0}
   RevealActions: []

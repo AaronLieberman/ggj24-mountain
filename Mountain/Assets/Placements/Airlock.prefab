@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 3329339800751253644}
   - component: {fileID: 8158027313759549239}
   - component: {fileID: 4514671431535678054}
-  - component: {fileID: 924821009167441636}
   m_Layer: 0
   m_Name: Airlock
   m_TagString: Untagged
@@ -56,7 +55,7 @@ MonoBehaviour:
   FlavorText: 'An airlock with simple controls: two buttons labeled ''Depart'' and
     ''Seal''. Until recently, it has never been used.'
   Biome: {fileID: 6223766025237645061, guid: b30f520d510134f4da99aaf67f3f714b, type: 3}
-  OnRevealTextTitle: Stratohaven
+  OnRevealTextTitle: Airlock
   OnRevealText: For a year, the airlock out of Stratohaven has stood unlocked, yet
     none dared venture beyond. Our haven in the clouds has provided all we needed.
     Why risk the barren lands below? But today, something changed. In the distance,
@@ -66,7 +65,6 @@ MonoBehaviour:
   RevealAction: {fileID: 0}
   RevealActions:
   - {fileID: 4514671431535678054}
-  - {fileID: 924821009167441636}
   OnVisitTooltipText: 
   OnVisitAction: {fileID: 0}
   VisitActions: []
@@ -87,25 +85,6 @@ MonoBehaviour:
   Comment: 
   tileToPlace: {fileID: 3340648647498721399, guid: bbda8dc89eaffb64a8ed0c834f5ce395, type: 3}
   placementCoordinates: {x: 10, y: 7}
---- !u!114 &924821009167441636
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2176906942159763448}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f509cefe7ad4574e8e856c6985aedac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Comment: 
-  textToPopUp: For a year, the airlock out of Stratohaven has stood unlocked, yet
-    none dared venture beyond. Our haven in the clouds has provided all we needed.
-    Why risk the barren lands below? But today, something changed. In the distance,
-    bursts of light pierced the sky - fireworks, akin to those in our old TV shows.
-    Are we truly alone? Curiosity stirs in Stratohaven. Our bravest will journey
-    to uncover this enigma.
 --- !u!1 &2794840741613513883
 GameObject:
   m_ObjectHideFlags: 0

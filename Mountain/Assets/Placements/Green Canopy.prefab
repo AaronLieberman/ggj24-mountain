@@ -53,6 +53,7 @@ MonoBehaviour:
   FlavorText: Wind ripples an emerald ceiling, causing slivers of sunlight to dance
     across the carpet of ferns.
   Biome: {fileID: 5689664702476106266, guid: d207460ad79d71147a84f132fe13e8bc, type: 3}
+  OnRevealTextTitle: Green Canopy
   OnRevealText: 
   RevealAction: {fileID: 0}
   RevealActions: []
