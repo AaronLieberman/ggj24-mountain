@@ -8,7 +8,8 @@ public class ShowOnVisitPopupTextAction : PlacementAction
     public string textToPopUp = "A ShowPopUpText had no text set.";
     public override void DoWork(Worker worker, Placement placement, Card card)
     {
-        //TODO: show popup dialog instead of going to the log
         Debug.Log(textToPopUp);
+
+        Utilities.GetRootComponent<GameManager>().ShowOnRevealText(placement.Name, textToPopUp);
     }
 }
