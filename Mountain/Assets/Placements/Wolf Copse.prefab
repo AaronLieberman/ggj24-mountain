@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5106170961069515600}
   - component: {fileID: 7393449126778127976}
   - component: {fileID: 3832706135677558317}
+  - component: {fileID: 674243425679670310}
   m_Layer: 0
   m_Name: Wolf Copse
   m_TagString: Untagged
@@ -61,6 +62,7 @@ MonoBehaviour:
   RevealAction: {fileID: 0}
   RevealActions:
   - {fileID: 7393449126778127976}
+  - {fileID: 674243425679670310}
   OnVisitTooltipText: Explorer flees back to Stratohaven.
   OnVisitAction: {fileID: 0}
   VisitActions:
@@ -102,6 +104,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Comment: visit
+--- !u!114 &674243425679670310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6023640877869612184}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cede75c5975197645b83effe1664d5c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Comment: 
+  MaxLevelToIncreaseTo: 2
 --- !u!1001 &4093793848529880120
 PrefabInstance:
   m_ObjectHideFlags: 0
